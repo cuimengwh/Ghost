@@ -1,32 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3169b134478cff4696fe1723347ba2c, type: 3}
-  m_Name: Mushroom
-  m_EditorClassIdentifier: 
-  id: 
-  itemName: Mushroom
-  itemDescription: Unable to do modeling or arts, but nutrious
-  maxStack: 99
-  isStackable: 1
-  canSell: 1
-  value: 0
-  sellPrice: 0
-  prefab: {fileID: 0}
-  itemIcon: {fileID: 21300000, guid: cc08ccd1cf04a3d43b8d437d087cfc02, type: 3}
-  plantSeason: 0
-  growDay: 3
-  resultingCropId: 0
-  plantPrefab: {fileID: 0}
-  growPrefab: {fileID: 0}
-  harvestPrefab: {fileID: 0}
-  yieldAmount: 0
-  isGhost: 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fa49cce8fd1a37895d69591b2170df0d4f774ebb68195e07085d49597391d2b
+size 824
