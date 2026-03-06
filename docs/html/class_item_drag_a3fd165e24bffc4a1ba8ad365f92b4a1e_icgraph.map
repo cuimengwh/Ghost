@@ -1,0 +1,10 @@
+<map id="ItemDrag.ReturnToOriginalPosition" name="ItemDrag.ReturnToOriginalPosition">
+<area shape="rect" id="Node000001" title="返回原始位置 当拖拽到无效区域或出现异常时调用" alt="" coords="455,48,631,91"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#a09fca6b4b2434ecf2c07dfafc7f38065" title="强制结束当前物品的拖拽 在UI关闭、背包切换等情况下调用" alt="" coords="201,5,407,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="437,48,370,35,371,30,443,47"/>
+<area shape="rect" id="Node000003" href="$class_item_drag.html#afa4ce46ba7f60ccdb57fc530aaa81c9c" title="获取当前指针位置下的GameObject 使用异常处理确保安全" alt="" coords="226,56,382,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="437,69,382,72,382,67,442,69"/>
+<area shape="rect" id="Node000004" href="$class_item_drag.html#aa966ed36f05faca17b4ec738fd636bfd" title="结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性" alt="" coords="5,81,153,108"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="442,90,407,97,272,103,153,101,153,96,272,98,407,92,437,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="208,80,154,89,153,84,213,79"/>
+</map>

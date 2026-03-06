@@ -1,0 +1,9 @@
+<map id="Slot" name="Slot">
+<area shape="rect" id="Node000001" title="挂在每个背包格子（slot）上。 负责保存并显示该格子对应的物品图标、描述文本， 以及响应点击事件，将物品信息展示到外部面板。" alt="" coords="79,180,123,207"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,117,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,121,99,180,93,180,70,125"/>
+<area shape="rect" id="Node000003" href="$class_item_data.html" title="公共物品数据类" alt="" coords="141,81,216,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,120,113,182,109,178,156,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,5,237,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="180,45,181,82,176,80,177,49"/>
+</map>

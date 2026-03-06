@@ -1,0 +1,9 @@
+<map id="Utopia.TimeSystem.TimeManager.SkipToCustomDateTime" name="Utopia.TimeSystem.TimeManager.SkipToCustomDateTime">
+<area shape="rect" id="Node000001" title="跳转到自定义日期时间" alt="" coords="5,39,230,81"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a32a5365f026bb7ea432c0e9b539c70e0" title="计算更新时间值" alt="" coords="278,5,502,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,44,265,42,259,43,231,49"/>
+<area shape="rect" id="Node000004" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#ac28c129d06012f5997a41308883bbe4f" title="转换为总天数" alt="" coords="296,72,484,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="230,71,283,80,278,80,230,76"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a2a0363f2f5eeede91a93a108c91a2e4f" title="计算季节" alt="" coords="550,5,774,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="502,24,537,26,532,27,503,29"/>
+</map>

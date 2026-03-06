@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: CameraFollow类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_camera_follow.html','','class_camera_follow-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CameraFollow类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>相机跟随脚本，挂在主相机上，实现第三人称视角的跟随效果。  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 CameraFollow 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camera_follow__inherit__graph.png" border="0" usemap="#a_camera_follow_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_camera_follow_inherit__map" id="a_camera_follow_inherit__map">
+<area shape="rect" title="相机跟随脚本，挂在主相机上，实现第三人称视角的跟随效果。" alt="" coords="8,80,114,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+CameraFollow 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camera_follow__coll__graph.png" border="0" usemap="#a_camera_follow_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_camera_follow_coll__map" id="a_camera_follow_coll__map">
+<area shape="rect" title="相机跟随脚本，挂在主相机上，实现第三人称视角的跟随效果。" alt="" coords="8,80,114,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a2ef2d3655fd0cb86d18e6324b75c0a59" id="r_a2ef2d3655fd0cb86d18e6324b75c0a59"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#a2ef2d3655fd0cb86d18e6324b75c0a59">target</a></td></tr>
+<tr class="memitem:a01d72332e1a55963f882330a70f8195b" id="r_a01d72332e1a55963f882330a70f8195b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a01d72332e1a55963f882330a70f8195b">eyeHeight</a> = 1.6f</td></tr>
+<tr class="memitem:a94cb8f84fe6b96324e44d3b7a0be3d91" id="r_a94cb8f84fe6b96324e44d3b7a0be3d91"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a94cb8f84fe6b96324e44d3b7a0be3d91">distance</a> = 4f</td></tr>
+<tr class="memitem:ab78156bcef04a2a9cc44510e384f4712" id="r_ab78156bcef04a2a9cc44510e384f4712"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab78156bcef04a2a9cc44510e384f4712">minDistance</a> = 2f</td></tr>
+<tr class="memitem:ab2f7c211f52a15dcef5e488b16c7bbda" id="r_ab2f7c211f52a15dcef5e488b16c7bbda"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab2f7c211f52a15dcef5e488b16c7bbda">maxDistance</a> = 6f</td></tr>
+<tr class="memitem:aecbe34700da2e30537df6b1cdc8afc93" id="r_aecbe34700da2e30537df6b1cdc8afc93"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aecbe34700da2e30537df6b1cdc8afc93">zoomSpeed</a> = 2f</td></tr>
+<tr class="memitem:a237af4886303d8b1769c2f8d26ccbff5" id="r_a237af4886303d8b1769c2f8d26ccbff5"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a237af4886303d8b1769c2f8d26ccbff5">followSpeed</a> = 10f</td></tr>
+<tr class="memitem:aebe0060c020fd4041f574f9607832047" id="r_aebe0060c020fd4041f574f9607832047"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aebe0060c020fd4041f574f9607832047">rotationSpeed</a> = 8f</td></tr>
+<tr class="memitem:a41e70d813f23e6963f8966be6b7ab2b4" id="r_a41e70d813f23e6963f8966be6b7ab2b4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a41e70d813f23e6963f8966be6b7ab2b4">mouseSensitivity</a> = 2f</td></tr>
+<tr class="memitem:ab068e7ba9b64f5ad85cec52ef27b0d8f" id="r_ab068e7ba9b64f5ad85cec52ef27b0d8f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab068e7ba9b64f5ad85cec52ef27b0d8f">minPitch</a> = -30f</td></tr>
+<tr class="memitem:a1f1465a904d68c24030d3bf03d72bada" id="r_a1f1465a904d68c24030d3bf03d72bada"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1f1465a904d68c24030d3bf03d72bada">maxPitch</a> = 70f</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:adbbbae516b9d54ffc9afe287dcb72cd5" id="r_adbbbae516b9d54ffc9afe287dcb72cd5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adbbbae516b9d54ffc9afe287dcb72cd5">Start</a> ()</td></tr>
+<tr class="memitem:af572f7bb45ca2a3027beacdd5985a60d" id="r_af572f7bb45ca2a3027beacdd5985a60d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af572f7bb45ca2a3027beacdd5985a60d">LateUpdate</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:af9d04087d871704371451458ea01703c" id="r_af9d04087d871704371451458ea01703c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af9d04087d871704371451458ea01703c">yaw</a> = 0f</td></tr>
+<tr class="memitem:ab5e17bde9f92ecf34f74d9c7cac9a52b" id="r_ab5e17bde9f92ecf34f74d9c7cac9a52b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab5e17bde9f92ecf34f74d9c7cac9a52b">pitch</a> = 20f</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>相机跟随脚本，挂在主相机上，实现第三人称视角的跟随效果。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="af572f7bb45ca2a3027beacdd5985a60d" name="af572f7bb45ca2a3027beacdd5985a60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af572f7bb45ca2a3027beacdd5985a60d">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraFollow.LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbbbae516b9d54ffc9afe287dcb72cd5" name="adbbbae516b9d54ffc9afe287dcb72cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbbae516b9d54ffc9afe287dcb72cd5">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraFollow.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a94cb8f84fe6b96324e44d3b7a0be3d91" name="a94cb8f84fe6b96324e44d3b7a0be3d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94cb8f84fe6b96324e44d3b7a0be3d91">&#9670;&#160;</a></span>distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.distance = 4f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01d72332e1a55963f882330a70f8195b" name="a01d72332e1a55963f882330a70f8195b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d72332e1a55963f882330a70f8195b">&#9670;&#160;</a></span>eyeHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.eyeHeight = 1.6f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a237af4886303d8b1769c2f8d26ccbff5" name="a237af4886303d8b1769c2f8d26ccbff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237af4886303d8b1769c2f8d26ccbff5">&#9670;&#160;</a></span>followSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.followSpeed = 10f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2f7c211f52a15dcef5e488b16c7bbda" name="ab2f7c211f52a15dcef5e488b16c7bbda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f7c211f52a15dcef5e488b16c7bbda">&#9670;&#160;</a></span>maxDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.maxDistance = 6f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f1465a904d68c24030d3bf03d72bada" name="a1f1465a904d68c24030d3bf03d72bada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1465a904d68c24030d3bf03d72bada">&#9670;&#160;</a></span>maxPitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.maxPitch = 70f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab78156bcef04a2a9cc44510e384f4712" name="ab78156bcef04a2a9cc44510e384f4712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78156bcef04a2a9cc44510e384f4712">&#9670;&#160;</a></span>minDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.minDistance = 2f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab068e7ba9b64f5ad85cec52ef27b0d8f" name="ab068e7ba9b64f5ad85cec52ef27b0d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab068e7ba9b64f5ad85cec52ef27b0d8f">&#9670;&#160;</a></span>minPitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.minPitch = -30f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41e70d813f23e6963f8966be6b7ab2b4" name="a41e70d813f23e6963f8966be6b7ab2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e70d813f23e6963f8966be6b7ab2b4">&#9670;&#160;</a></span>mouseSensitivity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.mouseSensitivity = 2f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5e17bde9f92ecf34f74d9c7cac9a52b" name="ab5e17bde9f92ecf34f74d9c7cac9a52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5e17bde9f92ecf34f74d9c7cac9a52b">&#9670;&#160;</a></span>pitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.pitch = 20f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebe0060c020fd4041f574f9607832047" name="aebe0060c020fd4041f574f9607832047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe0060c020fd4041f574f9607832047">&#9670;&#160;</a></span>rotationSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.rotationSpeed = 8f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ef2d3655fd0cb86d18e6324b75c0a59" name="a2ef2d3655fd0cb86d18e6324b75c0a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef2d3655fd0cb86d18e6324b75c0a59">&#9670;&#160;</a></span>target</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform CameraFollow.target</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9d04087d871704371451458ea01703c" name="af9d04087d871704371451458ea01703c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d04087d871704371451458ea01703c">&#9670;&#160;</a></span>yaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.yaw = 0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecbe34700da2e30537df6b1cdc8afc93" name="aecbe34700da2e30537df6b1cdc8afc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecbe34700da2e30537df6b1cdc8afc93">&#9670;&#160;</a></span>zoomSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.zoomSpeed = 2f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Player/<a class="el" href="_camera_control_8cs.html">CameraControl.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_camera_follow.html">CameraFollow</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

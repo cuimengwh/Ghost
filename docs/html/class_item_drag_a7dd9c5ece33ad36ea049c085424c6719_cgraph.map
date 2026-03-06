@@ -1,0 +1,5 @@
+<map id="ItemDrag.HandleMoveToEmptySlot" name="ItemDrag.HandleMoveToEmptySlot">
+<area shape="rect" id="Node000001" title="处理移动到空槽位" alt="" coords="5,5,233,32"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#aabda3e1da8ef8840621636641ecc5a2c" title="拖拽结束后的通用设置 恢复射线检测，重置拖拽状态" alt="" coords="281,5,459,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,16,268,19,262,19,233,21"/>
+</map>

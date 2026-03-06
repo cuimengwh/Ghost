@@ -1,0 +1,201 @@
+\doxysection{Inventory类 参考}
+\hypertarget{class_inventory}{}\label{class_inventory}\index{Inventory@{Inventory}}
+
+
+背包 Scriptable\+Object 用于存储和管理背包中的物品数据  
+
+
+
+
+类 Inventory 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_inventory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Inventory 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_inventory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_inventory_a9af2082b6531ca3f8fd35464e1b99649}{Get\+Empty\+Slot\+Index}} ()
+\begin{DoxyCompactList}\small\item\em 获取第一个空的物品格下标 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inventory_a05764dfb496e0fa28997c2df12174ea0}{Add\+Item}} (\doxymbox{\hyperlink{class_item_data}{Item\+Data}} item)
+\begin{DoxyCompactList}\small\item\em 添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放 \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_inventory_a8a07a663f0002415ddbc2842d9c80125}{Use\+Item}} (int index)
+\begin{DoxyCompactList}\small\item\em 使用物品 数量减 1，当数量为 0 时清空格子 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inventory_acc6ca12b4614b161833cb896e67353d3}{Drop\+Item}} (int index)
+\begin{DoxyCompactList}\small\item\em 丢弃物品 清空对应格子 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_inventory_a82b0b0cacc23f0e331509f0a4a67c06f}{Swap\+Item}} (int indexA, int indexB)
+\begin{DoxyCompactList}\small\item\em 交换两个格子的物品 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} $>$ \doxymbox{\hyperlink{class_inventory_a55e40c16b0a53a2fe810d3f5301d25ce}{items}} = new List$<$\doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}}$>$()
+\begin{DoxyCompactList}\small\item\em 背包物品列表 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+背包 Scriptable\+Object 用于存储和管理背包中的物品数据 
+
+\label{doc-func-members}
+\Hypertarget{class_inventory_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_inventory_a05764dfb496e0fa28997c2df12174ea0}\index{Inventory@{Inventory}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily \label{class_inventory_a05764dfb496e0fa28997c2df12174ea0} 
+bool Inventory.\+Add\+Item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_item_data}{Item\+Data}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放 
+
+
+\begin{DoxyParams}{参数}
+{\em item} & 要添加的物品\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+成功返回 true，失败返回 false
+\end{DoxyReturn}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_a05764dfb496e0fa28997c2df12174ea0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_acc6ca12b4614b161833cb896e67353d3}\index{Inventory@{Inventory}!DropItem@{DropItem}}
+\index{DropItem@{DropItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{DropItem()}{DropItem()}}
+{\footnotesize\ttfamily \label{class_inventory_acc6ca12b4614b161833cb896e67353d3} 
+bool Inventory.\+Drop\+Item (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+丢弃物品 清空对应格子 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & 物品所在格子下标\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+成功返回 true，失败返回 false
+\end{DoxyReturn}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_acc6ca12b4614b161833cb896e67353d3_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_acc6ca12b4614b161833cb896e67353d3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_a9af2082b6531ca3f8fd35464e1b99649}\index{Inventory@{Inventory}!GetEmptySlotIndex@{GetEmptySlotIndex}}
+\index{GetEmptySlotIndex@{GetEmptySlotIndex}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{GetEmptySlotIndex()}{GetEmptySlotIndex()}}
+{\footnotesize\ttfamily \label{class_inventory_a9af2082b6531ca3f8fd35464e1b99649} 
+int Inventory.\+Get\+Empty\+Slot\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取第一个空的物品格下标 
+
+\begin{DoxyReturn}{返回}
+空格下标，如果没有空格返回 -\/1
+\end{DoxyReturn}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_a9af2082b6531ca3f8fd35464e1b99649_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_a82b0b0cacc23f0e331509f0a4a67c06f}\index{Inventory@{Inventory}!SwapItem@{SwapItem}}
+\index{SwapItem@{SwapItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{SwapItem()}{SwapItem()}}
+{\footnotesize\ttfamily \label{class_inventory_a82b0b0cacc23f0e331509f0a4a67c06f} 
+void Inventory.\+Swap\+Item (\begin{DoxyParamCaption}\item[{int}]{indexA}{, }\item[{int}]{indexB}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+交换两个格子的物品 
+
+
+\begin{DoxyParams}{参数}
+{\em indexA} & 第一个格子下标\\
+\hline
+{\em indexB} & 第二个格子下标\\
+\hline
+\end{DoxyParams}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_a82b0b0cacc23f0e331509f0a4a67c06f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_a8a07a663f0002415ddbc2842d9c80125}\index{Inventory@{Inventory}!UseItem@{UseItem}}
+\index{UseItem@{UseItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{UseItem()}{UseItem()}}
+{\footnotesize\ttfamily \label{class_inventory_a8a07a663f0002415ddbc2842d9c80125} 
+virtual bool Inventory.\+Use\+Item (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+使用物品 数量减 1，当数量为 0 时清空格子 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & 物品所在格子下标\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+使用成功返回 true，失败返回 false
+\end{DoxyReturn}
+
+
+被 \doxymbox{\hyperlink{class_dish_inventory_ab67b5447b32d8ab2ce6b477bee543141}{Dish\+Inventory}} 重载.
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_a8a07a663f0002415ddbc2842d9c80125_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_inventory_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_inventory_a55e40c16b0a53a2fe810d3f5301d25ce}\index{Inventory@{Inventory}!items@{items}}
+\index{items@{items}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily \label{class_inventory_a55e40c16b0a53a2fe810d3f5301d25ce} 
+List$<$\doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}}$>$ Inventory.\+items = new List$<$\doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}}$>$()}
+
+
+
+背包物品列表 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Inventory/\+\doxymbox{\hyperlink{_inventory_8cs}{Inventory.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.Core.Services.ServiceLocatorProvider类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html','','class_utopia_1_1_core_1_1_services_1_1_service_locator_provider-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.Core.Services.ServiceLocatorProvider类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>挂载在场景物体上的服务提供者组件。 用于在Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Utopia.Core.Services.ServiceLocatorProvider 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider__inherit__graph.png" border="0" usemap="#a_utopia_8_core_8_services_8_service_locator_provider_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_utopia_8_core_8_services_8_service_locator_provider_inherit__map" id="a_utopia_8_core_8_services_8_service_locator_provider_inherit__map">
+<area shape="rect" title="挂载在场景物体上的服务提供者组件。 用于在Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。" alt="" coords="5,80,200,123"/>
+<area shape="rect" title=" " alt="" coords="47,5,158,32"/>
+<area shape="poly" title=" " alt="" coords="104,46,105,81,100,79,101,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Utopia.Core.Services.ServiceLocatorProvider 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider__coll__graph.png" border="0" usemap="#a_utopia_8_core_8_services_8_service_locator_provider_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_core_8_services_8_service_locator_provider_coll__map" id="a_utopia_8_core_8_services_8_service_locator_provider_coll__map">
+<area shape="rect" title="挂载在场景物体上的服务提供者组件。 用于在Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。" alt="" coords="5,235,200,277"/>
+<area shape="rect" title=" " alt="" coords="26,128,137,155"/>
+<area shape="poly" title=" " alt="" coords="88,168,101,234,96,234,84,172"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html" title="分层服务定位器，支持服务查找的层级继承机制。 允许创建父子层级的服务容器，子容器可以访问父容器的服务。 实现 IDisposable 接口以确保资源正确释放。" alt="" coords="161,120,380,163"/>
+<area shape="poly" title=" " alt="" coords="230,171,134,237,132,232,225,172"/>
+<area shape="poly" title=" " alt="" coords="396,132,407,141,399,150,381,153,380,148,397,145,402,141,395,137"/>
+<area shape="rect" title=" " alt="" coords="141,13,232,40"/>
+<area shape="poly" title=" " alt="" coords="206,50,258,119,253,120,204,55"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator.html" title="线程安全、支持懒加载工厂的非单例服务定位器。 核心服务容器，提供服务的注册、解析和管理功能。 特性：" alt="" coords="256,5,450,48"/>
+<area shape="poly" title=" " alt="" coords="331,59,287,121,284,118,327,63"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:ab24878b2060cb596624663a8f526e3ab" id="r_ab24878b2060cb596624663a8f526e3ab"><td class="memItemLeft">static <a class="el" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html">ServiceLocatorProvider</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab24878b2060cb596624663a8f526e3ab">Global</a><code> [get, private set]</code></td></tr>
+<tr class="memdesc:ab24878b2060cb596624663a8f526e3ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局唯一的服务提供者实例，用于跨场景访问核心服务。  <br /></td></tr>
+<tr class="memitem:a916fd6e3ddd7aba668b607718bd90591" id="r_a916fd6e3ddd7aba668b607718bd90591"><td class="memItemLeft"><a class="el" href="class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html">HierarchicalServiceLocator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a916fd6e3ddd7aba668b607718bd90591">Locator</a><code> [get]</code></td></tr>
+<tr class="memdesc:a916fd6e3ddd7aba668b607718bd90591"><td class="mdescLeft">&#160;</td><td class="mdescRight">公开访问的服务定位器属性。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a4fd225428a45c3cb8eaff5fff1c19924" id="r_a4fd225428a45c3cb8eaff5fff1c19924"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4fd225428a45c3cb8eaff5fff1c19924">Awake</a> ()</td></tr>
+<tr class="memdesc:a4fd225428a45c3cb8eaff5fff1c19924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。  <br /></td></tr>
+<tr class="memitem:adb27774dfa84d6f1cc284e603b0e16f0" id="r_adb27774dfa84d6f1cc284e603b0e16f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adb27774dfa84d6f1cc284e603b0e16f0">SetUpLocator</a> ()</td></tr>
+<tr class="memdesc:adb27774dfa84d6f1cc284e603b0e16f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置服务定位器，根据配置创建全局或局部定位器。  <br /></td></tr>
+<tr class="memitem:a0a7e220e1b7920ce4fbffd85698cf89a" id="r_a0a7e220e1b7920ce4fbffd85698cf89a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0a7e220e1b7920ce4fbffd85698cf89a">RegisterPredefinedComponents</a> ()</td></tr>
+<tr class="memdesc:a0a7e220e1b7920ce4fbffd85698cf89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册所有预先配置的组件到服务定位器。  <br /></td></tr>
+<tr class="memitem:ace1fd6abc0cf83293856aab27bdcc65e" id="r_ace1fd6abc0cf83293856aab27bdcc65e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ace1fd6abc0cf83293856aab27bdcc65e">RegisterComponentAndInterfaces</a> (Component component)</td></tr>
+<tr class="memdesc:ace1fd6abc0cf83293856aab27bdcc65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册组件及其实现的非系统/Unity接口到服务定位器。  <br /></td></tr>
+<tr class="memitem:a1f9aef3dcb01057a108c0b04c5eba4b4" id="r_a1f9aef3dcb01057a108c0b04c5eba4b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1f9aef3dcb01057a108c0b04c5eba4b4">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:a1f9aef3dcb01057a108c0b04c5eba4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unity生命周期方法：当对象被销毁时调用。 清理服务定位器资源，重置全局引用。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8c3b187277341232786991511730481c" id="r_a8c3b187277341232786991511730481c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8c3b187277341232786991511730481c">_isGlobal</a> = false</td></tr>
+<tr class="memitem:a30c2ec335044410a5a8cd6d8b221852b" id="r_a30c2ec335044410a5a8cd6d8b221852b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a30c2ec335044410a5a8cd6d8b221852b">_dontDestroyOnLoad</a> = false</td></tr>
+<tr class="memitem:aba59124efc49d009d4864c91ecd701b6" id="r_aba59124efc49d009d4864c91ecd701b6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aba59124efc49d009d4864c91ecd701b6">_autoInjectSelf</a> = true</td></tr>
+<tr class="memitem:a612d0690c6df29b919b50b6d22d54225" id="r_a612d0690c6df29b919b50b6d22d54225"><td class="memItemLeft">List&lt; Component &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a612d0690c6df29b919b50b6d22d54225">_autoRegisterComponents</a></td></tr>
+<tr class="memitem:af967c49e769c0a7fb3d18d7796a55903" id="r_af967c49e769c0a7fb3d18d7796a55903"><td class="memItemLeft"><a class="el" href="class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html">HierarchicalServiceLocator</a>&#160;</td><td class="memItemRight"><a class="el" href="#af967c49e769c0a7fb3d18d7796a55903">_locator</a></td></tr>
+<tr class="memdesc:af967c49e769c0a7fb3d18d7796a55903"><td class="mdescLeft">&#160;</td><td class="mdescRight">分层服务定位器实例，负责实际的依赖注入和服务解析。  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>挂载在场景物体上的服务提供者组件。 用于在Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a4fd225428a45c3cb8eaff5fff1c19924" name="a4fd225428a45c3cb8eaff5fff1c19924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd225428a45c3cb8eaff5fff1c19924">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocatorProvider.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924_cgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924_cgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924_cgraph">
+<area shape="rect" title="Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。" alt="" coords="5,51,200,93"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a0a7e220e1b7920ce4fbffd85698cf89a" title="注册所有预先配置的组件到服务定位器。" alt="" coords="248,5,475,64"/>
+<area shape="poly" title=" " alt="" coords="200,55,235,53,230,54,201,61"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#adb27774dfa84d6f1cc284e603b0e16f0" title="设置服务定位器，根据配置创建全局或局部定位器。" alt="" coords="263,88,460,131"/>
+<area shape="poly" title=" " alt="" coords="200,83,250,93,245,93,200,89"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#ace1fd6abc0cf83293856aab27bdcc65e" title="注册组件及其实现的非系统/Unity接口到服务定位器。" alt="" coords="523,5,755,64"/>
+<area shape="poly" title=" " alt="" coords="475,32,510,34,505,35,476,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1f9aef3dcb01057a108c0b04c5eba4b4" name="a1f9aef3dcb01057a108c0b04c5eba4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f9aef3dcb01057a108c0b04c5eba4b4">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocatorProvider.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unity生命周期方法：当对象被销毁时调用。 清理服务定位器资源，重置全局引用。 </p>
+
+</div>
+</div>
+<a id="ace1fd6abc0cf83293856aab27bdcc65e" name="ace1fd6abc0cf83293856aab27bdcc65e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1fd6abc0cf83293856aab27bdcc65e">&#9670;&#160;</a></span>RegisterComponentAndInterfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocatorProvider.RegisterComponentAndInterfaces </td>
+          <td>(</td>
+          <td class="paramtype">Component</td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册组件及其实现的非系统/Unity接口到服务定位器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>要注册的Unity组件</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e_icgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e_icgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e_icgraph">
+<area shape="rect" title="注册组件及其实现的非系统/Unity接口到服务定位器。" alt="" coords="523,5,755,64"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a0a7e220e1b7920ce4fbffd85698cf89a" title="注册所有预先配置的组件到服务定位器。" alt="" coords="248,5,475,64"/>
+<area shape="poly" title=" " alt="" coords="505,35,475,37,475,32,510,35"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a4fd225428a45c3cb8eaff5fff1c19924" title="Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。" alt="" coords="5,13,200,56"/>
+<area shape="poly" title=" " alt="" coords="229,35,200,37,200,32,235,34"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0a7e220e1b7920ce4fbffd85698cf89a" name="a0a7e220e1b7920ce4fbffd85698cf89a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a7e220e1b7920ce4fbffd85698cf89a">&#9670;&#160;</a></span>RegisterPredefinedComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocatorProvider.RegisterPredefinedComponents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册所有预先配置的组件到服务定位器。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_cgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_cgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_cgraph">
+<area shape="rect" title="注册所有预先配置的组件到服务定位器。" alt="" coords="5,5,233,64"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#ace1fd6abc0cf83293856aab27bdcc65e" title="注册组件及其实现的非系统/Unity接口到服务定位器。" alt="" coords="281,5,513,64"/>
+<area shape="poly" title=" " alt="" coords="233,32,268,34,263,35,233,37"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_icgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_icgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_icgraph">
+<area shape="rect" title="注册所有预先配置的组件到服务定位器。" alt="" coords="248,5,475,64"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a4fd225428a45c3cb8eaff5fff1c19924" title="Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。" alt="" coords="5,13,200,56"/>
+<area shape="poly" title=" " alt="" coords="229,35,200,37,200,32,235,34"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb27774dfa84d6f1cc284e603b0e16f0" name="adb27774dfa84d6f1cc284e603b0e16f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb27774dfa84d6f1cc284e603b0e16f0">&#9670;&#160;</a></span>SetUpLocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocatorProvider.SetUpLocator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置服务定位器，根据配置创建全局或局部定位器。 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0_icgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0_icgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0_icgraph">
+<area shape="rect" title="设置服务定位器，根据配置创建全局或局部定位器。" alt="" coords="248,5,444,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a4fd225428a45c3cb8eaff5fff1c19924" title="Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。" alt="" coords="5,5,200,48"/>
+<area shape="poly" title=" " alt="" coords="230,27,200,29,200,24,235,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aba59124efc49d009d4864c91ecd701b6" name="aba59124efc49d009d4864c91ecd701b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba59124efc49d009d4864c91ecd701b6">&#9670;&#160;</a></span>_autoInjectSelf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Core.Services.ServiceLocatorProvider._autoInjectSelf = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a612d0690c6df29b919b50b6d22d54225" name="a612d0690c6df29b919b50b6d22d54225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612d0690c6df29b919b50b6d22d54225">&#9670;&#160;</a></span>_autoRegisterComponents</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Component&gt; Utopia.Core.Services.ServiceLocatorProvider._autoRegisterComponents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30c2ec335044410a5a8cd6d8b221852b" name="a30c2ec335044410a5a8cd6d8b221852b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c2ec335044410a5a8cd6d8b221852b">&#9670;&#160;</a></span>_dontDestroyOnLoad</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Core.Services.ServiceLocatorProvider._dontDestroyOnLoad = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c3b187277341232786991511730481c" name="a8c3b187277341232786991511730481c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3b187277341232786991511730481c">&#9670;&#160;</a></span>_isGlobal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Core.Services.ServiceLocatorProvider._isGlobal = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af967c49e769c0a7fb3d18d7796a55903" name="af967c49e769c0a7fb3d18d7796a55903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af967c49e769c0a7fb3d18d7796a55903">&#9670;&#160;</a></span>_locator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html">HierarchicalServiceLocator</a> Utopia.Core.Services.ServiceLocatorProvider._locator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>分层服务定位器实例，负责实际的依赖注入和服务解析。 </p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">属性说明</h2>
+<a id="ab24878b2060cb596624663a8f526e3ab" name="ab24878b2060cb596624663a8f526e3ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24878b2060cb596624663a8f526e3ab">&#9670;&#160;</a></span>Global</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html">ServiceLocatorProvider</a> Utopia.Core.Services.ServiceLocatorProvider.Global</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel get">get</span><span class="mlabel private-set">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全局唯一的服务提供者实例，用于跨场景访问核心服务。 </p>
+
+</div>
+</div>
+<a id="a916fd6e3ddd7aba668b607718bd90591" name="a916fd6e3ddd7aba668b607718bd90591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916fd6e3ddd7aba668b607718bd90591">&#9670;&#160;</a></span>Locator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html">HierarchicalServiceLocator</a> Utopia.Core.Services.ServiceLocatorProvider.Locator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>公开访问的服务定位器属性。 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Services/<a class="el" href="_service_locator_provider_8cs.html">ServiceLocatorProvider.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_core.html">Core</a></li><li class="navelem"><a href="namespace_utopia_1_1_core_1_1_services.html">Services</a></li><li class="navelem"><a href="class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html">ServiceLocatorProvider</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

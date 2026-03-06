@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.GameLogic.NPC.INPCConfigLoader接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader.html','','interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.GameLogic.NPC.INPCConfigLoader接口 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>NPC配置加载器接口 定义用于加载NPC配置的标准契约  
+ <a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4154ec4b3b1d24c9a3c56c5f58afdd89" id="r_a4154ec4b3b1d24c9a3c56c5f58afdd89"><td class="memItemLeft">NPCData[]&#160;</td><td class="memItemRight"><a class="el" href="#a4154ec4b3b1d24c9a3c56c5f58afdd89">LoadAllConfigs</a> ()</td></tr>
+<tr class="memdesc:a4154ec4b3b1d24c9a3c56c5f58afdd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载所有NPC配置 从数据源获取所有可用的NPC配置数据  <br /></td></tr>
+<tr class="memitem:a08ddceca6dd514cdf61b09573e6bd89b" id="r_a08ddceca6dd514cdf61b09573e6bd89b"><td class="memItemLeft">NPCData&#160;</td><td class="memItemRight"><a class="el" href="#a08ddceca6dd514cdf61b09573e6bd89b">LoadConfig</a> (string id)</td></tr>
+<tr class="memdesc:a08ddceca6dd514cdf61b09573e6bd89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据ID加载指定的NPC配置 用于按需加载特定NPC的配置数据  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>NPC配置加载器接口 定义用于加载NPC配置的标准契约 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a4154ec4b3b1d24c9a3c56c5f58afdd89" name="a4154ec4b3b1d24c9a3c56c5f58afdd89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4154ec4b3b1d24c9a3c56c5f58afdd89">&#9670;&#160;</a></span>LoadAllConfigs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NPCData[] Utopia.GameLogic.NPC.INPCConfigLoader.LoadAllConfigs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>加载所有NPC配置 从数据源获取所有可用的NPC配置数据 </p>
+<dl class="section return"><dt>返回</dt><dd>NPCData数组，包含所有NPC的配置信息</dd></dl>
+
+</div>
+</div>
+<a id="a08ddceca6dd514cdf61b09573e6bd89b" name="a08ddceca6dd514cdf61b09573e6bd89b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ddceca6dd514cdf61b09573e6bd89b">&#9670;&#160;</a></span>LoadConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NPCData Utopia.GameLogic.NPC.INPCConfigLoader.LoadConfig </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据ID加载指定的NPC配置 用于按需加载特定NPC的配置数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>NPC的唯一标识符</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对应ID的NPCData对象，如果未找到则返回null</dd></dl>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>Assets/Script/Npc/Manage/<a class="el" href="_resources_n_p_c_config_loader_8cs.html">ResourcesNPCConfigLoader.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_game_logic.html">GameLogic</a></li><li class="navelem"><a href="namespace_utopia_1_1_game_logic_1_1_n_p_c.html">NPC</a></li><li class="navelem"><a href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader.html">INPCConfigLoader</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

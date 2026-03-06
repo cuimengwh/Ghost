@@ -1,0 +1,5 @@
+<map id="ItemDrag.HandleMoveToEmptySlot" name="ItemDrag.HandleMoveToEmptySlot">
+<area shape="rect" id="Node000001" title="处理移动到空槽位" alt="" coords="201,5,428,32"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#aa966ed36f05faca17b4ec738fd636bfd" title="结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性" alt="" coords="5,5,153,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,19,153,21,153,16,187,19"/>
+</map>

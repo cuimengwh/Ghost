@@ -1,0 +1,9 @@
+<map id="Utopia.TimeSystem.TimeManager.AdvanceDay" name="Utopia.TimeSystem.TimeManager.AdvanceDay">
+<area shape="rect" id="Node000001" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="5,39,230,81"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a37aec0df9dd39c07adffc3f21ef74441" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="278,39,502,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,57,265,60,259,60,230,63"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_manager.html#adf292d62d1f2e3893212d5ab2bb2cb63" title="推进到新的一年，触发年份变更事件。" alt="" coords="550,5,774,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="502,44,537,42,532,43,503,49"/>
+<area shape="rect" id="Node000004" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="550,72,774,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="502,71,537,78,532,78,502,76"/>
+</map>

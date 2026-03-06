@@ -1,0 +1,7 @@
+<map id="Utopia.TimeSystem.TimeManager.AdvanceMonth" name="Utopia.TimeSystem.TimeManager.AdvanceMonth">
+<area shape="rect" id="Node000001" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="550,5,774,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a83bc0288b5c2c5156c8d90113ef8a031" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="278,5,502,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="532,27,503,29,503,24,537,27"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>

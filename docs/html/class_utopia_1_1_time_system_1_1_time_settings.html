@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.TimeSystem.TimeSettings类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_time_system_1_1_time_settings.html','','class_utopia_1_1_time_system_1_1_time_settings-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.TimeSystem.TimeSettings类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Utopia.TimeSystem.TimeSettings 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_settings__inherit__graph.png" border="0" usemap="#a_utopia_8_time_system_8_time_settings_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_utopia_8_time_system_8_time_settings_inherit__map" id="a_utopia_8_time_system_8_time_settings_inherit__map">
+<area shape="rect" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统" alt="" coords="5,80,224,107"/>
+<area shape="rect" title=" " alt="" coords="56,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="116,46,117,81,112,78,113,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Utopia.TimeSystem.TimeSettings 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_settings__coll__graph.png" border="0" usemap="#a_utopia_8_time_system_8_time_settings_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_time_system_8_time_settings_coll__map" id="a_utopia_8_time_system_8_time_settings_coll__map">
+<area shape="rect" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统" alt="" coords="10,196,228,223"/>
+<area shape="rect" title=" " alt="" coords="5,89,123,116"/>
+<area shape="poly" title=" " alt="" coords="79,127,115,195,110,196,76,131"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="146,81,334,124"/>
+<area shape="poly" title=" " alt="" coords="208,134,135,198,132,193,202,134"/>
+<area shape="rect" title=" " alt="" coords="9,5,231,32"/>
+<area shape="poly" title=" " alt="" coords="151,38,212,80,207,82,150,43"/>
+<area shape="rect" title=" " alt="" coords="255,5,465,32"/>
+<area shape="poly" title=" " alt="" coords="332,39,272,83,269,79,327,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0fdc65020c4a10302456adfc30a44ba2" id="r_a0fdc65020c4a10302456adfc30a44ba2"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0fdc65020c4a10302456adfc30a44ba2">GetSeason</a> (int month)</td></tr>
+<tr class="memdesc:a0fdc65020c4a10302456adfc30a44ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据月份获取对应的季节  <br /></td></tr>
+<tr class="memitem:aefc19a0ff504d46ead07f0678c818dcf" id="r_aefc19a0ff504d46ead07f0678c818dcf"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a>&#160;</td><td class="memItemRight"><a class="el" href="#aefc19a0ff504d46ead07f0678c818dcf">GetSunState</a> (float time01)</td></tr>
+<tr class="memdesc:aefc19a0ff504d46ead07f0678c818dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当天的时间进度（0-1）获取时段状态  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a8f02d3edf766988af81df17388ce0d24" id="r_a8f02d3edf766988af81df17388ce0d24"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8f02d3edf766988af81df17388ce0d24">timeMultiplier</a> = 60f</td></tr>
+<tr class="memitem:a1cdb5bb399f1a0540a01cf65aa16a04b" id="r_a1cdb5bb399f1a0540a01cf65aa16a04b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1cdb5bb399f1a0540a01cf65aa16a04b">secondsPerFullDay</a> = 86400f</td></tr>
+<tr class="memitem:ac5313fc5af720f8cbe9a99bc40b840c8" id="r_ac5313fc5af720f8cbe9a99bc40b840c8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac5313fc5af720f8cbe9a99bc40b840c8">daysPerMonth</a> = 28</td></tr>
+<tr class="memitem:a96ae87278ab0ed97d33dc4750b72f1e4" id="r_a96ae87278ab0ed97d33dc4750b72f1e4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a96ae87278ab0ed97d33dc4750b72f1e4">monthsPerYear</a> = 4</td></tr>
+<tr class="memitem:a362b2907c05b487b5232e73ee8fd9362" id="r_a362b2907c05b487b5232e73ee8fd9362"><td class="memItemLeft"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>&#160;</td><td class="memItemRight"><a class="el" href="#a362b2907c05b487b5232e73ee8fd9362">startDateTime</a> = new <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>(1, 1, 1, 0.25f)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a4d795d5a30a88041feb0126217d0edd7" id="r_a4d795d5a30a88041feb0126217d0edd7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4d795d5a30a88041feb0126217d0edd7">daysPerYear</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4d795d5a30a88041feb0126217d0edd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">每年包含的总天数（只读） 计算公式：monthsPerYear × daysPerMonth 默认值：4 × 28 = 112 天/年  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a2ef4b72374058a7f4360fe65e62df6cd" id="r_a2ef4b72374058a7f4360fe65e62df6cd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ef4b72374058a7f4360fe65e62df6cd">OnValidate</a> ()</td></tr>
+<tr class="memdesc:a2ef4b72374058a7f4360fe65e62df6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">当在Inspector中修改数值时自动调用，用于修正非法数值  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a0fdc65020c4a10302456adfc30a44ba2" name="a0fdc65020c4a10302456adfc30a44ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fdc65020c4a10302456adfc30a44ba2">&#9670;&#160;</a></span>GetSeason()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a> Utopia.TimeSystem.TimeSettings.GetSeason </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>month</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据月份获取对应的季节 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">month</td><td>月份（1~monthsPerYear）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>季节枚举</dd></dl>
+<p>注意：原代码错误地将 month 限制在 [1, daysPerMonth] 范围内，已修正为 [1, monthsPerYear]。 季节与月份的对应关系为：1月→春，2月→夏，3月→秋，4月→冬。 </p>
+
+</div>
+</div>
+<a id="aefc19a0ff504d46ead07f0678c818dcf" name="aefc19a0ff504d46ead07f0678c818dcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc19a0ff504d46ead07f0678c818dcf">&#9670;&#160;</a></span>GetSunState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a> Utopia.TimeSystem.TimeSettings.GetSunState </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time01</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据当天的时间进度（0-1）获取时段状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time01</td><td>0~1的小数，0=0:00，1=次日0:00</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>太阳状态（早晨/中午/黄昏/午夜）</dd></dl>
+<p>时段划分规则（与SunState枚举的Tooltip保持一致）：</p><ul>
+<li>6:00 ~ 10:00 → Morn</li>
+<li>10:00 ~ 16:00 → Noon</li>
+<li>16:00 ~ 20:00 → Dusk</li>
+<li>20:00 ~ 次日6:00 → Midnight </li>
+</ul>
+
+</div>
+</div>
+<a id="a2ef4b72374058a7f4360fe65e62df6cd" name="a2ef4b72374058a7f4360fe65e62df6cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef4b72374058a7f4360fe65e62df6cd">&#9670;&#160;</a></span>OnValidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeSettings.OnValidate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当在Inspector中修改数值时自动调用，用于修正非法数值 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ac5313fc5af720f8cbe9a99bc40b840c8" name="ac5313fc5af720f8cbe9a99bc40b840c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5313fc5af720f8cbe9a99bc40b840c8">&#9670;&#160;</a></span>daysPerMonth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeSettings.daysPerMonth = 28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96ae87278ab0ed97d33dc4750b72f1e4" name="a96ae87278ab0ed97d33dc4750b72f1e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ae87278ab0ed97d33dc4750b72f1e4">&#9670;&#160;</a></span>monthsPerYear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeSettings.monthsPerYear = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cdb5bb399f1a0540a01cf65aa16a04b" name="a1cdb5bb399f1a0540a01cf65aa16a04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cdb5bb399f1a0540a01cf65aa16a04b">&#9670;&#160;</a></span>secondsPerFullDay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeSettings.secondsPerFullDay = 86400f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a362b2907c05b487b5232e73ee8fd9362" name="a362b2907c05b487b5232e73ee8fd9362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362b2907c05b487b5232e73ee8fd9362">&#9670;&#160;</a></span>startDateTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> Utopia.TimeSystem.TimeSettings.startDateTime = new <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>(1, 1, 1, 0.25f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f02d3edf766988af81df17388ce0d24" name="a8f02d3edf766988af81df17388ce0d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f02d3edf766988af81df17388ce0d24">&#9670;&#160;</a></span>timeMultiplier</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeSettings.timeMultiplier = 60f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">属性说明</h2>
+<a id="a4d795d5a30a88041feb0126217d0edd7" name="a4d795d5a30a88041feb0126217d0edd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d795d5a30a88041feb0126217d0edd7">&#9670;&#160;</a></span>daysPerYear</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeSettings.daysPerYear</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每年包含的总天数（只读） 计算公式：monthsPerYear × daysPerMonth 默认值：4 × 28 = 112 天/年 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/TimeTool/<a class="el" href="_time_setting_8cs.html">TimeSetting.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_time_system.html">TimeSystem</a></li><li class="navelem"><a href="class_utopia_1_1_time_system_1_1_time_settings.html">TimeSettings</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+\doxysection{Utopia.\+Game\+Logic.\+NPC.\+INPCConfig\+Loader接口 参考}
+\hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader}{}\label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader}\index{Utopia.GameLogic.NPC.INPCConfigLoader@{Utopia.GameLogic.NPC.INPCConfigLoader}}
+
+
+NPC配置加载器接口 定义用于加载\+NPC配置的标准契约  
+
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+NPCData\+[$\,$]\+ \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader_a4154ec4b3b1d24c9a3c56c5f58afdd89}{Load\+All\+Configs}} ()
+\begin{DoxyCompactList}\small\item\em 加载所有\+NPC配置 从数据源获取所有可用的\+NPC配置数据 \end{DoxyCompactList}\item 
+NPCData \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader_a08ddceca6dd514cdf61b09573e6bd89b}{Load\+Config}} (string id)
+\begin{DoxyCompactList}\small\item\em 根据\+ID加载指定的\+NPC配置 用于按需加载特定\+NPC的配置数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+NPC配置加载器接口 定义用于加载\+NPC配置的标准契约 
+
+\label{doc-func-members}
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader_a4154ec4b3b1d24c9a3c56c5f58afdd89}\index{Utopia.GameLogic.NPC.INPCConfigLoader@{Utopia.GameLogic.NPC.INPCConfigLoader}!LoadAllConfigs@{LoadAllConfigs}}
+\index{LoadAllConfigs@{LoadAllConfigs}!Utopia.GameLogic.NPC.INPCConfigLoader@{Utopia.GameLogic.NPC.INPCConfigLoader}}
+\doxysubsubsection{\texorpdfstring{LoadAllConfigs()}{LoadAllConfigs()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader_a4154ec4b3b1d24c9a3c56c5f58afdd89} 
+NPCData\+[$\,$]\+ Utopia.\+Game\+Logic.\+NPC.\+INPCConfig\+Loader.\+Load\+All\+Configs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+加载所有\+NPC配置 从数据源获取所有可用的\+NPC配置数据 
+
+\begin{DoxyReturn}{返回}
+NPCData数组，包含所有\+NPC的配置信息
+\end{DoxyReturn}
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader_a08ddceca6dd514cdf61b09573e6bd89b}\index{Utopia.GameLogic.NPC.INPCConfigLoader@{Utopia.GameLogic.NPC.INPCConfigLoader}!LoadConfig@{LoadConfig}}
+\index{LoadConfig@{LoadConfig}!Utopia.GameLogic.NPC.INPCConfigLoader@{Utopia.GameLogic.NPC.INPCConfigLoader}}
+\doxysubsubsection{\texorpdfstring{LoadConfig()}{LoadConfig()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader_a08ddceca6dd514cdf61b09573e6bd89b} 
+NPCData Utopia.\+Game\+Logic.\+NPC.\+INPCConfig\+Loader.\+Load\+Config (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})}
+
+
+
+根据\+ID加载指定的\+NPC配置 用于按需加载特定\+NPC的配置数据 
+
+
+\begin{DoxyParams}{参数}
+{\em id} & NPC的唯一标识符\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+对应\+ID的\+NPCData对象，如果未找到则返回null
+\end{DoxyReturn}
+
+
+该接口的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Npc/\+\+Manage/\+\doxymbox{\hyperlink{_resources_n_p_c_config_loader_8cs}{Resources\+NPCConfig\+Loader.\+cs}}\end{DoxyCompactItemize}

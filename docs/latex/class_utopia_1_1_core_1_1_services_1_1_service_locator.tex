@@ -1,0 +1,399 @@
+\doxysection{Utopia.\+Core.\+Services.\+Service\+Locator类 参考}
+\hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator}{}\label{class_utopia_1_1_core_1_1_services_1_1_service_locator}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+
+
+线程安全、支持懒加载工厂的非单例服务定位器。 核心服务容器，提供服务的注册、解析和管理功能。 特性：  
+
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3}{Register$<$ T $>$}} (T service)
+\begin{DoxyCompactList}\small\item\em 泛型注册方法：注册具体服务实例 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba}{Register}} (Type type, object service)
+\begin{DoxyCompactList}\small\item\em 非泛型注册方法：使用\+Type对象注册服务 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_afc6b6687bd967ada5d8690ddc174722a}{Register\+Factory$<$ T $>$}} (Func$<$ T $>$ factory)
+\begin{DoxyCompactList}\small\item\em 注册服务工厂方法，支持懒加载 \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a2e377d2539e39a3d2511069a16e6a524}{Get$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em 获取服务实例，如果未创建则调用工厂方法创建 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf}{Try\+Get$<$ T $>$}} (out T service)
+\begin{DoxyCompactList}\small\item\em 尝试获取服务（安全版本，不抛出异常） \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51}{Try\+Get}} (Type type, out object service)
+\begin{DoxyCompactList}\small\item\em 核心尝试获取方法（非泛型版本） \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a7fbf6dc5acfb718ba3c715ff2d5f0595}{Is\+Registered$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em 检查指定类型的服务是否已注册（包括工厂注册） \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_af1c2c8416f4a3ae3f095c1836d5a5214}{Unregister$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em 泛型注销方法：移除指定类型的服务和工厂 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5d3686985cb8d3add4b942b49eaea5a2}{Unregister}} (Type type)
+\begin{DoxyCompactList}\small\item\em 非泛型注销方法：移除指定类型的服务和工厂 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_acdfab0fca292a03e5fbf755cffd611d8}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em 释放容器资源 \end{DoxyCompactList}\item 
+Dictionary$<$ Type, string $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_ade048c146cc944031f643962428287d3}{Get\+Debug\+Snapshot}} ()
+\begin{DoxyCompactList}\small\item\em 调试用：获取内部服务列表的快照 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+readonly Dictionary$<$ Type, object $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_ae2773e788ef6ee0ec3f264f6da965cd5}{\+\_\+services}} = new Dictionary$<$Type, object$>$()
+\begin{DoxyCompactList}\small\item\em 已实例化的服务存储字典 Key:\+ 服务类型（通常为接口或抽象类） Value:\+ 已创建的服务实例 \end{DoxyCompactList}\item 
+readonly Dictionary$<$ Type, Func$<$ object $>$ $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a97b89f097d28dbda9a0cc3eb26363370}{\+\_\+factories}} = new Dictionary$<$Type, Func$<$object$>$$>$()
+\begin{DoxyCompactList}\small\item\em 服务工厂字典，用于延迟创建服务实例 Key:\+ 服务类型 Value:\+ 创建该类型实例的工厂方法 当首次请求服务时调用工厂方法，创建后移至\+\_\+services字典 \end{DoxyCompactList}\item 
+readonly Reader\+Writer\+Lock\+Slim \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_aaa28d78c8663b333cb6dae4e9beba3b5}{\+\_\+lock}} = new Reader\+Writer\+Lock\+Slim(Lock\+Recursion\+Policy.\+No\+Recursion)
+\begin{DoxyCompactList}\small\item\em 读写锁，提供线程安全访问 使用\+Reader\+Writer\+Lock\+Slim替代lock关键字，优化读多写少的场景 Lock\+Recursion\+Policy.\+No\+Recursion:\+ 禁止递归锁，避免死锁风险 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a949412b9fd9862da0a4cee1e5694ea0a}{\+\_\+is\+Disposed}} = false
+\begin{DoxyCompactList}\small\item\em 标记容器是否已释放，防止释放后继续使用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+线程安全、支持懒加载工厂的非单例服务定位器。 核心服务容器，提供服务的注册、解析和管理功能。 特性： 
+
+
+\begin{DoxyEnumerate}
+\item 线程安全：使用读写锁(\+Reader\+Writer\+Lock\+Slim)优化并发性能
+\item 懒加载：支持通过工厂方法延迟创建服务实例
+\item 非单例：可创建多个独立实例，适用于不同作用域
+\item 生命周期管理：支持\+IDisposable服务的自动释放 
+\end{DoxyEnumerate}
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_acdfab0fca292a03e5fbf755cffd611d8}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_acdfab0fca292a03e5fbf755cffd611d8} 
+void Utopia.\+Core.\+Services.\+Service\+Locator.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+释放容器资源 
+
+执行以下操作：
+\begin{DoxyEnumerate}
+\item 释放所有实现\+IDisposable的服务
+\item 清空服务和工厂字典
+\item 释放读写锁
+\item 标记容器为已释放状态
+\end{DoxyEnumerate}
+
+注意：释放后容器不可再用。 \Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a2e377d2539e39a3d2511069a16e6a524}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a2e377d2539e39a3d2511069a16e6a524} 
+T Utopia.\+Core.\+Services.\+Service\+Locator.\+Get$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取服务实例，如果未创建则调用工厂方法创建 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 请求的服务类型\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+服务实例
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{异常}
+{\em Invalid\+Operation\+Exception} & 当服务未注册时抛出\\
+\hline
+\end{DoxyExceptions}
+
+
+执行流程：
+\begin{DoxyEnumerate}
+\item 尝试从已实例化字典中获取（读锁）
+\item 如果未找到，尝试获取工厂方法
+\item 在无锁状态下执行工厂方法（避免死锁）
+\item 使用双重检查锁定模式将新实例存入字典（写锁） 
+\end{DoxyEnumerate}\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_ade048c146cc944031f643962428287d3}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!GetDebugSnapshot@{GetDebugSnapshot}}
+\index{GetDebugSnapshot@{GetDebugSnapshot}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{GetDebugSnapshot()}{GetDebugSnapshot()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_ade048c146cc944031f643962428287d3} 
+Dictionary$<$ Type, string $>$ Utopia.\+Core.\+Services.\+Service\+Locator.\+Get\+Debug\+Snapshot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+调试用：获取内部服务列表的快照 
+
+\begin{DoxyReturn}{返回}
+包含服务类型和描述信息的字典
+\end{DoxyReturn}
+
+
+仅供调试使用，生产环境中可能不需要。 返回的字典是副本，不会影响原始数据。 \Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a7fbf6dc5acfb718ba3c715ff2d5f0595}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!IsRegistered$<$ T $>$@{IsRegistered$<$ T $>$}}
+\index{IsRegistered$<$ T $>$@{IsRegistered$<$ T $>$}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{IsRegistered$<$ T $>$()}{IsRegistered< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a7fbf6dc5acfb718ba3c715ff2d5f0595} 
+bool Utopia.\+Core.\+Services.\+Service\+Locator.\+Is\+Registered$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查指定类型的服务是否已注册（包括工厂注册） 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 要检查的服务类型\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+服务是否已注册
+\end{DoxyReturn}
+
+
+注意：此方法仅检查注册状态，不创建服务实例。 即使只有工厂注册而没有实际实例，也返回true。 \Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!Register@{Register}}
+\index{Register@{Register}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba} 
+void Utopia.\+Core.\+Services.\+Service\+Locator.\+Register (\begin{DoxyParamCaption}\item[{Type}]{type}{, }\item[{object}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+非泛型注册方法：使用\+Type对象注册服务 
+
+
+\begin{DoxyParams}{参数}
+{\em type} & 服务类型（\+Type对象）\\
+\hline
+{\em service} & 服务实例\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{异常}
+{\em Argument\+Null\+Exception} & 当service为null时抛出\\
+\hline
+\end{DoxyExceptions}
+
+
+提供运行时类型注册能力，比泛型版本更灵活但类型安全性稍差。 主要用于反射场景或动态类型注册。 这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!Register$<$ T $>$@{Register$<$ T $>$}}
+\index{Register$<$ T $>$@{Register$<$ T $>$}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Register$<$ T $>$()}{Register< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3} 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba}{Utopia.\+Core.\+Services.\+Service\+Locator.\+Register}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+泛型注册方法：注册具体服务实例 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 服务类型（通常为接口）\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em service} & 服务实例\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{异常}
+{\em Argument\+Null\+Exception} & 当service为null时抛出\\
+\hline
+\end{DoxyExceptions}
+
+
+此方法将服务实例直接存储在容器中，立即可用。 如果同一类型已注册，会覆盖原有实例并输出警告。 \begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_afc6b6687bd967ada5d8690ddc174722a}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!RegisterFactory$<$ T $>$@{RegisterFactory$<$ T $>$}}
+\index{RegisterFactory$<$ T $>$@{RegisterFactory$<$ T $>$}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{RegisterFactory$<$ T $>$()}{RegisterFactory< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_afc6b6687bd967ada5d8690ddc174722a} 
+void Utopia.\+Core.\+Services.\+Service\+Locator.\+Register\+Factory$<$ T $>$ (\begin{DoxyParamCaption}\item[{Func$<$ T $>$}]{factory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+注册服务工厂方法，支持懒加载 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 服务类型\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em factory} & 创建服务实例的工厂方法\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{异常}
+{\em Argument\+Null\+Exception} & 当factory为null时抛出\\
+\hline
+\end{DoxyExceptions}
+
+
+工厂方法会在首次请求服务时被调用，实现延迟初始化。 适用场景：
+\begin{DoxyEnumerate}
+\item 服务创建成本高，需要按需创建
+\item 服务依赖其他可能尚未注册的服务
+\item 需要控制服务创建时机 
+\end{DoxyEnumerate}\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!TryGet@{TryGet}}
+\index{TryGet@{TryGet}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{TryGet()}{TryGet()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51} 
+bool Utopia.\+Core.\+Services.\+Service\+Locator.\+Try\+Get (\begin{DoxyParamCaption}\item[{Type}]{type}{, }\item[{out object}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+核心尝试获取方法（非泛型版本） 
+
+
+\begin{DoxyParams}{参数}
+{\em type} & 请求的服务类型\\
+\hline
+{\em service} & 输出参数，找到的服务实例\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否成功获取服务
+\end{DoxyReturn}
+
+
+这是所有获取操作的核心实现，处理懒加载和线程安全。 这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!TryGet$<$ T $>$@{TryGet$<$ T $>$}}
+\index{TryGet$<$ T $>$@{TryGet$<$ T $>$}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{TryGet$<$ T $>$()}{TryGet< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf} 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51}{Utopia.\+Core.\+Services.\+Service\+Locator.\+Try\+Get}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{out T}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+尝试获取服务（安全版本，不抛出异常） 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 请求的服务类型\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em service} & 输出参数，找到的服务实例\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否成功获取服务
+\end{DoxyReturn}
+
+
+此方法不会抛出异常，适合在不确定服务是否注册时使用。 如果服务未注册，返回false且service为null。 \begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5d3686985cb8d3add4b942b49eaea5a2}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!Unregister@{Unregister}}
+\index{Unregister@{Unregister}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Unregister()}{Unregister()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5d3686985cb8d3add4b942b49eaea5a2} 
+void Utopia.\+Core.\+Services.\+Service\+Locator.\+Unregister (\begin{DoxyParamCaption}\item[{Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+非泛型注销方法：移除指定类型的服务和工厂 
+
+
+\begin{DoxyParams}{参数}
+{\em type} & 要注销的服务类型\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_af1c2c8416f4a3ae3f095c1836d5a5214}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!Unregister$<$ T $>$@{Unregister$<$ T $>$}}
+\index{Unregister$<$ T $>$@{Unregister$<$ T $>$}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Unregister$<$ T $>$()}{Unregister< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_af1c2c8416f4a3ae3f095c1836d5a5214} 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_a5d3686985cb8d3add4b942b49eaea5a2}{Utopia.\+Core.\+Services.\+Service\+Locator.\+Unregister}}$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+泛型注销方法：移除指定类型的服务和工厂 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 要注销的服务类型\\
+\hline
+\end{DoxyTemplParams}
+
+
+只移除容器中的注册，不会调用服务的\+Dispose方法。 如果需要释放资源，请先手动调用服务的\+Dispose。 
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a97b89f097d28dbda9a0cc3eb26363370}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!\_factories@{\_factories}}
+\index{\_factories@{\_factories}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{\_factories}{\_factories}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a97b89f097d28dbda9a0cc3eb26363370} 
+readonly Dictionary$<$Type, Func$<$object$>$ $>$ Utopia.\+Core.\+Services.\+Service\+Locator.\+\_\+factories = new Dictionary$<$Type, Func$<$object$>$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+服务工厂字典，用于延迟创建服务实例 Key:\+ 服务类型 Value:\+ 创建该类型实例的工厂方法 当首次请求服务时调用工厂方法，创建后移至\+\_\+services字典 
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_a949412b9fd9862da0a4cee1e5694ea0a}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!\_isDisposed@{\_isDisposed}}
+\index{\_isDisposed@{\_isDisposed}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{\_isDisposed}{\_isDisposed}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_a949412b9fd9862da0a4cee1e5694ea0a} 
+bool Utopia.\+Core.\+Services.\+Service\+Locator.\+\_\+is\+Disposed = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+标记容器是否已释放，防止释放后继续使用 
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_aaa28d78c8663b333cb6dae4e9beba3b5}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!\_lock@{\_lock}}
+\index{\_lock@{\_lock}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{\_lock}{\_lock}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_aaa28d78c8663b333cb6dae4e9beba3b5} 
+readonly Reader\+Writer\+Lock\+Slim Utopia.\+Core.\+Services.\+Service\+Locator.\+\_\+lock = new Reader\+Writer\+Lock\+Slim(Lock\+Recursion\+Policy.\+No\+Recursion)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+读写锁，提供线程安全访问 使用\+Reader\+Writer\+Lock\+Slim替代lock关键字，优化读多写少的场景 Lock\+Recursion\+Policy.\+No\+Recursion:\+ 禁止递归锁，避免死锁风险 
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_ae2773e788ef6ee0ec3f264f6da965cd5}\index{Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}!\_services@{\_services}}
+\index{\_services@{\_services}!Utopia.Core.Services.ServiceLocator@{Utopia.Core.Services.ServiceLocator}}
+\doxysubsubsection{\texorpdfstring{\_services}{\_services}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_ae2773e788ef6ee0ec3f264f6da965cd5} 
+readonly Dictionary$<$Type, object$>$ Utopia.\+Core.\+Services.\+Service\+Locator.\+\_\+services = new Dictionary$<$Type, object$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+已实例化的服务存储字典 Key:\+ 服务类型（通常为接口或抽象类） Value:\+ 已创建的服务实例 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Services/\+\doxymbox{\hyperlink{_service_locator_8cs}{Service\+Locator.\+cs}}\end{DoxyCompactItemize}

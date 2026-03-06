@@ -1,0 +1,9 @@
+<map id="Utopia.TimeSystem.TimeEventTrigger" name="Utopia.TimeSystem.TimeEventTrigger">
+<area shape="rect" id="Node000001" title="时间事件触发器 &#45; 定义事件触发的条件和规则" alt="" coords="134,196,339,239"/>
+<area shape="rect" id="Node000002" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="143,81,330,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,138,239,197,234,194,235,141"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,228,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,38,209,80,204,82,147,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="251,5,462,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="328,39,268,83,265,79,324,42"/>
+</map>

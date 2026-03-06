@@ -1,0 +1,108 @@
+\doxysection{Item\+Pick类 参考}
+\hypertarget{class_item_pick}{}\label{class_item_pick}\index{ItemPick@{ItemPick}}
+
+
+挂在可捡起的物品上，负责与玩家碰撞检测， 并将物品添加到指定的 \doxylink{class_inventory}{Inventory} 中。  
+
+
+
+
+类 Item\+Pick 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_item_pick__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Item\+Pick 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_item_pick__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_item_data}{Item\+Data}} \doxymbox{\hyperlink{class_item_pick_a7042635492174c5f824536170e211f31}{this\+Item}}
+\item 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} \doxymbox{\hyperlink{class_item_pick_af85f93ff1bff1c6dcd6d7187e52b0b0a}{inventory}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_item_pick_a8a440171ea9b87e61fa9c169b3e44ec5}{On\+Trigger\+Enter}} (Collider other)
+\begin{DoxyCompactList}\small\item\em 当其他碰撞体进入触发器时调用 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_pick_abbef768a2833f0e713d9f629501b5f9a}{Pick\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 拾取物品的主要逻辑 将物品添加到背包，如果添加成功则销毁场景中的物品对象 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+挂在可捡起的物品上，负责与玩家碰撞检测， 并将物品添加到指定的 \doxylink{class_inventory}{Inventory} 中。 
+
+\label{doc-func-members}
+\Hypertarget{class_item_pick_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_item_pick_a8a440171ea9b87e61fa9c169b3e44ec5}\index{ItemPick@{ItemPick}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!ItemPick@{ItemPick}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_item_pick_a8a440171ea9b87e61fa9c169b3e44ec5} 
+void Item\+Pick.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+当其他碰撞体进入触发器时调用 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & 进入触发器的碰撞体\\
+\hline
+\end{DoxyParams}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_item_pick_a8a440171ea9b87e61fa9c169b3e44ec5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_pick_abbef768a2833f0e713d9f629501b5f9a}\index{ItemPick@{ItemPick}!PickUp@{PickUp}}
+\index{PickUp@{PickUp}!ItemPick@{ItemPick}}
+\doxysubsubsection{\texorpdfstring{PickUp()}{PickUp()}}
+{\footnotesize\ttfamily \label{class_item_pick_abbef768a2833f0e713d9f629501b5f9a} 
+void Item\+Pick.\+Pick\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+拾取物品的主要逻辑 将物品添加到背包，如果添加成功则销毁场景中的物品对象 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_item_pick_abbef768a2833f0e713d9f629501b5f9a_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_item_pick_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_item_pick_af85f93ff1bff1c6dcd6d7187e52b0b0a}\index{ItemPick@{ItemPick}!inventory@{inventory}}
+\index{inventory@{inventory}!ItemPick@{ItemPick}}
+\doxysubsubsection{\texorpdfstring{inventory}{inventory}}
+{\footnotesize\ttfamily \label{class_item_pick_af85f93ff1bff1c6dcd6d7187e52b0b0a} 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} Item\+Pick.\+inventory}
+
+\Hypertarget{class_item_pick_a7042635492174c5f824536170e211f31}\index{ItemPick@{ItemPick}!thisItem@{thisItem}}
+\index{thisItem@{thisItem}!ItemPick@{ItemPick}}
+\doxysubsubsection{\texorpdfstring{thisItem}{thisItem}}
+{\footnotesize\ttfamily \label{class_item_pick_a7042635492174c5f824536170e211f31} 
+\doxymbox{\hyperlink{class_item_data}{Item\+Data}} Item\+Pick.\+this\+Item}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Inventory\+Script/\+\doxymbox{\hyperlink{_item_pick_8cs}{Item\+Pick.\+cs}}\end{DoxyCompactItemize}

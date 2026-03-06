@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeEvent.Reset" name="Utopia.TimeSystem.TimeEvent.Reset">
+<area shape="rect" id="Node000001" title="重置事件状态（对于非重复事件，可以重新激活）" alt="" coords="278,5,486,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a473a06b00d6f1bfeaf8dfef1f28a66b3" title="注册一个定时事件，事件到达触发时间时将执行回调。" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,27,230,29,230,24,264,27"/>
+</map>

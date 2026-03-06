@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: PlayerController类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_player_controller.html','','class_player_controller-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PlayerController类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 PlayerController 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller__inherit__graph.png" border="0" usemap="#a_player_controller_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_player_controller_inherit__map" id="a_player_controller_inherit__map">
+<area shape="rect" title="玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为" alt="" coords="84,155,198,181"/>
+<area shape="rect" href="class_player_base.html" title=" " alt="" coords="97,80,185,107"/>
+<area shape="poly" title=" " alt="" coords="143,121,143,156,139,153,139,124"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="86,40,130,79,125,80,86,45"/>
+<area shape="rect" href="interface_player_base_1_1_i_interactable.html" title="可交互接口定义" alt="" coords="140,5,304,32"/>
+<area shape="poly" title=" " alt="" coords="199,41,157,82,153,78,195,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+PlayerController 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller__coll__graph.png" border="0" usemap="#a_player_controller_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_player_controller_coll__map" id="a_player_controller_coll__map">
+<area shape="rect" title="玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为" alt="" coords="84,155,198,181"/>
+<area shape="rect" href="class_player_base.html" title=" " alt="" coords="97,80,185,107"/>
+<area shape="poly" title=" " alt="" coords="143,121,143,156,139,153,139,124"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="86,40,130,79,125,80,86,45"/>
+<area shape="rect" href="interface_player_base_1_1_i_interactable.html" title="可交互接口定义" alt="" coords="140,5,304,32"/>
+<area shape="poly" title=" " alt="" coords="199,41,157,82,153,78,195,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7393ba7246897b4f96a0c57ae2cf2850" id="r_a7393ba7246897b4f96a0c57ae2cf2850"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7393ba7246897b4f96a0c57ae2cf2850">HandleAnimation</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a0e31d8c625f96e9190931e33b5e08ddf" id="r_a0e31d8c625f96e9190931e33b5e08ddf"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a0e31d8c625f96e9190931e33b5e08ddf">myBag</a></td></tr>
+<tr class="memitem:a00896f22917508c98eb22357b9bb6fc8" id="r_a00896f22917508c98eb22357b9bb6fc8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a00896f22917508c98eb22357b9bb6fc8">bagOpen</a> = false</td></tr>
+<tr class="inherit_header pub_attribs_class_player_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_player_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 属性 继承自 <a class="el" href="class_player_base.html">PlayerBase</a></td></tr>
+<tr class="memitem:ab069356c3f2e1b5d27b14d762830f777 inherit pub_attribs_class_player_base" id="r_ab069356c3f2e1b5d27b14d762830f777"><td class="memItemLeft"><a class="el" href="class_player_base.html#a630f170c6c590c14d716f5de8f03c4df">CharacterExecutableActions</a>&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#ab069356c3f2e1b5d27b14d762830f777">CurrentCharacterExecutableActions</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a050967f0e5c2340cb21861e4c8c788a1" id="r_a050967f0e5c2340cb21861e4c8c788a1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a050967f0e5c2340cb21861e4c8c788a1">Awake</a> ()</td></tr>
+<tr class="inherit_header pro_methods_class_player_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_player_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="class_player_base.html">PlayerBase</a></td></tr>
+<tr class="memitem:a60f864316d3516c1a091f1c12186e219 inherit pro_methods_class_player_base" id="r_a60f864316d3516c1a091f1c12186e219"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a60f864316d3516c1a091f1c12186e219">ToggleExistenceState</a> ()</td></tr>
+<tr class="memdesc:a60f864316d3516c1a091f1c12186e219 inherit pro_methods_class_player_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">切换存在状态（物理/精神）  <br /></td></tr>
+<tr class="memitem:a6f1754b2027bac04811cf95489dff2be inherit pro_methods_class_player_base" id="r_a6f1754b2027bac04811cf95489dff2be"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a6f1754b2027bac04811cf95489dff2be">ChangeExistenceState</a> (<a class="el" href="class_player_base.html#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> newState)</td></tr>
+<tr class="memdesc:a6f1754b2027bac04811cf95489dff2be inherit pro_methods_class_player_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">改变存在状态  <br /></td></tr>
+<tr class="memitem:a45746088ea41373c86537c8d2737af23 inherit pro_methods_class_player_base" id="r_a45746088ea41373c86537c8d2737af23"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a45746088ea41373c86537c8d2737af23">EnterExistenceState</a> (<a class="el" href="class_player_base.html#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> state)</td></tr>
+<tr class="memdesc:a45746088ea41373c86537c8d2737af23 inherit pro_methods_class_player_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">进入特定存在状态时的处理  <br /></td></tr>
+<tr class="memitem:a17f55ff96f5d5f01ebfba1bb9e84826a inherit pro_methods_class_player_base" id="r_a17f55ff96f5d5f01ebfba1bb9e84826a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a17f55ff96f5d5f01ebfba1bb9e84826a">ExitExistenceState</a> (<a class="el" href="class_player_base.html#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> state)</td></tr>
+<tr class="memdesc:a17f55ff96f5d5f01ebfba1bb9e84826a inherit pro_methods_class_player_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出特定存在状态时的处理  <br /></td></tr>
+<tr class="memitem:a6995ce07d2f1c198e2341dee4015c83d inherit pro_methods_class_player_base" id="r_a6995ce07d2f1c198e2341dee4015c83d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a6995ce07d2f1c198e2341dee4015c83d">GetInput</a> ()</td></tr>
+<tr class="memdesc:a6995ce07d2f1c198e2341dee4015c83d inherit pro_methods_class_player_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取玩家输入  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ae8bc83dffb99867a04be016473ed2c43" id="r_ae8bc83dffb99867a04be016473ed2c43"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae8bc83dffb99867a04be016473ed2c43">Update</a> ()</td></tr>
+<tr class="memitem:a53e932ee02c4c2cc18c7219d40e93cad" id="r_a53e932ee02c4c2cc18c7219d40e93cad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a53e932ee02c4c2cc18c7219d40e93cad">HandleMovement</a> ()</td></tr>
+<tr class="memitem:aeda2a33e5b70b31a20cd310c58d20623" id="r_aeda2a33e5b70b31a20cd310c58d20623"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeda2a33e5b70b31a20cd310c58d20623">HandleGravity</a> ()</td></tr>
+<tr class="memitem:ad6c24a42714cc5182b042266d9f07403" id="r_ad6c24a42714cc5182b042266d9f07403"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad6c24a42714cc5182b042266d9f07403">HandleRotation</a> ()</td></tr>
+<tr class="memitem:a59a67027c72e920c61f0bcd89688d66a" id="r_a59a67027c72e920c61f0bcd89688d66a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a59a67027c72e920c61f0bcd89688d66a">HandleUI</a> ()</td></tr>
+<tr class="memitem:a23f7de3309f9aa0712ec564eab57eb10" id="r_a23f7de3309f9aa0712ec564eab57eb10"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a23f7de3309f9aa0712ec564eab57eb10">CursorLock</a> (bool visible)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac0f9de9c0ab3c9e5f9c4aebb56cd36da" id="r_ac0f9de9c0ab3c9e5f9c4aebb56cd36da"><td class="memItemLeft">CharacterController&#160;</td><td class="memItemRight"><a class="el" href="#ac0f9de9c0ab3c9e5f9c4aebb56cd36da">characterController</a></td></tr>
+<tr class="memitem:af24a8820ce6558138208255b27d948d3" id="r_af24a8820ce6558138208255b27d948d3"><td class="memItemLeft">Animator&#160;</td><td class="memItemRight"><a class="el" href="#af24a8820ce6558138208255b27d948d3">animator</a></td></tr>
+<tr class="memitem:a0b7a80746d397eca23aa5236913b06aa" id="r_a0b7a80746d397eca23aa5236913b06aa"><td class="memItemLeft">Vector3&#160;</td><td class="memItemRight"><a class="el" href="#a0b7a80746d397eca23aa5236913b06aa">velocity</a></td></tr>
+<tr class="memitem:ac1b74e25587d1a45a576bac03d165254" id="r_ac1b74e25587d1a45a576bac03d165254"><td class="memItemLeft">Vector3&#160;</td><td class="memItemRight"><a class="el" href="#ac1b74e25587d1a45a576bac03d165254">moveDir</a></td></tr>
+<tr class="memitem:a1b9bf4209b48528e45100b0e4064f0e0" id="r_a1b9bf4209b48528e45100b0e4064f0e0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1b9bf4209b48528e45100b0e4064f0e0">MoveSpeed</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_class_player_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_player_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 类型 继承自 <a class="el" href="class_player_base.html">PlayerBase</a></td></tr>
+<tr class="memitem:a9571567d8a69eb7c3b725331a8638d2b inherit pub_types_class_player_base" id="r_a9571567d8a69eb7c3b725331a8638d2b"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2b">CharacterPhysicalState</a> { <br />
+&#160;&#160;<a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c">Idle</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1">Walking</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09">Running</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee">Jumping</a>
+, <br />
+&#160;&#160;<a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b">Sleeping</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c">fainting</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a">Falling</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b">Attacking</a>
+, <br />
+&#160;&#160;<a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e">Planting</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2">Felling</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76">Interacting</a>
+, <a class="el" href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617">Dead</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a9571567d8a69eb7c3b725331a8638d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">角色物理状态枚举  <a href="class_player_base.html#a9571567d8a69eb7c3b725331a8638d2b">更多...</a><br /></td></tr>
+<tr class="memitem:a3b1397acf413e2c9ef8ae46f7190512a inherit pub_types_class_player_base" id="r_a3b1397acf413e2c9ef8ae46f7190512a"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a3b1397acf413e2c9ef8ae46f7190512a">MovementType</a> { <br />
+&#160;&#160;<a class="el" href="class_player_base.html#a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62">Walk</a>
+, <a class="el" href="class_player_base.html#a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d">Run</a>
+, <a class="el" href="class_player_base.html#a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367">squat</a>
+, <a class="el" href="class_player_base.html#a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d">Swim</a>
+, <br />
+&#160;&#160;<a class="el" href="class_player_base.html#a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51">Fly</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a3b1397acf413e2c9ef8ae46f7190512a"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动方式枚举  <a href="class_player_base.html#a3b1397acf413e2c9ef8ae46f7190512a">更多...</a><br /></td></tr>
+<tr class="memitem:a59a1d33a183c8e42daad79a58d659ceb inherit pub_types_class_player_base" id="r_a59a1d33a183c8e42daad79a58d659ceb"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> { <a class="el" href="class_player_base.html#a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9">Physical</a>
+, <a class="el" href="class_player_base.html#a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57">Psychical</a>
+ }</td></tr>
+<tr class="memdesc:a59a1d33a183c8e42daad79a58d659ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在状态枚举  <a href="class_player_base.html#a59a1d33a183c8e42daad79a58d659ceb">更多...</a><br /></td></tr>
+<tr class="memitem:a630f170c6c590c14d716f5de8f03c4df inherit pub_types_class_player_base" id="r_a630f170c6c590c14d716f5de8f03c4df"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a630f170c6c590c14d716f5de8f03c4df">CharacterExecutableActions</a> { <a class="el" href="class_player_base.html#a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d">nothing</a>
+ }</td></tr>
+<tr class="memdesc:a630f170c6c590c14d716f5de8f03c4df"><td class="mdescLeft">&#160;</td><td class="mdescRight">角色可执行动作枚举  <a href="class_player_base.html#a630f170c6c590c14d716f5de8f03c4df">更多...</a><br /></td></tr>
+<tr class="inherit_header pro_attribs_class_player_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_player_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="class_player_base.html">PlayerBase</a></td></tr>
+<tr class="memitem:a4c22537ee829c34af77ff0eb5d594849 inherit pro_attribs_class_player_base" id="r_a4c22537ee829c34af77ff0eb5d594849"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a4c22537ee829c34af77ff0eb5d594849">maxHealth</a> = 100f</td></tr>
+<tr class="memitem:a30958f090dd354fa915b3cbfb531c88b inherit pro_attribs_class_player_base" id="r_a30958f090dd354fa915b3cbfb531c88b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a30958f090dd354fa915b3cbfb531c88b">health</a> = 100f</td></tr>
+<tr class="memitem:af4678b1e19baa4c55783f0ba254cafdc inherit pro_attribs_class_player_base" id="r_af4678b1e19baa4c55783f0ba254cafdc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#af4678b1e19baa4c55783f0ba254cafdc">maxEnergy</a> = 100f</td></tr>
+<tr class="memitem:a919ce2390bded1fb2ac78722b8ac6707 inherit pro_attribs_class_player_base" id="r_a919ce2390bded1fb2ac78722b8ac6707"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a919ce2390bded1fb2ac78722b8ac6707">energy</a> = 100f</td></tr>
+<tr class="memitem:a34969ed0207aa3b52ee7cdb445c37ed4 inherit pro_attribs_class_player_base" id="r_a34969ed0207aa3b52ee7cdb445c37ed4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a34969ed0207aa3b52ee7cdb445c37ed4">maxSpiritualNourishment</a> = 100f</td></tr>
+<tr class="memitem:abb3977ca382bb0f62e95dc49eedabddc inherit pro_attribs_class_player_base" id="r_abb3977ca382bb0f62e95dc49eedabddc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#abb3977ca382bb0f62e95dc49eedabddc">spiritualNourishment</a> = 100f</td></tr>
+<tr class="memitem:aae05464ed0ec9861302c86c644afc072 inherit pro_attribs_class_player_base" id="r_aae05464ed0ec9861302c86c644afc072"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#aae05464ed0ec9861302c86c644afc072">walkSpeed</a> = 5f</td></tr>
+<tr class="memitem:a301ffd2d3b8a7c027dd5923f3304df67 inherit pro_attribs_class_player_base" id="r_a301ffd2d3b8a7c027dd5923f3304df67"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a301ffd2d3b8a7c027dd5923f3304df67">runSpeed</a> = 10f</td></tr>
+<tr class="memitem:a1bf7af748d618da108ce5c76207c90f0 inherit pro_attribs_class_player_base" id="r_a1bf7af748d618da108ce5c76207c90f0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a1bf7af748d618da108ce5c76207c90f0">squatSpeed</a> = 2.5f</td></tr>
+<tr class="memitem:afceb356fbaf39359459d33ab91559421 inherit pro_attribs_class_player_base" id="r_afceb356fbaf39359459d33ab91559421"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#afceb356fbaf39359459d33ab91559421">jumpHeight</a> = 2f</td></tr>
+<tr class="memitem:a1a9152c04dd5812bb2e3907f51809e6a inherit pro_attribs_class_player_base" id="r_a1a9152c04dd5812bb2e3907f51809e6a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a1a9152c04dd5812bb2e3907f51809e6a">gravity</a> = -9.81f</td></tr>
+<tr class="memitem:a9f0028a1138247e16bbbc9dec534acc1 inherit pro_attribs_class_player_base" id="r_a9f0028a1138247e16bbbc9dec534acc1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a9f0028a1138247e16bbbc9dec534acc1">rotationSpeed</a> = 10f</td></tr>
+<tr class="memitem:ad4350eef0c6bfa309455967e59ec7e15 inherit pro_attribs_class_player_base" id="r_ad4350eef0c6bfa309455967e59ec7e15"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#ad4350eef0c6bfa309455967e59ec7e15">horizontalInput</a></td></tr>
+<tr class="memitem:adbfc912504af2402d266f780befa3115 inherit pro_attribs_class_player_base" id="r_adbfc912504af2402d266f780befa3115"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#adbfc912504af2402d266f780befa3115">verticalInput</a></td></tr>
+<tr class="memitem:ad3334551ff379d6f2275f3b7f3140685 inherit pro_attribs_class_player_base" id="r_ad3334551ff379d6f2275f3b7f3140685"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#ad3334551ff379d6f2275f3b7f3140685">jumpInput</a></td></tr>
+<tr class="memitem:af634007f2c03f23b2579ec40944ac1fd inherit pro_attribs_class_player_base" id="r_af634007f2c03f23b2579ec40944ac1fd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#af634007f2c03f23b2579ec40944ac1fd">runInput</a></td></tr>
+<tr class="memitem:a1d7789c3512aabc9c4db16cb4ea835a7 inherit pro_attribs_class_player_base" id="r_a1d7789c3512aabc9c4db16cb4ea835a7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a1d7789c3512aabc9c4db16cb4ea835a7">squatInput</a></td></tr>
+<tr class="memitem:a975c95832d33b41b9863296b2e47d611 inherit pro_attribs_class_player_base" id="r_a975c95832d33b41b9863296b2e47d611"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a975c95832d33b41b9863296b2e47d611">interactInput</a></td></tr>
+<tr class="inherit_header events_class_player_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('events_class_player_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>事件 继承自 <a class="el" href="class_player_base.html">PlayerBase</a></td></tr>
+<tr class="memitem:a25aeae6d3d0ad3557d6a71f37590c31d inherit events_class_player_base" id="r_a25aeae6d3d0ad3557d6a71f37590c31d"><td class="memItemLeft">Action&lt; <a class="el" href="class_player_base.html#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player_base.html#a25aeae6d3d0ad3557d6a71f37590c31d">OnExistenceStateChanged</a></td></tr>
+<tr class="memdesc:a25aeae6d3d0ad3557d6a71f37590c31d inherit events_class_player_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在状态改变时触发的事件  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a050967f0e5c2340cb21861e4c8c788a1" name="a050967f0e5c2340cb21861e4c8c788a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050967f0e5c2340cb21861e4c8c788a1">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23f7de3309f9aa0712ec564eab57eb10" name="a23f7de3309f9aa0712ec564eab57eb10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f7de3309f9aa0712ec564eab57eb10">&#9670;&#160;</a></span>CursorLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.CursorLock </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>visible</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_a23f7de3309f9aa0712ec564eab57eb10_icgraph.png" border="0" usemap="#aclass_player_controller_a23f7de3309f9aa0712ec564eab57eb10_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_a23f7de3309f9aa0712ec564eab57eb10_icgraph" id="aclass_player_controller_a23f7de3309f9aa0712ec564eab57eb10_icgraph">
+<area shape="rect" title=" " alt="" coords="435,5,620,32"/>
+<area shape="rect" href="class_player_controller.html#a59a67027c72e920c61f0bcd89688d66a" title=" " alt="" coords="214,5,387,32"/>
+<area shape="poly" title=" " alt="" coords="417,19,388,21,387,16,422,19"/>
+<area shape="rect" href="class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="196,19,166,21,166,16,201,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7393ba7246897b4f96a0c57ae2cf2850" name="a7393ba7246897b4f96a0c57ae2cf2850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7393ba7246897b4f96a0c57ae2cf2850">&#9670;&#160;</a></span>HandleAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerController.HandleAnimation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_a7393ba7246897b4f96a0c57ae2cf2850_icgraph.png" border="0" usemap="#aclass_player_controller_a7393ba7246897b4f96a0c57ae2cf2850_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_a7393ba7246897b4f96a0c57ae2cf2850_icgraph" id="aclass_player_controller_a7393ba7246897b4f96a0c57ae2cf2850_icgraph">
+<area shape="rect" title=" " alt="" coords="214,5,431,32"/>
+<area shape="rect" href="class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="195,19,166,21,166,16,201,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeda2a33e5b70b31a20cd310c58d20623" name="aeda2a33e5b70b31a20cd310c58d20623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda2a33e5b70b31a20cd310c58d20623">&#9670;&#160;</a></span>HandleGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.HandleGravity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_aeda2a33e5b70b31a20cd310c58d20623_icgraph.png" border="0" usemap="#aclass_player_controller_aeda2a33e5b70b31a20cd310c58d20623_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_aeda2a33e5b70b31a20cd310c58d20623_icgraph" id="aclass_player_controller_aeda2a33e5b70b31a20cd310c58d20623_icgraph">
+<area shape="rect" title=" " alt="" coords="214,5,415,32"/>
+<area shape="rect" href="class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="195,19,166,21,166,16,201,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a53e932ee02c4c2cc18c7219d40e93cad" name="a53e932ee02c4c2cc18c7219d40e93cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e932ee02c4c2cc18c7219d40e93cad">&#9670;&#160;</a></span>HandleMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.HandleMovement </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_a53e932ee02c4c2cc18c7219d40e93cad_icgraph.png" border="0" usemap="#aclass_player_controller_a53e932ee02c4c2cc18c7219d40e93cad_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_a53e932ee02c4c2cc18c7219d40e93cad_icgraph" id="aclass_player_controller_a53e932ee02c4c2cc18c7219d40e93cad_icgraph">
+<area shape="rect" title=" " alt="" coords="214,5,434,32"/>
+<area shape="rect" href="class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="195,19,166,21,166,16,201,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad6c24a42714cc5182b042266d9f07403" name="ad6c24a42714cc5182b042266d9f07403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c24a42714cc5182b042266d9f07403">&#9670;&#160;</a></span>HandleRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.HandleRotation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_ad6c24a42714cc5182b042266d9f07403_icgraph.png" border="0" usemap="#aclass_player_controller_ad6c24a42714cc5182b042266d9f07403_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_ad6c24a42714cc5182b042266d9f07403_icgraph" id="aclass_player_controller_ad6c24a42714cc5182b042266d9f07403_icgraph">
+<area shape="rect" title=" " alt="" coords="214,5,422,32"/>
+<area shape="rect" href="class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="195,19,166,21,166,16,201,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a59a67027c72e920c61f0bcd89688d66a" name="a59a67027c72e920c61f0bcd89688d66a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a67027c72e920c61f0bcd89688d66a">&#9670;&#160;</a></span>HandleUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.HandleUI </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_a59a67027c72e920c61f0bcd89688d66a_cgraph.png" border="0" usemap="#aclass_player_controller_a59a67027c72e920c61f0bcd89688d66a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_a59a67027c72e920c61f0bcd89688d66a_cgraph" id="aclass_player_controller_a59a67027c72e920c61f0bcd89688d66a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,179,57"/>
+<area shape="rect" href="class_player_controller.html#a23f7de3309f9aa0712ec564eab57eb10" title=" " alt="" coords="227,5,412,32"/>
+<area shape="poly" title=" " alt="" coords="178,32,214,30,209,31,179,37"/>
+<area shape="rect" href="class_item_drag.html#a5e99cd0e1fb5ba904e61f2f84c90cbe3" title="静态方法：强制结束所有正在拖拽的物品 在背包关闭、场景切换时调用" alt="" coords="238,56,401,83"/>
+<area shape="poly" title=" " alt="" coords="179,51,225,58,220,59,179,56"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_a59a67027c72e920c61f0bcd89688d66a_icgraph.png" border="0" usemap="#aclass_player_controller_a59a67027c72e920c61f0bcd89688d66a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_a59a67027c72e920c61f0bcd89688d66a_icgraph" id="aclass_player_controller_a59a67027c72e920c61f0bcd89688d66a_icgraph">
+<area shape="rect" title=" " alt="" coords="214,5,387,32"/>
+<area shape="rect" href="class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="196,19,166,21,166,16,201,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae8bc83dffb99867a04be016473ed2c43" name="ae8bc83dffb99867a04be016473ed2c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bc83dffb99867a04be016473ed2c43">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_controller_ae8bc83dffb99867a04be016473ed2c43_cgraph.png" border="0" usemap="#aclass_player_controller_ae8bc83dffb99867a04be016473ed2c43_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_controller_ae8bc83dffb99867a04be016473ed2c43_cgraph" id="aclass_player_controller_ae8bc83dffb99867a04be016473ed2c43_cgraph">
+<area shape="rect" title=" " alt="" coords="5,132,166,159"/>
+<area shape="rect" href="class_player_base.html#a6995ce07d2f1c198e2341dee4015c83d" title="获取玩家输入" alt="" coords="253,5,395,32"/>
+<area shape="poly" title=" " alt="" coords="98,130,146,86,178,62,212,42,240,33,236,36,215,46,181,66,149,90,102,133"/>
+<area shape="rect" href="class_player_controller.html#a7393ba7246897b4f96a0c57ae2cf2850" title=" " alt="" coords="215,56,432,83"/>
+<area shape="poly" title=" " alt="" coords="116,129,213,92,243,85,239,88,215,97,119,134"/>
+<area shape="rect" href="class_player_controller.html#aeda2a33e5b70b31a20cd310c58d20623" title=" " alt="" coords="223,107,424,133"/>
+<area shape="poly" title=" " alt="" coords="165,134,210,131,205,134,167,139"/>
+<area shape="rect" href="class_player_controller.html#a53e932ee02c4c2cc18c7219d40e93cad" title=" " alt="" coords="214,157,434,184"/>
+<area shape="poly" title=" " alt="" coords="165,151,201,156,196,158,167,156"/>
+<area shape="rect" href="class_player_controller.html#ad6c24a42714cc5182b042266d9f07403" title=" " alt="" coords="220,208,428,235"/>
+<area shape="poly" title=" " alt="" coords="118,156,215,193,243,203,238,204,213,199,117,162"/>
+<area shape="rect" href="class_player_controller.html#a59a67027c72e920c61f0bcd89688d66a" title=" " alt="" coords="237,259,410,285"/>
+<area shape="poly" title=" " alt="" coords="100,157,149,201,181,224,215,244,232,253,227,253,212,249,178,229,146,205,99,162"/>
+<area shape="rect" href="class_player_controller.html#a23f7de3309f9aa0712ec564eab57eb10" title=" " alt="" coords="482,233,667,260"/>
+<area shape="poly" title=" " alt="" coords="411,261,469,257,464,258,411,266"/>
+<area shape="rect" href="class_item_drag.html#a5e99cd0e1fb5ba904e61f2f84c90cbe3" title="静态方法：强制结束所有正在拖拽的物品 在背包关闭、场景切换时调用" alt="" coords="493,284,656,311"/>
+<area shape="poly" title=" " alt="" coords="411,278,480,288,475,288,411,283"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="af24a8820ce6558138208255b27d948d3" name="af24a8820ce6558138208255b27d948d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24a8820ce6558138208255b27d948d3">&#9670;&#160;</a></span>animator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator PlayerController.animator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00896f22917508c98eb22357b9bb6fc8" name="a00896f22917508c98eb22357b9bb6fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00896f22917508c98eb22357b9bb6fc8">&#9670;&#160;</a></span>bagOpen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerController.bagOpen = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0f9de9c0ab3c9e5f9c4aebb56cd36da" name="ac0f9de9c0ab3c9e5f9c4aebb56cd36da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f9de9c0ab3c9e5f9c4aebb56cd36da">&#9670;&#160;</a></span>characterController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CharacterController PlayerController.characterController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1b74e25587d1a45a576bac03d165254" name="ac1b74e25587d1a45a576bac03d165254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b74e25587d1a45a576bac03d165254">&#9670;&#160;</a></span>moveDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 PlayerController.moveDir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b9bf4209b48528e45100b0e4064f0e0" name="a1b9bf4209b48528e45100b0e4064f0e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b9bf4209b48528e45100b0e4064f0e0">&#9670;&#160;</a></span>MoveSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerController.MoveSpeed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e31d8c625f96e9190931e33b5e08ddf" name="a0e31d8c625f96e9190931e33b5e08ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e31d8c625f96e9190931e33b5e08ddf">&#9670;&#160;</a></span>myBag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject PlayerController.myBag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b7a80746d397eca23aa5236913b06aa" name="a0b7a80746d397eca23aa5236913b06aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7a80746d397eca23aa5236913b06aa">&#9670;&#160;</a></span>velocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 PlayerController.velocity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Player/<a class="el" href="_player_controller_8cs.html">PlayerController.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_player_controller.html">PlayerController</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

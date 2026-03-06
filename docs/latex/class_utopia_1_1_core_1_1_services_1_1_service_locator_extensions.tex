@@ -1,0 +1,65 @@
+\doxysection{Utopia.\+Core.\+Services.\+Service\+Locator\+Extensions类 参考}
+\hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_extensions}{}\label{class_utopia_1_1_core_1_1_services_1_1_service_locator_extensions}\index{Utopia.Core.Services.ServiceLocatorExtensions@{Utopia.Core.Services.ServiceLocatorExtensions}}
+
+
+服务定位器的静态扩展方法类。 为\+Hierarchical\+Service\+Locator添加依赖注入功能。  
+
+
+\doxysubsubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_extensions_a2d658c77ad52ed98b14911c1eddf71fe}{Inject}} (this \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}{Hierarchical\+Service\+Locator}} locator, object target)
+\begin{DoxyCompactList}\small\item\em 执行依赖注入操作。 扫描目标对象中标记了\+[Service\+Inject]\+特性的所有字段， 并从服务定位器中获取对应服务实例进行自动赋值。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+服务定位器的静态扩展方法类。 为\+Hierarchical\+Service\+Locator添加依赖注入功能。 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_extensions_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_extensions_a2d658c77ad52ed98b14911c1eddf71fe}\index{Utopia.Core.Services.ServiceLocatorExtensions@{Utopia.Core.Services.ServiceLocatorExtensions}!Inject@{Inject}}
+\index{Inject@{Inject}!Utopia.Core.Services.ServiceLocatorExtensions@{Utopia.Core.Services.ServiceLocatorExtensions}}
+\doxysubsubsection{\texorpdfstring{Inject()}{Inject()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_extensions_a2d658c77ad52ed98b14911c1eddf71fe} 
+void Utopia.\+Core.\+Services.\+Service\+Locator\+Extensions.\+Inject (\begin{DoxyParamCaption}\item[{this \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}{Hierarchical\+Service\+Locator}}}]{locator}{, }\item[{object}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+执行依赖注入操作。 扫描目标对象中标记了\+[Service\+Inject]\+特性的所有字段， 并从服务定位器中获取对应服务实例进行自动赋值。 
+
+
+\begin{DoxyParams}{参数}
+{\em locator} & 服务定位器实例\\
+\hline
+{\em target} & 需要注入服务的对象实例\\
+\hline
+\end{DoxyParams}
+
+
+典型使用场景：
+\begin{DoxyEnumerate}
+\item 在\+Mono\+Behaviour的\+Awake或\+Start方法中调用
+\item 在普通类的构造函数或初始化方法中调用
+\end{DoxyEnumerate}
+
+示例： 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PlayerController\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [ServiceInject]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ IAudioService\ \_audioService;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ServiceLocatorProvider.Global.Locator.Inject(\textcolor{keyword}{this});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_audioService.PlaySound(\textcolor{stringliteral}{"{}startup"{}});\ \textcolor{comment}{//\ 服务已可用}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Services/\+\doxymbox{\hyperlink{_service_inject_attribute_8cs}{Service\+Inject\+Attribute.\+cs}}\end{DoxyCompactItemize}

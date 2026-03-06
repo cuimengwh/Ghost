@@ -1,0 +1,21 @@
+<map id="ItemDrag.EndDragSettings" name="ItemDrag.EndDragSettings">
+<area shape="rect" id="Node000001" title="拖拽结束后的通用设置 恢复射线检测，重置拖拽状态" alt="" coords="730,81,909,108"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#a3b8eddea878288083c2115b35d108fba" title="处理拖拽到背包外的情况（丢弃物品）" alt="" coords="482,5,676,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="758,76,682,53,625,35,625,30,683,48,764,76"/>
+<area shape="rect" id="Node000004" href="$class_item_drag.html#a7dd9c5ece33ad36ea049c085424c6719" title="处理移动到空槽位" alt="" coords="201,56,428,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="713,91,429,78,428,72,717,88"/>
+<area shape="rect" id="Node000005" href="$class_item_drag.html#a4aa44b8bf9a6e79ea49231ad6f3072d6" title="处理与另一个物品交换位置" alt="" coords="476,107,682,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="712,106,683,112,682,106,717,105"/>
+<area shape="rect" id="Node000006" href="$class_item_drag.html#a3fd165e24bffc4a1ba8ad365f92b4a1e" title="返回原始位置 当拖拽到无效区域或出现异常时调用" alt="" coords="491,179,667,221"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="776,114,631,181,629,176,770,115"/>
+<area shape="rect" id="Node000003" href="$class_item_drag.html#aa966ed36f05faca17b4ec738fd636bfd" title="结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性" alt="" coords="5,107,153,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="465,13,405,15,338,20,268,30,202,47,171,59,143,76,98,108,95,104,140,71,169,54,200,41,267,24,337,14,405,10,470,11"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="232,88,145,109,143,104,236,85"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="459,122,154,123,153,117,461,118"/>
+<area shape="poly" id="edge11_Node000006_Node000003" title=" " alt="" coords="474,186,153,134,153,129,477,181"/>
+<area shape="rect" id="Node000007" href="$class_item_drag.html#a09fca6b4b2434ecf2c07dfafc7f38065" title="强制结束当前物品的拖拽 在UI关闭、背包切换等情况下调用" alt="" coords="211,208,418,235"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="473,209,418,216,418,210,478,208"/>
+<area shape="rect" id="Node000008" href="$class_item_drag.html#afa4ce46ba7f60ccdb57fc530aaa81c9c" title="获取当前指针位置下的GameObject 使用异常处理确保安全" alt="" coords="237,259,392,285"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="500,226,429,249,382,261,381,255,427,244,494,227"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="219,256,199,249,163,223,131,191,88,137,90,131,135,188,166,219,202,244,225,257"/>
+</map>

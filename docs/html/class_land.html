@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Land类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_land.html','','class_land-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Land类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Land 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_land__inherit__graph.png" border="0" usemap="#a_land_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_land_inherit__map" id="a_land_inherit__map">
+<area shape="rect" title="土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示" alt="" coords="36,80,86,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Land 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_land__coll__graph.png" border="0" usemap="#a_land_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_land_coll__map" id="a_land_coll__map">
+<area shape="rect" title="土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示" alt="" coords="36,80,86,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a6f9ebccbffdeca2f6cfae58838f95319" id="r_a6f9ebccbffdeca2f6cfae58838f95319"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319">LandStatus</a> { <a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319ac90b1198f689dd950d51142e65a44c81">dirt</a>
+, <a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319aac9094d64bf2626d3efdb1132045c224">farmland</a>
+, <a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319a1d0bfd0cc7da03f349301713c9de0274">watered</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3fd6faf4f6de9aed7001178e4bb14c9c" id="r_a3fd6faf4f6de9aed7001178e4bb14c9c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3fd6faf4f6de9aed7001178e4bb14c9c">SwitchLandStatus</a> (<a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319">LandStatus</a> newStatus)</td></tr>
+<tr class="memdesc:a3fd6faf4f6de9aed7001178e4bb14c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">切换土地状态  <br /></td></tr>
+<tr class="memitem:ac39ebba4c710035088e2db926ca1991b" id="r_ac39ebba4c710035088e2db926ca1991b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac39ebba4c710035088e2db926ca1991b">Select</a> (bool isSelected)</td></tr>
+<tr class="memdesc:ac39ebba4c710035088e2db926ca1991b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置土地的选中状态  <br /></td></tr>
+<tr class="memitem:a6c2c760cdd5387b690a786ecf3433d7e" id="r_a6c2c760cdd5387b690a786ecf3433d7e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c2c760cdd5387b690a786ecf3433d7e">Interact</a> ()</td></tr>
+<tr class="memdesc:a6c2c760cdd5387b690a786ecf3433d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">与土地交互的处理函数  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:aaaf62cbce6f1451b858d49defb338d60" id="r_aaaf62cbce6f1451b858d49defb338d60"><td class="memItemLeft">Material&#160;</td><td class="memItemRight"><a class="el" href="#aaaf62cbce6f1451b858d49defb338d60">dirtMat</a></td></tr>
+<tr class="memitem:a4ac66b1f6c2f5bf56e5df48d74ad8204" id="r_a4ac66b1f6c2f5bf56e5df48d74ad8204"><td class="memItemLeft">Material&#160;</td><td class="memItemRight"><a class="el" href="#a4ac66b1f6c2f5bf56e5df48d74ad8204">farmlandMat</a></td></tr>
+<tr class="memitem:ad496f0050ba20569291108e276c33420" id="r_ad496f0050ba20569291108e276c33420"><td class="memItemLeft">Material&#160;</td><td class="memItemRight"><a class="el" href="#ad496f0050ba20569291108e276c33420">wateredMat</a></td></tr>
+<tr class="memitem:aaea141cba92ebcc1aa229158b7a9b901" id="r_aaea141cba92ebcc1aa229158b7a9b901"><td class="memItemLeft"><a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319">LandStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaea141cba92ebcc1aa229158b7a9b901">landStatus</a></td></tr>
+<tr class="memitem:a0ec4bc3f6bbbd347503a068518ff4338" id="r_a0ec4bc3f6bbbd347503a068518ff4338"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a0ec4bc3f6bbbd347503a068518ff4338">select</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a44ddbf29618a18157f98eabcb3de4c52" id="r_a44ddbf29618a18157f98eabcb3de4c52"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44ddbf29618a18157f98eabcb3de4c52">Start</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a47b2d6be3790f1a393e91a031d0ab572" id="r_a47b2d6be3790f1a393e91a031d0ab572"><td class="memItemLeft">new Renderer&#160;</td><td class="memItemRight"><a class="el" href="#a47b2d6be3790f1a393e91a031d0ab572">renderer</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示 </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">成员枚举类型说明</h2>
+<a id="a6f9ebccbffdeca2f6cfae58838f95319" name="a6f9ebccbffdeca2f6cfae58838f95319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f9ebccbffdeca2f6cfae58838f95319">&#9670;&#160;</a></span>LandStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319">Land.LandStatus</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a6f9ebccbffdeca2f6cfae58838f95319ac90b1198f689dd950d51142e65a44c81" name="a6f9ebccbffdeca2f6cfae58838f95319ac90b1198f689dd950d51142e65a44c81"></a>dirt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6f9ebccbffdeca2f6cfae58838f95319aac9094d64bf2626d3efdb1132045c224" name="a6f9ebccbffdeca2f6cfae58838f95319aac9094d64bf2626d3efdb1132045c224"></a>farmland&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6f9ebccbffdeca2f6cfae58838f95319a1d0bfd0cc7da03f349301713c9de0274" name="a6f9ebccbffdeca2f6cfae58838f95319a1d0bfd0cc7da03f349301713c9de0274"></a>watered&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a6c2c760cdd5387b690a786ecf3433d7e" name="a6c2c760cdd5387b690a786ecf3433d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2c760cdd5387b690a786ecf3433d7e">&#9670;&#160;</a></span>Interact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Land.Interact </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>与土地交互的处理函数 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_land_a6c2c760cdd5387b690a786ecf3433d7e_cgraph.png" border="0" usemap="#aclass_land_a6c2c760cdd5387b690a786ecf3433d7e_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_land_a6c2c760cdd5387b690a786ecf3433d7e_cgraph" id="aclass_land_a6c2c760cdd5387b690a786ecf3433d7e_cgraph">
+<area shape="rect" title="与土地交互的处理函数" alt="" coords="5,5,103,32"/>
+<area shape="rect" href="class_land.html#a3fd6faf4f6de9aed7001178e4bb14c9c" title="切换土地状态" alt="" coords="151,5,310,32"/>
+<area shape="poly" title=" " alt="" coords="103,16,138,18,133,19,103,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_land_a6c2c760cdd5387b690a786ecf3433d7e_icgraph.png" border="0" usemap="#aclass_land_a6c2c760cdd5387b690a786ecf3433d7e_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_land_a6c2c760cdd5387b690a786ecf3433d7e_icgraph" id="aclass_land_a6c2c760cdd5387b690a786ecf3433d7e_icgraph">
+<area shape="rect" title="与土地交互的处理函数" alt="" coords="474,5,571,32"/>
+<area shape="rect" href="class_land_interaction.html#a1ae8a3c2b3806a55f06d47f6663a11a9" title=" " alt="" coords="210,5,426,32"/>
+<area shape="poly" title=" " alt="" coords="455,19,427,21,426,16,461,19"/>
+<area shape="rect" href="class_land_interaction.html#aa8dd049d858c61094d083d7211bf8c54" title=" " alt="" coords="5,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="191,19,162,21,162,16,197,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac39ebba4c710035088e2db926ca1991b" name="ac39ebba4c710035088e2db926ca1991b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39ebba4c710035088e2db926ca1991b">&#9670;&#160;</a></span>Select()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Land.Select </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isSelected</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置土地的选中状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isSelected</td><td>是否被选中</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_land_ac39ebba4c710035088e2db926ca1991b_icgraph.png" border="0" usemap="#aclass_land_ac39ebba4c710035088e2db926ca1991b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_land_ac39ebba4c710035088e2db926ca1991b_icgraph" id="aclass_land_ac39ebba4c710035088e2db926ca1991b_icgraph">
+<area shape="rect" title="设置土地的选中状态" alt="" coords="437,5,527,32"/>
+<area shape="rect" href="class_land_interaction.html#a5da8a5d69d85ee27f46091097f590224" title=" " alt="" coords="210,5,389,32"/>
+<area shape="poly" title=" " alt="" coords="419,19,389,21,389,16,424,19"/>
+<area shape="rect" href="class_land_interaction.html#aa8dd049d858c61094d083d7211bf8c54" title=" " alt="" coords="5,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="192,19,162,21,162,16,197,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44ddbf29618a18157f98eabcb3de4c52" name="a44ddbf29618a18157f98eabcb3de4c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ddbf29618a18157f98eabcb3de4c52">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Land.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_land_a44ddbf29618a18157f98eabcb3de4c52_cgraph.png" border="0" usemap="#aclass_land_a44ddbf29618a18157f98eabcb3de4c52_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_land_a44ddbf29618a18157f98eabcb3de4c52_cgraph" id="aclass_land_a44ddbf29618a18157f98eabcb3de4c52_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" href="class_land.html#a3fd6faf4f6de9aed7001178e4bb14c9c" title="切换土地状态" alt="" coords="135,5,294,32"/>
+<area shape="poly" title=" " alt="" coords="87,16,122,18,117,19,87,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3fd6faf4f6de9aed7001178e4bb14c9c" name="a3fd6faf4f6de9aed7001178e4bb14c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd6faf4f6de9aed7001178e4bb14c9c">&#9670;&#160;</a></span>SwitchLandStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Land.SwitchLandStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319">LandStatus</a></td>          <td class="paramname"><span class="paramname"><em>newStatus</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>切换土地状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newStatus</td><td>新的土地状态</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_land_a3fd6faf4f6de9aed7001178e4bb14c9c_icgraph.png" border="0" usemap="#aclass_land_a3fd6faf4f6de9aed7001178e4bb14c9c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_land_a3fd6faf4f6de9aed7001178e4bb14c9c_icgraph" id="aclass_land_a3fd6faf4f6de9aed7001178e4bb14c9c_icgraph">
+<area shape="rect" title="切换土地状态" alt="" coords="619,31,779,57"/>
+<area shape="rect" href="class_land.html#a6c2c760cdd5387b690a786ecf3433d7e" title="与土地交互的处理函数" alt="" coords="474,5,571,32"/>
+<area shape="poly" title=" " alt="" coords="601,30,572,28,572,23,606,30"/>
+<area shape="rect" href="class_land.html#a44ddbf29618a18157f98eabcb3de4c52" title=" " alt="" coords="482,56,563,83"/>
+<area shape="poly" title=" " alt="" coords="607,57,564,66,563,61,601,58"/>
+<area shape="rect" href="class_land_interaction.html#a1ae8a3c2b3806a55f06d47f6663a11a9" title=" " alt="" coords="210,5,426,32"/>
+<area shape="poly" title=" " alt="" coords="455,19,427,21,426,16,461,18"/>
+<area shape="rect" href="class_land_interaction.html#aa8dd049d858c61094d083d7211bf8c54" title=" " alt="" coords="5,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="191,19,162,21,162,16,196,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aaaf62cbce6f1451b858d49defb338d60" name="aaaf62cbce6f1451b858d49defb338d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf62cbce6f1451b858d49defb338d60">&#9670;&#160;</a></span>dirtMat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material Land.dirtMat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ac66b1f6c2f5bf56e5df48d74ad8204" name="a4ac66b1f6c2f5bf56e5df48d74ad8204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac66b1f6c2f5bf56e5df48d74ad8204">&#9670;&#160;</a></span>farmlandMat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material Land.farmlandMat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaea141cba92ebcc1aa229158b7a9b901" name="aaea141cba92ebcc1aa229158b7a9b901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea141cba92ebcc1aa229158b7a9b901">&#9670;&#160;</a></span>landStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6f9ebccbffdeca2f6cfae58838f95319">LandStatus</a> Land.landStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47b2d6be3790f1a393e91a031d0ab572" name="a47b2d6be3790f1a393e91a031d0ab572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b2d6be3790f1a393e91a031d0ab572">&#9670;&#160;</a></span>renderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">new Renderer Land.renderer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ec4bc3f6bbbd347503a068518ff4338" name="a0ec4bc3f6bbbd347503a068518ff4338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec4bc3f6bbbd347503a068518ff4338">&#9670;&#160;</a></span>select</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Land.select</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad496f0050ba20569291108e276c33420" name="ad496f0050ba20569291108e276c33420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad496f0050ba20569291108e276c33420">&#9670;&#160;</a></span>wateredMat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material Land.wateredMat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Farming/Interaction/<a class="el" href="_land_8cs.html">Land.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_land.html">Land</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

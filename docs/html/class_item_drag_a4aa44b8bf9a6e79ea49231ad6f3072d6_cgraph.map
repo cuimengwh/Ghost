@@ -1,0 +1,5 @@
+<map id="ItemDrag.HandleSwapWithItem" name="ItemDrag.HandleSwapWithItem">
+<area shape="rect" id="Node000001" title="处理与另一个物品交换位置" alt="" coords="5,5,212,32"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#aabda3e1da8ef8840621636641ecc5a2c" title="拖拽结束后的通用设置 恢复射线检测，重置拖拽状态" alt="" coords="260,5,438,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,16,247,19,241,19,212,21"/>
+</map>

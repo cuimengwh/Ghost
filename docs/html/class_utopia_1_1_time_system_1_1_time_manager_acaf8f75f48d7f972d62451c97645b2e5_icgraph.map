@@ -1,0 +1,11 @@
+<map id="Utopia.TimeSystem.TimeManager.CheckSunState" name="Utopia.TimeSystem.TimeManager.CheckSunState">
+<area shape="rect" id="Node000001" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="822,39,1047,81"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="550,5,774,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="804,44,775,43,775,38,810,44"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a24c81babd9b2946736418757ac59a0ce" title="刷新所有派生状态（季节、时段）。" alt="" coords="550,72,774,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="810,75,775,82,775,77,804,76"/>
+<area shape="rect" id="Node000004" href="$class_utopia_1_1_time_system_1_1_time_manager.html#adc47f1f89ae295d0dbb3d1cc635e1972" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="278,72,502,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,93,503,96,503,91,537,93"/>
+<area shape="rect" id="Node000005" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a7b664087cb737df808970dba08fa7ef9" title="启动时初始化时间系统。" alt="" coords="5,72,230,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="260,93,230,96,230,91,265,93"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Inventory.GetEmptySlotIndex" name="Inventory.GetEmptySlotIndex">
+<area shape="rect" id="Node000001" title="获取第一个空的物品格下标" alt="" coords="181,5,373,32"/>
+<area shape="rect" id="Node000002" href="$class_inventory.html#a05764dfb496e0fa28997c2df12174ea0" title="添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放" alt="" coords="5,5,133,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,19,133,21,133,16,167,18"/>
+</map>

@@ -1,0 +1,938 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.TimeSystem.TimeEventTrigger类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_time_system_1_1_time_event_trigger.html','','class_utopia_1_1_time_system_1_1_time_event_trigger-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.TimeSystem.TimeEventTrigger类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>时间事件触发器 - 定义事件触发的条件和规则  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+Utopia.TimeSystem.TimeEventTrigger 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger__coll__graph.png" border="0" usemap="#a_utopia_8_time_system_8_time_event_trigger_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_time_system_8_time_event_trigger_coll__map" id="a_utopia_8_time_system_8_time_event_trigger_coll__map">
+<area shape="rect" title="时间事件触发器 &#45; 定义事件触发的条件和规则" alt="" coords="134,196,339,239"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="143,81,330,124"/>
+<area shape="poly" title=" " alt="" coords="238,138,239,197,234,194,235,141"/>
+<area shape="rect" title=" " alt="" coords="5,5,228,32"/>
+<area shape="poly" title=" " alt="" coords="147,38,209,80,204,82,147,43"/>
+<area shape="rect" title=" " alt="" coords="251,5,462,32"/>
+<area shape="poly" title=" " alt="" coords="328,39,268,83,265,79,324,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a28a01b8ec2f60b1e2d243dacb2cedb50" id="r_a28a01b8ec2f60b1e2d243dacb2cedb50"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50">TriggerType</a> { <br />
+&#160;&#160;<a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50adfc67de6b6e06d8b4e6e790a3234d184">SpecificDateTime</a>
+, <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3">Daily</a>
+, <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50a9030e39f00132d583da4122532e509e9">Monthly</a>
+, <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50acf5ea7953dc47105e0eb179dbefaaf46">Yearly</a>
+, <br />
+&#160;&#160;<a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50a0f094b17d6d26c3925824223a3c97fdd">TimeOfDay</a>
+, <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50a783d39033cf6121820228c9259b8e25c">SeasonChange</a>
+, <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50a25b324b1f4067f72a0f321378a53ea86">MonthChange</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a28a01b8ec2f60b1e2d243dacb2cedb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">触发类型枚举  <a href="#a28a01b8ec2f60b1e2d243dacb2cedb50">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6e57ba87dff9cb48b0a14990965a0403" id="r_a6e57ba87dff9cb48b0a14990965a0403"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6e57ba87dff9cb48b0a14990965a0403">IsConditionMet</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> currentDateTime, int currentTotalDays)</td></tr>
+<tr class="memdesc:a6e57ba87dff9cb48b0a14990965a0403"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否满足触发条件  <br /></td></tr>
+<tr class="memitem:ab2b589aad59b9ed89c37b0cacec6f952" id="r_ab2b589aad59b9ed89c37b0cacec6f952"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab2b589aad59b9ed89c37b0cacec6f952">Reset</a> ()</td></tr>
+<tr class="memdesc:ab2b589aad59b9ed89c37b0cacec6f952"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置触发状态  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ab51a66be5e01aa3dddb2ae1d7308b600" id="r_ab51a66be5e01aa3dddb2ae1d7308b600"><td class="memItemLeft"><a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50">TriggerType</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab51a66be5e01aa3dddb2ae1d7308b600">triggerType</a> = <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3">TriggerType.Daily</a></td></tr>
+<tr class="memitem:a71330aab25f47da6a2fa7336b8656147" id="r_a71330aab25f47da6a2fa7336b8656147"><td class="memItemLeft"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>&#160;</td><td class="memItemRight"><a class="el" href="#a71330aab25f47da6a2fa7336b8656147">specificDateTime</a> = new <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>(1, 1, 1, 0.5f)</td></tr>
+<tr class="memitem:a0d4aee41c757c1f0963f6c7d230668dc" id="r_a0d4aee41c757c1f0963f6c7d230668dc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0d4aee41c757c1f0963f6c7d230668dc">dailyTime</a> = 0.5f</td></tr>
+<tr class="memitem:ab0ad991ad80a96433e8ca4cdfda95104" id="r_ab0ad991ad80a96433e8ca4cdfda95104"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab0ad991ad80a96433e8ca4cdfda95104">dailyTimeTolerance</a> = 0.01f</td></tr>
+<tr class="memitem:ace27da1d12171d6df160f773f66f5c34" id="r_ace27da1d12171d6df160f773f66f5c34"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ace27da1d12171d6df160f773f66f5c34">dayOfMonth</a> = 1</td></tr>
+<tr class="memitem:a512ca1ab7337561f1cbd1d8e46b1603f" id="r_a512ca1ab7337561f1cbd1d8e46b1603f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a512ca1ab7337561f1cbd1d8e46b1603f">monthlyTime</a> = 0.5f</td></tr>
+<tr class="memitem:ac69c447064a22d17573823baace2f56f" id="r_ac69c447064a22d17573823baace2f56f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac69c447064a22d17573823baace2f56f">monthlyTimeTolerance</a> = 0.01f</td></tr>
+<tr class="memitem:acb9fd7ed9d4ec114a4e7a89d856fd57f" id="r_acb9fd7ed9d4ec114a4e7a89d856fd57f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acb9fd7ed9d4ec114a4e7a89d856fd57f">monthOfYear</a> = 1</td></tr>
+<tr class="memitem:ac1fc807069fffe059303d9c26f8d8b8c" id="r_ac1fc807069fffe059303d9c26f8d8b8c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac1fc807069fffe059303d9c26f8d8b8c">dayOfYear</a> = 1</td></tr>
+<tr class="memitem:a15c42c5313783ac8d91799a83add9e88" id="r_a15c42c5313783ac8d91799a83add9e88"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a15c42c5313783ac8d91799a83add9e88">yearlyTime</a> = 0.5f</td></tr>
+<tr class="memitem:a03b07699204a966bcf525ef9d98a9ad7" id="r_a03b07699204a966bcf525ef9d98a9ad7"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a03b07699204a966bcf525ef9d98a9ad7">yearlyTimeTolerance</a> = 0.01f</td></tr>
+<tr class="memitem:a0de60a04adc8a89f9f6ee5c6c1a42f39" id="r_a0de60a04adc8a89f9f6ee5c6c1a42f39"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0de60a04adc8a89f9f6ee5c6c1a42f39">timeOfDay</a> = 0.5f</td></tr>
+<tr class="memitem:ab66f741a6f598bac281d70732299200f" id="r_ab66f741a6f598bac281d70732299200f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab66f741a6f598bac281d70732299200f">timeOfDayTolerance</a> = 0.01f</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a43a6044c485f73b8c460171a439db151" id="r_a43a6044c485f73b8c460171a439db151"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a43a6044c485f73b8c460171a439db151">CheckSpecificDateTime</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> currentDateTime, int currentTotalDays)</td></tr>
+<tr class="memdesc:a43a6044c485f73b8c460171a439db151"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查特定日期时间条件  <br /></td></tr>
+<tr class="memitem:aa9b470b1eb171df9324218142ea6d56e" id="r_aa9b470b1eb171df9324218142ea6d56e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa9b470b1eb171df9324218142ea6d56e">CheckDaily</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> currentDateTime, int currentTotalDays)</td></tr>
+<tr class="memdesc:aa9b470b1eb171df9324218142ea6d56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查每日触发条件  <br /></td></tr>
+<tr class="memitem:a3b2b1006d3c1ebf4884f3092ac37afd0" id="r_a3b2b1006d3c1ebf4884f3092ac37afd0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3b2b1006d3c1ebf4884f3092ac37afd0">CheckMonthly</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> currentDateTime, int currentTotalDays)</td></tr>
+<tr class="memdesc:a3b2b1006d3c1ebf4884f3092ac37afd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查每月触发条件  <br /></td></tr>
+<tr class="memitem:a341fdd3d49006d59e077fd431ee4291a" id="r_a341fdd3d49006d59e077fd431ee4291a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a341fdd3d49006d59e077fd431ee4291a">CheckYearly</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> currentDateTime, int currentTotalDays)</td></tr>
+<tr class="memdesc:a341fdd3d49006d59e077fd431ee4291a"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查每年触发条件  <br /></td></tr>
+<tr class="memitem:a46e4a4407cc2ab3d03a1da02b8bae800" id="r_a46e4a4407cc2ab3d03a1da02b8bae800"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a46e4a4407cc2ab3d03a1da02b8bae800">CheckTimeOfDay</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> currentDateTime, int currentTotalDays)</td></tr>
+<tr class="memdesc:a46e4a4407cc2ab3d03a1da02b8bae800"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查每天特定时间触发条件  <br /></td></tr>
+<tr class="memitem:a6e3f05cc252a911d39fe726215b06984" id="r_a6e3f05cc252a911d39fe726215b06984"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6e3f05cc252a911d39fe726215b06984">CheckSeasonChange</a> (int currentMonth)</td></tr>
+<tr class="memdesc:a6e3f05cc252a911d39fe726215b06984"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查季节变化触发条件  <br /></td></tr>
+<tr class="memitem:a6bd6fccd85ae6717ddf5a2aba5059dd3" id="r_a6bd6fccd85ae6717ddf5a2aba5059dd3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6bd6fccd85ae6717ddf5a2aba5059dd3">CheckMonthChange</a> (int currentMonth)</td></tr>
+<tr class="memdesc:a6bd6fccd85ae6717ddf5a2aba5059dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查月份变化触发条件  <br /></td></tr>
+<tr class="memitem:ad42fbc5a41f99104046dbd3aa0a1103d" id="r_ad42fbc5a41f99104046dbd3aa0a1103d"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad42fbc5a41f99104046dbd3aa0a1103d">GetSeasonForMonth</a> (int month)</td></tr>
+<tr class="memdesc:ad42fbc5a41f99104046dbd3aa0a1103d"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据月份获取对应的季节  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5f5837b4af2ef6c9682e27c4ebcef9e5" id="r_a5f5837b4af2ef6c9682e27c4ebcef9e5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5f5837b4af2ef6c9682e27c4ebcef9e5">hasTriggered</a> = false</td></tr>
+<tr class="memitem:affa4410aec15748e2208bd4f4df3b086" id="r_affa4410aec15748e2208bd4f4df3b086"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#affa4410aec15748e2208bd4f4df3b086">lastTriggerTotalDays</a> = -1</td></tr>
+<tr class="memitem:a959cf939a6556f7201b1414695cc47e4" id="r_a959cf939a6556f7201b1414695cc47e4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a959cf939a6556f7201b1414695cc47e4">lastTriggerMonth</a> = -1</td></tr>
+<tr class="memitem:a678014600b1a833568744f7bb2c5a36c" id="r_a678014600b1a833568744f7bb2c5a36c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a678014600b1a833568744f7bb2c5a36c">lastTriggerYear</a> = -1</td></tr>
+<tr class="memitem:ac34f5fa18a0135018849f40910c31aef" id="r_ac34f5fa18a0135018849f40910c31aef"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac34f5fa18a0135018849f40910c31aef">lastTriggerSeason</a> = <a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541a38008dd81c2f4d7985ecf6e0ce8af1d1">Season.Spring</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>时间事件触发器 - 定义事件触发的条件和规则 </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">成员枚举类型说明</h2>
+<a id="a28a01b8ec2f60b1e2d243dacb2cedb50" name="a28a01b8ec2f60b1e2d243dacb2cedb50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a01b8ec2f60b1e2d243dacb2cedb50">&#9670;&#160;</a></span>TriggerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50">Utopia.TimeSystem.TimeEventTrigger.TriggerType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>触发类型枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a28a01b8ec2f60b1e2d243dacb2cedb50adfc67de6b6e06d8b4e6e790a3234d184" name="a28a01b8ec2f60b1e2d243dacb2cedb50adfc67de6b6e06d8b4e6e790a3234d184"></a>SpecificDateTime&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3" name="a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3"></a>Daily&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a28a01b8ec2f60b1e2d243dacb2cedb50a9030e39f00132d583da4122532e509e9" name="a28a01b8ec2f60b1e2d243dacb2cedb50a9030e39f00132d583da4122532e509e9"></a>Monthly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a28a01b8ec2f60b1e2d243dacb2cedb50acf5ea7953dc47105e0eb179dbefaaf46" name="a28a01b8ec2f60b1e2d243dacb2cedb50acf5ea7953dc47105e0eb179dbefaaf46"></a>Yearly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a28a01b8ec2f60b1e2d243dacb2cedb50a0f094b17d6d26c3925824223a3c97fdd" name="a28a01b8ec2f60b1e2d243dacb2cedb50a0f094b17d6d26c3925824223a3c97fdd"></a>TimeOfDay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a28a01b8ec2f60b1e2d243dacb2cedb50a783d39033cf6121820228c9259b8e25c" name="a28a01b8ec2f60b1e2d243dacb2cedb50a783d39033cf6121820228c9259b8e25c"></a>SeasonChange&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a28a01b8ec2f60b1e2d243dacb2cedb50a25b324b1f4067f72a0f321378a53ea86" name="a28a01b8ec2f60b1e2d243dacb2cedb50a25b324b1f4067f72a0f321378a53ea86"></a>MonthChange&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="aa9b470b1eb171df9324218142ea6d56e" name="aa9b470b1eb171df9324218142ea6d56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b470b1eb171df9324218142ea6d56e">&#9670;&#160;</a></span>CheckDaily()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.CheckDaily </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>currentDateTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentTotalDays</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查每日触发条件 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e_icgraph">
+<area shape="rect" title="检查每日触发条件" alt="" coords="258,5,462,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6bd6fccd85ae6717ddf5a2aba5059dd3" name="a6bd6fccd85ae6717ddf5a2aba5059dd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd6fccd85ae6717ddf5a2aba5059dd3">&#9670;&#160;</a></span>CheckMonthChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.CheckMonthChange </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentMonth</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查月份变化触发条件 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3_icgraph">
+<area shape="rect" title="检查月份变化触发条件" alt="" coords="258,5,462,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b2b1006d3c1ebf4884f3092ac37afd0" name="a3b2b1006d3c1ebf4884f3092ac37afd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2b1006d3c1ebf4884f3092ac37afd0">&#9670;&#160;</a></span>CheckMonthly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.CheckMonthly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>currentDateTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentTotalDays</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查每月触发条件 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0_icgraph">
+<area shape="rect" title="检查每月触发条件" alt="" coords="258,5,462,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e3f05cc252a911d39fe726215b06984" name="a6e3f05cc252a911d39fe726215b06984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3f05cc252a911d39fe726215b06984">&#9670;&#160;</a></span>CheckSeasonChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.CheckSeasonChange </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentMonth</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查季节变化触发条件 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_cgraph">
+<area shape="rect" title="检查季节变化触发条件" alt="" coords="5,5,210,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#ad42fbc5a41f99104046dbd3aa0a1103d" title="根据月份获取对应的季节" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="210,24,245,27,239,27,210,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_icgraph">
+<area shape="rect" title="检查季节变化触发条件" alt="" coords="258,5,462,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a43a6044c485f73b8c460171a439db151" name="a43a6044c485f73b8c460171a439db151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a6044c485f73b8c460171a439db151">&#9670;&#160;</a></span>CheckSpecificDateTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.CheckSpecificDateTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>currentDateTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentTotalDays</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查特定日期时间条件 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151_icgraph">
+<area shape="rect" title="检查特定日期时间条件" alt="" coords="258,5,465,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="239,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a46e4a4407cc2ab3d03a1da02b8bae800" name="a46e4a4407cc2ab3d03a1da02b8bae800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e4a4407cc2ab3d03a1da02b8bae800">&#9670;&#160;</a></span>CheckTimeOfDay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.CheckTimeOfDay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>currentDateTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentTotalDays</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查每天特定时间触发条件 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800_icgraph">
+<area shape="rect" title="检查每天特定时间触发条件" alt="" coords="258,5,462,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a341fdd3d49006d59e077fd431ee4291a" name="a341fdd3d49006d59e077fd431ee4291a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341fdd3d49006d59e077fd431ee4291a">&#9670;&#160;</a></span>CheckYearly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.CheckYearly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>currentDateTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentTotalDays</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查每年触发条件 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a_icgraph">
+<area shape="rect" title="检查每年触发条件" alt="" coords="258,5,462,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad42fbc5a41f99104046dbd3aa0a1103d" name="ad42fbc5a41f99104046dbd3aa0a1103d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42fbc5a41f99104046dbd3aa0a1103d">&#9670;&#160;</a></span>GetSeasonForMonth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a> Utopia.TimeSystem.TimeEventTrigger.GetSeasonForMonth </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>month</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据月份获取对应的季节 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d_icgraph">
+<area shape="rect" title="根据月份获取对应的季节" alt="" coords="510,5,714,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e3f05cc252a911d39fe726215b06984" title="检查季节变化触发条件" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="492,27,463,29,462,24,497,27"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e57ba87dff9cb48b0a14990965a0403" name="a6e57ba87dff9cb48b0a14990965a0403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e57ba87dff9cb48b0a14990965a0403">&#9670;&#160;</a></span>IsConditionMet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.IsConditionMet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>currentDateTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentTotalDays</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查是否满足触发条件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentDateTime</td><td>当前自定义日期时间</td></tr>
+    <tr><td class="paramname">currentTotalDays</td><td>当前总天数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否满足条件</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403_cgraph">
+<area shape="rect" title="检查是否满足触发条件" alt="" coords="5,205,210,248"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#aa9b470b1eb171df9324218142ea6d56e" title="检查每日触发条件" alt="" coords="259,5,464,48"/>
+<area shape="poly" title=" " alt="" coords="120,203,174,132,213,92,256,58,267,54,263,57,259,62,216,96,178,136,125,206"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6bd6fccd85ae6717ddf5a2aba5059dd3" title="检查月份变化触发条件" alt="" coords="259,72,464,115"/>
+<area shape="poly" title=" " alt="" coords="134,203,189,164,256,124,273,119,268,123,259,129,192,168,138,207"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a3b2b1006d3c1ebf4884f3092ac37afd0" title="检查每月触发条件" alt="" coords="259,139,464,181"/>
+<area shape="poly" title=" " alt="" coords="190,202,265,184,260,188,193,207"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e3f05cc252a911d39fe726215b06984" title="检查季节变化触发条件" alt="" coords="259,205,464,248"/>
+<area shape="poly" title=" " alt="" coords="209,224,246,225,241,228,211,229"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a43a6044c485f73b8c460171a439db151" title="检查特定日期时间条件" alt="" coords="258,272,465,315"/>
+<area shape="poly" title=" " alt="" coords="191,246,265,266,260,269,192,251"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a46e4a4407cc2ab3d03a1da02b8bae800" title="检查每天特定时间触发条件" alt="" coords="259,339,464,381"/>
+<area shape="poly" title=" " alt="" coords="136,246,192,285,259,324,273,332,268,333,256,329,189,290,136,251"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#a341fdd3d49006d59e077fd431ee4291a" title="检查每年触发条件" alt="" coords="259,405,464,448"/>
+<area shape="poly" title=" " alt="" coords="123,246,178,318,216,357,259,391,268,398,263,398,256,396,213,361,174,321,122,251"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html#ad42fbc5a41f99104046dbd3aa0a1103d" title="根据月份获取对应的季节" alt="" coords="513,205,717,248"/>
+<area shape="poly" title=" " alt="" coords="464,224,500,226,495,227,465,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2b589aad59b9ed89c37b0cacec6f952" name="ab2b589aad59b9ed89c37b0cacec6f952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b589aad59b9ed89c37b0cacec6f952">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeEventTrigger.Reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置触发状态 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a0d4aee41c757c1f0963f6c7d230668dc" name="a0d4aee41c757c1f0963f6c7d230668dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4aee41c757c1f0963f6c7d230668dc">&#9670;&#160;</a></span>dailyTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.dailyTime = 0.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0ad991ad80a96433e8ca4cdfda95104" name="ab0ad991ad80a96433e8ca4cdfda95104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ad991ad80a96433e8ca4cdfda95104">&#9670;&#160;</a></span>dailyTimeTolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.dailyTimeTolerance = 0.01f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace27da1d12171d6df160f773f66f5c34" name="ace27da1d12171d6df160f773f66f5c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace27da1d12171d6df160f773f66f5c34">&#9670;&#160;</a></span>dayOfMonth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeEventTrigger.dayOfMonth = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1fc807069fffe059303d9c26f8d8b8c" name="ac1fc807069fffe059303d9c26f8d8b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1fc807069fffe059303d9c26f8d8b8c">&#9670;&#160;</a></span>dayOfYear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeEventTrigger.dayOfYear = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f5837b4af2ef6c9682e27c4ebcef9e5" name="a5f5837b4af2ef6c9682e27c4ebcef9e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5837b4af2ef6c9682e27c4ebcef9e5">&#9670;&#160;</a></span>hasTriggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEventTrigger.hasTriggered = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a959cf939a6556f7201b1414695cc47e4" name="a959cf939a6556f7201b1414695cc47e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959cf939a6556f7201b1414695cc47e4">&#9670;&#160;</a></span>lastTriggerMonth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeEventTrigger.lastTriggerMonth = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac34f5fa18a0135018849f40910c31aef" name="ac34f5fa18a0135018849f40910c31aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34f5fa18a0135018849f40910c31aef">&#9670;&#160;</a></span>lastTriggerSeason</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a> Utopia.TimeSystem.TimeEventTrigger.lastTriggerSeason = <a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541a38008dd81c2f4d7985ecf6e0ce8af1d1">Season.Spring</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affa4410aec15748e2208bd4f4df3b086" name="affa4410aec15748e2208bd4f4df3b086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa4410aec15748e2208bd4f4df3b086">&#9670;&#160;</a></span>lastTriggerTotalDays</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeEventTrigger.lastTriggerTotalDays = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a678014600b1a833568744f7bb2c5a36c" name="a678014600b1a833568744f7bb2c5a36c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678014600b1a833568744f7bb2c5a36c">&#9670;&#160;</a></span>lastTriggerYear</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeEventTrigger.lastTriggerYear = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a512ca1ab7337561f1cbd1d8e46b1603f" name="a512ca1ab7337561f1cbd1d8e46b1603f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a512ca1ab7337561f1cbd1d8e46b1603f">&#9670;&#160;</a></span>monthlyTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.monthlyTime = 0.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac69c447064a22d17573823baace2f56f" name="ac69c447064a22d17573823baace2f56f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69c447064a22d17573823baace2f56f">&#9670;&#160;</a></span>monthlyTimeTolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.monthlyTimeTolerance = 0.01f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb9fd7ed9d4ec114a4e7a89d856fd57f" name="acb9fd7ed9d4ec114a4e7a89d856fd57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9fd7ed9d4ec114a4e7a89d856fd57f">&#9670;&#160;</a></span>monthOfYear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeEventTrigger.monthOfYear = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71330aab25f47da6a2fa7336b8656147" name="a71330aab25f47da6a2fa7336b8656147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71330aab25f47da6a2fa7336b8656147">&#9670;&#160;</a></span>specificDateTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> Utopia.TimeSystem.TimeEventTrigger.specificDateTime = new <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>(1, 1, 1, 0.5f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0de60a04adc8a89f9f6ee5c6c1a42f39" name="a0de60a04adc8a89f9f6ee5c6c1a42f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de60a04adc8a89f9f6ee5c6c1a42f39">&#9670;&#160;</a></span>timeOfDay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.timeOfDay = 0.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab66f741a6f598bac281d70732299200f" name="ab66f741a6f598bac281d70732299200f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66f741a6f598bac281d70732299200f">&#9670;&#160;</a></span>timeOfDayTolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.timeOfDayTolerance = 0.01f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab51a66be5e01aa3dddb2ae1d7308b600" name="ab51a66be5e01aa3dddb2ae1d7308b600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51a66be5e01aa3dddb2ae1d7308b600">&#9670;&#160;</a></span>triggerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50">TriggerType</a> Utopia.TimeSystem.TimeEventTrigger.triggerType = <a class="el" href="#a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3">TriggerType.Daily</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15c42c5313783ac8d91799a83add9e88" name="a15c42c5313783ac8d91799a83add9e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c42c5313783ac8d91799a83add9e88">&#9670;&#160;</a></span>yearlyTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.yearlyTime = 0.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03b07699204a966bcf525ef9d98a9ad7" name="a03b07699204a966bcf525ef9d98a9ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b07699204a966bcf525ef9d98a9ad7">&#9670;&#160;</a></span>yearlyTimeTolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeEventTrigger.yearlyTimeTolerance = 0.01f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Tool/<a class="el" href="_time_event_8cs.html">TimeEvent.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_time_system.html">TimeSystem</a></li><li class="navelem"><a href="class_utopia_1_1_time_system_1_1_time_event_trigger.html">TimeEventTrigger</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+\doxysection{Dish类 参考}
+\hypertarget{class_dish}{}\label{class_dish}\index{Dish@{Dish}}
+
+
+菜肴数据类，继承自 \doxylink{class_item_data}{Item\+Data}  
+
+
+
+
+类 Dish 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_dish__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Dish 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_dish__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_dish_abb17c6c7d137ef6f760492aa0ad1ae3b}{hunger\+Restore}}
+\item 
+int \doxymbox{\hyperlink{class_dish_aaae9b879e62ee11a7f1417797ea638c9}{health\+Restore}}
+\item 
+int \doxymbox{\hyperlink{class_dish_ab8339f16166ea9f7bf98dd1f0d973eac}{sanity\+Restore}}
+\item 
+int \doxymbox{\hyperlink{class_dish_aba789583bfd3016d2f1afbcf82298117}{dish\+Stars}}
+\item 
+List$<$ string $>$ \doxymbox{\hyperlink{class_dish_a7a9940fdd0c3e7a15a088e02ae908243}{ingredients}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性 继承自 \doxymbox{\hyperlink{class_item_data}{Item\+Data}}}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_item_data_ac9c7a827207936e1779bf10a6ffdfd57}{id}}
+\item 
+string \doxymbox{\hyperlink{class_item_data_ac84f9991e476bd4c2f8403a0f6f5b98e}{item\+Name}}
+\item 
+string \doxymbox{\hyperlink{class_item_data_a4d31ba387c9cbf81f386100006067f86}{item\+Description}}
+\item 
+int \doxymbox{\hyperlink{class_item_data_a513e3d0837b63057e1abb650b8d34d84}{max\+Stack}} = 99
+\item 
+bool \doxymbox{\hyperlink{class_item_data_a1bc480aa361b0a6c4bfd99fdc732d66f}{is\+Stackable}} = true
+\item 
+bool \doxymbox{\hyperlink{class_item_data_ab0cb2fefb894e0cf9e4f3030a12292e0}{can\+Sell}} = true
+\item 
+int \doxymbox{\hyperlink{class_item_data_a3b9308c1131c7921ad66766d2b1951c5}{value}}
+\item 
+int \doxymbox{\hyperlink{class_item_data_a7d164d604dab4f2a38e8812d233c80b5}{sell\+Price}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_item_data_ac2686d323c71cd030e3439d66504df5a}{prefab}}
+\item 
+Sprite \doxymbox{\hyperlink{class_item_data_aba4f58feb517ece89ccaadecb99a59d2}{item\+Icon}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+菜肴数据类，继承自 \doxylink{class_item_data}{Item\+Data} 
+
+\label{doc-variable-members}
+\Hypertarget{class_dish_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_dish_aba789583bfd3016d2f1afbcf82298117}\index{Dish@{Dish}!dishStars@{dishStars}}
+\index{dishStars@{dishStars}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{dishStars}{dishStars}}
+{\footnotesize\ttfamily \label{class_dish_aba789583bfd3016d2f1afbcf82298117} 
+int Dish.\+dish\+Stars}
+
+\Hypertarget{class_dish_aaae9b879e62ee11a7f1417797ea638c9}\index{Dish@{Dish}!healthRestore@{healthRestore}}
+\index{healthRestore@{healthRestore}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{healthRestore}{healthRestore}}
+{\footnotesize\ttfamily \label{class_dish_aaae9b879e62ee11a7f1417797ea638c9} 
+int Dish.\+health\+Restore}
+
+\Hypertarget{class_dish_abb17c6c7d137ef6f760492aa0ad1ae3b}\index{Dish@{Dish}!hungerRestore@{hungerRestore}}
+\index{hungerRestore@{hungerRestore}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{hungerRestore}{hungerRestore}}
+{\footnotesize\ttfamily \label{class_dish_abb17c6c7d137ef6f760492aa0ad1ae3b} 
+int Dish.\+hunger\+Restore}
+
+\Hypertarget{class_dish_a7a9940fdd0c3e7a15a088e02ae908243}\index{Dish@{Dish}!ingredients@{ingredients}}
+\index{ingredients@{ingredients}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{ingredients}{ingredients}}
+{\footnotesize\ttfamily \label{class_dish_a7a9940fdd0c3e7a15a088e02ae908243} 
+List$<$string$>$ Dish.\+ingredients}
+
+\Hypertarget{class_dish_ab8339f16166ea9f7bf98dd1f0d973eac}\index{Dish@{Dish}!sanityRestore@{sanityRestore}}
+\index{sanityRestore@{sanityRestore}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{sanityRestore}{sanityRestore}}
+{\footnotesize\ttfamily \label{class_dish_ab8339f16166ea9f7bf98dd1f0d973eac} 
+int Dish.\+sanity\+Restore}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Item/\+\doxymbox{\hyperlink{_dish_8cs}{Dish.\+cs}}\end{DoxyCompactItemize}

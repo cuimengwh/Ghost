@@ -1,0 +1,15 @@
+<map id="Utopia.TimeSystem.TimeManager.AdvanceTime" name="Utopia.TimeSystem.TimeManager.AdvanceTime">
+<area shape="rect" id="Node000001" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,105,230,148"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a83bc0288b5c2c5156c8d90113ef8a031" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="278,39,502,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,102,287,84,283,87,208,107"/>
+<area shape="rect" id="Node000006" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a40e3c3b354971e1e4927b93967ca19d8" title="检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。" alt="" coords="278,105,502,148"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="230,124,265,126,259,127,230,129"/>
+<area shape="rect" id="Node000007" href="$class_utopia_1_1_time_system_1_1_time_manager.html#acaf8f75f48d7f972d62451c97645b2e5" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="278,172,502,215"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="208,146,288,167,282,168,207,151"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a37aec0df9dd39c07adffc3f21ef74441" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="550,39,774,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="502,57,537,60,532,60,503,63"/>
+<area shape="rect" id="Node000004" href="$class_utopia_1_1_time_system_1_1_time_manager.html#adf292d62d1f2e3893212d5ab2bb2cb63" title="推进到新的一年，触发年份变更事件。" alt="" coords="822,5,1047,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="774,44,809,42,804,43,775,49"/>
+<area shape="rect" id="Node000005" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="822,72,1047,115"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="775,71,809,78,804,78,775,76"/>
+</map>

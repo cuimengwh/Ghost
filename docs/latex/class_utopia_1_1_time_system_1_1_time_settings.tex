@@ -1,0 +1,175 @@
+\doxysection{Utopia.\+Time\+System.\+Time\+Settings类 参考}
+\hypertarget{class_utopia_1_1_time_system_1_1_time_settings}{}\label{class_utopia_1_1_time_system_1_1_time_settings}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+
+
+时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统  
+
+
+
+
+类 Utopia.\+Time\+System.\+Time\+Settings 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_utopia_1_1_time_system_1_1_time_settings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Time\+System.\+Time\+Settings 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_settings__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_a0fdc65020c4a10302456adfc30a44ba2}{Get\+Season}} (int month)
+\begin{DoxyCompactList}\small\item\em 根据月份获取对应的季节 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_aefc19a0ff504d46ead07f0678c818dcf}{Get\+Sun\+State}} (float time01)
+\begin{DoxyCompactList}\small\item\em 根据当天的时间进度（0-\/1）获取时段状态 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_a8f02d3edf766988af81df17388ce0d24}{time\+Multiplier}} = 60f
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_a1cdb5bb399f1a0540a01cf65aa16a04b}{seconds\+Per\+Full\+Day}} = 86400f
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_ac5313fc5af720f8cbe9a99bc40b840c8}{days\+Per\+Month}} = 28
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_a96ae87278ab0ed97d33dc4750b72f1e4}{months\+Per\+Year}} = 4
+\item 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_a362b2907c05b487b5232e73ee8fd9362}{start\+Date\+Time}} = new \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}(1, 1, 1, 0.\+25f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_a4d795d5a30a88041feb0126217d0edd7}{days\+Per\+Year}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 每年包含的总天数（只读） 计算公式：months\+Per\+Year × days\+Per\+Month 默认值：4 × 28 = 112 天/\+年 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings_a2ef4b72374058a7f4360fe65e62df6cd}{On\+Validate}} ()
+\begin{DoxyCompactList}\small\item\em 当在\+Inspector中修改数值时自动调用，用于修正非法数值 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_a0fdc65020c4a10302456adfc30a44ba2}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!GetSeason@{GetSeason}}
+\index{GetSeason@{GetSeason}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{GetSeason()}{GetSeason()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_a0fdc65020c4a10302456adfc30a44ba2} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} Utopia.\+Time\+System.\+Time\+Settings.\+Get\+Season (\begin{DoxyParamCaption}\item[{int}]{month}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+根据月份获取对应的季节 
+
+
+\begin{DoxyParams}{参数}
+{\em month} & 月份（1\texorpdfstring{$\sim$}{\string~}months\+Per\+Year）\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+季节枚举
+\end{DoxyReturn}
+
+
+注意：原代码错误地将 month 限制在 \+[1, days\+Per\+Month]\+ 范围内，已修正为 \+[1, months\+Per\+Year]\+。 季节与月份的对应关系为：1月→春，2月→夏，3月→秋，4月→冬。 \Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_aefc19a0ff504d46ead07f0678c818dcf}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!GetSunState@{GetSunState}}
+\index{GetSunState@{GetSunState}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{GetSunState()}{GetSunState()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_aefc19a0ff504d46ead07f0678c818dcf} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} Utopia.\+Time\+System.\+Time\+Settings.\+Get\+Sun\+State (\begin{DoxyParamCaption}\item[{float}]{time01}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+根据当天的时间进度（0-\/1）获取时段状态 
+
+
+\begin{DoxyParams}{参数}
+{\em time01} & 0\texorpdfstring{$\sim$}{\string~}1的小数，0=0:\+00，1=次日0:\+00\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+太阳状态（早晨/\+中午/\+黄昏/\+午夜）
+\end{DoxyReturn}
+
+
+时段划分规则（与\+Sun\+State枚举的\+Tooltip保持一致）：
+\begin{DoxyItemize}
+\item 6:\+00 \texorpdfstring{$\sim$}{\string~} 10:\+00 → Morn
+\item 10:\+00 \texorpdfstring{$\sim$}{\string~} 16:\+00 → Noon
+\item 16:\+00 \texorpdfstring{$\sim$}{\string~} 20:\+00 → Dusk
+\item 20:\+00 \texorpdfstring{$\sim$}{\string~} 次日6:\+00 → Midnight 
+\end{DoxyItemize}\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_a2ef4b72374058a7f4360fe65e62df6cd}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!OnValidate@{OnValidate}}
+\index{OnValidate@{OnValidate}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{OnValidate()}{OnValidate()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_a2ef4b72374058a7f4360fe65e62df6cd} 
+void Utopia.\+Time\+System.\+Time\+Settings.\+On\+Validate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+当在\+Inspector中修改数值时自动调用，用于修正非法数值 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_ac5313fc5af720f8cbe9a99bc40b840c8}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!daysPerMonth@{daysPerMonth}}
+\index{daysPerMonth@{daysPerMonth}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{daysPerMonth}{daysPerMonth}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_ac5313fc5af720f8cbe9a99bc40b840c8} 
+int Utopia.\+Time\+System.\+Time\+Settings.\+days\+Per\+Month = 28}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_a96ae87278ab0ed97d33dc4750b72f1e4}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!monthsPerYear@{monthsPerYear}}
+\index{monthsPerYear@{monthsPerYear}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{monthsPerYear}{monthsPerYear}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_a96ae87278ab0ed97d33dc4750b72f1e4} 
+int Utopia.\+Time\+System.\+Time\+Settings.\+months\+Per\+Year = 4}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_a1cdb5bb399f1a0540a01cf65aa16a04b}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!secondsPerFullDay@{secondsPerFullDay}}
+\index{secondsPerFullDay@{secondsPerFullDay}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{secondsPerFullDay}{secondsPerFullDay}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_a1cdb5bb399f1a0540a01cf65aa16a04b} 
+float Utopia.\+Time\+System.\+Time\+Settings.\+seconds\+Per\+Full\+Day = 86400f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_a362b2907c05b487b5232e73ee8fd9362}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!startDateTime@{startDateTime}}
+\index{startDateTime@{startDateTime}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{startDateTime}{startDateTime}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_a362b2907c05b487b5232e73ee8fd9362} 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} Utopia.\+Time\+System.\+Time\+Settings.\+start\+Date\+Time = new \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}(1, 1, 1, 0.\+25f)}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_a8f02d3edf766988af81df17388ce0d24}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!timeMultiplier@{timeMultiplier}}
+\index{timeMultiplier@{timeMultiplier}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{timeMultiplier}{timeMultiplier}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_a8f02d3edf766988af81df17388ce0d24} 
+float Utopia.\+Time\+System.\+Time\+Settings.\+time\+Multiplier = 60f}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_doc-property-members}
+\doxysubsection{属性说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_settings_a4d795d5a30a88041feb0126217d0edd7}\index{Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}!daysPerYear@{daysPerYear}}
+\index{daysPerYear@{daysPerYear}!Utopia.TimeSystem.TimeSettings@{Utopia.TimeSystem.TimeSettings}}
+\doxysubsubsection{\texorpdfstring{daysPerYear}{daysPerYear}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_settings_a4d795d5a30a88041feb0126217d0edd7} 
+int Utopia.\+Time\+System.\+Time\+Settings.\+days\+Per\+Year\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+每年包含的总天数（只读） 计算公式：months\+Per\+Year × days\+Per\+Month 默认值：4 × 28 = 112 天/\+年 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Time\+Tool/\+\doxymbox{\hyperlink{_time_setting_8cs}{Time\+Setting.\+cs}}\end{DoxyCompactItemize}

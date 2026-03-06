@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.TimeSystem.TimeEvent类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_time_system_1_1_time_event.html','','class_utopia_1_1_time_system_1_1_time_event-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.TimeSystem.TimeEvent类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>时间事件类 - 用于在特定时间触发事件 支持自定义日历系统（28天/月，4月/年）  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+Utopia.TimeSystem.TimeEvent 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event__coll__graph.png" border="0" usemap="#a_utopia_8_time_system_8_time_event_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_time_system_8_time_event_coll__map" id="a_utopia_8_time_system_8_time_event_coll__map">
+<area shape="rect" title="时间事件类 &#45; 用于在特定时间触发事件 支持自定义日历系统（28天/月，4月/年）" alt="" coords="134,311,339,337"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html" title="时间事件触发器 &#45; 定义事件触发的条件和规则" alt="" coords="134,196,339,239"/>
+<area shape="poly" title=" " alt="" coords="238,253,239,311,234,309,235,256"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="143,81,330,124"/>
+<area shape="poly" title=" " alt="" coords="238,137,239,197,234,195,235,142"/>
+<area shape="rect" title=" " alt="" coords="5,5,228,32"/>
+<area shape="poly" title=" " alt="" coords="147,38,209,80,204,82,147,43"/>
+<area shape="rect" title=" " alt="" coords="251,5,462,32"/>
+<area shape="poly" title=" " alt="" coords="324,42,268,83,265,79,328,39"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af863cdd797fad2bb15dba920afc35b45" id="r_af863cdd797fad2bb15dba920afc35b45"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af863cdd797fad2bb15dba920afc35b45">ShouldTrigger</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> currentDateTime, int currentTotalDays)</td></tr>
+<tr class="memdesc:af863cdd797fad2bb15dba920afc35b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查当前时间是否满足触发条件  <br /></td></tr>
+<tr class="memitem:a5c8f16295c3465423af8851c987c833d" id="r_a5c8f16295c3465423af8851c987c833d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5c8f16295c3465423af8851c987c833d">Trigger</a> ()</td></tr>
+<tr class="memdesc:a5c8f16295c3465423af8851c987c833d"><td class="mdescLeft">&#160;</td><td class="mdescRight">触发事件  <br /></td></tr>
+<tr class="memitem:a5362cad4d4d73896e334c79d1cb7dfe1" id="r_a5362cad4d4d73896e334c79d1cb7dfe1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5362cad4d4d73896e334c79d1cb7dfe1">Reset</a> ()</td></tr>
+<tr class="memdesc:a5362cad4d4d73896e334c79d1cb7dfe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置事件状态（对于非重复事件，可以重新激活）  <br /></td></tr>
+<tr class="memitem:ad39ca0c85d3bf1adc390c41b1b8f803f" id="r_ad39ca0c85d3bf1adc390c41b1b8f803f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad39ca0c85d3bf1adc390c41b1b8f803f">CheckAndTrigger</a> (<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> _currentTime)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:adcbb09ee677a2b198115a194edcff7ce" id="r_adcbb09ee677a2b198115a194edcff7ce"><td class="memItemLeft">static <a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a>&#160;</td><td class="memItemRight"><a class="el" href="#adcbb09ee677a2b198115a194edcff7ce">CreateOneTimeEvent</a> (string name, int year, int month, int day, float time, UnityAction action)</td></tr>
+<tr class="memdesc:adcbb09ee677a2b198115a194edcff7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一次性日期时间事件  <br /></td></tr>
+<tr class="memitem:a9b09b56dd2e80a235dfa4e0f8752a0c5" id="r_a9b09b56dd2e80a235dfa4e0f8752a0c5"><td class="memItemLeft">static <a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9b09b56dd2e80a235dfa4e0f8752a0c5">CreateDailyEvent</a> (string name, float time, UnityAction action)</td></tr>
+<tr class="memdesc:a9b09b56dd2e80a235dfa4e0f8752a0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建每日重复事件  <br /></td></tr>
+<tr class="memitem:acb224e1e3308a186484d591e7325b021" id="r_acb224e1e3308a186484d591e7325b021"><td class="memItemLeft">static <a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a>&#160;</td><td class="memItemRight"><a class="el" href="#acb224e1e3308a186484d591e7325b021">CreateMonthlyEvent</a> (string name, int day, float time, UnityAction action)</td></tr>
+<tr class="memdesc:acb224e1e3308a186484d591e7325b021"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建每月重复事件  <br /></td></tr>
+<tr class="memitem:a63cda595436cce39a29db1191aceb062" id="r_a63cda595436cce39a29db1191aceb062"><td class="memItemLeft">static <a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a>&#160;</td><td class="memItemRight"><a class="el" href="#a63cda595436cce39a29db1191aceb062">CreateYearlyEvent</a> (string name, int month, int day, float time, UnityAction action)</td></tr>
+<tr class="memdesc:a63cda595436cce39a29db1191aceb062"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建每年重复事件  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac7f40ecc7998bec1acf40cd7a67850c0" id="r_ac7f40ecc7998bec1acf40cd7a67850c0"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#ac7f40ecc7998bec1acf40cd7a67850c0">eventName</a></td></tr>
+<tr class="memitem:a73b82e0398d8eb8f04ddf5d32b3dfab2" id="r_a73b82e0398d8eb8f04ddf5d32b3dfab2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a73b82e0398d8eb8f04ddf5d32b3dfab2">isRepeatable</a></td></tr>
+<tr class="memitem:af6d03f1f36965d1b5f4a102d74fd66fd" id="r_af6d03f1f36965d1b5f4a102d74fd66fd"><td class="memItemLeft"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html">TimeEventTrigger</a>&#160;</td><td class="memItemRight"><a class="el" href="#af6d03f1f36965d1b5f4a102d74fd66fd">triggerCondition</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aae6e69266759ec8472926d4ea53f0b5d" id="r_aae6e69266759ec8472926d4ea53f0b5d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aae6e69266759ec8472926d4ea53f0b5d">hasTriggered</a> = false</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>时间事件类 - 用于在特定时间触发事件 支持自定义日历系统（28天/月，4月/年） </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ad39ca0c85d3bf1adc390c41b1b8f803f" name="ad39ca0c85d3bf1adc390c41b1b8f803f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39ca0c85d3bf1adc390c41b1b8f803f">&#9670;&#160;</a></span>CheckAndTrigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEvent.CheckAndTrigger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>_currentTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b09b56dd2e80a235dfa4e0f8752a0c5" name="a9b09b56dd2e80a235dfa4e0f8752a0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b09b56dd2e80a235dfa4e0f8752a0c5">&#9670;&#160;</a></span>CreateDailyEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a> Utopia.TimeSystem.TimeEvent.CreateDailyEvent </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnityAction</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建每日重复事件 </p>
+
+</div>
+</div>
+<a id="acb224e1e3308a186484d591e7325b021" name="acb224e1e3308a186484d591e7325b021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb224e1e3308a186484d591e7325b021">&#9670;&#160;</a></span>CreateMonthlyEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a> Utopia.TimeSystem.TimeEvent.CreateMonthlyEvent </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>day</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnityAction</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建每月重复事件 </p>
+
+</div>
+</div>
+<a id="adcbb09ee677a2b198115a194edcff7ce" name="adcbb09ee677a2b198115a194edcff7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbb09ee677a2b198115a194edcff7ce">&#9670;&#160;</a></span>CreateOneTimeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a> Utopia.TimeSystem.TimeEvent.CreateOneTimeEvent </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>day</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnityAction</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建一次性日期时间事件 </p>
+
+</div>
+</div>
+<a id="a63cda595436cce39a29db1191aceb062" name="a63cda595436cce39a29db1191aceb062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cda595436cce39a29db1191aceb062">&#9670;&#160;</a></span>CreateYearlyEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a> Utopia.TimeSystem.TimeEvent.CreateYearlyEvent </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>day</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnityAction</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建每年重复事件 </p>
+
+</div>
+</div>
+<a id="a5362cad4d4d73896e334c79d1cb7dfe1" name="a5362cad4d4d73896e334c79d1cb7dfe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5362cad4d4d73896e334c79d1cb7dfe1">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeEvent.Reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置事件状态（对于非重复事件，可以重新激活） </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_event_a5362cad4d4d73896e334c79d1cb7dfe1_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_event_a5362cad4d4d73896e334c79d1cb7dfe1_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_event_a5362cad4d4d73896e334c79d1cb7dfe1_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_event_a5362cad4d4d73896e334c79d1cb7dfe1_icgraph">
+<area shape="rect" title="重置事件状态（对于非重复事件，可以重新激活）" alt="" coords="278,5,486,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a473a06b00d6f1bfeaf8dfef1f28a66b3" title="注册一个定时事件，事件到达触发时间时将执行回调。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="259,27,230,29,230,24,264,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af863cdd797fad2bb15dba920afc35b45" name="af863cdd797fad2bb15dba920afc35b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af863cdd797fad2bb15dba920afc35b45">&#9670;&#160;</a></span>ShouldTrigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEvent.ShouldTrigger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>currentDateTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentTotalDays</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查当前时间是否满足触发条件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentDateTime</td><td>当前自定义日期时间</td></tr>
+    <tr><td class="paramname">currentTotalDays</td><td>当前总天数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否满足触发条件</dd></dl>
+
+</div>
+</div>
+<a id="a5c8f16295c3465423af8851c987c833d" name="a5c8f16295c3465423af8851c987c833d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8f16295c3465423af8851c987c833d">&#9670;&#160;</a></span>Trigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeEvent.Trigger </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>触发事件 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ac7f40ecc7998bec1acf40cd7a67850c0" name="ac7f40ecc7998bec1acf40cd7a67850c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f40ecc7998bec1acf40cd7a67850c0">&#9670;&#160;</a></span>eventName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Utopia.TimeSystem.TimeEvent.eventName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae6e69266759ec8472926d4ea53f0b5d" name="aae6e69266759ec8472926d4ea53f0b5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6e69266759ec8472926d4ea53f0b5d">&#9670;&#160;</a></span>hasTriggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEvent.hasTriggered = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73b82e0398d8eb8f04ddf5d32b3dfab2" name="a73b82e0398d8eb8f04ddf5d32b3dfab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b82e0398d8eb8f04ddf5d32b3dfab2">&#9670;&#160;</a></span>isRepeatable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeEvent.isRepeatable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6d03f1f36965d1b5f4a102d74fd66fd" name="af6d03f1f36965d1b5f4a102d74fd66fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d03f1f36965d1b5f4a102d74fd66fd">&#9670;&#160;</a></span>triggerCondition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event_trigger.html">TimeEventTrigger</a> Utopia.TimeSystem.TimeEvent.triggerCondition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Tool/<a class="el" href="_time_event_8cs.html">TimeEvent.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_time_system.html">TimeSystem</a></li><li class="navelem"><a href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

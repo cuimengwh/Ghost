@@ -1,0 +1,5 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,13,96,40"/>
+<area shape="rect" id="Node000001" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html" title="分层服务定位器，支持服务查找的层级继承机制。 允许创建父子层级的服务容器，子容器可以访问父容器的服务。 实现 IDisposable 接口以确保资源正确释放。" alt="" coords="144,5,363,48"/>
+<area shape="poly" id="edge29_Node000000_Node000001" title=" " alt="" coords="111,24,146,26,140,27,112,29"/>
+</map>

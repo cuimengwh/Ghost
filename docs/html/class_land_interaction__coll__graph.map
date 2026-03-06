@@ -1,0 +1,15 @@
+<map id="LandInteraction" name="LandInteraction">
+<area shape="rect" id="Node000001" title="Í��ؽ���×�¼þ,�ÒÔÚÍ�¼ҽÅÏµĿÕÎïÌåÉϣ���Ô�¼�²âÍ�¼ÒÓëÍ��صĽ���" alt="" coords="172,281,283,308"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="193,5,304,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="271,41,297,75,320,117,328,140,332,164,331,187,325,210,310,234,291,254,252,283,249,278,288,250,306,231,320,208,326,187,327,164,323,142,315,119,293,78,270,47"/>
+<area shape="rect" id="Node000004" href="$class_player_base.html" title=" " alt="" coords="65,81,153,108"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="210,42,134,83,131,79,213,37"/>
+<area shape="rect" id="Node000006" href="$class_land.html" title="土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示" alt="" coords="208,132,258,159"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="247,45,237,132,232,130,244,50"/>
+<area shape="rect" id="Node000003" href="$class_player_controller.html" title="玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为" alt="" coords="52,183,166,209"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,222,106,241,112,256,124,268,139,277,175,290,169,290,137,282,121,272,108,259,101,242,101,227"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="110,121,111,183,106,182,108,126"/>
+<area shape="rect" id="Node000005" href="$interface_player_base_1_1_i_interactable.html" title="可交互接口定义" alt="" coords="5,5,170,32"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="96,44,108,81,103,81,95,49"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="234,173,230,282,225,280,230,176"/>
+</map>

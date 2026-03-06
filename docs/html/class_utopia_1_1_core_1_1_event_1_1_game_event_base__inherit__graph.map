@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Event.GameEventBase" name="Utopia.Core.Event.GameEventBase">
+<area shape="rect" id="Node000001" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此" alt="" coords="5,5,238,32"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_tool_1_1_time_triggered_event.html" title="时间触发事件，包含时间触发相关信息" alt="" coords="20,80,223,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,46,124,81,119,79,120,50"/>
+</map>

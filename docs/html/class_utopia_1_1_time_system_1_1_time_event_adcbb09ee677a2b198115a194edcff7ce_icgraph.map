@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeEvent.CreateOneTimeEvent" name="Utopia.TimeSystem.TimeEvent.CreateOneTimeEvent">
+<area shape="rect" id="Node000001" title="创建一次性日期时间事件" alt="" coords="278,5,486,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#ad3e6238a9186bbbadca5163de0789ee3" title="创建一次性时间事件" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,27,230,29,230,24,264,27"/>
+</map>

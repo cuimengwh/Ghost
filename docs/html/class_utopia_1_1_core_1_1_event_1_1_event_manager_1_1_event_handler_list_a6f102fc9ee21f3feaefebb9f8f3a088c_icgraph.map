@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Event.EventManager.EventHandlerList.BeginInvoke" name="Utopia.Core.Event.EventManager.EventHandlerList.BeginInvoke">
+<area shape="rect" id="Node000001" title="标记开始发布事件。 应在调用处理器之前调用。" alt="" coords="275,5,496,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_event_1_1_event_manager.html#a6a7174ddce49cc96acc49c4c5bd292e2" title="发布指定类型的事件，所有订阅者将收到此事件数据。 发布过程是线程安全的，并且会捕获单个处理器抛出的异常，避免影响其他处理器。" alt="" coords="5,5,227,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,27,227,29,227,24,262,27"/>
+</map>

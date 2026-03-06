@@ -1,0 +1,225 @@
+\doxysection{Utopia.\+Core.\+Services.\+Service\+Locator\+Provider类 参考}
+\hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider}{}\label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+
+
+挂载在场景物体上的服务提供者组件。 用于在\+Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。  
+
+
+
+
+类 Utopia.\+Core.\+Services.\+Service\+Locator\+Provider 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Core.\+Services.\+Service\+Locator\+Provider 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider}{Service\+Locator\+Provider}} \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ab24878b2060cb596624663a8f526e3ab}{Global}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\begin{DoxyCompactList}\small\item\em 全局唯一的服务提供者实例，用于跨场景访问核心服务。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}{Hierarchical\+Service\+Locator}} \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a916fd6e3ddd7aba668b607718bd90591}{Locator}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 公开访问的服务定位器属性。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0}{Set\+Up\+Locator}} ()
+\begin{DoxyCompactList}\small\item\em 设置服务定位器，根据配置创建全局或局部定位器。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a}{Register\+Predefined\+Components}} ()
+\begin{DoxyCompactList}\small\item\em 注册所有预先配置的组件到服务定位器。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e}{Register\+Component\+And\+Interfaces}} (Component component)
+\begin{DoxyCompactList}\small\item\em 注册组件及其实现的非系统/\+\+Unity接口到服务定位器。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a1f9aef3dcb01057a108c0b04c5eba4b4}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Unity生命周期方法：当对象被销毁时调用。 清理服务定位器资源，重置全局引用。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a8c3b187277341232786991511730481c}{\+\_\+is\+Global}} = false
+\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a30c2ec335044410a5a8cd6d8b221852b}{\+\_\+dont\+Destroy\+On\+Load}} = false
+\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_aba59124efc49d009d4864c91ecd701b6}{\+\_\+auto\+Inject\+Self}} = true
+\item 
+List$<$ Component $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a612d0690c6df29b919b50b6d22d54225}{\+\_\+auto\+Register\+Components}}
+\item 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}{Hierarchical\+Service\+Locator}} \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_af967c49e769c0a7fb3d18d7796a55903}{\+\_\+locator}}
+\begin{DoxyCompactList}\small\item\em 分层服务定位器实例，负责实际的依赖注入和服务解析。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+挂载在场景物体上的服务提供者组件。 用于在\+Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!Awake@{Awake}}
+\index{Awake@{Awake}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924} 
+void Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a4fd225428a45c3cb8eaff5fff1c19924_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a1f9aef3dcb01057a108c0b04c5eba4b4}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a1f9aef3dcb01057a108c0b04c5eba4b4} 
+void Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Unity生命周期方法：当对象被销毁时调用。 清理服务定位器资源，重置全局引用。 
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!RegisterComponentAndInterfaces@{RegisterComponentAndInterfaces}}
+\index{RegisterComponentAndInterfaces@{RegisterComponentAndInterfaces}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{RegisterComponentAndInterfaces()}{RegisterComponentAndInterfaces()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e} 
+void Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+Register\+Component\+And\+Interfaces (\begin{DoxyParamCaption}\item[{Component}]{component}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+注册组件及其实现的非系统/\+\+Unity接口到服务定位器。 
+
+
+\begin{DoxyParams}{参数}
+{\em component} & 要注册的\+Unity组件\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ace1fd6abc0cf83293856aab27bdcc65e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!RegisterPredefinedComponents@{RegisterPredefinedComponents}}
+\index{RegisterPredefinedComponents@{RegisterPredefinedComponents}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{RegisterPredefinedComponents()}{RegisterPredefinedComponents()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a} 
+void Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+Register\+Predefined\+Components (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+注册所有预先配置的组件到服务定位器。 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a0a7e220e1b7920ce4fbffd85698cf89a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!SetUpLocator@{SetUpLocator}}
+\index{SetUpLocator@{SetUpLocator}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{SetUpLocator()}{SetUpLocator()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0} 
+void Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+Set\+Up\+Locator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+设置服务定位器，根据配置创建全局或局部定位器。 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_adb27774dfa84d6f1cc284e603b0e16f0_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_aba59124efc49d009d4864c91ecd701b6}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!\_autoInjectSelf@{\_autoInjectSelf}}
+\index{\_autoInjectSelf@{\_autoInjectSelf}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{\_autoInjectSelf}{\_autoInjectSelf}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_aba59124efc49d009d4864c91ecd701b6} 
+bool Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+\_\+auto\+Inject\+Self = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a612d0690c6df29b919b50b6d22d54225}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!\_autoRegisterComponents@{\_autoRegisterComponents}}
+\index{\_autoRegisterComponents@{\_autoRegisterComponents}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{\_autoRegisterComponents}{\_autoRegisterComponents}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a612d0690c6df29b919b50b6d22d54225} 
+List$<$Component$>$ Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+\_\+auto\+Register\+Components\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a30c2ec335044410a5a8cd6d8b221852b}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!\_dontDestroyOnLoad@{\_dontDestroyOnLoad}}
+\index{\_dontDestroyOnLoad@{\_dontDestroyOnLoad}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{\_dontDestroyOnLoad}{\_dontDestroyOnLoad}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a30c2ec335044410a5a8cd6d8b221852b} 
+bool Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+\_\+dont\+Destroy\+On\+Load = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a8c3b187277341232786991511730481c}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!\_isGlobal@{\_isGlobal}}
+\index{\_isGlobal@{\_isGlobal}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{\_isGlobal}{\_isGlobal}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a8c3b187277341232786991511730481c} 
+bool Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+\_\+is\+Global = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_af967c49e769c0a7fb3d18d7796a55903}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!\_locator@{\_locator}}
+\index{\_locator@{\_locator}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{\_locator}{\_locator}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_af967c49e769c0a7fb3d18d7796a55903} 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}{Hierarchical\+Service\+Locator}} Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+\_\+locator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+分层服务定位器实例，负责实际的依赖注入和服务解析。 
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_doc-property-members}
+\doxysubsection{属性说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ab24878b2060cb596624663a8f526e3ab}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!Global@{Global}}
+\index{Global@{Global}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{Global}{Global}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_ab24878b2060cb596624663a8f526e3ab} 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider}{Service\+Locator\+Provider}} Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+Global\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+全局唯一的服务提供者实例，用于跨场景访问核心服务。 
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a916fd6e3ddd7aba668b607718bd90591}\index{Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}!Locator@{Locator}}
+\index{Locator@{Locator}!Utopia.Core.Services.ServiceLocatorProvider@{Utopia.Core.Services.ServiceLocatorProvider}}
+\doxysubsubsection{\texorpdfstring{Locator}{Locator}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_service_locator_provider_a916fd6e3ddd7aba668b607718bd90591} 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}{Hierarchical\+Service\+Locator}} Utopia.\+Core.\+Services.\+Service\+Locator\+Provider.\+Locator\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+公开访问的服务定位器属性。 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Services/\+\doxymbox{\hyperlink{_service_locator_provider_8cs}{Service\+Locator\+Provider.\+cs}}\end{DoxyCompactItemize}

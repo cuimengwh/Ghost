@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.HierarchicalServiceLocator.IsRegisteredInHierarchy&lt; T &gt;" name="Utopia.Core.Services.HierarchicalServiceLocator.IsRegisteredInHierarchy&lt; T &gt;">
+<area shape="rect" id="Node000001" title="检查整个层级链中是否存在指定类型的服务。" alt="" coords="5,5,290,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#a645a6e009a86be3716d0e1037c0efdbe" title="核心查找方法：按照分层顺序查找指定类型的服务。" alt="" coords="338,5,557,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,24,325,27,319,27,290,29"/>
+</map>

@@ -1,0 +1,122 @@
+\doxysection{Utopia.\+Game\+Logic.\+NPC.\+INPCService接口 参考}
+\hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service}{}\label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service}\index{Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}}
+
+
+NPC服务接口 提供\+NPC系统的核心服务功能，统一管理\+NPC的配置和状态数据 作为其他系统与\+NPC数据交互的统一入口  
+
+
+
+
+类 Utopia.\+Game\+Logic.\+NPC.\+INPCService 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+NPCData \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_af18ca0c0c70529b60bb9c357ebaa559c}{Get\+Config}} (string npc\+Id)
+\begin{DoxyCompactList}\small\item\em 获取指定\+NPC的配置数据 包含\+NPC的静态属性、预设行为等不变数据 \end{DoxyCompactList}\item 
+NPCState \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a561f9ee4a4e484fb5d3b62ce63fd7d4e}{Get\+State}} (string npc\+Id)
+\begin{DoxyCompactList}\small\item\em 获取指定\+NPC的运行时状态数据 包含\+NPC的动态状态，如位置、情绪、标志位等 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_ac341207a0aa17d5d89a52ceff8250e6a}{Updata\+State}} (string npc\+Id, NPCState new\+State)
+\begin{DoxyCompactList}\small\item\em 更新指定\+NPC的状态数据 用于将修改后的状态保存回管理器中 注意：此方法不会自动持久化到存储，需要调用\+Save\+All\+NPCs \end{DoxyCompactList}\item 
+IEnumerable$<$ string $>$ \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a60990cd5d1ee5d0fab88c7363cffb889}{Get\+All\+NPCIds}} ()
+\begin{DoxyCompactList}\small\item\em 获取所有已加载\+NPC的\+ID列表 用于遍历、批量操作或调试 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+NPC服务接口 提供\+NPC系统的核心服务功能，统一管理\+NPC的配置和状态数据 作为其他系统与\+NPC数据交互的统一入口 
+
+\label{doc-func-members}
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a60990cd5d1ee5d0fab88c7363cffb889}\index{Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}!GetAllNPCIds@{GetAllNPCIds}}
+\index{GetAllNPCIds@{GetAllNPCIds}!Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}}
+\doxysubsubsection{\texorpdfstring{GetAllNPCIds()}{GetAllNPCIds()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a60990cd5d1ee5d0fab88c7363cffb889} 
+IEnumerable$<$ string $>$ Utopia.\+Game\+Logic.\+NPC.\+INPCService.\+Get\+All\+NPCIds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+获取所有已加载\+NPC的\+ID列表 用于遍历、批量操作或调试 
+
+\begin{DoxyReturn}{返回}
+所有\+NPC ID的枚举集合
+\end{DoxyReturn}
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6a4ff44969458709fd9616ac72ed4b6e}{Utopia.\+Game\+Logic.\+NPC.\+NPCManager}} 内被实现.
+
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_af18ca0c0c70529b60bb9c357ebaa559c}\index{Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}!GetConfig@{GetConfig}}
+\index{GetConfig@{GetConfig}!Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}}
+\doxysubsubsection{\texorpdfstring{GetConfig()}{GetConfig()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_af18ca0c0c70529b60bb9c357ebaa559c} 
+NPCData Utopia.\+Game\+Logic.\+NPC.\+INPCService.\+Get\+Config (\begin{DoxyParamCaption}\item[{string}]{npc\+Id}{}\end{DoxyParamCaption})}
+
+
+
+获取指定\+NPC的配置数据 包含\+NPC的静态属性、预设行为等不变数据 
+
+
+\begin{DoxyParams}{参数}
+{\em npc\+Id} & NPC的唯一标识符\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+NPCData配置对象，未找到时返回null
+\end{DoxyReturn}
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_af11bd7df509f8248dc1ebcc9c6442151}{Utopia.\+Game\+Logic.\+NPC.\+NPCManager}} 内被实现.
+
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a561f9ee4a4e484fb5d3b62ce63fd7d4e}\index{Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}!GetState@{GetState}}
+\index{GetState@{GetState}!Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a561f9ee4a4e484fb5d3b62ce63fd7d4e} 
+NPCState Utopia.\+Game\+Logic.\+NPC.\+INPCService.\+Get\+State (\begin{DoxyParamCaption}\item[{string}]{npc\+Id}{}\end{DoxyParamCaption})}
+
+
+
+获取指定\+NPC的运行时状态数据 包含\+NPC的动态状态，如位置、情绪、标志位等 
+
+
+\begin{DoxyParams}{参数}
+{\em npc\+Id} & NPC的唯一标识符\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+NPCState状态对象，未找到时返回null
+\end{DoxyReturn}
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac7441499682a9806d68081270ec5e5ec}{Utopia.\+Game\+Logic.\+NPC.\+NPCManager}} 内被实现.
+
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_ac341207a0aa17d5d89a52ceff8250e6a}\index{Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}!UpdataState@{UpdataState}}
+\index{UpdataState@{UpdataState}!Utopia.GameLogic.NPC.INPCService@{Utopia.GameLogic.NPC.INPCService}}
+\doxysubsubsection{\texorpdfstring{UpdataState()}{UpdataState()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_ac341207a0aa17d5d89a52ceff8250e6a} 
+void Utopia.\+Game\+Logic.\+NPC.\+INPCService.\+Updata\+State (\begin{DoxyParamCaption}\item[{string}]{npc\+Id}{, }\item[{NPCState}]{new\+State}{}\end{DoxyParamCaption})}
+
+
+
+更新指定\+NPC的状态数据 用于将修改后的状态保存回管理器中 注意：此方法不会自动持久化到存储，需要调用\+Save\+All\+NPCs 
+
+
+\begin{DoxyParams}{参数}
+{\em npc\+Id} & NPC的唯一标识符\\
+\hline
+{\em new\+State} & 新的\+NPC状态对象\\
+\hline
+\end{DoxyParams}
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a1b8ba8785e7573962d6f5187d967d019}{Utopia.\+Game\+Logic.\+NPC.\+NPCManager}} 内被实现.
+
+
+
+该接口的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Npc/\+\+Manage/\+\doxymbox{\hyperlink{_n_p_c_manager_8cs}{NPCManager.\+cs}}\end{DoxyCompactItemize}

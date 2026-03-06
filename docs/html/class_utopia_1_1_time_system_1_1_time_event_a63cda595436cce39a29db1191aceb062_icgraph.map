@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeEvent.CreateYearlyEvent" name="Utopia.TimeSystem.TimeEvent.CreateYearlyEvent">
+<area shape="rect" id="Node000001" title="创建每年重复事件" alt="" coords="278,5,486,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#ad063b6076ee4f4886c7662c3cf43c07e" title="创建每年重复事件" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,27,230,29,230,24,264,27"/>
+</map>

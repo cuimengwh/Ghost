@@ -1,0 +1,9 @@
+<map id="Utopia.Core.Event.EventManager.Publish&lt; IEvent &gt;" name="Utopia.Core.Event.EventManager.Publish&lt; IEvent &gt;">
+<area shape="rect" id="Node000001" title="发布指定类型的事件，所有订阅者将收到此事件数据。 发布过程是线程安全的，并且会捕获单个处理器抛出的异常，避免影响其他处理器。" alt="" coords="5,72,227,115"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list.html#a6f102fc9ee21f3feaefebb9f8f3a088c" title="标记开始发布事件。 应在调用处理器之前调用。" alt="" coords="278,5,499,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,69,286,51,281,53,207,74"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list.html#a5a13fc39e59d9e82e5ae7fe5a09091dd" title="标记结束发布事件。 清理快照列表，并重置状态。 应在调用处理器之后调用（包含异常处理）。" alt="" coords="278,72,499,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,91,265,93,260,94,227,96"/>
+<area shape="rect" id="Node000004" href="$class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list.html#a0876ef6bdf247c46e5d5c4162e38f853" title="获取当前应该被调用的处理器列表。 如果在发布过程中，返回 Handlers 的快照；否则直接返回 Handlers。" alt="" coords="275,139,502,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,113,286,134,281,135,206,118"/>
+</map>

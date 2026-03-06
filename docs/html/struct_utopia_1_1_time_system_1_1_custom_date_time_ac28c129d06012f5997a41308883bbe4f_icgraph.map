@@ -1,0 +1,7 @@
+<map id="Utopia.TimeSystem.CustomDateTime.ToTotalDays" name="Utopia.TimeSystem.CustomDateTime.ToTotalDays">
+<area shape="rect" id="Node000001" title="转换为总天数" alt="" coords="278,39,465,81"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a8c6d10c0d130b86ad04b34c578b97f4d" title="跳转到自定义日期时间" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,46,230,44,230,39,265,45"/>
+<area shape="rect" id="Node000003" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#aaeb5ac1050341de74a9aecf15200d868" title="转换为总小时数" alt="" coords="24,72,211,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,75,212,84,211,78,265,74"/>
+</map>

@@ -1,0 +1,329 @@
+\doxysection{Utopia.\+Core.\+Event.\+Event\+Manager类 参考}
+\hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager}{}\label{class_utopia_1_1_core_1_1_event_1_1_event_manager}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+
+
+全局事件总线。 纯 C\# 实现，独立于 Unity 生命周期，适用于任何需要事件通信的场景。 无单例模式，建议通过依赖注入或服务定位器访问。 遵循订阅-\/发布模式，用于模块间解耦通信。 所有公开方法均为线程安全（使用对象锁）。  
+
+
+
+
+类 Utopia.\+Core.\+Event.\+Event\+Manager 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{class_utopia_1_1_core_1_1_event_1_1_event_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Core.\+Event.\+Event\+Manager 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{class_utopia_1_1_core_1_1_event_1_1_event_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list}{Event\+Handler\+List}}
+\begin{DoxyCompactList}\small\item\em 封装特定事件类型的处理器列表，并提供在发布过程中安全遍历的能力。 使用快照机制（\+\_\+handlers\+To\+Invoke）避免在遍历过程中修改集合导致的异常。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_ae1af2a702706f939ffdca13b3c2fb4ac}{Subscribe$<$ IEvent $>$}} (Action$<$ IEvent $>$ handler)
+\begin{DoxyCompactList}\small\item\em 订阅指定类型的事件。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_aab47270229db301088f40cbc5a1b6886}{Unsubscribe$<$ IEvent $>$}} (Action$<$ IEvent $>$ handler)
+\begin{DoxyCompactList}\small\item\em 取消订阅指定类型的事件。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_a6a7174ddce49cc96acc49c4c5bd292e2}{Publish$<$ IEvent $>$}} (IEvent event\+Data)
+\begin{DoxyCompactList}\small\item\em 发布指定类型的事件，所有订阅者将收到此事件数据。 发布过程是线程安全的，并且会捕获单个处理器抛出的异常，避免影响其他处理器。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_a1d0994435da6d43b5016393967e51b41}{Has\+Subscribers$<$ IEvent $>$}} ()
+\begin{DoxyCompactList}\small\item\em 检测指定事件类型是否存在至少一个订阅者。 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_a34166deaba5a5d805dfd1ae34b0b243b}{Get\+Subscriber\+Count$<$ IEvent $>$}} ()
+\begin{DoxyCompactList}\small\item\em 获取指定事件类型的当前订阅者数量。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_a48504e514beb0bf6a2db2143acbe864f}{Clear\+All}} ()
+\begin{DoxyCompactList}\small\item\em 清除所有事件的所有订阅者。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_aa1a1e5d43849b0528b4a2433ad9cc841}{Clear\+Event$<$ IEvent $>$}} ()
+\begin{DoxyCompactList}\small\item\em 清除指定事件类型的所有订阅者。 \end{DoxyCompactList}\item 
+List$<$ Type $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_af22e83f2badb006c2b76baf300e5fbdb}{Get\+All\+Event\+Types}} ()
+\begin{DoxyCompactList}\small\item\em 获取当前已注册的所有事件类型列表。 该方法主要用于调试和监控工具。 \end{DoxyCompactList}\item 
+Dictionary$<$ string, int $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_a64d0a97a524e601f1085e591ef0e4df1}{Get\+Event\+Statistics}} ()
+\begin{DoxyCompactList}\small\item\em 获取事件订阅统计信息。 以字典形式返回每种事件类型及其对应的订阅者数量。 该方法主要用于调试和性能分析。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+readonly Dictionary$<$ Type, \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list}{Event\+Handler\+List}} $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_a638738b48783781966d70974e7326bf7}{\+\_\+event\+Handlers}} = new()
+\begin{DoxyCompactList}\small\item\em 存储所有事件类型与其对应处理器列表的字典。 键：事件类型（\+Type） 值：该事件类型的处理器封装对象 \doxylink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list}{Event\+Handler\+List} \end{DoxyCompactList}\item 
+readonly object \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_adfba87fdd46063d4504bccfd0a1fd937}{\+\_\+lock}} = new()
+\begin{DoxyCompactList}\small\item\em 线程同步锁对象。 用于保证所有订阅、取消订阅、发布、查询操作在多线程环境下的原子性和可见性。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_acdb14aff6be2ecda834759f802f2fd0b}{\+\_\+enable\+Logging}} = false
+\begin{DoxyCompactList}\small\item\em 日志开关。 当设置为 true 时，会在控制台输出订阅、取消订阅、发布等关键操作的调试信息。 默认关闭，可通过其他方式（如配置文件、\+Inspector）动态修改。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+全局事件总线。 纯 C\# 实现，独立于 Unity 生命周期，适用于任何需要事件通信的场景。 无单例模式，建议通过依赖注入或服务定位器访问。 遵循订阅-\/发布模式，用于模块间解耦通信。 所有公开方法均为线程安全（使用对象锁）。 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_a48504e514beb0bf6a2db2143acbe864f}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!ClearAll@{ClearAll}}
+\index{ClearAll@{ClearAll}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{ClearAll()}{ClearAll()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_a48504e514beb0bf6a2db2143acbe864f} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Clear\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+清除所有事件的所有订阅者。 
+
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1}{Utopia.\+Core.\+Event.\+IEvent\+Manager}}.
+
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_aa1a1e5d43849b0528b4a2433ad9cc841}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!ClearEvent$<$ IEvent $>$@{ClearEvent$<$ IEvent $>$}}
+\index{ClearEvent$<$ IEvent $>$@{ClearEvent$<$ IEvent $>$}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{ClearEvent$<$ IEvent $>$()}{ClearEvent< IEvent >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_aa1a1e5d43849b0528b4a2433ad9cc841} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Clear\+Event$<$ IEvent $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+清除指定事件类型的所有订阅者。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em IEvent} & 事件类型，必须继承自 \doxylink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}\\
+\hline
+\end{DoxyTemplParams}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_af4e2cf4f538caeffdc1c66e57c8a7cdb}{Utopia.\+Core.\+Event.\+IEvent\+Manager}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em IEvent} : {\em \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}}}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_af22e83f2badb006c2b76baf300e5fbdb}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!GetAllEventTypes@{GetAllEventTypes}}
+\index{GetAllEventTypes@{GetAllEventTypes}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{GetAllEventTypes()}{GetAllEventTypes()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_af22e83f2badb006c2b76baf300e5fbdb} 
+List$<$ Type $>$ Utopia.\+Core.\+Event.\+Event\+Manager.\+Get\+All\+Event\+Types (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取当前已注册的所有事件类型列表。 该方法主要用于调试和监控工具。 
+
+\begin{DoxyReturn}{返回}
+包含所有事件 Type 对象的列表
+\end{DoxyReturn}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_a64d0a97a524e601f1085e591ef0e4df1}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!GetEventStatistics@{GetEventStatistics}}
+\index{GetEventStatistics@{GetEventStatistics}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{GetEventStatistics()}{GetEventStatistics()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_a64d0a97a524e601f1085e591ef0e4df1} 
+Dictionary$<$ string, int $>$ Utopia.\+Core.\+Event.\+Event\+Manager.\+Get\+Event\+Statistics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取事件订阅统计信息。 以字典形式返回每种事件类型及其对应的订阅者数量。 该方法主要用于调试和性能分析。 
+
+\begin{DoxyReturn}{返回}
+键为事件类型名称（字符串），值为订阅者数量
+\end{DoxyReturn}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_a34166deaba5a5d805dfd1ae34b0b243b}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!GetSubscriberCount$<$ IEvent $>$@{GetSubscriberCount$<$ IEvent $>$}}
+\index{GetSubscriberCount$<$ IEvent $>$@{GetSubscriberCount$<$ IEvent $>$}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{GetSubscriberCount$<$ IEvent $>$()}{GetSubscriberCount< IEvent >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_a34166deaba5a5d805dfd1ae34b0b243b} 
+int Utopia.\+Core.\+Event.\+Event\+Manager.\+Get\+Subscriber\+Count$<$ IEvent $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取指定事件类型的当前订阅者数量。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em IEvent} & 事件类型，必须继承自 \doxylink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+订阅者数量，如果无订阅者则返回 0
+\end{DoxyReturn}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ad644d79d3e8afc511fcdeb1d46d28e3b}{Utopia.\+Core.\+Event.\+IEvent\+Manager}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em IEvent} : {\em \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}}}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_a1d0994435da6d43b5016393967e51b41}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!HasSubscribers$<$ IEvent $>$@{HasSubscribers$<$ IEvent $>$}}
+\index{HasSubscribers$<$ IEvent $>$@{HasSubscribers$<$ IEvent $>$}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{HasSubscribers$<$ IEvent $>$()}{HasSubscribers< IEvent >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_a1d0994435da6d43b5016393967e51b41} 
+bool Utopia.\+Core.\+Event.\+Event\+Manager.\+Has\+Subscribers$<$ IEvent $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检测指定事件类型是否存在至少一个订阅者。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em IEvent} & 事件类型，必须继承自 \doxylink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+如果有任何订阅者则返回 true，否则返回 false
+\end{DoxyReturn}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ae61a7a74151a852b7b57b27bce802267}{Utopia.\+Core.\+Event.\+IEvent\+Manager}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em IEvent} : {\em \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}}}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_a6a7174ddce49cc96acc49c4c5bd292e2}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!Publish$<$ IEvent $>$@{Publish$<$ IEvent $>$}}
+\index{Publish$<$ IEvent $>$@{Publish$<$ IEvent $>$}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{Publish$<$ IEvent $>$()}{Publish< IEvent >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_a6a7174ddce49cc96acc49c4c5bd292e2} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Publish$<$ IEvent $>$ (\begin{DoxyParamCaption}\item[{IEvent}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+发布指定类型的事件，所有订阅者将收到此事件数据。 发布过程是线程安全的，并且会捕获单个处理器抛出的异常，避免影响其他处理器。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em IEvent} & 事件类型，必须继承自 \doxylink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em event\+Data} & 要发布的事件实例\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{异常}
+{\em Argument\+Null\+Exception} & 当 event\+Data 为 null 时抛出\\
+\hline
+\end{DoxyExceptions}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_a09d7fe918547676bbbba917a664bc189}{Utopia.\+Core.\+Event.\+IEvent\+Manager}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em IEvent} : {\em \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}}}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_event_1_1_event_manager_a6a7174ddce49cc96acc49c4c5bd292e2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_ae1af2a702706f939ffdca13b3c2fb4ac}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!Subscribe$<$ IEvent $>$@{Subscribe$<$ IEvent $>$}}
+\index{Subscribe$<$ IEvent $>$@{Subscribe$<$ IEvent $>$}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{Subscribe$<$ IEvent $>$()}{Subscribe< IEvent >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_ae1af2a702706f939ffdca13b3c2fb4ac} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Subscribe$<$ IEvent $>$ (\begin{DoxyParamCaption}\item[{Action$<$ IEvent $>$}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+订阅指定类型的事件。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em IEvent} & 事件类型，必须继承自 \doxylink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em handler} & 事件处理回调方法\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{异常}
+{\em Argument\+Null\+Exception} & 当 handler 为 null 时抛出\\
+\hline
+\end{DoxyExceptions}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_a37a67fd6abf20b3a10202785e0b2c7d3}{Utopia.\+Core.\+Event.\+IEvent\+Manager}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em IEvent} : {\em \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}}}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_aab47270229db301088f40cbc5a1b6886}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!Unsubscribe$<$ IEvent $>$@{Unsubscribe$<$ IEvent $>$}}
+\index{Unsubscribe$<$ IEvent $>$@{Unsubscribe$<$ IEvent $>$}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{Unsubscribe$<$ IEvent $>$()}{Unsubscribe< IEvent >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_aab47270229db301088f40cbc5a1b6886} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Unsubscribe$<$ IEvent $>$ (\begin{DoxyParamCaption}\item[{Action$<$ IEvent $>$}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+取消订阅指定类型的事件。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em IEvent} & 事件类型，必须继承自 \doxylink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em handler} & 之前订阅时使用的相同回调方法\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{异常}
+{\em Argument\+Null\+Exception} & 当 handler 为 null 时抛出\\
+\hline
+\end{DoxyExceptions}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_a6cecd9b8f1feafea20629f387eb51232}{Utopia.\+Core.\+Event.\+IEvent\+Manager}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em IEvent} : {\em \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}}}]\end{description}
+\end{Desc}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_acdb14aff6be2ecda834759f802f2fd0b}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!\_enableLogging@{\_enableLogging}}
+\index{\_enableLogging@{\_enableLogging}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{\_enableLogging}{\_enableLogging}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_acdb14aff6be2ecda834759f802f2fd0b} 
+bool Utopia.\+Core.\+Event.\+Event\+Manager.\+\_\+enable\+Logging = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+日志开关。 当设置为 true 时，会在控制台输出订阅、取消订阅、发布等关键操作的调试信息。 默认关闭，可通过其他方式（如配置文件、\+Inspector）动态修改。 
+
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_a638738b48783781966d70974e7326bf7}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!\_eventHandlers@{\_eventHandlers}}
+\index{\_eventHandlers@{\_eventHandlers}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{\_eventHandlers}{\_eventHandlers}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_a638738b48783781966d70974e7326bf7} 
+readonly Dictionary$<$Type, \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list}{Event\+Handler\+List}}$>$ Utopia.\+Core.\+Event.\+Event\+Manager.\+\_\+event\+Handlers = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+存储所有事件类型与其对应处理器列表的字典。 键：事件类型（\+Type） 值：该事件类型的处理器封装对象 \doxylink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list}{Event\+Handler\+List} 
+
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_adfba87fdd46063d4504bccfd0a1fd937}\index{Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}!\_lock@{\_lock}}
+\index{\_lock@{\_lock}!Utopia.Core.Event.EventManager@{Utopia.Core.Event.EventManager}}
+\doxysubsubsection{\texorpdfstring{\_lock}{\_lock}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_adfba87fdd46063d4504bccfd0a1fd937} 
+readonly object Utopia.\+Core.\+Event.\+Event\+Manager.\+\_\+lock = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+线程同步锁对象。 用于保证所有订阅、取消订阅、发布、查询操作在多线程环境下的原子性和可见性。 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Events/\+\doxymbox{\hyperlink{_event_manager_8cs}{Event\+Manager.\+cs}}\end{DoxyCompactItemize}

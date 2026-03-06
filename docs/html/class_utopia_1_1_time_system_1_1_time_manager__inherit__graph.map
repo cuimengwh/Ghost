@@ -1,0 +1,7 @@
+<map id="Utopia.TimeSystem.TimeManager" name="Utopia.TimeSystem.TimeManager">
+<area shape="rect" id="Node000001" title="TimeManager &#45; 负责游戏内时间的管理和事件系统" alt="" coords="22,80,242,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,41,122,79,117,80,83,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="140,5,264,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,42,145,82,142,77,177,44"/>
+</map>

@@ -1,0 +1,231 @@
+\doxysection{Land类 参考}
+\hypertarget{class_land}{}\label{class_land}\index{Land@{Land}}
+
+
+土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示  
+
+
+
+
+类 Land 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_land__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Land 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_land__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319}{Land\+Status}} \{ \doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319ac90b1198f689dd950d51142e65a44c81}{dirt}}
+, \doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319aac9094d64bf2626d3efdb1132045c224}{farmland}}
+, \doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319a1d0bfd0cc7da03f349301713c9de0274}{watered}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_land_a3fd6faf4f6de9aed7001178e4bb14c9c}{Switch\+Land\+Status}} (\doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319}{Land\+Status}} new\+Status)
+\begin{DoxyCompactList}\small\item\em 切换土地状态 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_land_ac39ebba4c710035088e2db926ca1991b}{Select}} (bool is\+Selected)
+\begin{DoxyCompactList}\small\item\em 设置土地的选中状态 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_land_a6c2c760cdd5387b690a786ecf3433d7e}{Interact}} ()
+\begin{DoxyCompactList}\small\item\em 与土地交互的处理函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Material \doxymbox{\hyperlink{class_land_aaaf62cbce6f1451b858d49defb338d60}{dirt\+Mat}}
+\item 
+Material \doxymbox{\hyperlink{class_land_a4ac66b1f6c2f5bf56e5df48d74ad8204}{farmland\+Mat}}
+\item 
+Material \doxymbox{\hyperlink{class_land_ad496f0050ba20569291108e276c33420}{watered\+Mat}}
+\item 
+\doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319}{Land\+Status}} \doxymbox{\hyperlink{class_land_aaea141cba92ebcc1aa229158b7a9b901}{land\+Status}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_land_a0ec4bc3f6bbbd347503a068518ff4338}{select}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_land_a44ddbf29618a18157f98eabcb3de4c52}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+new Renderer \doxymbox{\hyperlink{class_land_a47b2d6be3790f1a393e91a031d0ab572}{renderer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示 
+
+\label{doc-enum-members}
+\Hypertarget{class_land_doc-enum-members}
+\doxysubsection{成员枚举类型说明}
+\Hypertarget{class_land_a6f9ebccbffdeca2f6cfae58838f95319}\index{Land@{Land}!LandStatus@{LandStatus}}
+\index{LandStatus@{LandStatus}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{LandStatus}{LandStatus}}
+{\footnotesize\ttfamily \label{class_land_a6f9ebccbffdeca2f6cfae58838f95319} 
+enum \doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319}{Land.\+Land\+Status}}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dirt@{dirt}!Land@{Land}}
+\index{Land@{Land}!dirt@{dirt}}
+}\Hypertarget{class_land_a6f9ebccbffdeca2f6cfae58838f95319ac90b1198f689dd950d51142e65a44c81}\label{class_land_a6f9ebccbffdeca2f6cfae58838f95319ac90b1198f689dd950d51142e65a44c81} 
+dirt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{farmland@{farmland}!Land@{Land}}
+\index{Land@{Land}!farmland@{farmland}}
+}\Hypertarget{class_land_a6f9ebccbffdeca2f6cfae58838f95319aac9094d64bf2626d3efdb1132045c224}\label{class_land_a6f9ebccbffdeca2f6cfae58838f95319aac9094d64bf2626d3efdb1132045c224} 
+farmland&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{watered@{watered}!Land@{Land}}
+\index{Land@{Land}!watered@{watered}}
+}\Hypertarget{class_land_a6f9ebccbffdeca2f6cfae58838f95319a1d0bfd0cc7da03f349301713c9de0274}\label{class_land_a6f9ebccbffdeca2f6cfae58838f95319a1d0bfd0cc7da03f349301713c9de0274} 
+watered&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_land_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_land_a6c2c760cdd5387b690a786ecf3433d7e}\index{Land@{Land}!Interact@{Interact}}
+\index{Interact@{Interact}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{Interact()}{Interact()}}
+{\footnotesize\ttfamily \label{class_land_a6c2c760cdd5387b690a786ecf3433d7e} 
+void Land.\+Interact (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+与土地交互的处理函数 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_land_a6c2c760cdd5387b690a786ecf3433d7e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_land_a6c2c760cdd5387b690a786ecf3433d7e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_land_ac39ebba4c710035088e2db926ca1991b}\index{Land@{Land}!Select@{Select}}
+\index{Select@{Select}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{Select()}{Select()}}
+{\footnotesize\ttfamily \label{class_land_ac39ebba4c710035088e2db926ca1991b} 
+void Land.\+Select (\begin{DoxyParamCaption}\item[{bool}]{is\+Selected}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置土地的选中状态 
+
+
+\begin{DoxyParams}{参数}
+{\em is\+Selected} & 是否被选中\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_land_ac39ebba4c710035088e2db926ca1991b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_land_a44ddbf29618a18157f98eabcb3de4c52}\index{Land@{Land}!Start@{Start}}
+\index{Start@{Start}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_land_a44ddbf29618a18157f98eabcb3de4c52} 
+void Land.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_land_a44ddbf29618a18157f98eabcb3de4c52_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_land_a3fd6faf4f6de9aed7001178e4bb14c9c}\index{Land@{Land}!SwitchLandStatus@{SwitchLandStatus}}
+\index{SwitchLandStatus@{SwitchLandStatus}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{SwitchLandStatus()}{SwitchLandStatus()}}
+{\footnotesize\ttfamily \label{class_land_a3fd6faf4f6de9aed7001178e4bb14c9c} 
+void Land.\+Switch\+Land\+Status (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319}{Land\+Status}}}]{new\+Status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+切换土地状态 
+
+
+\begin{DoxyParams}{参数}
+{\em new\+Status} & 新的土地状态\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_land_a3fd6faf4f6de9aed7001178e4bb14c9c_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_land_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_land_aaaf62cbce6f1451b858d49defb338d60}\index{Land@{Land}!dirtMat@{dirtMat}}
+\index{dirtMat@{dirtMat}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{dirtMat}{dirtMat}}
+{\footnotesize\ttfamily \label{class_land_aaaf62cbce6f1451b858d49defb338d60} 
+Material Land.\+dirt\+Mat}
+
+\Hypertarget{class_land_a4ac66b1f6c2f5bf56e5df48d74ad8204}\index{Land@{Land}!farmlandMat@{farmlandMat}}
+\index{farmlandMat@{farmlandMat}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{farmlandMat}{farmlandMat}}
+{\footnotesize\ttfamily \label{class_land_a4ac66b1f6c2f5bf56e5df48d74ad8204} 
+Material Land.\+farmland\+Mat}
+
+\Hypertarget{class_land_aaea141cba92ebcc1aa229158b7a9b901}\index{Land@{Land}!landStatus@{landStatus}}
+\index{landStatus@{landStatus}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{landStatus}{landStatus}}
+{\footnotesize\ttfamily \label{class_land_aaea141cba92ebcc1aa229158b7a9b901} 
+\doxymbox{\hyperlink{class_land_a6f9ebccbffdeca2f6cfae58838f95319}{Land\+Status}} Land.\+land\+Status}
+
+\Hypertarget{class_land_a47b2d6be3790f1a393e91a031d0ab572}\index{Land@{Land}!renderer@{renderer}}
+\index{renderer@{renderer}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily \label{class_land_a47b2d6be3790f1a393e91a031d0ab572} 
+new Renderer Land.\+renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_land_a0ec4bc3f6bbbd347503a068518ff4338}\index{Land@{Land}!select@{select}}
+\index{select@{select}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{select}{select}}
+{\footnotesize\ttfamily \label{class_land_a0ec4bc3f6bbbd347503a068518ff4338} 
+Game\+Object Land.\+select}
+
+\Hypertarget{class_land_ad496f0050ba20569291108e276c33420}\index{Land@{Land}!wateredMat@{wateredMat}}
+\index{wateredMat@{wateredMat}!Land@{Land}}
+\doxysubsubsection{\texorpdfstring{wateredMat}{wateredMat}}
+{\footnotesize\ttfamily \label{class_land_ad496f0050ba20569291108e276c33420} 
+Material Land.\+watered\+Mat}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Farming/\+\+Interaction/\+\doxymbox{\hyperlink{_land_8cs}{Land.\+cs}}\end{DoxyCompactItemize}

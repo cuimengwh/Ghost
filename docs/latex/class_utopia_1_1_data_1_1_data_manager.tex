@@ -1,0 +1,292 @@
+\doxysection{Utopia.\+Data.\+Data\+Manager类 参考}
+\hypertarget{class_utopia_1_1_data_1_1_data_manager}{}\label{class_utopia_1_1_data_1_1_data_manager}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+
+
+数据管理器实现。 负责磁盘\+IO、序列化、加密。  
+
+
+
+
+类 Utopia.\+Data.\+Data\+Manager 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_utopia_1_1_data_1_1_data_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Data.\+Data\+Manager 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_utopia_1_1_data_1_1_data_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+async Task \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917}{Save\+Data\+Async$<$ T $>$}} (string key, T data)
+\begin{DoxyCompactList}\small\item\em 异步保存数据文件 \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5}{Load\+Data\+Async$<$ T $>$}} (string key)
+\begin{DoxyCompactList}\small\item\em 异步加载数据 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_aca871f7502add0997179d3cf068571ce}{Delete\+Data}} (string key)
+\begin{DoxyCompactList}\small\item\em 删除指定键的数据 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a330855bc46b8221f200c89f700385a62}{Has\+Data}} (string key)
+\begin{DoxyCompactList}\small\item\em 检查指定键是否存在数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7}{Awake}} ()
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a0db9bab677f6eff3276e3609ba5659e1}{On\+Destroy}} ()
+\item 
+byte\+[$\,$]\+ \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e}{XOREncrypt}} (byte\+[$\,$]\+ data, string key)
+\begin{DoxyCompactList}\small\item\em XOR异或加密/\+解密算法 注意：这是简单的加密，不适合高安全需求 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a320c1a3f85ca20ad96743603977ba646}{\+\_\+file\+Name}} = "{}save\+\_\+data.\+json"{}
+\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a8b7a23869f93c610cb596ff7c2ecd15a}{\+\_\+use\+Encryption}} = true
+\item 
+string \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a1a23a1448120d1cafe73efa8cc7d0f42}{\+\_\+encryption\+Key}} = "{}Soul\+Farm\+\_\+\+Secret\+\_\+2025"{}
+\item 
+string \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a86a45525ed4bf3df7aba3cca33bc28fc}{\+\_\+save\+Path}}
+\item 
+Dictionary$<$ string, object $>$ \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_ae7d3205bf2138729d758ea7389ad5fa8}{\+\_\+runtime\+Cache}} = new Dictionary$<$string, object$>$()
+\item 
+readonly Json\+Serializer\+Settings \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a96d4a755487a387b5431504442a79008}{\+\_\+json\+Settings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+数据管理器实现。 负责磁盘\+IO、序列化、加密。 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!Awake@{Awake}}
+\index{Awake@{Awake}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7} 
+void Utopia.\+Data.\+Data\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_aca871f7502add0997179d3cf068571ce}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!DeleteData@{DeleteData}}
+\index{DeleteData@{DeleteData}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{DeleteData()}{DeleteData()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_aca871f7502add0997179d3cf068571ce} 
+void Utopia.\+Data.\+Data\+Manager.\+Delete\+Data (\begin{DoxyParamCaption}\item[{string}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+删除指定键的数据 
+
+
+\begin{DoxyParams}{参数}
+{\em key} & 数据标识键\\
+\hline
+\end{DoxyParams}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_af9ec3103551c128865f2e550fd4cd0c6}{Utopia.\+Data.\+IData\+Service}}.
+
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a330855bc46b8221f200c89f700385a62}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!HasData@{HasData}}
+\index{HasData@{HasData}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{HasData()}{HasData()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a330855bc46b8221f200c89f700385a62} 
+bool Utopia.\+Data.\+Data\+Manager.\+Has\+Data (\begin{DoxyParamCaption}\item[{string}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查指定键是否存在数据 
+
+
+\begin{DoxyParams}{参数}
+{\em key} & 数据标识键\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否存在数据
+\end{DoxyReturn}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_a6c0134f4572a08090cc1f714154bddb3}{Utopia.\+Data.\+IData\+Service}}.
+
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!LoadDataAsync$<$ T $>$@{LoadDataAsync$<$ T $>$}}
+\index{LoadDataAsync$<$ T $>$@{LoadDataAsync$<$ T $>$}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{LoadDataAsync$<$ T $>$()}{LoadDataAsync< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5} 
+async Task$<$ T $>$ Utopia.\+Data.\+Data\+Manager.\+Load\+Data\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+异步加载数据 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 期望的数据类型\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em key} & 数据标识键\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+加载的数据对象，不存在时返回null
+\end{DoxyReturn}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_a4dfdfc020d339a0c583297cccb5377e4}{Utopia.\+Data.\+IData\+Service}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a0db9bab677f6eff3276e3609ba5659e1}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a0db9bab677f6eff3276e3609ba5659e1} 
+void Utopia.\+Data.\+Data\+Manager.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!SaveDataAsync$<$ T $>$@{SaveDataAsync$<$ T $>$}}
+\index{SaveDataAsync$<$ T $>$@{SaveDataAsync$<$ T $>$}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{SaveDataAsync$<$ T $>$()}{SaveDataAsync< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917} 
+async Task Utopia.\+Data.\+Data\+Manager.\+Save\+Data\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key}{, }\item[{T}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+异步保存数据文件 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 数据类型，必须是类\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em key} & 数据标识键，用作文件名\\
+\hline
+{\em data} & 要保存的数据对象\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+异步任务
+\end{DoxyReturn}
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_aec33fc40b4e526c450c214d12248344a}{Utopia.\+Data.\+IData\+Service}}.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!XOREncrypt@{XOREncrypt}}
+\index{XOREncrypt@{XOREncrypt}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{XOREncrypt()}{XOREncrypt()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e} 
+byte\+[$\,$]\+ Utopia.\+Data.\+Data\+Manager.\+XOREncrypt (\begin{DoxyParamCaption}\item[{byte\+[$\,$]\+}]{data}{, }\item[{string}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+XOR异或加密/\+解密算法 注意：这是简单的加密，不适合高安全需求 
+
+
+\begin{DoxyParams}{参数}
+{\em data} & 要加密/\+解密的数据\\
+\hline
+{\em key} & 加密密钥\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+处理后的字节数组
+\end{DoxyReturn}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a1a23a1448120d1cafe73efa8cc7d0f42}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!\_encryptionKey@{\_encryptionKey}}
+\index{\_encryptionKey@{\_encryptionKey}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{\_encryptionKey}{\_encryptionKey}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a1a23a1448120d1cafe73efa8cc7d0f42} 
+string Utopia.\+Data.\+Data\+Manager.\+\_\+encryption\+Key = "{}Soul\+Farm\+\_\+\+Secret\+\_\+2025"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a320c1a3f85ca20ad96743603977ba646}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!\_fileName@{\_fileName}}
+\index{\_fileName@{\_fileName}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{\_fileName}{\_fileName}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a320c1a3f85ca20ad96743603977ba646} 
+string Utopia.\+Data.\+Data\+Manager.\+\_\+file\+Name = "{}save\+\_\+data.\+json"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a96d4a755487a387b5431504442a79008}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!\_jsonSettings@{\_jsonSettings}}
+\index{\_jsonSettings@{\_jsonSettings}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{\_jsonSettings}{\_jsonSettings}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a96d4a755487a387b5431504442a79008} 
+readonly Json\+Serializer\+Settings Utopia.\+Data.\+Data\+Manager.\+\_\+json\+Settings\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries 初始值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{new}\ JsonSerializerSettings}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ Formatting\ =\ Formatting.Indented,}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ ReferenceLoopHandling\ =\ ReferenceLoopHandling.Ignore,}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ TypeNameHandling\ =\ TypeNameHandling.Auto}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_ae7d3205bf2138729d758ea7389ad5fa8}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!\_runtimeCache@{\_runtimeCache}}
+\index{\_runtimeCache@{\_runtimeCache}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{\_runtimeCache}{\_runtimeCache}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_ae7d3205bf2138729d758ea7389ad5fa8} 
+Dictionary$<$string, object$>$ Utopia.\+Data.\+Data\+Manager.\+\_\+runtime\+Cache = new Dictionary$<$string, object$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a86a45525ed4bf3df7aba3cca33bc28fc}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!\_savePath@{\_savePath}}
+\index{\_savePath@{\_savePath}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{\_savePath}{\_savePath}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a86a45525ed4bf3df7aba3cca33bc28fc} 
+string Utopia.\+Data.\+Data\+Manager.\+\_\+save\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_data_1_1_data_manager_a8b7a23869f93c610cb596ff7c2ecd15a}\index{Utopia.Data.DataManager@{Utopia.Data.DataManager}!\_useEncryption@{\_useEncryption}}
+\index{\_useEncryption@{\_useEncryption}!Utopia.Data.DataManager@{Utopia.Data.DataManager}}
+\doxysubsubsection{\texorpdfstring{\_useEncryption}{\_useEncryption}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_data_1_1_data_manager_a8b7a23869f93c610cb596ff7c2ecd15a} 
+bool Utopia.\+Data.\+Data\+Manager.\+\_\+use\+Encryption = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Base/\+\+Data/\+\doxymbox{\hyperlink{_data_manager_8cs}{Data\+Manager.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="Utopia.GameLogic.GameDataManager" name="Utopia.GameLogic.GameDataManager">
+<area shape="rect" id="Node000001" title="游戏数据管理器 负责全局游戏数据的存储、存档/读档、场景切换以及与各个可存档系统的协调。 通过服务定位器注册自身，供其他模块获取。" alt="" coords="46,104,242,147"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,42,130,103,125,104,79,46"/>
+<area shape="rect" id="Node000003" href="$interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试" alt="" coords="141,5,312,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,43,162,105,158,101,205,45"/>
+</map>

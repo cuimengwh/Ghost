@@ -1,0 +1,5 @@
+<map id="Slot.ItemOnClicked" name="Slot.ItemOnClicked">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" id="Node000002" href="$class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="189,5,408,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,16,176,18,170,19,141,21"/>
+</map>

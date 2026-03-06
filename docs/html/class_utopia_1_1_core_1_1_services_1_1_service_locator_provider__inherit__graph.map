@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.ServiceLocatorProvider" name="Utopia.Core.Services.ServiceLocatorProvider">
+<area shape="rect" id="Node000001" title="挂载在场景物体上的服务提供者组件。 用于在Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。" alt="" coords="5,80,200,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="47,5,158,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,46,105,81,100,79,101,50"/>
+</map>

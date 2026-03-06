@@ -1,0 +1,7 @@
+<map id="CropData" name="CropData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,155,103,181"/>
+<area shape="rect" id="Node000002" href="$class_item_data.html" title="公共物品数据类" alt="" coords="26,80,102,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,121,67,155,61,154,62,124"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,123,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="65,45,67,80,61,79,63,50"/>
+</map>

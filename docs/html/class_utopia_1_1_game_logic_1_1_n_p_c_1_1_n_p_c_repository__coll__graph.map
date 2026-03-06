@@ -1,0 +1,7 @@
+<map id="Utopia.GameLogic.NPC.NPCRepository" name="Utopia.GameLogic.NPC.NPCRepository">
+<area shape="rect" id="Node000001" title="NPC状态仓储的默认实现 使用IDataService进行实际的持久化操作" alt="" coords="127,104,386,131"/>
+<area shape="rect" id="Node000002" href="$interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository.html" title="NPC状态数据的仓储接口 设计模式：仓储模式，分离数据访问与业务逻辑" alt="" coords="5,5,268,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,39,243,103,238,104,163,44"/>
+<area shape="rect" id="Node000003" href="$interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试" alt="" coords="292,5,464,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="353,41,274,106,271,101,348,42"/>
+</map>

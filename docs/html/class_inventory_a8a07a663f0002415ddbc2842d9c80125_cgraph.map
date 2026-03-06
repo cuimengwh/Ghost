@@ -1,0 +1,7 @@
+<map id="Inventory.UseItem" name="Inventory.UseItem">
+<area shape="rect" id="Node000001" title="使用物品 数量减 1，当数量为 0 时清空格子" alt="" coords="5,5,134,32"/>
+<area shape="rect" id="Node000002" href="$class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="182,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,16,169,18,163,19,134,21"/>
+<area shape="rect" id="Node000003" href="$class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="431,5,650,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,16,418,19,413,19,384,21"/>
+</map>

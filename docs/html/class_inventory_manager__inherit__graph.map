@@ -1,0 +1,5 @@
+<map id="InventoryManager" name="InventoryManager">
+<area shape="rect" id="Node000001" title="库存管理器 &#45; 管理背包UI显示和交互 单例模式实现，全局只有一个库存管理器实例" alt="" coords="5,80,131,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="12,5,124,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,46,71,80,65,79,66,50"/>
+</map>

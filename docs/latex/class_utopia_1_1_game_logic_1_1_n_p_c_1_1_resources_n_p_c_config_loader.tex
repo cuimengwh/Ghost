@@ -1,0 +1,96 @@
+\doxysection{Utopia.\+Game\+Logic.\+NPC.\+Resources\+NPCConfig\+Loader类 参考}
+\hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader}{}\label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader}\index{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader@{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader}}
+
+
+基于\+Unity Resources系统的\+NPC配置加载器 继承自\+Mono\+Behaviour，可作为组件附加到游戏对象 实现\+INPCConfig\+Loader接口，提供具体的加载逻辑  
+
+
+
+
+类 Utopia.\+Game\+Logic.\+NPC.\+Resources\+NPCConfig\+Loader 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Game\+Logic.\+NPC.\+Resources\+NPCConfig\+Loader 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+NPCData\+[$\,$]\+ \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_ad448cd2b28b4b00f4607950a6265d2f3}{Load\+All\+Configs}} ()
+\begin{DoxyCompactList}\small\item\em 加载所有\+NPC配置文件 遍历指定路径下的所有\+NPCData资源文件 适用于初始化或批量处理场景 \end{DoxyCompactList}\item 
+NPCData \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_ad1003d0d9d1e2a27d05b3aa366e69009}{Load\+Config}} (string id)
+\begin{DoxyCompactList}\small\item\em 根据\+NPC ID加载特定配置文件 用于按需加载单个\+NPC的配置，提高资源使用效率 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+const string \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_abde26456ea230aa321dfeb18f1f3259d}{PATH}} = "{}Data/\+NPCs"{}
+\begin{DoxyCompactList}\small\item\em NPC配置文件在\+Resources文件夹中的存储路径 所有\+NPC的\+Scriptable\+Object配置都存放在此路径下 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+基于\+Unity Resources系统的\+NPC配置加载器 继承自\+Mono\+Behaviour，可作为组件附加到游戏对象 实现\+INPCConfig\+Loader接口，提供具体的加载逻辑 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_ad448cd2b28b4b00f4607950a6265d2f3}\index{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader@{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader}!LoadAllConfigs@{LoadAllConfigs}}
+\index{LoadAllConfigs@{LoadAllConfigs}!Utopia.GameLogic.NPC.ResourcesNPCConfigLoader@{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader}}
+\doxysubsubsection{\texorpdfstring{LoadAllConfigs()}{LoadAllConfigs()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_ad448cd2b28b4b00f4607950a6265d2f3} 
+NPCData\+[$\,$]\+ Utopia.\+Game\+Logic.\+NPC.\+Resources\+NPCConfig\+Loader.\+Load\+All\+Configs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+加载所有\+NPC配置文件 遍历指定路径下的所有\+NPCData资源文件 适用于初始化或批量处理场景 
+
+\begin{DoxyReturn}{返回}
+包含所有\+NPC配置的数组，如果路径为空则返回空数组
+\end{DoxyReturn}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_ad1003d0d9d1e2a27d05b3aa366e69009}\index{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader@{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader}!LoadConfig@{LoadConfig}}
+\index{LoadConfig@{LoadConfig}!Utopia.GameLogic.NPC.ResourcesNPCConfigLoader@{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader}}
+\doxysubsubsection{\texorpdfstring{LoadConfig()}{LoadConfig()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_ad1003d0d9d1e2a27d05b3aa366e69009} 
+NPCData Utopia.\+Game\+Logic.\+NPC.\+Resources\+NPCConfig\+Loader.\+Load\+Config (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+根据\+NPC ID加载特定配置文件 用于按需加载单个\+NPC的配置，提高资源使用效率 
+
+
+\begin{DoxyParams}{参数}
+{\em id} & 要加载的\+NPC配置文件名（不包含路径和扩展名）\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+对应的\+NPCData对象，如果资源不存在则返回null
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_abde26456ea230aa321dfeb18f1f3259d}\index{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader@{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader}!PATH@{PATH}}
+\index{PATH@{PATH}!Utopia.GameLogic.NPC.ResourcesNPCConfigLoader@{Utopia.GameLogic.NPC.ResourcesNPCConfigLoader}}
+\doxysubsubsection{\texorpdfstring{PATH}{PATH}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader_abde26456ea230aa321dfeb18f1f3259d} 
+const string Utopia.\+Game\+Logic.\+NPC.\+Resources\+NPCConfig\+Loader.\+PATH = "{}Data/\+NPCs"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+NPC配置文件在\+Resources文件夹中的存储路径 所有\+NPC的\+Scriptable\+Object配置都存放在此路径下 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Npc/\+\+Manage/\+\doxymbox{\hyperlink{_resources_n_p_c_config_loader_8cs}{Resources\+NPCConfig\+Loader.\+cs}}\end{DoxyCompactItemize}

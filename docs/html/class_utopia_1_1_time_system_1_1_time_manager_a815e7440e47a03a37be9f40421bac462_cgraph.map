@@ -1,0 +1,11 @@
+<map id="Utopia.TimeSystem.TimeManager.Update" name="Utopia.TimeSystem.TimeManager.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,230,81"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#af42ab9ed06e5484bfe3346ee7dfb6ce4" title="检测并触发时间事件" alt="" coords="278,5,502,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,44,265,42,259,43,231,49"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a245d64a0e487d87fae6e9006a233cb38" title="更新时间+触发时间事件" alt="" coords="278,72,502,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,71,265,78,259,78,230,76"/>
+<area shape="rect" id="Node000004" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a83bc0288b5c2c5156c8d90113ef8a031" title="日期更替方法，触发事件" alt="" coords="550,72,774,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="502,91,537,93,532,93,502,96"/>
+<area shape="rect" id="Node000005" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a2a0363f2f5eeede91a93a108c91a2e4f" title="计算季节" alt="" coords="822,72,1047,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="775,91,809,93,804,93,775,96"/>
+</map>

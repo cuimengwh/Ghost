@@ -1,0 +1,5 @@
+<map id="Utopia.GameLogic.NPC.NPCManager.InitializeSystemAsync" name="Utopia.GameLogic.NPC.NPCManager.InitializeSystemAsync">
+<area shape="rect" id="Node000001" title="异步初始化NPC系统 执行NPC数据的完整加载流程：" alt="" coords="303,5,552,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html#a6f670d8dbc685f840c230f394b20b5b9" title="启动初始化方法 在Unity GameObject激活后调用，执行以下操作：" alt="" coords="5,5,255,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,27,255,29,255,24,290,27"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" href="$class_utopia_1_1_core_1_1_event_1_1_game_event_base.html" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此" alt="" coords="5,13,238,40"/>
+<area shape="rect" id="Node000001" href="$class_utopia_1_1_time_tool_1_1_time_triggered_event.html" title="时间触发事件，包含时间触发相关信息" alt="" coords="286,5,489,48"/>
+<area shape="poly" id="edge40_Node000000_Node000001" title=" " alt="" coords="253,24,288,27,282,27,253,29"/>
+</map>

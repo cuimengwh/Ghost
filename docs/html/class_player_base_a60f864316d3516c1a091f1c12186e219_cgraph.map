@@ -1,0 +1,9 @@
+<map id="PlayerBase.ToggleExistenceState" name="PlayerBase.ToggleExistenceState">
+<area shape="rect" id="Node000001" title="切换存在状态（物理/精神）" alt="" coords="5,39,194,81"/>
+<area shape="rect" id="Node000002" href="$class_player_base.html#a6f1754b2027bac04811cf95489dff2be" title="改变存在状态" alt="" coords="242,39,437,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,57,229,60,224,60,195,63"/>
+<area shape="rect" id="Node000003" href="$class_player_base.html#a45746088ea41373c86537c8d2737af23" title="进入特定存在状态时的处理" alt="" coords="485,5,666,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="437,44,472,41,467,42,438,49"/>
+<area shape="rect" id="Node000004" href="$class_player_base.html#a17f55ff96f5d5f01ebfba1bb9e84826a" title="退出特定存在状态时的处理" alt="" coords="489,72,662,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="438,71,476,79,471,79,437,76"/>
+</map>

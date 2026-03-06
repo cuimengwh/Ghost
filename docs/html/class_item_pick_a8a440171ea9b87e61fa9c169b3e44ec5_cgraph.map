@@ -1,0 +1,5 @@
+<map id="ItemPick.OnTriggerEnter" name="ItemPick.OnTriggerEnter">
+<area shape="rect" id="Node000001" title="当其他碰撞体进入触发器时调用" alt="" coords="5,5,171,32"/>
+<area shape="rect" id="Node000002" href="$class_item_pick.html#abbef768a2833f0e713d9f629501b5f9a" title="拾取物品的主要逻辑 将物品添加到背包，如果添加成功则销毁场景中的物品对象" alt="" coords="219,5,339,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,16,206,19,201,19,171,21"/>
+</map>

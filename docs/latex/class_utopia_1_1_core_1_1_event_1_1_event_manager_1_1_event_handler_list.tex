@@ -1,0 +1,172 @@
+\doxysection{Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List类 参考}
+\hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list}{}\label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+
+
+封装特定事件类型的处理器列表，并提供在发布过程中安全遍历的能力。 使用快照机制（\+\_\+handlers\+To\+Invoke）避免在遍历过程中修改集合导致的异常。  
+
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a67b031b76458808636951b3e8158ebf7}{Add}} (Delegate handler)
+\begin{DoxyCompactList}\small\item\em 添加一个事件处理器。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a75202f868a864ee65fbc32bc9bad519a}{Remove}} (Delegate handler)
+\begin{DoxyCompactList}\small\item\em 移除一个事件处理器。 \end{DoxyCompactList}\item 
+List$<$ Delegate $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a0876ef6bdf247c46e5d5c4162e38f853}{Get\+Invocation\+List}} ()
+\begin{DoxyCompactList}\small\item\em 获取当前应该被调用的处理器列表。 如果在发布过程中，返回 Handlers 的快照；否则直接返回 Handlers。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a6f102fc9ee21f3feaefebb9f8f3a088c}{Begin\+Invoke}} ()
+\begin{DoxyCompactList}\small\item\em 标记开始发布事件。 应在调用处理器之前调用。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a5a13fc39e59d9e82e5ae7fe5a09091dd}{End\+Invoke}} ()
+\begin{DoxyCompactList}\small\item\em 标记结束发布事件。 清理快照列表，并重置状态。 应在调用处理器之后调用（包含异常处理）。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Delegate $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a8656e4e0b19bf2c038988024afc27804}{Handlers}} = new()\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 非运行时事件处理器列表。 允许在事件发布过程中修改（添加/\+移除）订阅者，修改不会影响正在进行的调用。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a4195b48c29e6bfe682f3c080befaf6b7}{Is\+Invoking}}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\begin{DoxyCompactList}\small\item\em 是否正在发布事件（正在调用处理器）。 控制 Get\+Invocation\+List 返回的是原始列表还是快照。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Delegate $>$ \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a546368b70db58a1958ccdcc698f88f5c}{\+\_\+handlers\+To\+Invoke}}
+\begin{DoxyCompactList}\small\item\em 运行时事件处理器列表快照。 仅在 Is\+Invoking 为 true 时使用，存储 Begin\+Invoke 时 Handlers 的副本。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+封装特定事件类型的处理器列表，并提供在发布过程中安全遍历的能力。 使用快照机制（\+\_\+handlers\+To\+Invoke）避免在遍历过程中修改集合导致的异常。 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a67b031b76458808636951b3e8158ebf7}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!Add@{Add}}
+\index{Add@{Add}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a67b031b76458808636951b3e8158ebf7} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+Add (\begin{DoxyParamCaption}\item[{Delegate}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+添加一个事件处理器。 
+
+
+\begin{DoxyParams}{参数}
+{\em handler} & 要添加的委托\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a6f102fc9ee21f3feaefebb9f8f3a088c}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!BeginInvoke@{BeginInvoke}}
+\index{BeginInvoke@{BeginInvoke}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{BeginInvoke()}{BeginInvoke()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a6f102fc9ee21f3feaefebb9f8f3a088c} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+Begin\+Invoke (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+标记开始发布事件。 应在调用处理器之前调用。 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a6f102fc9ee21f3feaefebb9f8f3a088c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a5a13fc39e59d9e82e5ae7fe5a09091dd}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!EndInvoke@{EndInvoke}}
+\index{EndInvoke@{EndInvoke}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{EndInvoke()}{EndInvoke()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a5a13fc39e59d9e82e5ae7fe5a09091dd} 
+void Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+End\+Invoke (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+标记结束发布事件。 清理快照列表，并重置状态。 应在调用处理器之后调用（包含异常处理）。 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a5a13fc39e59d9e82e5ae7fe5a09091dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a0876ef6bdf247c46e5d5c4162e38f853}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!GetInvocationList@{GetInvocationList}}
+\index{GetInvocationList@{GetInvocationList}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{GetInvocationList()}{GetInvocationList()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a0876ef6bdf247c46e5d5c4162e38f853} 
+List$<$ Delegate $>$ Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+Get\+Invocation\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取当前应该被调用的处理器列表。 如果在发布过程中，返回 Handlers 的快照；否则直接返回 Handlers。 
+
+\begin{DoxyReturn}{返回}
+用于调用的委托列表
+\end{DoxyReturn}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a0876ef6bdf247c46e5d5c4162e38f853_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a75202f868a864ee65fbc32bc9bad519a}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!Remove@{Remove}}
+\index{Remove@{Remove}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a75202f868a864ee65fbc32bc9bad519a} 
+bool Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+Remove (\begin{DoxyParamCaption}\item[{Delegate}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+移除一个事件处理器。 
+
+
+\begin{DoxyParams}{参数}
+{\em handler} & 要移除的委托\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+成功移除返回 true，否则 false
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a546368b70db58a1958ccdcc698f88f5c}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!\_handlersToInvoke@{\_handlersToInvoke}}
+\index{\_handlersToInvoke@{\_handlersToInvoke}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{\_handlersToInvoke}{\_handlersToInvoke}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a546368b70db58a1958ccdcc698f88f5c} 
+List$<$Delegate$>$ Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+\_\+handlers\+To\+Invoke\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+运行时事件处理器列表快照。 仅在 Is\+Invoking 为 true 时使用，存储 Begin\+Invoke 时 Handlers 的副本。 
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_doc-property-members}
+\doxysubsection{属性说明}
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a8656e4e0b19bf2c038988024afc27804}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!Handlers@{Handlers}}
+\index{Handlers@{Handlers}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{Handlers}{Handlers}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a8656e4e0b19bf2c038988024afc27804} 
+List$<$Delegate$>$ Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+Handlers = new()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+非运行时事件处理器列表。 允许在事件发布过程中修改（添加/\+移除）订阅者，修改不会影响正在进行的调用。 
+
+\Hypertarget{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a4195b48c29e6bfe682f3c080befaf6b7}\index{Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}!IsInvoking@{IsInvoking}}
+\index{IsInvoking@{IsInvoking}!Utopia.Core.Event.EventManager.EventHandlerList@{Utopia.Core.Event.EventManager.EventHandlerList}}
+\doxysubsubsection{\texorpdfstring{IsInvoking}{IsInvoking}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_event_1_1_event_manager_1_1_event_handler_list_a4195b48c29e6bfe682f3c080befaf6b7} 
+bool Utopia.\+Core.\+Event.\+Event\+Manager.\+Event\+Handler\+List.\+Is\+Invoking\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+是否正在发布事件（正在调用处理器）。 控制 Get\+Invocation\+List 返回的是原始列表还是快照。 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Events/\+\doxymbox{\hyperlink{_event_manager_8cs}{Event\+Manager.\+cs}}\end{DoxyCompactItemize}

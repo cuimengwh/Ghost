@@ -1,0 +1,7 @@
+<map id="PlayerBase.ExitExistenceState" name="PlayerBase.ExitExistenceState">
+<area shape="rect" id="Node000001" title="退出特定存在状态时的处理" alt="" coords="485,5,658,48"/>
+<area shape="rect" id="Node000002" href="$class_player_base.html#a6f1754b2027bac04811cf95489dff2be" title="改变存在状态" alt="" coords="242,5,437,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="467,27,438,29,437,24,472,27"/>
+<area shape="rect" id="Node000003" href="$class_player_base.html#a60f864316d3516c1a091f1c12186e219" title="切换存在状态（物理/精神）" alt="" coords="5,5,194,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,27,194,29,194,24,229,26"/>
+</map>

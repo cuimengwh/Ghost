@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.ServiceInjectAttribute" name="Utopia.Core.Services.ServiceInjectAttribute">
+<area shape="rect" id="Node000001" title="服务注入标记特性。 用于标识需要通过依赖注入自动赋值的字段或属性。" alt="" coords="5,80,200,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="67,5,138,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,46,105,81,100,79,101,50"/>
+</map>

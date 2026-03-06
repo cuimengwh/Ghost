@@ -1,0 +1,5 @@
+<map id="Utopia.GameLogic.NPC.NPCRepository.ClearStateAsync" name="Utopia.GameLogic.NPC.NPCRepository.ClearStateAsync">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,267,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_repository.html#a8121d176b2b693fd683b4057052d83b8" title="异步保存所有NPC状态" alt="" coords="315,5,576,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,24,302,27,297,27,267,29"/>
+</map>

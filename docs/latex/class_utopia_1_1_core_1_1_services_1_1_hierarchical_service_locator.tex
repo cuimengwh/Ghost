@@ -1,0 +1,462 @@
+\doxysection{Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator类 参考}
+\hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}{}\label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+
+
+分层服务定位器，支持服务查找的层级继承机制。 允许创建父子层级的服务容器，子容器可以访问父容器的服务。 实现 IDisposable 接口以确保资源正确释放。  
+
+
+
+
+类 Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}{Hierarchical\+Service\+Locator}} (Hierarchical\+Service\+Locator parent=null)
+\begin{DoxyCompactList}\small\item\em 构造函数，创建分层服务定位器。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_abde4e1666f31ea93c2bf88077aacd5be}{Register$<$ T $>$}} (T service)
+\begin{DoxyCompactList}\small\item\em 注册指定类型的服务实例到当前层级容器。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ac956d4c6015f38f1bef4f3ee11fdf2e8}{Register}} (Type type, object service)
+\begin{DoxyCompactList}\small\item\em 使用运行时类型信息注册服务实例。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a054e43145a1ec623ef09510d5fe659fa}{Register\+Factory$<$ T $>$}} (Func$<$ T $>$ factory)
+\begin{DoxyCompactList}\small\item\em 注册服务工厂方法，延迟创建服务实例。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_adec18a5247d5dcfc60c27c23c6034276}{Unregister$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em 从当前层级容器中注销指定类型的服务。 \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ae8143b5f603bf92135d78a6a894f4523}{Get$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em 获取指定类型的服务实例（强制版本）。 按照"{}当前层级 → 父级 → 父级的父级..."{}的顺序查找服务。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a61e03b24b959603aae542a9ad39c2e85}{Try\+Get$<$ T $>$}} (out T service)
+\begin{DoxyCompactList}\small\item\em 尝试获取指定类型的服务实例（安全版本）。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a645a6e009a86be3716d0e1037c0efdbe}{Try\+Get}} (Type type, out object service)
+\begin{DoxyCompactList}\small\item\em 核心查找方法：按照分层顺序查找指定类型的服务。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}{Hierarchical\+Service\+Locator}} \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a0cff1de857a12e99c2b7f3de1d943baf}{Create\+Child}} ()
+\begin{DoxyCompactList}\small\item\em 创建以当前定位器为父级的子定位器。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a62777ae4915de3af2d876c622ee7e639}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em 释放当前层级容器占用的资源。 实现\+IDisposable接口，遵循资源释放模式。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_aea2d66504d2ac0d32aa206f59c166673}{Is\+Registered\+Locally$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em 检查当前层级是否注册了指定类型的服务（不查找父级）。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2710f9477f0d8f931ede8c575e86d861}{Is\+Registered\+In\+Hierarchy$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em 检查整个层级链中是否存在指定类型的服务。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}{Hierarchical\+Service\+Locator}} \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a3569f0b451f84b280709c06cb0a39dc3}{Parent}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 获取父级定位器（只读）。 可用于调试或高级场景。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+readonly \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator}{Service\+Locator}} \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a23718f86b581df20cae94733eb387115}{\+\_\+container}} = new \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator}{Service\+Locator}}()
+\begin{DoxyCompactList}\small\item\em 当前层级（本地）的服务容器，存储本层注册的所有服务实例。 使用 \doxylink{class_utopia_1_1_core_1_1_services_1_1_service_locator}{Service\+Locator} 类作为底层容器实现。 \end{DoxyCompactList}\item 
+readonly \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}{Hierarchical\+Service\+Locator}} \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a7837e06bee201786333869aed00bad3a}{\+\_\+parent}}
+\begin{DoxyCompactList}\small\item\em 上级（父级）服务定位器的引用，用于服务查找的向上回溯。 当在当前层级找不到服务时，会尝试从父级查找。 如果为 null，表示这是顶层（根）定位器。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+分层服务定位器，支持服务查找的层级继承机制。 允许创建父子层级的服务容器，子容器可以访问父容器的服务。 实现 IDisposable 接口以确保资源正确释放。 
+
+\label{doc-constructors}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!HierarchicalServiceLocator@{HierarchicalServiceLocator}}
+\index{HierarchicalServiceLocator@{HierarchicalServiceLocator}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{HierarchicalServiceLocator()}{HierarchicalServiceLocator()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87} 
+Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Hierarchical\+Service\+Locator (\begin{DoxyParamCaption}\item[{Hierarchical\+Service\+Locator}]{parent}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数，创建分层服务定位器。 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父级服务定位器，如果为null则创建顶层定位器\\
+\hline
+\end{DoxyParams}
+
+
+分层设计模式：允许创建服务查找的层次结构。 典型应用场景：
+\begin{DoxyEnumerate}
+\item 全局服务注册在根定位器
+\item 场景特定服务注册在场景定位器
+\item 物体特定服务注册在物体定位器 每个子定位器可以访问父定位器的服务，形成服务查找链。 
+\end{DoxyEnumerate}函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a0cff1de857a12e99c2b7f3de1d943baf}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!CreateChild@{CreateChild}}
+\index{CreateChild@{CreateChild}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{CreateChild()}{CreateChild()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a0cff1de857a12e99c2b7f3de1d943baf} 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}{Hierarchical\+Service\+Locator}} Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Create\+Child (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+创建以当前定位器为父级的子定位器。 
+
+\begin{DoxyReturn}{返回}
+新的子级服务定位器
+\end{DoxyReturn}
+
+
+典型应用：
+\begin{DoxyEnumerate}
+\item 为每个场景创建子定位器，继承全局服务
+\item 为复杂物体创建子定位器，继承场景服务
+\item 实现服务的隔离作用域 
+\end{DoxyEnumerate}函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a0cff1de857a12e99c2b7f3de1d943baf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a62777ae4915de3af2d876c622ee7e639}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a62777ae4915de3af2d876c622ee7e639} 
+void Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+释放当前层级容器占用的资源。 实现\+IDisposable接口，遵循资源释放模式。 
+
+注意：
+\begin{DoxyEnumerate}
+\item 只释放当前层级的容器，不释放父级容器
+\item 子容器应该在父容器之前被释放
+\item 释放后不应再使用此定位器 
+\end{DoxyEnumerate}\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ae8143b5f603bf92135d78a6a894f4523}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ae8143b5f603bf92135d78a6a894f4523} 
+T Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Get$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取指定类型的服务实例（强制版本）。 按照"{}当前层级 → 父级 → 父级的父级..."{}的顺序查找服务。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 请求的服务类型\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+找到的服务实例
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{异常}
+{\em Invalid\+Operation\+Exception} & 当整个层级链中都找不到指定类型的服务时抛出 \\
+\hline
+\end{DoxyExceptions}
+
+
+查找顺序遵循"{}就近原则"{}：优先使用当前层级的注册， 这允许子容器覆盖父容器的服务实现。 \begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ae8143b5f603bf92135d78a6a894f4523_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2710f9477f0d8f931ede8c575e86d861}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!IsRegisteredInHierarchy$<$ T $>$@{IsRegisteredInHierarchy$<$ T $>$}}
+\index{IsRegisteredInHierarchy$<$ T $>$@{IsRegisteredInHierarchy$<$ T $>$}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{IsRegisteredInHierarchy$<$ T $>$()}{IsRegisteredInHierarchy< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2710f9477f0d8f931ede8c575e86d861} 
+bool Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Is\+Registered\+In\+Hierarchy$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查整个层级链中是否存在指定类型的服务。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 要检查的服务类型\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+整个层级链中是否存在该服务
+\end{DoxyReturn}
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2710f9477f0d8f931ede8c575e86d861_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_aea2d66504d2ac0d32aa206f59c166673}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!IsRegisteredLocally$<$ T $>$@{IsRegisteredLocally$<$ T $>$}}
+\index{IsRegisteredLocally$<$ T $>$@{IsRegisteredLocally$<$ T $>$}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{IsRegisteredLocally$<$ T $>$()}{IsRegisteredLocally< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_aea2d66504d2ac0d32aa206f59c166673} 
+bool Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Is\+Registered\+Locally$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查当前层级是否注册了指定类型的服务（不查找父级）。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 要检查的服务类型\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+当前层级是否注册了该服务
+\end{DoxyReturn}
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ac956d4c6015f38f1bef4f3ee11fdf2e8}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!Register@{Register}}
+\index{Register@{Register}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ac956d4c6015f38f1bef4f3ee11fdf2e8} 
+void Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Register (\begin{DoxyParamCaption}\item[{Type}]{type}{, }\item[{object}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+使用运行时类型信息注册服务实例。 
+
+
+\begin{DoxyParams}{参数}
+{\em type} & 要注册的服务类型（\+Type对象）\\
+\hline
+{\em service} & 服务实例\\
+\hline
+\end{DoxyParams}
+
+
+此方法允许在运行时动态确定注册类型，比泛型版本更灵活但类型安全性稍差。 这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ac956d4c6015f38f1bef4f3ee11fdf2e8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_abde4e1666f31ea93c2bf88077aacd5be}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!Register$<$ T $>$@{Register$<$ T $>$}}
+\index{Register$<$ T $>$@{Register$<$ T $>$}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Register$<$ T $>$()}{Register< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_abde4e1666f31ea93c2bf88077aacd5be} 
+void \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_ac956d4c6015f38f1bef4f3ee11fdf2e8}{Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Register}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+注册指定类型的服务实例到当前层级容器。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 要注册的服务类型（通常为接口或抽象类）\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em service} & 服务实例\\
+\hline
+\end{DoxyParams}
+
+
+注意：此方法将服务注册到当前层级，不会影响父级或子级容器。 如果同一类型已注册，通常会覆盖原有注册（取决于 \doxylink{class_utopia_1_1_core_1_1_services_1_1_service_locator}{Service\+Locator} 的实现）。 \begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a054e43145a1ec623ef09510d5fe659fa}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!RegisterFactory$<$ T $>$@{RegisterFactory$<$ T $>$}}
+\index{RegisterFactory$<$ T $>$@{RegisterFactory$<$ T $>$}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{RegisterFactory$<$ T $>$()}{RegisterFactory< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a054e43145a1ec623ef09510d5fe659fa} 
+void Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Register\+Factory$<$ T $>$ (\begin{DoxyParamCaption}\item[{Func$<$ T $>$}]{factory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+注册服务工厂方法，延迟创建服务实例。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 要注册的服务类型\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em factory} & 工厂方法，在需要时调用以创建服务实例\\
+\hline
+\end{DoxyParams}
+
+
+适用场景：
+\begin{DoxyEnumerate}
+\item 服务创建成本高，需要延迟初始化
+\item 服务实例需要每次请求时重新创建（瞬态服务）
+\item 服务创建需要依赖其他服务 
+\end{DoxyEnumerate}\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a645a6e009a86be3716d0e1037c0efdbe}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!TryGet@{TryGet}}
+\index{TryGet@{TryGet}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{TryGet()}{TryGet()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a645a6e009a86be3716d0e1037c0efdbe} 
+bool Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Try\+Get (\begin{DoxyParamCaption}\item[{Type}]{type}{, }\item[{out object}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+核心查找方法：按照分层顺序查找指定类型的服务。 
+
+
+\begin{DoxyParams}{参数}
+{\em type} & 要查找的服务类型\\
+\hline
+{\em service} & 输出参数，找到的服务实例\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否成功找到服务
+\end{DoxyReturn}
+
+
+查找流程：
+\begin{DoxyEnumerate}
+\item 在当前层级容器中查找
+\item 如果未找到且存在父级，递归在父级中查找
+\item 如果整个层级链中都未找到，返回false
+\end{DoxyEnumerate}
+
+这是一个深度优先的向上查找过程。 这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a645a6e009a86be3716d0e1037c0efdbe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a61e03b24b959603aae542a9ad39c2e85}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!TryGet$<$ T $>$@{TryGet$<$ T $>$}}
+\index{TryGet$<$ T $>$@{TryGet$<$ T $>$}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{TryGet$<$ T $>$()}{TryGet< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a61e03b24b959603aae542a9ad39c2e85} 
+bool \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a645a6e009a86be3716d0e1037c0efdbe}{Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Try\+Get}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{out T}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+尝试获取指定类型的服务实例（安全版本）。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 请求的服务类型\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em service} & 输出参数，找到的服务实例；如果未找到则为null\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否成功找到服务
+\end{DoxyReturn}
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a61e03b24b959603aae542a9ad39c2e85_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_adec18a5247d5dcfc60c27c23c6034276}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!Unregister$<$ T $>$@{Unregister$<$ T $>$}}
+\index{Unregister$<$ T $>$@{Unregister$<$ T $>$}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Unregister$<$ T $>$()}{Unregister< T >()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_adec18a5247d5dcfc60c27c23c6034276} 
+void Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Unregister$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+从当前层级容器中注销指定类型的服务。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 要注销的服务类型\\
+\hline
+\end{DoxyTemplParams}
+
+
+只影响当前层级容器，不影响父级容器中的注册。 注意：注销后，后续通过父级容器可能仍然能访问到该服务（如果父级有注册）。 \begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a23718f86b581df20cae94733eb387115}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!\_container@{\_container}}
+\index{\_container@{\_container}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{\_container}{\_container}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a23718f86b581df20cae94733eb387115} 
+readonly \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator}{Service\+Locator}} Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+\_\+container = new \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_service_locator}{Service\+Locator}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前层级（本地）的服务容器，存储本层注册的所有服务实例。 使用 \doxylink{class_utopia_1_1_core_1_1_services_1_1_service_locator}{Service\+Locator} 类作为底层容器实现。 
+
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a7837e06bee201786333869aed00bad3a}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!\_parent@{\_parent}}
+\index{\_parent@{\_parent}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{\_parent}{\_parent}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a7837e06bee201786333869aed00bad3a} 
+readonly \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}{Hierarchical\+Service\+Locator}} Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+\_\+parent\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+上级（父级）服务定位器的引用，用于服务查找的向上回溯。 当在当前层级找不到服务时，会尝试从父级查找。 如果为 null，表示这是顶层（根）定位器。 
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_doc-property-members}
+\doxysubsection{属性说明}
+\Hypertarget{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a3569f0b451f84b280709c06cb0a39dc3}\index{Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}!Parent@{Parent}}
+\index{Parent@{Parent}!Utopia.Core.Services.HierarchicalServiceLocator@{Utopia.Core.Services.HierarchicalServiceLocator}}
+\doxysubsubsection{\texorpdfstring{Parent}{Parent}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a3569f0b451f84b280709c06cb0a39dc3} 
+\doxymbox{\hyperlink{class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator_a2dbfb3aa610a06878a4106317736eb87}{Hierarchical\+Service\+Locator}} Utopia.\+Core.\+Services.\+Hierarchical\+Service\+Locator.\+Parent\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+获取父级定位器（只读）。 可用于调试或高级场景。 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Services/\+\doxymbox{\hyperlink{_hierarchical_service_locator_8cs}{Hierarchical\+Service\+Locator.\+cs}}\end{DoxyCompactItemize}

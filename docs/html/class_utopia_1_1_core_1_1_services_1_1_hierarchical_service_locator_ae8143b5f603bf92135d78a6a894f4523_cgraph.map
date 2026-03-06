@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.HierarchicalServiceLocator.Get&lt; T &gt;" name="Utopia.Core.Services.HierarchicalServiceLocator.Get&lt; T &gt;">
+<area shape="rect" id="Node000001" title="获取指定类型的服务实例（强制版本）。 按照&quot;当前层级 → 父级 → 父级的父级...&quot;的顺序查找服务。" alt="" coords="5,5,225,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#a645a6e009a86be3716d0e1037c0efdbe" title="核心查找方法：按照分层顺序查找指定类型的服务。" alt="" coords="273,5,492,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,24,260,27,254,27,225,29"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeManager.CreateDailyEvent" name="Utopia.TimeSystem.TimeManager.CreateDailyEvent">
+<area shape="rect" id="Node000001" title="创建每日重复事件" alt="" coords="5,5,230,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_event.html#a9b09b56dd2e80a235dfa4e0f8752a0c5" title="创建每日重复事件" alt="" coords="278,5,486,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,24,264,27,259,27,230,29"/>
+</map>

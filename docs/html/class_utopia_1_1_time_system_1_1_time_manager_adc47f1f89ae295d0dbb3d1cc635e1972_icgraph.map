@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeManager.InitializeTime" name="Utopia.TimeSystem.TimeManager.InitializeTime">
+<area shape="rect" id="Node000001" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="278,5,502,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a7b664087cb737df808970dba08fa7ef9" title="启动时初始化时间系统。" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>

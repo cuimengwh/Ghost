@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Event.EventManager" name="Utopia.Core.Event.EventManager">
+<area shape="rect" id="Node000001" title="全局事件总线。 纯 C# 实现，独立于 Unity 生命周期，适用于任何需要事件通信的场景。 无单例模式，建议通过依赖注入或服务定位器访问。 遵循订阅&#45;发布模式，用于模块间解耦通信。 所有公开方法均为线..." alt="" coords="5,96,223,123"/>
+<area shape="rect" id="Node000002" href="$interface_utopia_1_1_core_1_1_event_1_1_i_event_manager.html" title="事件管理器行为接口。 定义了事件系统的核心操作：订阅、取消订阅、发布、查询与清理。 实现此接口的类应保证线程安全（建议使用锁机制）。" alt="" coords="28,5,200,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,62,116,97,112,94,112,66"/>
+</map>

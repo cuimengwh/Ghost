@@ -1,0 +1,11 @@
+\doxysection{Utopia.\+Core.\+Event 命名空间参考}
+\hypertarget{namespace_utopia_1_1_core_1_1_event}{}\label{namespace_utopia_1_1_core_1_1_event}\index{Utopia.Core.Event@{Utopia.Core.Event}}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+interface \doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager}{IEvent\+Manager}}
+\begin{DoxyCompactList}\small\item\em 事件管理器行为接口。 定义了事件系统的核心操作：订阅、取消订阅、发布、查询与清理。 实现此接口的类应保证线程安全（建议使用锁机制）。 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_event_manager}{Event\+Manager}}
+\begin{DoxyCompactList}\small\item\em 全局事件总线。 纯 C\# 实现，独立于 Unity 生命周期，适用于任何需要事件通信的场景。 无单例模式，建议通过依赖注入或服务定位器访问。 遵循订阅-\/发布模式，用于模块间解耦通信。 所有公开方法均为线程安全（使用对象锁）。 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_core_1_1_event_1_1_game_event_base}{Game\+Event\+Base}}
+\begin{DoxyCompactList}\small\item\em 所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此 \end{DoxyCompactList}\end{DoxyCompactItemize}

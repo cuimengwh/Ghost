@@ -1,0 +1,300 @@
+\doxysection{Inventory\+Manager类 参考}
+\hypertarget{class_inventory_manager}{}\label{class_inventory_manager}\index{InventoryManager@{InventoryManager}}
+
+
+库存管理器 -\/ 管理背包\+UI显示和交互 单例模式实现，全局只有一个库存管理器实例  
+
+
+
+
+类 Inventory\+Manager 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_inventory_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Inventory\+Manager 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_inventory_manager_a8ec89990ee5d3f405312bb2c937a04ec}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em 激活时刷新背包显示 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_inventory_manager_acbf20cb841477f2746dd8109c6ee6306}{Switch\+Inventory}} (\doxymbox{\hyperlink{class_inventory}{Inventory}} target)
+\begin{DoxyCompactList}\small\item\em 切换到指定背包 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_inventory_manager_a52595fe976ce12f5403b934b49a05ac0}{Refresh\+Item}} (\doxymbox{\hyperlink{class_inventory}{Inventory}} target\+Inventory=null)
+\begin{DoxyCompactList}\small\item\em 刷新背包\+UI显示 \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_inventory_manager_a3398a2ce68a4fc5a914563c7c473abb0}{Update\+Item\+Info}} (\doxymbox{\hyperlink{class_item_data}{Item\+Data}} item)
+\begin{DoxyCompactList}\small\item\em 更新右侧物品信息面板 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} \doxymbox{\hyperlink{class_inventory_manager_ac6c01a74e851c79f573fe9a5c8d25cbf}{my\+Bag}}
+\item 
+\doxymbox{\hyperlink{class_collection_inventory}{Collection\+Inventory}} \doxymbox{\hyperlink{class_inventory_manager_aef1f43bdcd1467ecc9a174b1e27b41e8}{my\+Collection\+Bag}}
+\item 
+\doxymbox{\hyperlink{class_dish_inventory}{Dish\+Inventory}} \doxymbox{\hyperlink{class_inventory_manager_a7ba93a5840bff91c6e0b713d2ddc94df}{my\+Dish\+Bag}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_inventory_manager_a5e06fe7298e4589f9ac87927bb72795b}{slot\+Grid}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_inventory_manager_a7cfaa856a020e5b7a2cd2ff15085e459}{empty\+Slot}}
+\item 
+TMP\+\_\+\+Text \doxymbox{\hyperlink{class_inventory_manager_ad8ddd1c9f0ee2e552e9259ec09548161}{item\+Info}}
+\item 
+Image \doxymbox{\hyperlink{class_inventory_manager_a9bd3950d7b1c76214d8fd76779ac3125}{item\+Icon}}
+\item 
+TMP\+\_\+\+Text \doxymbox{\hyperlink{class_inventory_manager_a5543e54767e3a166bc7ef7b83862f645}{item\+Name}}
+\item 
+Button \doxymbox{\hyperlink{class_inventory_manager_adc9063cdfb7cc1f401192fbb73e58d68}{bag\+Button}}
+\item 
+Button \doxymbox{\hyperlink{class_inventory_manager_a7c956e418540633b805e06e98dde9db2}{collection\+Button}}
+\item 
+Button \doxymbox{\hyperlink{class_inventory_manager_a34e3eebec2a770e34b50bf3187b6b28f}{dish\+Button}}
+\item 
+List$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_inventory_manager_a1ba74f4b51fc220d80c471a2acf8573f}{slots}} = new List$<$Game\+Object$>$()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_inventory_manager}{Inventory\+Manager}} \doxymbox{\hyperlink{class_inventory_manager_ace602d33ec272f5ff5248e0a28db890c}{instance}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_inventory_manager_ada2c42fde9559e090f310e9b11780b8a}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em 初始化单例实例 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_inventory_manager_a5b18458e8dd8426c55d2d4e2d184706a}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} \doxymbox{\hyperlink{class_inventory_manager_ad3830374d5adfd4310d5d476b9392104}{current\+Inventory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+库存管理器 -\/ 管理背包\+UI显示和交互 单例模式实现，全局只有一个库存管理器实例 
+
+\label{doc-func-members}
+\Hypertarget{class_inventory_manager_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_inventory_manager_ada2c42fde9559e090f310e9b11780b8a}\index{InventoryManager@{InventoryManager}!Awake@{Awake}}
+\index{Awake@{Awake}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ada2c42fde9559e090f310e9b11780b8a} 
+void Inventory\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+初始化单例实例 
+
+\Hypertarget{class_inventory_manager_a8ec89990ee5d3f405312bb2c937a04ec}\index{InventoryManager@{InventoryManager}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a8ec89990ee5d3f405312bb2c937a04ec} 
+void Inventory\+Manager.\+On\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+激活时刷新背包显示 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager_a8ec89990ee5d3f405312bb2c937a04ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_manager_a52595fe976ce12f5403b934b49a05ac0}\index{InventoryManager@{InventoryManager}!RefreshItem@{RefreshItem}}
+\index{RefreshItem@{RefreshItem}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{RefreshItem()}{RefreshItem()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a52595fe976ce12f5403b934b49a05ac0} 
+void Inventory\+Manager.\+Refresh\+Item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_inventory}{Inventory}}}]{target\+Inventory}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+刷新背包\+UI显示 
+
+
+\begin{DoxyParams}{参数}
+{\em target\+Inventory} & 要刷新的背包数据，默认使用主背包\\
+\hline
+\end{DoxyParams}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager_a52595fe976ce12f5403b934b49a05ac0_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager_a52595fe976ce12f5403b934b49a05ac0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_manager_a5b18458e8dd8426c55d2d4e2d184706a}\index{InventoryManager@{InventoryManager}!Start@{Start}}
+\index{Start@{Start}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a5b18458e8dd8426c55d2d4e2d184706a} 
+void Inventory\+Manager.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager_a5b18458e8dd8426c55d2d4e2d184706a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_manager_acbf20cb841477f2746dd8109c6ee6306}\index{InventoryManager@{InventoryManager}!SwitchInventory@{SwitchInventory}}
+\index{SwitchInventory@{SwitchInventory}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{SwitchInventory()}{SwitchInventory()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_acbf20cb841477f2746dd8109c6ee6306} 
+void Inventory\+Manager.\+Switch\+Inventory (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_inventory}{Inventory}}}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+切换到指定背包 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager_acbf20cb841477f2746dd8109c6ee6306_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager_acbf20cb841477f2746dd8109c6ee6306_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_manager_a3398a2ce68a4fc5a914563c7c473abb0}\index{InventoryManager@{InventoryManager}!UpdateItemInfo@{UpdateItemInfo}}
+\index{UpdateItemInfo@{UpdateItemInfo}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{UpdateItemInfo()}{UpdateItemInfo()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a3398a2ce68a4fc5a914563c7c473abb0} 
+void Inventory\+Manager.\+Update\+Item\+Info (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_item_data}{Item\+Data}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+更新右侧物品信息面板 
+
+
+\begin{DoxyParams}{参数}
+{\em item} & 要显示信息的物品，null则清空显示\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_manager_a3398a2ce68a4fc5a914563c7c473abb0_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_inventory_manager_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_inventory_manager_adc9063cdfb7cc1f401192fbb73e58d68}\index{InventoryManager@{InventoryManager}!bagButton@{bagButton}}
+\index{bagButton@{bagButton}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{bagButton}{bagButton}}
+{\footnotesize\ttfamily \label{class_inventory_manager_adc9063cdfb7cc1f401192fbb73e58d68} 
+Button Inventory\+Manager.\+bag\+Button}
+
+\Hypertarget{class_inventory_manager_a7c956e418540633b805e06e98dde9db2}\index{InventoryManager@{InventoryManager}!collectionButton@{collectionButton}}
+\index{collectionButton@{collectionButton}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{collectionButton}{collectionButton}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a7c956e418540633b805e06e98dde9db2} 
+Button Inventory\+Manager.\+collection\+Button}
+
+\Hypertarget{class_inventory_manager_ad3830374d5adfd4310d5d476b9392104}\index{InventoryManager@{InventoryManager}!currentInventory@{currentInventory}}
+\index{currentInventory@{currentInventory}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{currentInventory}{currentInventory}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ad3830374d5adfd4310d5d476b9392104} 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} Inventory\+Manager.\+current\+Inventory\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_inventory_manager_a34e3eebec2a770e34b50bf3187b6b28f}\index{InventoryManager@{InventoryManager}!dishButton@{dishButton}}
+\index{dishButton@{dishButton}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{dishButton}{dishButton}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a34e3eebec2a770e34b50bf3187b6b28f} 
+Button Inventory\+Manager.\+dish\+Button}
+
+\Hypertarget{class_inventory_manager_a7cfaa856a020e5b7a2cd2ff15085e459}\index{InventoryManager@{InventoryManager}!emptySlot@{emptySlot}}
+\index{emptySlot@{emptySlot}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{emptySlot}{emptySlot}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a7cfaa856a020e5b7a2cd2ff15085e459} 
+Game\+Object Inventory\+Manager.\+empty\+Slot}
+
+\Hypertarget{class_inventory_manager_ace602d33ec272f5ff5248e0a28db890c}\index{InventoryManager@{InventoryManager}!instance@{instance}}
+\index{instance@{instance}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ace602d33ec272f5ff5248e0a28db890c} 
+\doxymbox{\hyperlink{class_inventory_manager}{Inventory\+Manager}} Inventory\+Manager.\+instance\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_inventory_manager_a9bd3950d7b1c76214d8fd76779ac3125}\index{InventoryManager@{InventoryManager}!itemIcon@{itemIcon}}
+\index{itemIcon@{itemIcon}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{itemIcon}{itemIcon}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a9bd3950d7b1c76214d8fd76779ac3125} 
+Image Inventory\+Manager.\+item\+Icon}
+
+\Hypertarget{class_inventory_manager_ad8ddd1c9f0ee2e552e9259ec09548161}\index{InventoryManager@{InventoryManager}!itemInfo@{itemInfo}}
+\index{itemInfo@{itemInfo}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{itemInfo}{itemInfo}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ad8ddd1c9f0ee2e552e9259ec09548161} 
+TMP\+\_\+\+Text Inventory\+Manager.\+item\+Info}
+
+\Hypertarget{class_inventory_manager_a5543e54767e3a166bc7ef7b83862f645}\index{InventoryManager@{InventoryManager}!itemName@{itemName}}
+\index{itemName@{itemName}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{itemName}{itemName}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a5543e54767e3a166bc7ef7b83862f645} 
+TMP\+\_\+\+Text Inventory\+Manager.\+item\+Name}
+
+\Hypertarget{class_inventory_manager_ac6c01a74e851c79f573fe9a5c8d25cbf}\index{InventoryManager@{InventoryManager}!myBag@{myBag}}
+\index{myBag@{myBag}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{myBag}{myBag}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ac6c01a74e851c79f573fe9a5c8d25cbf} 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} Inventory\+Manager.\+my\+Bag}
+
+\Hypertarget{class_inventory_manager_aef1f43bdcd1467ecc9a174b1e27b41e8}\index{InventoryManager@{InventoryManager}!myCollectionBag@{myCollectionBag}}
+\index{myCollectionBag@{myCollectionBag}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{myCollectionBag}{myCollectionBag}}
+{\footnotesize\ttfamily \label{class_inventory_manager_aef1f43bdcd1467ecc9a174b1e27b41e8} 
+\doxymbox{\hyperlink{class_collection_inventory}{Collection\+Inventory}} Inventory\+Manager.\+my\+Collection\+Bag}
+
+\Hypertarget{class_inventory_manager_a7ba93a5840bff91c6e0b713d2ddc94df}\index{InventoryManager@{InventoryManager}!myDishBag@{myDishBag}}
+\index{myDishBag@{myDishBag}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{myDishBag}{myDishBag}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a7ba93a5840bff91c6e0b713d2ddc94df} 
+\doxymbox{\hyperlink{class_dish_inventory}{Dish\+Inventory}} Inventory\+Manager.\+my\+Dish\+Bag}
+
+\Hypertarget{class_inventory_manager_a5e06fe7298e4589f9ac87927bb72795b}\index{InventoryManager@{InventoryManager}!slotGrid@{slotGrid}}
+\index{slotGrid@{slotGrid}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{slotGrid}{slotGrid}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a5e06fe7298e4589f9ac87927bb72795b} 
+Game\+Object Inventory\+Manager.\+slot\+Grid}
+
+\Hypertarget{class_inventory_manager_a1ba74f4b51fc220d80c471a2acf8573f}\index{InventoryManager@{InventoryManager}!slots@{slots}}
+\index{slots@{slots}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{slots}{slots}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a1ba74f4b51fc220d80c471a2acf8573f} 
+List$<$Game\+Object$>$ Inventory\+Manager.\+slots = new List$<$Game\+Object$>$()}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Inventory\+Script/\+\doxymbox{\hyperlink{_inventory_manager_8cs}{Inventory\+Manager.\+cs}}\end{DoxyCompactItemize}

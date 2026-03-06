@@ -1,0 +1,590 @@
+\doxysection{Player\+Base类 参考}
+\hypertarget{class_player_base}{}\label{class_player_base}\index{PlayerBase@{PlayerBase}}
+
+
+类 Player\+Base 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_player_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Player\+Base 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_player_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+interface \doxymbox{\hyperlink{interface_player_base_1_1_i_interactable}{IInteractable}}
+\begin{DoxyCompactList}\small\item\em 可交互接口定义 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2b}{Character\+Physical\+State}} \{ \newline
+\doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c}{Idle}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1}{Walking}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09}{Running}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee}{Jumping}}
+, \newline
+\doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b}{Sleeping}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c}{fainting}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a}{Falling}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b}{Attacking}}
+, \newline
+\doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e}{Planting}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2}{Felling}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76}{Interacting}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617}{Dead}}
+ \}
+\begin{DoxyCompactList}\small\item\em 角色物理状态枚举 \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512a}{Movement\+Type}} \{ \newline
+\doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62}{Walk}}
+, \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d}{Run}}
+, \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367}{squat}}
+, \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d}{Swim}}
+, \newline
+\doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51}{Fly}}
+ \}
+\begin{DoxyCompactList}\small\item\em 移动方式枚举 \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} \{ \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9}{Physical}}
+, \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57}{Psychical}}
+ \}
+\begin{DoxyCompactList}\small\item\em 存在状态枚举 \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{class_player_base_a630f170c6c590c14d716f5de8f03c4df}{Character\+Executable\+Actions}} \{ \doxymbox{\hyperlink{class_player_base_a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d}{nothing}}
+ \}
+\begin{DoxyCompactList}\small\item\em 角色可执行动作枚举 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_player_base_a630f170c6c590c14d716f5de8f03c4df}{Character\+Executable\+Actions}} \doxymbox{\hyperlink{class_player_base_ab069356c3f2e1b5d27b14d762830f777}{Current\+Character\+Executable\+Actions}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a60f864316d3516c1a091f1c12186e219}{Toggle\+Existence\+State}} ()
+\begin{DoxyCompactList}\small\item\em 切换存在状态（物理/\+精神） \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a6f1754b2027bac04811cf95489dff2be}{Change\+Existence\+State}} (\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em 改变存在状态 \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a45746088ea41373c86537c8d2737af23}{Enter\+Existence\+State}} (\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} state)
+\begin{DoxyCompactList}\small\item\em 进入特定存在状态时的处理 \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a}{Exit\+Existence\+State}} (\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} state)
+\begin{DoxyCompactList}\small\item\em 退出特定存在状态时的处理 \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a6995ce07d2f1c198e2341dee4015c83d}{Get\+Input}} ()
+\begin{DoxyCompactList}\small\item\em 获取玩家输入 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_player_base_a4c22537ee829c34af77ff0eb5d594849}{max\+Health}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a30958f090dd354fa915b3cbfb531c88b}{health}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_af4678b1e19baa4c55783f0ba254cafdc}{max\+Energy}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a919ce2390bded1fb2ac78722b8ac6707}{energy}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a34969ed0207aa3b52ee7cdb445c37ed4}{max\+Spiritual\+Nourishment}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_abb3977ca382bb0f62e95dc49eedabddc}{spiritual\+Nourishment}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_aae05464ed0ec9861302c86c644afc072}{walk\+Speed}} = 5f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a301ffd2d3b8a7c027dd5923f3304df67}{run\+Speed}} = 10f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a1bf7af748d618da108ce5c76207c90f0}{squat\+Speed}} = 2.\+5f
+\item 
+float \doxymbox{\hyperlink{class_player_base_afceb356fbaf39359459d33ab91559421}{jump\+Height}} = 2f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a1a9152c04dd5812bb2e3907f51809e6a}{gravity}} = -\/9.\+81f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a9f0028a1138247e16bbbc9dec534acc1}{rotation\+Speed}} = 10f
+\item 
+float \doxymbox{\hyperlink{class_player_base_ad4350eef0c6bfa309455967e59ec7e15}{horizontal\+Input}}
+\item 
+float \doxymbox{\hyperlink{class_player_base_adbfc912504af2402d266f780befa3115}{vertical\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_ad3334551ff379d6f2275f3b7f3140685}{jump\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_af634007f2c03f23b2579ec40944ac1fd}{run\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_a1d7789c3512aabc9c4db16cb4ea835a7}{squat\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_a975c95832d33b41b9863296b2e47d611}{interact\+Input}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{事件}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} $>$ \doxymbox{\hyperlink{class_player_base_a25aeae6d3d0ad3557d6a71f37590c31d}{On\+Existence\+State\+Changed}}
+\begin{DoxyCompactList}\small\item\em 存在状态改变时触发的事件 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void IInteractable. \doxymbox{\hyperlink{class_player_base_af9702099aba99cc7c5c397eacd909c97}{Interact}} (object interactor)
+\begin{DoxyCompactList}\small\item\em 实现\+IInteractable接口的交互方法 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_player_base_a21995afbdd86dbee833ad72fb922d49c}{interacting\+Energy\+Drain}} = 1f
+\item 
+\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} \doxymbox{\hyperlink{class_player_base_a033a31881ba90f50edda691df2903acc}{current\+Existence\+State}} = \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9}{Existence\+State.\+Physical}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{class_player_base_doc-enum-members}
+\doxysubsection{成员枚举类型说明}
+\Hypertarget{class_player_base_a630f170c6c590c14d716f5de8f03c4df}\index{PlayerBase@{PlayerBase}!CharacterExecutableActions@{CharacterExecutableActions}}
+\index{CharacterExecutableActions@{CharacterExecutableActions}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{CharacterExecutableActions}{CharacterExecutableActions}}
+{\footnotesize\ttfamily \label{class_player_base_a630f170c6c590c14d716f5de8f03c4df} 
+enum Player\+Base.\+Character\+Executable\+Actions}
+
+
+
+角色可执行动作枚举 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nothing@{nothing}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!nothing@{nothing}}
+}\Hypertarget{class_player_base_a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d}\label{class_player_base_a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d} 
+nothing&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2b}\index{PlayerBase@{PlayerBase}!CharacterPhysicalState@{CharacterPhysicalState}}
+\index{CharacterPhysicalState@{CharacterPhysicalState}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{CharacterPhysicalState}{CharacterPhysicalState}}
+{\footnotesize\ttfamily \label{class_player_base_a9571567d8a69eb7c3b725331a8638d2b} 
+enum Player\+Base.\+Character\+Physical\+State}
+
+
+
+角色物理状态枚举 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Idle@{Idle}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Walking@{Walking}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Walking@{Walking}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1} 
+Walking&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Running@{Running}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Running@{Running}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09} 
+Running&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Jumping@{Jumping}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Jumping@{Jumping}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee} 
+Jumping&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sleeping@{Sleeping}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Sleeping@{Sleeping}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b} 
+Sleeping&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fainting@{fainting}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!fainting@{fainting}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c} 
+fainting&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Falling@{Falling}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Falling@{Falling}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a} 
+Falling&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Attacking@{Attacking}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Attacking@{Attacking}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b} 
+Attacking&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Planting@{Planting}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Planting@{Planting}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e} 
+Planting&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Felling@{Felling}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Felling@{Felling}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2} 
+Felling&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Interacting@{Interacting}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Interacting@{Interacting}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76} 
+Interacting&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dead@{Dead}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Dead@{Dead}}
+}\Hypertarget{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617}\label{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617} 
+Dead&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}\index{PlayerBase@{PlayerBase}!ExistenceState@{ExistenceState}}
+\index{ExistenceState@{ExistenceState}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{ExistenceState}{ExistenceState}}
+{\footnotesize\ttfamily \label{class_player_base_a59a1d33a183c8e42daad79a58d659ceb} 
+enum Player\+Base.\+Existence\+State}
+
+
+
+存在状态枚举 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Physical@{Physical}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Physical@{Physical}}
+}\Hypertarget{class_player_base_a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9}\label{class_player_base_a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9} 
+Physical&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Psychical@{Psychical}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Psychical@{Psychical}}
+}\Hypertarget{class_player_base_a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57}\label{class_player_base_a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57} 
+Psychical&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_player_base_a3b1397acf413e2c9ef8ae46f7190512a}\index{PlayerBase@{PlayerBase}!MovementType@{MovementType}}
+\index{MovementType@{MovementType}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{MovementType}{MovementType}}
+{\footnotesize\ttfamily \label{class_player_base_a3b1397acf413e2c9ef8ae46f7190512a} 
+enum Player\+Base.\+Movement\+Type}
+
+
+
+移动方式枚举 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Walk@{Walk}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Walk@{Walk}}
+}\Hypertarget{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62}\label{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62} 
+Walk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Run@{Run}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Run@{Run}}
+}\Hypertarget{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d}\label{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d} 
+Run&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{squat@{squat}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!squat@{squat}}
+}\Hypertarget{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367}\label{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367} 
+squat&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Swim@{Swim}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Swim@{Swim}}
+}\Hypertarget{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d}\label{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d} 
+Swim&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fly@{Fly}!PlayerBase@{PlayerBase}}
+\index{PlayerBase@{PlayerBase}!Fly@{Fly}}
+}\Hypertarget{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51}\label{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51} 
+Fly&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_base_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_player_base_a6f1754b2027bac04811cf95489dff2be}\index{PlayerBase@{PlayerBase}!ChangeExistenceState@{ChangeExistenceState}}
+\index{ChangeExistenceState@{ChangeExistenceState}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{ChangeExistenceState()}{ChangeExistenceState()}}
+{\footnotesize\ttfamily \label{class_player_base_a6f1754b2027bac04811cf95489dff2be} 
+virtual void Player\+Base.\+Change\+Existence\+State (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}}}]{new\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+改变存在状态 
+
+
+\begin{DoxyParams}{参数}
+{\em new\+State} & 目标状态\\
+\hline
+\end{DoxyParams}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_base_a6f1754b2027bac04811cf95489dff2be_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_base_a6f1754b2027bac04811cf95489dff2be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_base_a45746088ea41373c86537c8d2737af23}\index{PlayerBase@{PlayerBase}!EnterExistenceState@{EnterExistenceState}}
+\index{EnterExistenceState@{EnterExistenceState}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{EnterExistenceState()}{EnterExistenceState()}}
+{\footnotesize\ttfamily \label{class_player_base_a45746088ea41373c86537c8d2737af23} 
+virtual void Player\+Base.\+Enter\+Existence\+State (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+进入特定存在状态时的处理 
+
+
+\begin{DoxyParams}{参数}
+{\em state} & 要进入的状态\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_base_a45746088ea41373c86537c8d2737af23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a}\index{PlayerBase@{PlayerBase}!ExitExistenceState@{ExitExistenceState}}
+\index{ExitExistenceState@{ExitExistenceState}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{ExitExistenceState()}{ExitExistenceState()}}
+{\footnotesize\ttfamily \label{class_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a} 
+virtual void Player\+Base.\+Exit\+Existence\+State (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+退出特定存在状态时的处理 
+
+
+\begin{DoxyParams}{参数}
+{\em state} & 要退出的状态\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_base_a6995ce07d2f1c198e2341dee4015c83d}\index{PlayerBase@{PlayerBase}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily \label{class_player_base_a6995ce07d2f1c198e2341dee4015c83d} 
+virtual void Player\+Base.\+Get\+Input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+获取玩家输入 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_player_base_a6995ce07d2f1c198e2341dee4015c83d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_base_af9702099aba99cc7c5c397eacd909c97}\index{PlayerBase@{PlayerBase}!Interact@{Interact}}
+\index{Interact@{Interact}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{Interact()}{Interact()}}
+{\footnotesize\ttfamily \label{class_player_base_af9702099aba99cc7c5c397eacd909c97} 
+void IInteractable. Player\+Base.\+Interact (\begin{DoxyParamCaption}\item[{object}]{interactor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+实现\+IInteractable接口的交互方法 
+
+
+\begin{DoxyParams}{参数}
+{\em interactor} & 交互发起者\\
+\hline
+\end{DoxyParams}
+
+
+实现了 \doxymbox{\hyperlink{interface_player_base_1_1_i_interactable_a5a3f535bd56f175d456ad89235d59de9}{Player\+Base.\+IInteractable}}.
+
+\Hypertarget{class_player_base_a60f864316d3516c1a091f1c12186e219}\index{PlayerBase@{PlayerBase}!ToggleExistenceState@{ToggleExistenceState}}
+\index{ToggleExistenceState@{ToggleExistenceState}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{ToggleExistenceState()}{ToggleExistenceState()}}
+{\footnotesize\ttfamily \label{class_player_base_a60f864316d3516c1a091f1c12186e219} 
+virtual void Player\+Base.\+Toggle\+Existence\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+切换存在状态（物理/\+精神） 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_base_a60f864316d3516c1a091f1c12186e219_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_player_base_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_player_base_ab069356c3f2e1b5d27b14d762830f777}\index{PlayerBase@{PlayerBase}!CurrentCharacterExecutableActions@{CurrentCharacterExecutableActions}}
+\index{CurrentCharacterExecutableActions@{CurrentCharacterExecutableActions}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{CurrentCharacterExecutableActions}{CurrentCharacterExecutableActions}}
+{\footnotesize\ttfamily \label{class_player_base_ab069356c3f2e1b5d27b14d762830f777} 
+\doxymbox{\hyperlink{class_player_base_a630f170c6c590c14d716f5de8f03c4df}{Character\+Executable\+Actions}} Player\+Base.\+Current\+Character\+Executable\+Actions}
+
+\Hypertarget{class_player_base_a033a31881ba90f50edda691df2903acc}\index{PlayerBase@{PlayerBase}!currentExistenceState@{currentExistenceState}}
+\index{currentExistenceState@{currentExistenceState}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{currentExistenceState}{currentExistenceState}}
+{\footnotesize\ttfamily \label{class_player_base_a033a31881ba90f50edda691df2903acc} 
+\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} Player\+Base.\+current\+Existence\+State = \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9}{Existence\+State.\+Physical}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_base_a919ce2390bded1fb2ac78722b8ac6707}\index{PlayerBase@{PlayerBase}!energy@{energy}}
+\index{energy@{energy}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{energy}{energy}}
+{\footnotesize\ttfamily \label{class_player_base_a919ce2390bded1fb2ac78722b8ac6707} 
+float Player\+Base.\+energy = 100f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a1a9152c04dd5812bb2e3907f51809e6a}\index{PlayerBase@{PlayerBase}!gravity@{gravity}}
+\index{gravity@{gravity}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{gravity}{gravity}}
+{\footnotesize\ttfamily \label{class_player_base_a1a9152c04dd5812bb2e3907f51809e6a} 
+float Player\+Base.\+gravity = -\/9.\+81f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a30958f090dd354fa915b3cbfb531c88b}\index{PlayerBase@{PlayerBase}!health@{health}}
+\index{health@{health}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily \label{class_player_base_a30958f090dd354fa915b3cbfb531c88b} 
+float Player\+Base.\+health = 100f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_ad4350eef0c6bfa309455967e59ec7e15}\index{PlayerBase@{PlayerBase}!horizontalInput@{horizontalInput}}
+\index{horizontalInput@{horizontalInput}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{horizontalInput}{horizontalInput}}
+{\footnotesize\ttfamily \label{class_player_base_ad4350eef0c6bfa309455967e59ec7e15} 
+float Player\+Base.\+horizontal\+Input\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a21995afbdd86dbee833ad72fb922d49c}\index{PlayerBase@{PlayerBase}!interactingEnergyDrain@{interactingEnergyDrain}}
+\index{interactingEnergyDrain@{interactingEnergyDrain}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{interactingEnergyDrain}{interactingEnergyDrain}}
+{\footnotesize\ttfamily \label{class_player_base_a21995afbdd86dbee833ad72fb922d49c} 
+float Player\+Base.\+interacting\+Energy\+Drain = 1f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_base_a975c95832d33b41b9863296b2e47d611}\index{PlayerBase@{PlayerBase}!interactInput@{interactInput}}
+\index{interactInput@{interactInput}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{interactInput}{interactInput}}
+{\footnotesize\ttfamily \label{class_player_base_a975c95832d33b41b9863296b2e47d611} 
+bool Player\+Base.\+interact\+Input\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_afceb356fbaf39359459d33ab91559421}\index{PlayerBase@{PlayerBase}!jumpHeight@{jumpHeight}}
+\index{jumpHeight@{jumpHeight}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{jumpHeight}{jumpHeight}}
+{\footnotesize\ttfamily \label{class_player_base_afceb356fbaf39359459d33ab91559421} 
+float Player\+Base.\+jump\+Height = 2f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_ad3334551ff379d6f2275f3b7f3140685}\index{PlayerBase@{PlayerBase}!jumpInput@{jumpInput}}
+\index{jumpInput@{jumpInput}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{jumpInput}{jumpInput}}
+{\footnotesize\ttfamily \label{class_player_base_ad3334551ff379d6f2275f3b7f3140685} 
+bool Player\+Base.\+jump\+Input\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_af4678b1e19baa4c55783f0ba254cafdc}\index{PlayerBase@{PlayerBase}!maxEnergy@{maxEnergy}}
+\index{maxEnergy@{maxEnergy}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{maxEnergy}{maxEnergy}}
+{\footnotesize\ttfamily \label{class_player_base_af4678b1e19baa4c55783f0ba254cafdc} 
+float Player\+Base.\+max\+Energy = 100f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a4c22537ee829c34af77ff0eb5d594849}\index{PlayerBase@{PlayerBase}!maxHealth@{maxHealth}}
+\index{maxHealth@{maxHealth}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{maxHealth}{maxHealth}}
+{\footnotesize\ttfamily \label{class_player_base_a4c22537ee829c34af77ff0eb5d594849} 
+float Player\+Base.\+max\+Health = 100f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a34969ed0207aa3b52ee7cdb445c37ed4}\index{PlayerBase@{PlayerBase}!maxSpiritualNourishment@{maxSpiritualNourishment}}
+\index{maxSpiritualNourishment@{maxSpiritualNourishment}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{maxSpiritualNourishment}{maxSpiritualNourishment}}
+{\footnotesize\ttfamily \label{class_player_base_a34969ed0207aa3b52ee7cdb445c37ed4} 
+float Player\+Base.\+max\+Spiritual\+Nourishment = 100f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a9f0028a1138247e16bbbc9dec534acc1}\index{PlayerBase@{PlayerBase}!rotationSpeed@{rotationSpeed}}
+\index{rotationSpeed@{rotationSpeed}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{rotationSpeed}{rotationSpeed}}
+{\footnotesize\ttfamily \label{class_player_base_a9f0028a1138247e16bbbc9dec534acc1} 
+float Player\+Base.\+rotation\+Speed = 10f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_af634007f2c03f23b2579ec40944ac1fd}\index{PlayerBase@{PlayerBase}!runInput@{runInput}}
+\index{runInput@{runInput}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{runInput}{runInput}}
+{\footnotesize\ttfamily \label{class_player_base_af634007f2c03f23b2579ec40944ac1fd} 
+bool Player\+Base.\+run\+Input\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a301ffd2d3b8a7c027dd5923f3304df67}\index{PlayerBase@{PlayerBase}!runSpeed@{runSpeed}}
+\index{runSpeed@{runSpeed}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{runSpeed}{runSpeed}}
+{\footnotesize\ttfamily \label{class_player_base_a301ffd2d3b8a7c027dd5923f3304df67} 
+float Player\+Base.\+run\+Speed = 10f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_abb3977ca382bb0f62e95dc49eedabddc}\index{PlayerBase@{PlayerBase}!spiritualNourishment@{spiritualNourishment}}
+\index{spiritualNourishment@{spiritualNourishment}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{spiritualNourishment}{spiritualNourishment}}
+{\footnotesize\ttfamily \label{class_player_base_abb3977ca382bb0f62e95dc49eedabddc} 
+float Player\+Base.\+spiritual\+Nourishment = 100f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a1d7789c3512aabc9c4db16cb4ea835a7}\index{PlayerBase@{PlayerBase}!squatInput@{squatInput}}
+\index{squatInput@{squatInput}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{squatInput}{squatInput}}
+{\footnotesize\ttfamily \label{class_player_base_a1d7789c3512aabc9c4db16cb4ea835a7} 
+bool Player\+Base.\+squat\+Input\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_a1bf7af748d618da108ce5c76207c90f0}\index{PlayerBase@{PlayerBase}!squatSpeed@{squatSpeed}}
+\index{squatSpeed@{squatSpeed}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{squatSpeed}{squatSpeed}}
+{\footnotesize\ttfamily \label{class_player_base_a1bf7af748d618da108ce5c76207c90f0} 
+float Player\+Base.\+squat\+Speed = 2.\+5f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_adbfc912504af2402d266f780befa3115}\index{PlayerBase@{PlayerBase}!verticalInput@{verticalInput}}
+\index{verticalInput@{verticalInput}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{verticalInput}{verticalInput}}
+{\footnotesize\ttfamily \label{class_player_base_adbfc912504af2402d266f780befa3115} 
+float Player\+Base.\+vertical\+Input\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_player_base_aae05464ed0ec9861302c86c644afc072}\index{PlayerBase@{PlayerBase}!walkSpeed@{walkSpeed}}
+\index{walkSpeed@{walkSpeed}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{walkSpeed}{walkSpeed}}
+{\footnotesize\ttfamily \label{class_player_base_aae05464ed0ec9861302c86c644afc072} 
+float Player\+Base.\+walk\+Speed = 5f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\label{doc-event-members}
+\Hypertarget{class_player_base_doc-event-members}
+\doxysubsection{事件说明}
+\Hypertarget{class_player_base_a25aeae6d3d0ad3557d6a71f37590c31d}\index{PlayerBase@{PlayerBase}!OnExistenceStateChanged@{OnExistenceStateChanged}}
+\index{OnExistenceStateChanged@{OnExistenceStateChanged}!PlayerBase@{PlayerBase}}
+\doxysubsubsection{\texorpdfstring{OnExistenceStateChanged}{OnExistenceStateChanged}}
+{\footnotesize\ttfamily \label{class_player_base_a25aeae6d3d0ad3557d6a71f37590c31d} 
+Action$<$\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}}$>$ Player\+Base.\+On\+Existence\+State\+Changed}
+
+
+
+存在状态改变时触发的事件 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Player/\+\doxymbox{\hyperlink{_player_base_8cs}{Player\+Base.\+cs}}\end{DoxyCompactItemize}

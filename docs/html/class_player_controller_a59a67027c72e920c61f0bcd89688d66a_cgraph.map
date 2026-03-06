@@ -1,0 +1,7 @@
+<map id="PlayerController.HandleUI" name="PlayerController.HandleUI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,179,57"/>
+<area shape="rect" id="Node000002" href="$class_player_controller.html#a23f7de3309f9aa0712ec564eab57eb10" title=" " alt="" coords="227,5,412,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,32,214,30,209,31,179,37"/>
+<area shape="rect" id="Node000003" href="$class_item_drag.html#a5e99cd0e1fb5ba904e61f2f84c90cbe3" title="静态方法：强制结束所有正在拖拽的物品 在背包关闭、场景切换时调用" alt="" coords="238,56,401,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,51,225,58,220,59,179,56"/>
+</map>

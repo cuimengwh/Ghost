@@ -1,0 +1,7 @@
+<map id="ItemDrag.GetHitObject" name="ItemDrag.GetHitObject">
+<area shape="rect" id="Node000001" title="获取当前指针位置下的GameObject 使用异常处理确保安全" alt="" coords="5,13,161,40"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#a3fd165e24bffc4a1ba8ad365f92b4a1e" title="返回原始位置 当拖拽到无效区域或出现异常时调用" alt="" coords="209,5,385,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,24,196,26,191,27,161,29"/>
+<area shape="rect" id="Node000003" href="$class_item_drag.html#aabda3e1da8ef8840621636641ecc5a2c" title="拖拽结束后的通用设置 恢复射线检测，重置拖拽状态" alt="" coords="433,13,611,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="385,24,420,27,415,27,386,29"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeManager.UpdateTime" name="Utopia.TimeSystem.TimeManager.UpdateTime">
+<area shape="rect" id="Node000001" title="更新时间+触发时间事件" alt="" coords="278,5,502,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a815e7440e47a03a37be9f40421bac462" title=" " alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>

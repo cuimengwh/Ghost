@@ -1,0 +1,19 @@
+<map id="PlayerController.Update" name="PlayerController.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,132,166,159"/>
+<area shape="rect" id="Node000002" href="$class_player_base.html#a6995ce07d2f1c198e2341dee4015c83d" title="获取玩家输入" alt="" coords="253,5,395,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,130,146,86,178,62,212,42,240,33,236,36,215,46,181,66,149,90,102,133"/>
+<area shape="rect" id="Node000003" href="$class_player_controller.html#a7393ba7246897b4f96a0c57ae2cf2850" title=" " alt="" coords="215,56,432,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,129,213,92,243,85,239,88,215,97,119,134"/>
+<area shape="rect" id="Node000004" href="$class_player_controller.html#aeda2a33e5b70b31a20cd310c58d20623" title=" " alt="" coords="223,107,424,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,134,210,131,205,134,167,139"/>
+<area shape="rect" id="Node000005" href="$class_player_controller.html#a53e932ee02c4c2cc18c7219d40e93cad" title=" " alt="" coords="214,157,434,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="165,151,201,156,196,158,167,156"/>
+<area shape="rect" id="Node000006" href="$class_player_controller.html#ad6c24a42714cc5182b042266d9f07403" title=" " alt="" coords="220,208,428,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="118,156,215,193,243,203,238,204,213,199,117,162"/>
+<area shape="rect" id="Node000007" href="$class_player_controller.html#a59a67027c72e920c61f0bcd89688d66a" title=" " alt="" coords="237,259,410,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="100,157,149,201,181,224,215,244,232,253,227,253,212,249,178,229,146,205,99,162"/>
+<area shape="rect" id="Node000008" href="$class_player_controller.html#a23f7de3309f9aa0712ec564eab57eb10" title=" " alt="" coords="482,233,667,260"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="411,261,469,257,464,258,411,266"/>
+<area shape="rect" id="Node000009" href="$class_item_drag.html#a5e99cd0e1fb5ba904e61f2f84c90cbe3" title="静态方法：强制结束所有正在拖拽的物品 在背包关闭、场景切换时调用" alt="" coords="493,284,656,311"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="411,278,480,288,475,288,411,283"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Utopia.GameLogic.NPC.NPCManager" name="Utopia.GameLogic.NPC.NPCManager">
+<area shape="rect" id="Node000001" title="NPC管理器 NPC系统的核心实现类，负责：" alt="" coords="38,80,284,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,39,146,79,141,80,90,44"/>
+<area shape="rect" id="Node000003" href="$interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html" title="NPC服务接口 提供NPC系统的核心服务功能，统一管理NPC的配置和状态数据 作为其他系统与NPC数据交互的统一入口" alt="" coords="141,5,384,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,41,180,82,178,77,230,42"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ItemDrag.HandleSwapWithItem" name="ItemDrag.HandleSwapWithItem">
+<area shape="rect" id="Node000001" title="处理与另一个物品交换位置" alt="" coords="201,5,407,32"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#aa966ed36f05faca17b4ec738fd636bfd" title="结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性" alt="" coords="5,5,153,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,19,153,21,153,16,188,19"/>
+</map>

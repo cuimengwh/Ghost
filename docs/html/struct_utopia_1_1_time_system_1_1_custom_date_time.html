@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.TimeSystem.CustomDateTime结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_utopia_1_1_time_system_1_1_custom_date_time.html','','struct_utopia_1_1_time_system_1_1_custom_date_time-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.TimeSystem.CustomDateTime结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、以及格式化的字符串输出。  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Utopia.TimeSystem.CustomDateTime 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time__inherit__graph.png" border="0" usemap="#a_utopia_8_time_system_8_custom_date_time_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_utopia_8_time_system_8_custom_date_time_inherit__map" id="a_utopia_8_time_system_8_custom_date_time_inherit__map">
+<area shape="rect" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="143,80,330,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,228,32"/>
+<area shape="poly" title=" " alt="" coords="149,38,208,79,203,80,147,43"/>
+<area shape="rect" title=" " alt="" coords="251,5,462,32"/>
+<area shape="poly" title=" " alt="" coords="328,40,268,82,266,77,323,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Utopia.TimeSystem.CustomDateTime 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time__coll__graph.png" border="0" usemap="#a_utopia_8_time_system_8_custom_date_time_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_time_system_8_custom_date_time_coll__map" id="a_utopia_8_time_system_8_custom_date_time_coll__map">
+<area shape="rect" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="143,80,330,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,228,32"/>
+<area shape="poly" title=" " alt="" coords="149,38,208,79,203,80,147,43"/>
+<area shape="rect" title=" " alt="" coords="251,5,462,32"/>
+<area shape="poly" title=" " alt="" coords="328,40,268,82,266,77,323,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3bdea6ae6b3eecb92b06b8f5203486b3" id="r_a3bdea6ae6b3eecb92b06b8f5203486b3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> (int <a class="el" href="#acc2b2a25ba3416f91e61f1812fffbfdd">year</a>, int <a class="el" href="#afb639602447b76b61f372dee319459c9">month</a>, int <a class="el" href="#ad994c7c26046ff06debe2f8a2284d81d">day</a>, float <a class="el" href="#ab8fbe83f1d2bec29e055cd3d9c1bfa36">time</a>)</td></tr>
+<tr class="memdesc:a3bdea6ae6b3eecb92b06b8f5203486b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用指定的年、月、日和时间初始化 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 实例。 参数会自动钳制到有效范围。  <br /></td></tr>
+<tr class="memitem:a4ba6bf017c7bd2822e64e1eea345d01e" id="r_a4ba6bf017c7bd2822e64e1eea345d01e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4ba6bf017c7bd2822e64e1eea345d01e">CompareTo</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> other)</td></tr>
+<tr class="memdesc:a4ba6bf017c7bd2822e64e1eea345d01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较当前实例与另一个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 对象。  <br /></td></tr>
+<tr class="memitem:a0e006c8eba7cb26faa6dbe8938f9346c" id="r_a0e006c8eba7cb26faa6dbe8938f9346c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0e006c8eba7cb26faa6dbe8938f9346c">Equals</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> other)</td></tr>
+<tr class="memdesc:a0e006c8eba7cb26faa6dbe8938f9346c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指示当前实例是否与另一个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 对象相等。  <br /></td></tr>
+<tr class="memitem:acd921fc5bf33cec856c03f5a4158d6dd" id="r_acd921fc5bf33cec856c03f5a4158d6dd"><td class="memItemLeft">override bool&#160;</td><td class="memItemRight"><a class="el" href="#acd921fc5bf33cec856c03f5a4158d6dd">Equals</a> (object obj)</td></tr>
+<tr class="memdesc:acd921fc5bf33cec856c03f5a4158d6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">指示当前实例是否等于另一个对象。  <br /></td></tr>
+<tr class="memitem:a705bbc3df230846dbd69b8d780e2fe5b" id="r_a705bbc3df230846dbd69b8d780e2fe5b"><td class="memItemLeft">override int&#160;</td><td class="memItemRight"><a class="el" href="#a705bbc3df230846dbd69b8d780e2fe5b">GetHashCode</a> ()</td></tr>
+<tr class="memdesc:a705bbc3df230846dbd69b8d780e2fe5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前实例的哈希码。  <br /></td></tr>
+<tr class="memitem:af9723d60fca7de1d8d2f5dd771af039e" id="r_af9723d60fca7de1d8d2f5dd771af039e"><td class="memItemLeft">override string&#160;</td><td class="memItemRight"><a class="el" href="#af9723d60fca7de1d8d2f5dd771af039e">ToString</a> ()</td></tr>
+<tr class="memdesc:af9723d60fca7de1d8d2f5dd771af039e"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 的字符串表示，格式为 "Y{year}-M{month:D2}-D{day:D2} {hours:D2}:{minutes:D2}"。 例如：Y1-M01-D01 00:00 表示元年1月1日午夜。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aeeda5a27bc7b7fefe613b4f2d621e966" id="r_aeeda5a27bc7b7fefe613b4f2d621e966"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#aeeda5a27bc7b7fefe613b4f2d621e966">operator==</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> a, <a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> b)</td></tr>
+<tr class="memdesc:aeeda5a27bc7b7fefe613b4f2d621e966"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断两个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 实例是否表示同一时刻（基于 Timestamp 比较）。  <br /></td></tr>
+<tr class="memitem:a4ad44d4b7821d2d7183eeb4e266827fd" id="r_a4ad44d4b7821d2d7183eeb4e266827fd"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a4ad44d4b7821d2d7183eeb4e266827fd">operator!=</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> a, <a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> b)</td></tr>
+<tr class="memdesc:a4ad44d4b7821d2d7183eeb4e266827fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断两个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 实例是否表示不同时刻。  <br /></td></tr>
+<tr class="memitem:a1160942def0310bcfa64b95b4a149cf9" id="r_a1160942def0310bcfa64b95b4a149cf9"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a1160942def0310bcfa64b95b4a149cf9">operator&gt;</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> x, <a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> y)</td></tr>
+<tr class="memdesc:a1160942def0310bcfa64b95b4a149cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断一个实例是否大于另一个实例（基于 Timestamp 比较）。  <br /></td></tr>
+<tr class="memitem:a0f26eeecc7069e70fe3b7e59c6da7d7b" id="r_a0f26eeecc7069e70fe3b7e59c6da7d7b"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a0f26eeecc7069e70fe3b7e59c6da7d7b">operator&lt;</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> x, <a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> y)</td></tr>
+<tr class="memdesc:a0f26eeecc7069e70fe3b7e59c6da7d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断一个实例是否小于另一个实例（基于 Timestamp 比较）。  <br /></td></tr>
+<tr class="memitem:ac8b11c81fdbcdd31d3f96ae5a21b53be" id="r_ac8b11c81fdbcdd31d3f96ae5a21b53be"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ac8b11c81fdbcdd31d3f96ae5a21b53be">operator&gt;=</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> a, <a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> b)</td></tr>
+<tr class="memdesc:ac8b11c81fdbcdd31d3f96ae5a21b53be"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断一个实例是否大于等于另一个实例（基于 Timestamp 比较）。  <br /></td></tr>
+<tr class="memitem:a89c7bac82fa09da179b5b87c634db85d" id="r_a89c7bac82fa09da179b5b87c634db85d"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a89c7bac82fa09da179b5b87c634db85d">operator&lt;=</a> (<a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> a, <a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a> b)</td></tr>
+<tr class="memdesc:a89c7bac82fa09da179b5b87c634db85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断一个实例是否小于等于另一个实例（基于 Timestamp 比较）。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:acc2b2a25ba3416f91e61f1812fffbfdd" id="r_acc2b2a25ba3416f91e61f1812fffbfdd"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acc2b2a25ba3416f91e61f1812fffbfdd">year</a></td></tr>
+<tr class="memdesc:acc2b2a25ba3416f91e61f1812fffbfdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">年份。从 1 开始，最小值为 1。  <br /></td></tr>
+<tr class="memitem:afb639602447b76b61f372dee319459c9" id="r_afb639602447b76b61f372dee319459c9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afb639602447b76b61f372dee319459c9">month</a></td></tr>
+<tr class="memdesc:afb639602447b76b61f372dee319459c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">月份，取值范围 1 ~ 4。  <br /></td></tr>
+<tr class="memitem:ad994c7c26046ff06debe2f8a2284d81d" id="r_ad994c7c26046ff06debe2f8a2284d81d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad994c7c26046ff06debe2f8a2284d81d">day</a></td></tr>
+<tr class="memdesc:ad994c7c26046ff06debe2f8a2284d81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">日期，取值范围 1 ~ 28。  <br /></td></tr>
+<tr class="memitem:ab8fbe83f1d2bec29e055cd3d9c1bfa36" id="r_ab8fbe83f1d2bec29e055cd3d9c1bfa36"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab8fbe83f1d2bec29e055cd3d9c1bfa36">time</a></td></tr>
+<tr class="memdesc:ab8fbe83f1d2bec29e055cd3d9c1bfa36"><td class="mdescLeft">&#160;</td><td class="mdescRight">一天内的时间，0 ~ 1 之间的浮点数，0 表示 00:00，1 表示 24:00。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a88eb9dbc3c41bac2b45425c0fa49e880" id="r_a88eb9dbc3c41bac2b45425c0fa49e880"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a88eb9dbc3c41bac2b45425c0fa49e880">ToTotalDays</a><code> [get]</code></td></tr>
+<tr class="memdesc:a88eb9dbc3c41bac2b45425c0fa49e880"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取从元年（1年1月1日）到当前日期经过的整数天数。 元年1月1日返回 0，1月2日返回 1，依此类推。  <br /></td></tr>
+<tr class="memitem:ae2cc310f10536d73e9cf68c9280081e6" id="r_ae2cc310f10536d73e9cf68c9280081e6"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ae2cc310f10536d73e9cf68c9280081e6">Timestamp</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae2cc310f10536d73e9cf68c9280081e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一个双精度浮点数表示的绝对时间戳，整数部分为 ToTotalDays，小数部分为 time（0~1）。 该值可用于日期时间的比较和算术运算。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:ac69252d3786d79986f73c3bf834184ee" id="r_ac69252d3786d79986f73c3bf834184ee"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#ac69252d3786d79986f73c3bf834184ee">DAYS_PER_YEAR</a> = 112</td></tr>
+<tr class="memdesc:ac69252d3786d79986f73c3bf834184ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">每年包含的天数（4个月 × 28天）。  <br /></td></tr>
+<tr class="memitem:a59eb593d947e7a2d5e4700f243f738ea" id="r_a59eb593d947e7a2d5e4700f243f738ea"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a59eb593d947e7a2d5e4700f243f738ea">DAYS_PER_MONTH</a> = 28</td></tr>
+<tr class="memdesc:a59eb593d947e7a2d5e4700f243f738ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">每月包含的天数。  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、以及格式化的字符串输出。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a3bdea6ae6b3eecb92b06b8f5203486b3" name="a3bdea6ae6b3eecb92b06b8f5203486b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdea6ae6b3eecb92b06b8f5203486b3">&#9670;&#160;</a></span>CustomDateTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Utopia.TimeSystem.CustomDateTime.CustomDateTime </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>day</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用指定的年、月、日和时间初始化 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 实例。 参数会自动钳制到有效范围。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年份（自动确保 ≥1）</td></tr>
+    <tr><td class="paramname">month</td><td>月份（自动限制在 1~4）</td></tr>
+    <tr><td class="paramname">day</td><td>日期（自动限制在 1~28）</td></tr>
+    <tr><td class="paramname">time</td><td>时间（0~1，自动限制在范围内）</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3_icgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3_icgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3_icgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3_icgraph">
+<area shape="rect" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,272,428,315"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a4ba6bf017c7bd2822e64e1eea345d01e" title="比较当前实例与另一个 CustomDateTime 对象。" alt="" coords="5,5,193,48"/>
+<area shape="poly" title=" " alt="" coords="318,257,299,214,271,161,235,108,191,62,176,51,175,46,194,58,239,105,276,158,304,211,323,258"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a0e006c8eba7cb26faa6dbe8938f9346c" title="指示当前实例是否与另一个 CustomDateTime 对象相等。" alt="" coords="5,72,193,115"/>
+<area shape="poly" title=" " alt="" coords="309,259,260,194,228,159,191,129,174,118,172,113,194,124,231,155,265,191,315,259"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#acd921fc5bf33cec856c03f5a4158d6dd" title="指示当前实例是否等于另一个对象。" alt="" coords="5,139,193,181"/>
+<area shape="poly" title=" " alt="" coords="293,263,246,229,191,196,169,184,167,179,194,191,249,225,298,262"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a4ad44d4b7821d2d7183eeb4e266827fd" title="判断两个 CustomDateTime 实例是否表示不同时刻。" alt="" coords="5,205,193,248"/>
+<area shape="poly" title=" " alt="" coords="240,269,178,251,176,246,244,266"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a0f26eeecc7069e70fe3b7e59c6da7d7b" title="判断一个实例是否小于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,272,193,315"/>
+<area shape="poly" title=" " alt="" coords="222,295,194,296,192,291,227,292"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a89c7bac82fa09da179b5b87c634db85d" title="判断一个实例是否小于等于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,339,193,381"/>
+<area shape="poly" title=" " alt="" coords="240,321,178,340,176,336,244,318"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#aeeda5a27bc7b7fefe613b4f2d621e966" title="判断两个 CustomDateTime 实例是否表示同一时刻（基于 Timestamp 比较）。" alt="" coords="5,405,193,448"/>
+<area shape="poly" title=" " alt="" coords="293,326,249,362,194,396,169,407,166,403,191,391,246,357,297,323"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a1160942def0310bcfa64b95b4a149cf9" title="判断一个实例是否大于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,472,193,515"/>
+<area shape="poly" title=" " alt="" coords="314,326,265,396,231,431,194,462,174,474,171,469,191,458,228,428,260,393,310,329"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#ac8b11c81fdbcdd31d3f96ae5a21b53be" title="判断一个实例是否大于等于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,539,193,581"/>
+<area shape="poly" title=" " alt="" coords="322,327,304,375,276,428,239,482,194,529,177,541,174,536,191,525,235,479,271,426,299,373,319,331"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a4ba6bf017c7bd2822e64e1eea345d01e" name="a4ba6bf017c7bd2822e64e1eea345d01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ba6bf017c7bd2822e64e1eea345d01e">&#9670;&#160;</a></span>CompareTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.CustomDateTime.CompareTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>比较当前实例与另一个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 对象。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>要比较的对象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>负数：当前小于 other；零：相等；正数：当前大于 other</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e_cgraph">
+<area shape="rect" title="比较当前实例与另一个 CustomDateTime 对象。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0e006c8eba7cb26faa6dbe8938f9346c" name="a0e006c8eba7cb26faa6dbe8938f9346c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e006c8eba7cb26faa6dbe8938f9346c">&#9670;&#160;</a></span>Equals() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.CustomDateTime.Equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指示当前实例是否与另一个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 对象相等。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>要比较的对象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果所有字段（年、月、日、时间）都相等则为 true，否则为 false</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c_cgraph">
+<area shape="rect" title="指示当前实例是否与另一个 CustomDateTime 对象相等。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acd921fc5bf33cec856c03f5a4158d6dd" name="acd921fc5bf33cec856c03f5a4158d6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd921fc5bf33cec856c03f5a4158d6dd">&#9670;&#160;</a></span>Equals() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool Utopia.TimeSystem.CustomDateTime.Equals </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指示当前实例是否等于另一个对象。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>要比较的对象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果 obj 是 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 且所有字段相等则为 true</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd_cgraph">
+<area shape="rect" title="指示当前实例是否等于另一个对象。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a705bbc3df230846dbd69b8d780e2fe5b" name="a705bbc3df230846dbd69b8d780e2fe5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705bbc3df230846dbd69b8d780e2fe5b">&#9670;&#160;</a></span>GetHashCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int Utopia.TimeSystem.CustomDateTime.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回当前实例的哈希码。 </p>
+<dl class="section return"><dt>返回</dt><dd>由年、月、日、时间组合成的哈希值</dd></dl>
+
+</div>
+</div>
+<a id="a4ad44d4b7821d2d7183eeb4e266827fd" name="a4ad44d4b7821d2d7183eeb4e266827fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad44d4b7821d2d7183eeb4e266827fd">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.CustomDateTime.operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断两个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 实例是否表示不同时刻。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd_cgraph">
+<area shape="rect" title="判断两个 CustomDateTime 实例是否表示不同时刻。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f26eeecc7069e70fe3b7e59c6da7d7b" name="a0f26eeecc7069e70fe3b7e59c6da7d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f26eeecc7069e70fe3b7e59c6da7d7b">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.CustomDateTime.operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断一个实例是否小于另一个实例（基于 Timestamp 比较）。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b_cgraph">
+<area shape="rect" title="判断一个实例是否小于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a89c7bac82fa09da179b5b87c634db85d" name="a89c7bac82fa09da179b5b87c634db85d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c7bac82fa09da179b5b87c634db85d">&#9670;&#160;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.CustomDateTime.operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断一个实例是否小于等于另一个实例（基于 Timestamp 比较）。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d_cgraph">
+<area shape="rect" title="判断一个实例是否小于等于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeeda5a27bc7b7fefe613b4f2d621e966" name="aeeda5a27bc7b7fefe613b4f2d621e966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeda5a27bc7b7fefe613b4f2d621e966">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.CustomDateTime.operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断两个 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 实例是否表示同一时刻（基于 Timestamp 比较）。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966_cgraph">
+<area shape="rect" title="判断两个 CustomDateTime 实例是否表示同一时刻（基于 Timestamp 比较）。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1160942def0310bcfa64b95b4a149cf9" name="a1160942def0310bcfa64b95b4a149cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1160942def0310bcfa64b95b4a149cf9">&#9670;&#160;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.CustomDateTime.operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断一个实例是否大于另一个实例（基于 Timestamp 比较）。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9_cgraph">
+<area shape="rect" title="判断一个实例是否大于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac8b11c81fdbcdd31d3f96ae5a21b53be" name="ac8b11c81fdbcdd31d3f96ae5a21b53be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b11c81fdbcdd31d3f96ae5a21b53be">&#9670;&#160;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.CustomDateTime.operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bdea6ae6b3eecb92b06b8f5203486b3">CustomDateTime</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断一个实例是否大于等于另一个实例（基于 Timestamp 比较）。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be_cgraph.png" border="0" usemap="#astruct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be_cgraph" id="astruct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be_cgraph">
+<area shape="rect" title="判断一个实例是否大于等于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,5,193,48"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html#a3bdea6ae6b3eecb92b06b8f5203486b3" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="193,24,228,26,222,27,193,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9723d60fca7de1d8d2f5dd771af039e" name="af9723d60fca7de1d8d2f5dd771af039e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9723d60fca7de1d8d2f5dd771af039e">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string Utopia.TimeSystem.CustomDateTime.ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回当前 <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、...">CustomDateTime</a> 的字符串表示，格式为 "Y{year}-M{month:D2}-D{day:D2} {hours:D2}:{minutes:D2}"。 例如：Y1-M01-D01 00:00 表示元年1月1日午夜。 </p>
+<dl class="section return"><dt>返回</dt><dd>格式化的日期时间字符串</dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ad994c7c26046ff06debe2f8a2284d81d" name="ad994c7c26046ff06debe2f8a2284d81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad994c7c26046ff06debe2f8a2284d81d">&#9670;&#160;</a></span>day</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.CustomDateTime.day</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>日期，取值范围 1 ~ 28。 </p>
+
+</div>
+</div>
+<a id="a59eb593d947e7a2d5e4700f243f738ea" name="a59eb593d947e7a2d5e4700f243f738ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59eb593d947e7a2d5e4700f243f738ea">&#9670;&#160;</a></span>DAYS_PER_MONTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Utopia.TimeSystem.CustomDateTime.DAYS_PER_MONTH = 28</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每月包含的天数。 </p>
+
+</div>
+</div>
+<a id="ac69252d3786d79986f73c3bf834184ee" name="ac69252d3786d79986f73c3bf834184ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69252d3786d79986f73c3bf834184ee">&#9670;&#160;</a></span>DAYS_PER_YEAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Utopia.TimeSystem.CustomDateTime.DAYS_PER_YEAR = 112</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每年包含的天数（4个月 × 28天）。 </p>
+
+</div>
+</div>
+<a id="afb639602447b76b61f372dee319459c9" name="afb639602447b76b61f372dee319459c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb639602447b76b61f372dee319459c9">&#9670;&#160;</a></span>month</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.CustomDateTime.month</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>月份，取值范围 1 ~ 4。 </p>
+
+</div>
+</div>
+<a id="ab8fbe83f1d2bec29e055cd3d9c1bfa36" name="ab8fbe83f1d2bec29e055cd3d9c1bfa36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8fbe83f1d2bec29e055cd3d9c1bfa36">&#9670;&#160;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.CustomDateTime.time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一天内的时间，0 ~ 1 之间的浮点数，0 表示 00:00，1 表示 24:00。 </p>
+
+</div>
+</div>
+<a id="acc2b2a25ba3416f91e61f1812fffbfdd" name="acc2b2a25ba3416f91e61f1812fffbfdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc2b2a25ba3416f91e61f1812fffbfdd">&#9670;&#160;</a></span>year</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.CustomDateTime.year</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>年份。从 1 开始，最小值为 1。 </p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">属性说明</h2>
+<a id="ae2cc310f10536d73e9cf68c9280081e6" name="ae2cc310f10536d73e9cf68c9280081e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2cc310f10536d73e9cf68c9280081e6">&#9670;&#160;</a></span>Timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Utopia.TimeSystem.CustomDateTime.Timestamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取一个双精度浮点数表示的绝对时间戳，整数部分为 ToTotalDays，小数部分为 time（0~1）。 该值可用于日期时间的比较和算术运算。 </p>
+
+</div>
+</div>
+<a id="a88eb9dbc3c41bac2b45425c0fa49e880" name="a88eb9dbc3c41bac2b45425c0fa49e880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88eb9dbc3c41bac2b45425c0fa49e880">&#9670;&#160;</a></span>ToTotalDays</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.CustomDateTime.ToTotalDays</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取从元年（1年1月1日）到当前日期经过的整数天数。 元年1月1日返回 0，1月2日返回 1，依此类推。 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>Assets/Script/Tool/<a class="el" href="_custom_date_time_8cs.html">CustomDateTime.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_time_system.html">TimeSystem</a></li><li class="navelem"><a href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

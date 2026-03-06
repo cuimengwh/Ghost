@@ -1,0 +1,11 @@
+<map id="Utopia.TimeSystem.TimeSettings" name="Utopia.TimeSystem.TimeSettings">
+<area shape="rect" id="Node000001" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统" alt="" coords="10,196,228,223"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,89,123,116"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,127,115,195,110,196,76,131"/>
+<area shape="rect" id="Node000003" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="146,81,334,124"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,134,135,198,132,193,202,134"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="9,5,231,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="151,38,212,80,207,82,150,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="255,5,465,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="332,39,272,83,269,79,327,42"/>
+</map>

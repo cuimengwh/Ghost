@@ -1,0 +1,172 @@
+\doxysection{Camera\+Follow类 参考}
+\hypertarget{class_camera_follow}{}\label{class_camera_follow}\index{CameraFollow@{CameraFollow}}
+
+
+相机跟随脚本，挂在主相机上，实现第三人称视角的跟随效果。  
+
+
+
+
+类 Camera\+Follow 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_camera_follow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Camera\+Follow 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_camera_follow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Transform \doxymbox{\hyperlink{class_camera_follow_a2ef2d3655fd0cb86d18e6324b75c0a59}{target}}
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_a01d72332e1a55963f882330a70f8195b}{eye\+Height}} = 1.\+6f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_a94cb8f84fe6b96324e44d3b7a0be3d91}{distance}} = 4f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_ab78156bcef04a2a9cc44510e384f4712}{min\+Distance}} = 2f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_ab2f7c211f52a15dcef5e488b16c7bbda}{max\+Distance}} = 6f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_aecbe34700da2e30537df6b1cdc8afc93}{zoom\+Speed}} = 2f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_a237af4886303d8b1769c2f8d26ccbff5}{follow\+Speed}} = 10f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_aebe0060c020fd4041f574f9607832047}{rotation\+Speed}} = 8f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_a41e70d813f23e6963f8966be6b7ab2b4}{mouse\+Sensitivity}} = 2f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_ab068e7ba9b64f5ad85cec52ef27b0d8f}{min\+Pitch}} = -\/30f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_a1f1465a904d68c24030d3bf03d72bada}{max\+Pitch}} = 70f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_camera_follow_adbbbae516b9d54ffc9afe287dcb72cd5}{Start}} ()
+\item 
+void \doxymbox{\hyperlink{class_camera_follow_af572f7bb45ca2a3027beacdd5985a60d}{Late\+Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_af9d04087d871704371451458ea01703c}{yaw}} = 0f
+\item 
+float \doxymbox{\hyperlink{class_camera_follow_ab5e17bde9f92ecf34f74d9c7cac9a52b}{pitch}} = 20f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+相机跟随脚本，挂在主相机上，实现第三人称视角的跟随效果。 
+
+\label{doc-func-members}
+\Hypertarget{class_camera_follow_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_camera_follow_af572f7bb45ca2a3027beacdd5985a60d}\index{CameraFollow@{CameraFollow}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily \label{class_camera_follow_af572f7bb45ca2a3027beacdd5985a60d} 
+void Camera\+Follow.\+Late\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_camera_follow_adbbbae516b9d54ffc9afe287dcb72cd5}\index{CameraFollow@{CameraFollow}!Start@{Start}}
+\index{Start@{Start}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_camera_follow_adbbbae516b9d54ffc9afe287dcb72cd5} 
+void Camera\+Follow.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_camera_follow_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_camera_follow_a94cb8f84fe6b96324e44d3b7a0be3d91}\index{CameraFollow@{CameraFollow}!distance@{distance}}
+\index{distance@{distance}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily \label{class_camera_follow_a94cb8f84fe6b96324e44d3b7a0be3d91} 
+float Camera\+Follow.\+distance = 4f}
+
+\Hypertarget{class_camera_follow_a01d72332e1a55963f882330a70f8195b}\index{CameraFollow@{CameraFollow}!eyeHeight@{eyeHeight}}
+\index{eyeHeight@{eyeHeight}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{eyeHeight}{eyeHeight}}
+{\footnotesize\ttfamily \label{class_camera_follow_a01d72332e1a55963f882330a70f8195b} 
+float Camera\+Follow.\+eye\+Height = 1.\+6f}
+
+\Hypertarget{class_camera_follow_a237af4886303d8b1769c2f8d26ccbff5}\index{CameraFollow@{CameraFollow}!followSpeed@{followSpeed}}
+\index{followSpeed@{followSpeed}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{followSpeed}{followSpeed}}
+{\footnotesize\ttfamily \label{class_camera_follow_a237af4886303d8b1769c2f8d26ccbff5} 
+float Camera\+Follow.\+follow\+Speed = 10f}
+
+\Hypertarget{class_camera_follow_ab2f7c211f52a15dcef5e488b16c7bbda}\index{CameraFollow@{CameraFollow}!maxDistance@{maxDistance}}
+\index{maxDistance@{maxDistance}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{maxDistance}{maxDistance}}
+{\footnotesize\ttfamily \label{class_camera_follow_ab2f7c211f52a15dcef5e488b16c7bbda} 
+float Camera\+Follow.\+max\+Distance = 6f}
+
+\Hypertarget{class_camera_follow_a1f1465a904d68c24030d3bf03d72bada}\index{CameraFollow@{CameraFollow}!maxPitch@{maxPitch}}
+\index{maxPitch@{maxPitch}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{maxPitch}{maxPitch}}
+{\footnotesize\ttfamily \label{class_camera_follow_a1f1465a904d68c24030d3bf03d72bada} 
+float Camera\+Follow.\+max\+Pitch = 70f}
+
+\Hypertarget{class_camera_follow_ab78156bcef04a2a9cc44510e384f4712}\index{CameraFollow@{CameraFollow}!minDistance@{minDistance}}
+\index{minDistance@{minDistance}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{minDistance}{minDistance}}
+{\footnotesize\ttfamily \label{class_camera_follow_ab78156bcef04a2a9cc44510e384f4712} 
+float Camera\+Follow.\+min\+Distance = 2f}
+
+\Hypertarget{class_camera_follow_ab068e7ba9b64f5ad85cec52ef27b0d8f}\index{CameraFollow@{CameraFollow}!minPitch@{minPitch}}
+\index{minPitch@{minPitch}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{minPitch}{minPitch}}
+{\footnotesize\ttfamily \label{class_camera_follow_ab068e7ba9b64f5ad85cec52ef27b0d8f} 
+float Camera\+Follow.\+min\+Pitch = -\/30f}
+
+\Hypertarget{class_camera_follow_a41e70d813f23e6963f8966be6b7ab2b4}\index{CameraFollow@{CameraFollow}!mouseSensitivity@{mouseSensitivity}}
+\index{mouseSensitivity@{mouseSensitivity}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{mouseSensitivity}{mouseSensitivity}}
+{\footnotesize\ttfamily \label{class_camera_follow_a41e70d813f23e6963f8966be6b7ab2b4} 
+float Camera\+Follow.\+mouse\+Sensitivity = 2f}
+
+\Hypertarget{class_camera_follow_ab5e17bde9f92ecf34f74d9c7cac9a52b}\index{CameraFollow@{CameraFollow}!pitch@{pitch}}
+\index{pitch@{pitch}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily \label{class_camera_follow_ab5e17bde9f92ecf34f74d9c7cac9a52b} 
+float Camera\+Follow.\+pitch = 20f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_camera_follow_aebe0060c020fd4041f574f9607832047}\index{CameraFollow@{CameraFollow}!rotationSpeed@{rotationSpeed}}
+\index{rotationSpeed@{rotationSpeed}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{rotationSpeed}{rotationSpeed}}
+{\footnotesize\ttfamily \label{class_camera_follow_aebe0060c020fd4041f574f9607832047} 
+float Camera\+Follow.\+rotation\+Speed = 8f}
+
+\Hypertarget{class_camera_follow_a2ef2d3655fd0cb86d18e6324b75c0a59}\index{CameraFollow@{CameraFollow}!target@{target}}
+\index{target@{target}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \label{class_camera_follow_a2ef2d3655fd0cb86d18e6324b75c0a59} 
+Transform Camera\+Follow.\+target}
+
+\Hypertarget{class_camera_follow_af9d04087d871704371451458ea01703c}\index{CameraFollow@{CameraFollow}!yaw@{yaw}}
+\index{yaw@{yaw}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{yaw}{yaw}}
+{\footnotesize\ttfamily \label{class_camera_follow_af9d04087d871704371451458ea01703c} 
+float Camera\+Follow.\+yaw = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_camera_follow_aecbe34700da2e30537df6b1cdc8afc93}\index{CameraFollow@{CameraFollow}!zoomSpeed@{zoomSpeed}}
+\index{zoomSpeed@{zoomSpeed}!CameraFollow@{CameraFollow}}
+\doxysubsubsection{\texorpdfstring{zoomSpeed}{zoomSpeed}}
+{\footnotesize\ttfamily \label{class_camera_follow_aecbe34700da2e30537df6b1cdc8afc93} 
+float Camera\+Follow.\+zoom\+Speed = 2f}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Player/\+\doxymbox{\hyperlink{_camera_control_8cs}{Camera\+Control.\+cs}}\end{DoxyCompactItemize}

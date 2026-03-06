@@ -1,0 +1,116 @@
+\doxysection{Utopia.\+Time\+System 命名空间参考}
+\hypertarget{namespace_utopia_1_1_time_system}{}\label{namespace_utopia_1_1_time_system}\index{Utopia.TimeSystem@{Utopia.TimeSystem}}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager}{Time\+Manager}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_utopia_1_1_time_system_1_1_time_manager}{Time\+Manager} -\/ 负责游戏内时间的管理和事件系统 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings}{Time\+Settings}}
+\begin{DoxyCompactList}\small\item\em 时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统 \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}
+\begin{DoxyCompactList}\small\item\em 自定义日期时间结构，适用于 28天/\+月、4月/\+年的独特日历系统。 时间部分以 0\texorpdfstring{$\sim$}{\string~}1 的浮点数表示一天内的时间进度（0 对应 00:\+00，1 对应 24:\+00）。 支持比较运算、算术运算（通过时间戳）、以及格式化的字符串输出。 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}}
+\begin{DoxyCompactList}\small\item\em 时间事件类 -\/ 用于在特定时间触发事件 支持自定义日历系统（28天/\+月，4月/\+年） \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger}{Time\+Event\+Trigger}}
+\begin{DoxyCompactList}\small\item\em 时间事件触发器 -\/ 定义事件触发的条件和规则 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} \{ \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2ab3e93cefb294ae5b43433acd5fa7eeb2}{Morn}}
+, \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2a8f8315c0511459dc8e1136e23c761fe5}{Noon}}
+, \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2aecafa7613fa0751f1d327559c2508d54}{Dusk}}
+, \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2ac8c012313f10e2d0830f3fbc5afca619}{Midnight}}
+ \}
+\begin{DoxyCompactList}\small\item\em 太阳状态枚举（一天中的时间段） 具体时段划分请参考 \doxylink{class_utopia_1_1_time_system_1_1_time_settings_aefc19a0ff504d46ead07f0678c818dcf}{Time\+Settings.\+Get\+Sun\+State} 方法的实现。 \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} \{ \newline
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a38008dd81c2f4d7985ecf6e0ce8af1d1}{Spring}}
+, \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a95884b5232ea01d055768613fc84f242}{Summer}}
+, \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a1e3576c804bb2b1cbf66a87b70b53ba8}{Autumn}}
+, \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541ab18e66b41efd9a3df1a7bc8758da1883}{Winter}}
+, \newline
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541aed36a1ef76a59ee3f15180e0441188ad}{Any}}
+ \}
+\begin{DoxyCompactList}\small\item\em 季节枚举 对应一年四个月：1月=Spring, 2月=Summer, 3月=Autumn, 4月=Winter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{namespace_utopia_1_1_time_system_doc-enum-members}
+\doxysubsection{枚举类型说明}
+\Hypertarget{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Season@{Season}}
+\index{Season@{Season}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\doxysubsubsection{\texorpdfstring{Season}{Season}}
+{\footnotesize\ttfamily \label{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541} 
+enum \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Utopia.\+Time\+System.\+Season}}}
+
+
+
+季节枚举 对应一年四个月：1月=Spring, 2月=Summer, 3月=Autumn, 4月=Winter 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Spring@{Spring}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Spring@{Spring}}
+}\Hypertarget{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a38008dd81c2f4d7985ecf6e0ce8af1d1}\label{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a38008dd81c2f4d7985ecf6e0ce8af1d1} 
+Spring&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Summer@{Summer}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Summer@{Summer}}
+}\Hypertarget{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a95884b5232ea01d055768613fc84f242}\label{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a95884b5232ea01d055768613fc84f242} 
+Summer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Autumn@{Autumn}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Autumn@{Autumn}}
+}\Hypertarget{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a1e3576c804bb2b1cbf66a87b70b53ba8}\label{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a1e3576c804bb2b1cbf66a87b70b53ba8} 
+Autumn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Winter@{Winter}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Winter@{Winter}}
+}\Hypertarget{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541ab18e66b41efd9a3df1a7bc8758da1883}\label{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541ab18e66b41efd9a3df1a7bc8758da1883} 
+Winter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Any@{Any}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Any@{Any}}
+}\Hypertarget{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541aed36a1ef76a59ee3f15180e0441188ad}\label{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541aed36a1ef76a59ee3f15180e0441188ad} 
+Any&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}\index{Utopia.TimeSystem@{Utopia.TimeSystem}!SunState@{SunState}}
+\index{SunState@{SunState}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\doxysubsubsection{\texorpdfstring{SunState}{SunState}}
+{\footnotesize\ttfamily \label{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2} 
+enum \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Utopia.\+Time\+System.\+Sun\+State}}}
+
+
+
+太阳状态枚举（一天中的时间段） 具体时段划分请参考 \doxylink{class_utopia_1_1_time_system_1_1_time_settings_aefc19a0ff504d46ead07f0678c818dcf}{Time\+Settings.\+Get\+Sun\+State} 方法的实现。 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Morn@{Morn}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Morn@{Morn}}
+}\Hypertarget{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2ab3e93cefb294ae5b43433acd5fa7eeb2}\label{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2ab3e93cefb294ae5b43433acd5fa7eeb2} 
+Morn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Noon@{Noon}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Noon@{Noon}}
+}\Hypertarget{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2a8f8315c0511459dc8e1136e23c761fe5}\label{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2a8f8315c0511459dc8e1136e23c761fe5} 
+Noon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dusk@{Dusk}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Dusk@{Dusk}}
+}\Hypertarget{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2aecafa7613fa0751f1d327559c2508d54}\label{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2aecafa7613fa0751f1d327559c2508d54} 
+Dusk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Midnight@{Midnight}!Utopia.TimeSystem@{Utopia.TimeSystem}}
+\index{Utopia.TimeSystem@{Utopia.TimeSystem}!Midnight@{Midnight}}
+}\Hypertarget{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2ac8c012313f10e2d0830f3fbc5afca619}\label{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2ac8c012313f10e2d0830f3fbc5afca619} 
+Midnight&\\
+\hline
+
+\end{DoxyEnumFields}

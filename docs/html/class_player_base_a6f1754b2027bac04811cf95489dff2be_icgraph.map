@@ -1,0 +1,5 @@
+<map id="PlayerBase.ChangeExistenceState" name="PlayerBase.ChangeExistenceState">
+<area shape="rect" id="Node000001" title="改变存在状态" alt="" coords="242,5,437,48"/>
+<area shape="rect" id="Node000002" href="$class_player_base.html#a60f864316d3516c1a091f1c12186e219" title="切换存在状态（物理/精神）" alt="" coords="5,5,194,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,27,194,29,194,24,229,26"/>
+</map>

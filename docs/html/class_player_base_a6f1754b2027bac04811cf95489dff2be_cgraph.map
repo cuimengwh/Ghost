@@ -1,0 +1,7 @@
+<map id="PlayerBase.ChangeExistenceState" name="PlayerBase.ChangeExistenceState">
+<area shape="rect" id="Node000001" title="改变存在状态" alt="" coords="5,39,201,81"/>
+<area shape="rect" id="Node000002" href="$class_player_base.html#a45746088ea41373c86537c8d2737af23" title="进入特定存在状态时的处理" alt="" coords="249,5,430,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,44,236,41,231,42,202,49"/>
+<area shape="rect" id="Node000003" href="$class_player_base.html#a17f55ff96f5d5f01ebfba1bb9e84826a" title="退出特定存在状态时的处理" alt="" coords="253,72,426,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,71,240,79,235,79,201,76"/>
+</map>

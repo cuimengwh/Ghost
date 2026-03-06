@@ -1,0 +1,9 @@
+<map id="PlayerBase" name="PlayerBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="97,80,185,107"/>
+<area shape="rect" id="Node000004" href="$class_player_controller.html" title="玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为" alt="" coords="84,155,198,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,121,143,156,139,153,139,124"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,40,130,79,125,80,86,45"/>
+<area shape="rect" id="Node000003" href="$interface_player_base_1_1_i_interactable.html" title="可交互接口定义" alt="" coords="140,5,304,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,41,157,82,153,78,195,44"/>
+</map>

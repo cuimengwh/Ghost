@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.ServiceLocator.Register" name="Utopia.Core.Services.ServiceLocator.Register">
+<area shape="rect" id="Node000001" title="非泛型注册方法：使用Type对象注册服务" alt="" coords="248,5,442,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_service_locator.html#a161b4a338361c0873ac79645136cd4b3" title="泛型注册方法：注册具体服务实例" alt="" coords="5,5,200,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,27,200,29,200,24,235,26"/>
+</map>

@@ -1,0 +1,116 @@
+\doxysection{Slot类 参考}
+\hypertarget{class_slot}{}\label{class_slot}\index{Slot@{Slot}}
+
+
+挂在每个背包格子（slot）上。 负责保存并显示该格子对应的物品图标、描述文本， 以及响应点击事件，将物品信息展示到外部面板。  
+
+
+
+
+类 Slot 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_slot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Slot 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_slot__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_slot_aecd7f2fb06f99ffc60e339bd92a612ec}{Item\+On\+Clicked}} ()
+\item 
+void \doxymbox{\hyperlink{class_slot_afaa10498a6024dcd86fef23cde98ff07}{Set\+Up\+Slot}} (\doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} item, int index)
+\begin{DoxyCompactList}\small\item\em 外部调用，用于初始化或刷新格子显示 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Image \doxymbox{\hyperlink{class_slot_a53ecd25cf2ee6f29b8919347b6fd4c71}{slot\+Image}}
+\item 
+TMP\+\_\+\+Text \doxymbox{\hyperlink{class_slot_abb2e527520cb84aa515147ed16751ef7}{slot\+Amount}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_slot_aeee4af198c5df9c65e62b830104186d5}{item\+In\+Slot}}
+\item 
+int \doxymbox{\hyperlink{class_slot_a1b3ff820d8913d374267abbcf1166ed1}{slot\+Index}}
+\item 
+\doxymbox{\hyperlink{class_item_data}{Item\+Data}} \doxymbox{\hyperlink{class_slot_ab3918cd847ecc4571748a52e97a0054f}{slot\+Item}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+挂在每个背包格子（slot）上。 负责保存并显示该格子对应的物品图标、描述文本， 以及响应点击事件，将物品信息展示到外部面板。 
+
+\label{doc-func-members}
+\Hypertarget{class_slot_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_slot_aecd7f2fb06f99ffc60e339bd92a612ec}\index{Slot@{Slot}!ItemOnClicked@{ItemOnClicked}}
+\index{ItemOnClicked@{ItemOnClicked}!Slot@{Slot}}
+\doxysubsubsection{\texorpdfstring{ItemOnClicked()}{ItemOnClicked()}}
+{\footnotesize\ttfamily \label{class_slot_aecd7f2fb06f99ffc60e339bd92a612ec} 
+void Slot.\+Item\+On\+Clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_slot_aecd7f2fb06f99ffc60e339bd92a612ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_slot_afaa10498a6024dcd86fef23cde98ff07}\index{Slot@{Slot}!SetUpSlot@{SetUpSlot}}
+\index{SetUpSlot@{SetUpSlot}!Slot@{Slot}}
+\doxysubsubsection{\texorpdfstring{SetUpSlot()}{SetUpSlot()}}
+{\footnotesize\ttfamily \label{class_slot_afaa10498a6024dcd86fef23cde98ff07} 
+void Slot.\+Set\+Up\+Slot (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}}}]{item}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+外部调用，用于初始化或刷新格子显示 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_slot_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_slot_aeee4af198c5df9c65e62b830104186d5}\index{Slot@{Slot}!itemInSlot@{itemInSlot}}
+\index{itemInSlot@{itemInSlot}!Slot@{Slot}}
+\doxysubsubsection{\texorpdfstring{itemInSlot}{itemInSlot}}
+{\footnotesize\ttfamily \label{class_slot_aeee4af198c5df9c65e62b830104186d5} 
+Game\+Object Slot.\+item\+In\+Slot}
+
+\Hypertarget{class_slot_abb2e527520cb84aa515147ed16751ef7}\index{Slot@{Slot}!slotAmount@{slotAmount}}
+\index{slotAmount@{slotAmount}!Slot@{Slot}}
+\doxysubsubsection{\texorpdfstring{slotAmount}{slotAmount}}
+{\footnotesize\ttfamily \label{class_slot_abb2e527520cb84aa515147ed16751ef7} 
+TMP\+\_\+\+Text Slot.\+slot\+Amount}
+
+\Hypertarget{class_slot_a53ecd25cf2ee6f29b8919347b6fd4c71}\index{Slot@{Slot}!slotImage@{slotImage}}
+\index{slotImage@{slotImage}!Slot@{Slot}}
+\doxysubsubsection{\texorpdfstring{slotImage}{slotImage}}
+{\footnotesize\ttfamily \label{class_slot_a53ecd25cf2ee6f29b8919347b6fd4c71} 
+Image Slot.\+slot\+Image}
+
+\Hypertarget{class_slot_a1b3ff820d8913d374267abbcf1166ed1}\index{Slot@{Slot}!slotIndex@{slotIndex}}
+\index{slotIndex@{slotIndex}!Slot@{Slot}}
+\doxysubsubsection{\texorpdfstring{slotIndex}{slotIndex}}
+{\footnotesize\ttfamily \label{class_slot_a1b3ff820d8913d374267abbcf1166ed1} 
+int Slot.\+slot\+Index}
+
+\Hypertarget{class_slot_ab3918cd847ecc4571748a52e97a0054f}\index{Slot@{Slot}!slotItem@{slotItem}}
+\index{slotItem@{slotItem}!Slot@{Slot}}
+\doxysubsubsection{\texorpdfstring{slotItem}{slotItem}}
+{\footnotesize\ttfamily \label{class_slot_ab3918cd847ecc4571748a52e97a0054f} 
+\doxymbox{\hyperlink{class_item_data}{Item\+Data}} Slot.\+slot\+Item}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Inventory/\+\doxymbox{\hyperlink{_slot_8cs}{Slot.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Land.Start" name="Land.Start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" id="Node000002" href="$class_land.html#a3fd6faf4f6de9aed7001178e4bb14c9c" title="切换土地状态" alt="" coords="135,5,294,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,16,122,18,117,19,87,21"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Inventory" name="Inventory">
+<area shape="rect" id="Node000001" title="背包 ScriptableObject 用于存储和管理背包中的物品数据" alt="" coords="105,80,180,107"/>
+<area shape="rect" id="Node000003" href="$class_collection_inventory.html" title=" " alt="" coords="5,155,139,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,117,86,156,82,152,117,119"/>
+<area shape="rect" id="Node000004" href="$class_dish_inventory.html" title=" " alt="" coords="162,155,264,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,115,204,154,199,154,164,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="84,5,201,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,46,145,81,140,79,141,50"/>
+</map>

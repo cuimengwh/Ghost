@@ -1,0 +1,21 @@
+<map id="Utopia.TimeSystem.CustomDateTime.CustomDateTime" name="Utopia.TimeSystem.CustomDateTime.CustomDateTime">
+<area shape="rect" id="Node000001" title="使用指定的年、月、日和时间初始化 CustomDateTime 实例。 参数会自动钳制到有效范围。" alt="" coords="241,272,428,315"/>
+<area shape="rect" id="Node000002" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#a4ba6bf017c7bd2822e64e1eea345d01e" title="比较当前实例与另一个 CustomDateTime 对象。" alt="" coords="5,5,193,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,257,299,214,271,161,235,108,191,62,176,51,175,46,194,58,239,105,276,158,304,211,323,258"/>
+<area shape="rect" id="Node000003" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#a0e006c8eba7cb26faa6dbe8938f9346c" title="指示当前实例是否与另一个 CustomDateTime 对象相等。" alt="" coords="5,72,193,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="309,259,260,194,228,159,191,129,174,118,172,113,194,124,231,155,265,191,315,259"/>
+<area shape="rect" id="Node000004" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#acd921fc5bf33cec856c03f5a4158d6dd" title="指示当前实例是否等于另一个对象。" alt="" coords="5,139,193,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="293,263,246,229,191,196,169,184,167,179,194,191,249,225,298,262"/>
+<area shape="rect" id="Node000005" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#a4ad44d4b7821d2d7183eeb4e266827fd" title="判断两个 CustomDateTime 实例是否表示不同时刻。" alt="" coords="5,205,193,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="240,269,178,251,176,246,244,266"/>
+<area shape="rect" id="Node000006" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#a0f26eeecc7069e70fe3b7e59c6da7d7b" title="判断一个实例是否小于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,272,193,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="222,295,194,296,192,291,227,292"/>
+<area shape="rect" id="Node000007" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#a89c7bac82fa09da179b5b87c634db85d" title="判断一个实例是否小于等于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,339,193,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="240,321,178,340,176,336,244,318"/>
+<area shape="rect" id="Node000008" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#aeeda5a27bc7b7fefe613b4f2d621e966" title="判断两个 CustomDateTime 实例是否表示同一时刻（基于 Timestamp 比较）。" alt="" coords="5,405,193,448"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="293,326,249,362,194,396,169,407,166,403,191,391,246,357,297,323"/>
+<area shape="rect" id="Node000009" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#a1160942def0310bcfa64b95b4a149cf9" title="判断一个实例是否大于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,472,193,515"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="314,326,265,396,231,431,194,462,174,474,171,469,191,458,228,428,260,393,310,329"/>
+<area shape="rect" id="Node000010" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html#ac8b11c81fdbcdd31d3f96ae5a21b53be" title="判断一个实例是否大于等于另一个实例（基于 Timestamp 比较）。" alt="" coords="5,539,193,581"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="322,327,304,375,276,428,239,482,194,529,177,541,174,536,191,525,235,479,271,426,299,373,319,331"/>
+</map>

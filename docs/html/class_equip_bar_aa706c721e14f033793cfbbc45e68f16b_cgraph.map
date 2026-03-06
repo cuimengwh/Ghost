@@ -1,0 +1,5 @@
+<map id="EquipBar.Update" name="EquipBar.Update">
+<area shape="rect" id="Node000001" title="每帧更新方法 监听键盘数字键1&#45;9，实现快捷键切换功能" alt="" coords="5,5,126,32"/>
+<area shape="rect" id="Node000002" href="$class_equip_bar.html#aa598b79327d6991a62d84fc2c0aa53c5" title="选择指定快捷栏槽位" alt="" coords="174,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,16,161,18,155,19,126,21"/>
+</map>

@@ -1,0 +1,178 @@
+\doxysection{Equip\+Bar类 参考}
+\hypertarget{class_equip_bar}{}\label{class_equip_bar}\index{EquipBar@{EquipBar}}
+
+
+装备栏（快捷栏）管理器  
+
+
+
+
+类 Equip\+Bar 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_equip_bar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Equip\+Bar 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_equip_bar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5}{Select\+Slot}} (int index)
+\begin{DoxyCompactList}\small\item\em 选择指定快捷栏槽位 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_item_data}{Item\+Data}} \doxymbox{\hyperlink{class_equip_bar_ada2611a62d0c8eb2c7636a22c75476b0}{Get\+Current\+Item}} ()
+\begin{DoxyCompactList}\small\item\em 获取当前选中的物品数据 用于物品使用、装备等操作 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} \doxymbox{\hyperlink{class_equip_bar_ac2baf6ed91a10f38bb57c56334399f09}{my\+Bag}}
+\item 
+int \doxymbox{\hyperlink{class_equip_bar_af03e0330ebe2eb1f942551989c624eee}{hotbar\+Size}} = 9
+\item 
+int \doxymbox{\hyperlink{class_equip_bar_a62372077f36363036d4df9992b34f086}{current\+Index}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_equip_bar}{Equip\+Bar}} \doxymbox{\hyperlink{class_equip_bar_a5b30fca2b30885431e26cc18f6cc399f}{instance}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_equip_bar_aecbca138ae8124656cf31b71a5b6edfb}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Awake初始化方法 实现单例模式，确保全局只有一个快捷栏管理器 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_equip_bar_aa706c721e14f033793cfbbc45e68f16b}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 每帧更新方法 监听键盘数字键1-\/9，实现快捷键切换功能 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+装备栏（快捷栏）管理器 
+
+功能说明：
+\begin{DoxyEnumerate}
+\item 提供游戏内的快捷物品栏，直接引用背包前\+N个格子
+\item 支持1-\/9数字键快速切换和选择物品
+\item 单例模式实现，全局唯一访问点
+\item 与背包数据实时同步，无独立存储
+\end{DoxyEnumerate}
+
+设计特点：
+\begin{DoxyItemize}
+\item 数据引用模式：直接引用背包数据，不单独存储
+\item 快捷键支持：数字键1-\/9对应快捷栏1-\/9
+\item 索引映射：快捷栏索引=背包前\+N个格子索引
+\end{DoxyItemize}
+
+使用要求：
+\begin{DoxyEnumerate}
+\item 需要关联到有效的\+Inventory背包
+\item 背包必须有足够的格子数量（≥hotbar\+Size） 
+\end{DoxyEnumerate}
+
+\label{doc-func-members}
+\Hypertarget{class_equip_bar_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_equip_bar_aecbca138ae8124656cf31b71a5b6edfb}\index{EquipBar@{EquipBar}!Awake@{Awake}}
+\index{Awake@{Awake}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_equip_bar_aecbca138ae8124656cf31b71a5b6edfb} 
+void Equip\+Bar.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Awake初始化方法 实现单例模式，确保全局只有一个快捷栏管理器 
+
+\Hypertarget{class_equip_bar_ada2611a62d0c8eb2c7636a22c75476b0}\index{EquipBar@{EquipBar}!GetCurrentItem@{GetCurrentItem}}
+\index{GetCurrentItem@{GetCurrentItem}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{GetCurrentItem()}{GetCurrentItem()}}
+{\footnotesize\ttfamily \label{class_equip_bar_ada2611a62d0c8eb2c7636a22c75476b0} 
+\doxymbox{\hyperlink{class_item_data}{Item\+Data}} Equip\+Bar.\+Get\+Current\+Item (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取当前选中的物品数据 用于物品使用、装备等操作 
+
+\begin{DoxyReturn}{返回}
+当前选中槽位的物品数据，可能为null
+\end{DoxyReturn}
+\Hypertarget{class_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5}\index{EquipBar@{EquipBar}!SelectSlot@{SelectSlot}}
+\index{SelectSlot@{SelectSlot}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{SelectSlot()}{SelectSlot()}}
+{\footnotesize\ttfamily \label{class_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5} 
+void Equip\+Bar.\+Select\+Slot (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+选择指定快捷栏槽位 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & 快捷栏索引（0-\/8）\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_equip_bar_aa706c721e14f033793cfbbc45e68f16b}\index{EquipBar@{EquipBar}!Update@{Update}}
+\index{Update@{Update}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_equip_bar_aa706c721e14f033793cfbbc45e68f16b} 
+void Equip\+Bar.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+每帧更新方法 监听键盘数字键1-\/9，实现快捷键切换功能 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_equip_bar_aa706c721e14f033793cfbbc45e68f16b_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_equip_bar_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_equip_bar_a62372077f36363036d4df9992b34f086}\index{EquipBar@{EquipBar}!currentIndex@{currentIndex}}
+\index{currentIndex@{currentIndex}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{currentIndex}{currentIndex}}
+{\footnotesize\ttfamily \label{class_equip_bar_a62372077f36363036d4df9992b34f086} 
+int Equip\+Bar.\+current\+Index = 0}
+
+\Hypertarget{class_equip_bar_af03e0330ebe2eb1f942551989c624eee}\index{EquipBar@{EquipBar}!hotbarSize@{hotbarSize}}
+\index{hotbarSize@{hotbarSize}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{hotbarSize}{hotbarSize}}
+{\footnotesize\ttfamily \label{class_equip_bar_af03e0330ebe2eb1f942551989c624eee} 
+int Equip\+Bar.\+hotbar\+Size = 9}
+
+\Hypertarget{class_equip_bar_a5b30fca2b30885431e26cc18f6cc399f}\index{EquipBar@{EquipBar}!instance@{instance}}
+\index{instance@{instance}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{class_equip_bar_a5b30fca2b30885431e26cc18f6cc399f} 
+\doxymbox{\hyperlink{class_equip_bar}{Equip\+Bar}} Equip\+Bar.\+instance\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_equip_bar_ac2baf6ed91a10f38bb57c56334399f09}\index{EquipBar@{EquipBar}!myBag@{myBag}}
+\index{myBag@{myBag}!EquipBar@{EquipBar}}
+\doxysubsubsection{\texorpdfstring{myBag}{myBag}}
+{\footnotesize\ttfamily \label{class_equip_bar_ac2baf6ed91a10f38bb57c56334399f09} 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} Equip\+Bar.\+my\+Bag}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Inventory/\+\doxymbox{\hyperlink{_equip_bar_8cs}{Equip\+Bar.\+cs}}\end{DoxyCompactItemize}

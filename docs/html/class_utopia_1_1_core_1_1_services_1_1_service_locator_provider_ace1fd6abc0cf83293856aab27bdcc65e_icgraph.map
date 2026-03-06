@@ -1,0 +1,7 @@
+<map id="Utopia.Core.Services.ServiceLocatorProvider.RegisterComponentAndInterfaces" name="Utopia.Core.Services.ServiceLocatorProvider.RegisterComponentAndInterfaces">
+<area shape="rect" id="Node000001" title="注册组件及其实现的非系统/Unity接口到服务定位器。" alt="" coords="523,5,755,64"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a0a7e220e1b7920ce4fbffd85698cf89a" title="注册所有预先配置的组件到服务定位器。" alt="" coords="248,5,475,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="505,35,475,37,475,32,510,35"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a4fd225428a45c3cb8eaff5fff1c19924" title="Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。" alt="" coords="5,13,200,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,35,200,37,200,32,235,34"/>
+</map>

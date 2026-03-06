@@ -1,0 +1,12 @@
+<map id="Utopia.Core.Services.ServiceLocatorProvider" name="Utopia.Core.Services.ServiceLocatorProvider">
+<area shape="rect" id="Node000001" title="挂载在场景物体上的服务提供者组件。 用于在Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。" alt="" coords="5,235,200,277"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="26,128,137,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,168,101,234,96,234,84,172"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html" title="分层服务定位器，支持服务查找的层级继承机制。 允许创建父子层级的服务容器，子容器可以访问父容器的服务。 实现 IDisposable 接口以确保资源正确释放。" alt="" coords="161,120,380,163"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,171,134,237,132,232,225,172"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="396,132,407,141,399,150,381,153,380,148,397,145,402,141,395,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="141,13,232,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="206,50,258,119,253,120,204,55"/>
+<area shape="rect" id="Node000005" href="$class_utopia_1_1_core_1_1_services_1_1_service_locator.html" title="线程安全、支持懒加载工厂的非单例服务定位器。 核心服务容器，提供服务的注册、解析和管理功能。 特性：" alt="" coords="256,5,450,48"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="331,59,287,121,284,118,327,63"/>
+</map>

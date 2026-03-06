@@ -1,0 +1,74 @@
+\doxysection{Dish\+Inventory类 参考}
+\hypertarget{class_dish_inventory}{}\label{class_dish_inventory}\index{DishInventory@{DishInventory}}
+
+
+类 Dish\+Inventory 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_dish_inventory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Dish\+Inventory 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_dish_inventory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+override bool \doxymbox{\hyperlink{class_dish_inventory_ab67b5447b32d8ab2ce6b477bee543141}{Use\+Item}} (int index)
+\begin{DoxyCompactList}\small\item\em 使用物品 数量减 1，当数量为 0 时清空格子 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{class_inventory}{Inventory}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_inventory_a9af2082b6531ca3f8fd35464e1b99649}{Get\+Empty\+Slot\+Index}} ()
+\begin{DoxyCompactList}\small\item\em 获取第一个空的物品格下标 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inventory_a05764dfb496e0fa28997c2df12174ea0}{Add\+Item}} (\doxymbox{\hyperlink{class_item_data}{Item\+Data}} item)
+\begin{DoxyCompactList}\small\item\em 添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inventory_acc6ca12b4614b161833cb896e67353d3}{Drop\+Item}} (int index)
+\begin{DoxyCompactList}\small\item\em 丢弃物品 清空对应格子 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_inventory_a82b0b0cacc23f0e331509f0a4a67c06f}{Swap\+Item}} (int indexA, int indexB)
+\begin{DoxyCompactList}\small\item\em 交换两个格子的物品 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{额外继承的成员函数}
+\doxysubsection*{Public 属性 继承自 \doxymbox{\hyperlink{class_inventory}{Inventory}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} $>$ \doxymbox{\hyperlink{class_inventory_a55e40c16b0a53a2fe810d3f5301d25ce}{items}} = new List$<$\doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}}$>$()
+\begin{DoxyCompactList}\small\item\em 背包物品列表 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_dish_inventory_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_dish_inventory_ab67b5447b32d8ab2ce6b477bee543141}\index{DishInventory@{DishInventory}!UseItem@{UseItem}}
+\index{UseItem@{UseItem}!DishInventory@{DishInventory}}
+\doxysubsubsection{\texorpdfstring{UseItem()}{UseItem()}}
+{\footnotesize\ttfamily \label{class_dish_inventory_ab67b5447b32d8ab2ce6b477bee543141} 
+override bool Dish\+Inventory.\+Use\+Item (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+使用物品 数量减 1，当数量为 0 时清空格子 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & 物品所在格子下标\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+使用成功返回 true，失败返回 false
+\end{DoxyReturn}
+
+
+重载 \doxymbox{\hyperlink{class_inventory_a8a07a663f0002415ddbc2842d9c80125}{Inventory}} .
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Inventory/\+\doxymbox{\hyperlink{_dish_inventory_8cs}{Dish\+Inventory.\+cs}}\end{DoxyCompactItemize}

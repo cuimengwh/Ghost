@@ -1,0 +1,6 @@
+<map id="Utopia.Core.Services.HierarchicalServiceLocator.CreateChild" name="Utopia.Core.Services.HierarchicalServiceLocator.CreateChild">
+<area shape="rect" id="Node000001" title="创建以当前定位器为父级的子定位器。" alt="" coords="5,29,225,72"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#a2dbfb3aa610a06878a4106317736eb87" title="构造函数，创建分层服务定位器。" alt="" coords="273,29,541,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,48,260,51,254,51,225,53"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="352,27,350,19,359,10,378,5,407,3,438,5,458,14,453,14,437,10,407,8,379,10,362,15,355,21,357,30"/>
+</map>

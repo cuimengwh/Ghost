@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Inventory类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_inventory.html','','class_inventory-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Inventory类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>背包 ScriptableObject 用于存储和管理背包中的物品数据  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Inventory 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory__inherit__graph.png" border="0" usemap="#a_inventory_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_inventory_inherit__map" id="a_inventory_inherit__map">
+<area shape="rect" title="背包 ScriptableObject 用于存储和管理背包中的物品数据" alt="" coords="105,80,180,107"/>
+<area shape="rect" href="class_collection_inventory.html" title=" " alt="" coords="5,155,139,181"/>
+<area shape="poly" title=" " alt="" coords="122,117,86,156,82,152,117,119"/>
+<area shape="rect" href="class_dish_inventory.html" title=" " alt="" coords="162,155,264,181"/>
+<area shape="poly" title=" " alt="" coords="167,115,204,154,199,154,164,120"/>
+<area shape="rect" title=" " alt="" coords="84,5,201,32"/>
+<area shape="poly" title=" " alt="" coords="144,46,145,81,140,79,141,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Inventory 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory__coll__graph.png" border="0" usemap="#a_inventory_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_inventory_coll__map" id="a_inventory_coll__map">
+<area shape="rect" title="背包 ScriptableObject 用于存储和管理背包中的物品数据" alt="" coords="26,80,102,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,123,32"/>
+<area shape="poly" title=" " alt="" coords="66,46,67,80,61,79,62,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9af2082b6531ca3f8fd35464e1b99649" id="r_a9af2082b6531ca3f8fd35464e1b99649"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9af2082b6531ca3f8fd35464e1b99649">GetEmptySlotIndex</a> ()</td></tr>
+<tr class="memdesc:a9af2082b6531ca3f8fd35464e1b99649"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取第一个空的物品格下标  <br /></td></tr>
+<tr class="memitem:a05764dfb496e0fa28997c2df12174ea0" id="r_a05764dfb496e0fa28997c2df12174ea0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a05764dfb496e0fa28997c2df12174ea0">AddItem</a> (<a class="el" href="class_item_data.html">ItemData</a> item)</td></tr>
+<tr class="memdesc:a05764dfb496e0fa28997c2df12174ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放  <br /></td></tr>
+<tr class="memitem:a8a07a663f0002415ddbc2842d9c80125" id="r_a8a07a663f0002415ddbc2842d9c80125"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a8a07a663f0002415ddbc2842d9c80125">UseItem</a> (int index)</td></tr>
+<tr class="memdesc:a8a07a663f0002415ddbc2842d9c80125"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用物品 数量减 1，当数量为 0 时清空格子  <br /></td></tr>
+<tr class="memitem:acc6ca12b4614b161833cb896e67353d3" id="r_acc6ca12b4614b161833cb896e67353d3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acc6ca12b4614b161833cb896e67353d3">DropItem</a> (int index)</td></tr>
+<tr class="memdesc:acc6ca12b4614b161833cb896e67353d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">丢弃物品 清空对应格子  <br /></td></tr>
+<tr class="memitem:a82b0b0cacc23f0e331509f0a4a67c06f" id="r_a82b0b0cacc23f0e331509f0a4a67c06f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a82b0b0cacc23f0e331509f0a4a67c06f">SwapItem</a> (int indexA, int indexB)</td></tr>
+<tr class="memdesc:a82b0b0cacc23f0e331509f0a4a67c06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换两个格子的物品  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a55e40c16b0a53a2fe810d3f5301d25ce" id="r_a55e40c16b0a53a2fe810d3f5301d25ce"><td class="memItemLeft">List&lt; <a class="el" href="class_inventory_item.html">InventoryItem</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a55e40c16b0a53a2fe810d3f5301d25ce">items</a> = new List&lt;<a class="el" href="class_inventory_item.html">InventoryItem</a>&gt;()</td></tr>
+<tr class="memdesc:a55e40c16b0a53a2fe810d3f5301d25ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">背包物品列表  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>背包 ScriptableObject 用于存储和管理背包中的物品数据 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a05764dfb496e0fa28997c2df12174ea0" name="a05764dfb496e0fa28997c2df12174ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05764dfb496e0fa28997c2df12174ea0">&#9670;&#160;</a></span>AddItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Inventory.AddItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_item_data.html">ItemData</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>要添加的物品</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回 true，失败返回 false</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory_a05764dfb496e0fa28997c2df12174ea0_cgraph.png" border="0" usemap="#aclass_inventory_a05764dfb496e0fa28997c2df12174ea0_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_inventory_a05764dfb496e0fa28997c2df12174ea0_cgraph" id="aclass_inventory_a05764dfb496e0fa28997c2df12174ea0_cgraph">
+<area shape="rect" title="添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放" alt="" coords="5,31,133,57"/>
+<area shape="rect" href="class_inventory.html#a9af2082b6531ca3f8fd35464e1b99649" title="获取第一个空的物品格下标" alt="" coords="185,5,378,32"/>
+<area shape="poly" title=" " alt="" coords="133,34,172,31,167,33,134,39"/>
+<area shape="rect" href="class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="181,56,382,83"/>
+<area shape="poly" title=" " alt="" coords="133,49,168,55,163,56,133,54"/>
+<area shape="rect" href="class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="430,56,649,83"/>
+<area shape="poly" title=" " alt="" coords="383,67,417,69,412,69,383,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acc6ca12b4614b161833cb896e67353d3" name="acc6ca12b4614b161833cb896e67353d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6ca12b4614b161833cb896e67353d3">&#9670;&#160;</a></span>DropItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Inventory.DropItem </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>丢弃物品 清空对应格子 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>物品所在格子下标</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回 true，失败返回 false</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory_acc6ca12b4614b161833cb896e67353d3_cgraph.png" border="0" usemap="#aclass_inventory_acc6ca12b4614b161833cb896e67353d3_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_inventory_acc6ca12b4614b161833cb896e67353d3_cgraph" id="aclass_inventory_acc6ca12b4614b161833cb896e67353d3_cgraph">
+<area shape="rect" title="丢弃物品 清空对应格子" alt="" coords="5,5,138,32"/>
+<area shape="rect" href="class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="186,5,387,32"/>
+<area shape="poly" title=" " alt="" coords="138,16,172,18,167,19,138,21"/>
+<area shape="rect" href="class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="435,5,654,32"/>
+<area shape="poly" title=" " alt="" coords="388,16,422,19,417,19,388,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory_acc6ca12b4614b161833cb896e67353d3_icgraph.png" border="0" usemap="#aclass_inventory_acc6ca12b4614b161833cb896e67353d3_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_inventory_acc6ca12b4614b161833cb896e67353d3_icgraph" id="aclass_inventory_acc6ca12b4614b161833cb896e67353d3_icgraph">
+<area shape="rect" title="丢弃物品 清空对应格子" alt="" coords="442,5,574,32"/>
+<area shape="rect" href="class_item_drag.html#a3b8eddea878288083c2115b35d108fba" title="处理拖拽到背包外的情况（丢弃物品）" alt="" coords="201,5,394,32"/>
+<area shape="poly" title=" " alt="" coords="424,19,395,21,395,16,429,19"/>
+<area shape="rect" href="class_item_drag.html#aa966ed36f05faca17b4ec738fd636bfd" title="结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性" alt="" coords="5,5,153,32"/>
+<area shape="poly" title=" " alt="" coords="182,19,153,21,153,16,188,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9af2082b6531ca3f8fd35464e1b99649" name="a9af2082b6531ca3f8fd35464e1b99649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9af2082b6531ca3f8fd35464e1b99649">&#9670;&#160;</a></span>GetEmptySlotIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Inventory.GetEmptySlotIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取第一个空的物品格下标 </p>
+<dl class="section return"><dt>返回</dt><dd>空格下标，如果没有空格返回 -1</dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory_a9af2082b6531ca3f8fd35464e1b99649_icgraph.png" border="0" usemap="#aclass_inventory_a9af2082b6531ca3f8fd35464e1b99649_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_inventory_a9af2082b6531ca3f8fd35464e1b99649_icgraph" id="aclass_inventory_a9af2082b6531ca3f8fd35464e1b99649_icgraph">
+<area shape="rect" title="获取第一个空的物品格下标" alt="" coords="181,5,373,32"/>
+<area shape="rect" href="class_inventory.html#a05764dfb496e0fa28997c2df12174ea0" title="添加物品 如果物品可堆叠，则尝试叠加；否则寻找空格存放" alt="" coords="5,5,133,32"/>
+<area shape="poly" title=" " alt="" coords="162,19,133,21,133,16,167,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a82b0b0cacc23f0e331509f0a4a67c06f" name="a82b0b0cacc23f0e331509f0a4a67c06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82b0b0cacc23f0e331509f0a4a67c06f">&#9670;&#160;</a></span>SwapItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Inventory.SwapItem </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indexA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indexB</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>交换两个格子的物品 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indexA</td><td>第一个格子下标</td></tr>
+    <tr><td class="paramname">indexB</td><td>第二个格子下标</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory_a82b0b0cacc23f0e331509f0a4a67c06f_cgraph.png" border="0" usemap="#aclass_inventory_a82b0b0cacc23f0e331509f0a4a67c06f_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_inventory_a82b0b0cacc23f0e331509f0a4a67c06f_cgraph" id="aclass_inventory_a82b0b0cacc23f0e331509f0a4a67c06f_cgraph">
+<area shape="rect" title="交换两个格子的物品" alt="" coords="5,5,143,32"/>
+<area shape="rect" href="class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="191,5,392,32"/>
+<area shape="poly" title=" " alt="" coords="143,16,178,19,172,19,143,21"/>
+<area shape="rect" href="class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="440,5,659,32"/>
+<area shape="poly" title=" " alt="" coords="393,16,427,19,422,19,393,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8a07a663f0002415ddbc2842d9c80125" name="a8a07a663f0002415ddbc2842d9c80125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a07a663f0002415ddbc2842d9c80125">&#9670;&#160;</a></span>UseItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Inventory.UseItem </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用物品 数量减 1，当数量为 0 时清空格子 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>物品所在格子下标</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>使用成功返回 true，失败返回 false</dd></dl>
+
+<p>被 <a class="el" href="class_dish_inventory.html#ab67b5447b32d8ab2ce6b477bee543141">DishInventory</a> 重载.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_inventory_a8a07a663f0002415ddbc2842d9c80125_cgraph.png" border="0" usemap="#aclass_inventory_a8a07a663f0002415ddbc2842d9c80125_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_inventory_a8a07a663f0002415ddbc2842d9c80125_cgraph" id="aclass_inventory_a8a07a663f0002415ddbc2842d9c80125_cgraph">
+<area shape="rect" title="使用物品 数量减 1，当数量为 0 时清空格子" alt="" coords="5,5,134,32"/>
+<area shape="rect" href="class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="182,5,383,32"/>
+<area shape="poly" title=" " alt="" coords="134,16,169,18,163,19,134,21"/>
+<area shape="rect" href="class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="431,5,650,32"/>
+<area shape="poly" title=" " alt="" coords="384,16,418,19,413,19,384,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a55e40c16b0a53a2fe810d3f5301d25ce" name="a55e40c16b0a53a2fe810d3f5301d25ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e40c16b0a53a2fe810d3f5301d25ce">&#9670;&#160;</a></span>items</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_inventory_item.html">InventoryItem</a>&gt; Inventory.items = new List&lt;<a class="el" href="class_inventory_item.html">InventoryItem</a>&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>背包物品列表 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Bag/Inventory/<a class="el" href="_inventory_8cs.html">Inventory.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_inventory.html">Inventory</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

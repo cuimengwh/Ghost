@@ -1,0 +1,9 @@
+<map id="InventoryManager.Start" name="InventoryManager.Start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" id="Node000002" href="$class_inventory_manager.html#acbf20cb841477f2746dd8109c6ee6306" title="切换到指定背包" alt="" coords="211,5,434,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,16,197,19,192,19,163,21"/>
+<area shape="rect" id="Node000003" href="$class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="482,5,683,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,16,469,19,464,19,434,21"/>
+<area shape="rect" id="Node000004" href="$class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="731,5,951,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="684,16,719,19,713,19,684,21"/>
+</map>

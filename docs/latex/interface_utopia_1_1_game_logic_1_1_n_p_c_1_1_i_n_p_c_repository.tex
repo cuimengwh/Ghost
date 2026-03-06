@@ -1,0 +1,72 @@
+\doxysection{Utopia.\+Game\+Logic.\+NPC.\+INPCRepository接口 参考}
+\hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository}{}\label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository}\index{Utopia.GameLogic.NPC.INPCRepository@{Utopia.GameLogic.NPC.INPCRepository}}
+
+
+NPC状态数据的仓储接口 设计模式：仓储模式，分离数据访问与业务逻辑  
+
+
+
+
+类 Utopia.\+Game\+Logic.\+NPC.\+INPCRepository 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ Dictionary$<$ string, NPCState $>$ $>$ \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository_abfc8efed01d26d2ec8672a22e0572302}{Load\+State\+Async}} ()
+\begin{DoxyCompactList}\small\item\em 异步加载所有\+NPC状态 \end{DoxyCompactList}\item 
+Task \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository_a05cb2a855fce04fa4b4eb9ce06c14549}{Save\+State\+Async}} (Dictionary$<$ string, NPCState $>$ states)
+\begin{DoxyCompactList}\small\item\em 异步保存所有\+NPC状态 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+NPC状态数据的仓储接口 设计模式：仓储模式，分离数据访问与业务逻辑 
+
+\label{doc-func-members}
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository_abfc8efed01d26d2ec8672a22e0572302}\index{Utopia.GameLogic.NPC.INPCRepository@{Utopia.GameLogic.NPC.INPCRepository}!LoadStateAsync@{LoadStateAsync}}
+\index{LoadStateAsync@{LoadStateAsync}!Utopia.GameLogic.NPC.INPCRepository@{Utopia.GameLogic.NPC.INPCRepository}}
+\doxysubsubsection{\texorpdfstring{LoadStateAsync()}{LoadStateAsync()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository_abfc8efed01d26d2ec8672a22e0572302} 
+Task$<$ Dictionary$<$ string, NPCState $>$ $>$ Utopia.\+Game\+Logic.\+NPC.\+INPCRepository.\+Load\+State\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+异步加载所有\+NPC状态 
+
+\begin{DoxyReturn}{返回}
+NPC状态字典，无数据时返回空字典（非null）
+\end{DoxyReturn}
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_repository_a1bc9a1a7542fe24b8fb4d94388d2f952}{Utopia.\+Game\+Logic.\+NPC.\+NPCRepository}} 内被实现.
+
+\Hypertarget{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository_a05cb2a855fce04fa4b4eb9ce06c14549}\index{Utopia.GameLogic.NPC.INPCRepository@{Utopia.GameLogic.NPC.INPCRepository}!SaveStateAsync@{SaveStateAsync}}
+\index{SaveStateAsync@{SaveStateAsync}!Utopia.GameLogic.NPC.INPCRepository@{Utopia.GameLogic.NPC.INPCRepository}}
+\doxysubsubsection{\texorpdfstring{SaveStateAsync()}{SaveStateAsync()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository_a05cb2a855fce04fa4b4eb9ce06c14549} 
+Task Utopia.\+Game\+Logic.\+NPC.\+INPCRepository.\+Save\+State\+Async (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, NPCState $>$}]{states}{}\end{DoxyParamCaption})}
+
+
+
+异步保存所有\+NPC状态 
+
+
+\begin{DoxyParams}{参数}
+{\em states} & 要保存的\+NPC状态字典\\
+\hline
+\end{DoxyParams}
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_repository_a8121d176b2b693fd683b4057052d83b8}{Utopia.\+Game\+Logic.\+NPC.\+NPCRepository}} 内被实现.
+
+
+
+该接口的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Npc/\+\+Manage/\+\doxymbox{\hyperlink{_n_p_c_repository_8cs}{NPCRepository.\+cs}}\end{DoxyCompactItemize}

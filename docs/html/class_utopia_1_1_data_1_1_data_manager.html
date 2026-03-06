@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.Data.DataManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_data_1_1_data_manager.html','','class_utopia_1_1_data_1_1_data_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.Data.DataManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>数据管理器实现。 负责磁盘IO、序列化、加密。  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Utopia.Data.DataManager 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_data_1_1_data_manager__inherit__graph.png" border="0" usemap="#a_utopia_8_data_8_data_manager_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_utopia_8_data_8_data_manager_inherit__map" id="a_utopia_8_data_8_data_manager_inherit__map">
+<area shape="rect" title="数据管理器实现。 负责磁盘IO、序列化、加密。" alt="" coords="57,80,230,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="88,40,132,79,127,80,86,45"/>
+<area shape="rect" href="interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试" alt="" coords="141,5,312,32"/>
+<area shape="poly" title=" " alt="" coords="203,42,159,82,156,77,198,43"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Utopia.Data.DataManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_data_1_1_data_manager__coll__graph.png" border="0" usemap="#a_utopia_8_data_8_data_manager_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_data_8_data_manager_coll__map" id="a_utopia_8_data_8_data_manager_coll__map">
+<area shape="rect" title="数据管理器实现。 负责磁盘IO、序列化、加密。" alt="" coords="57,80,230,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="88,40,132,79,127,80,86,45"/>
+<area shape="rect" href="interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试" alt="" coords="141,5,312,32"/>
+<area shape="poly" title=" " alt="" coords="203,42,159,82,156,77,198,43"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7b7d2d5c5f51047dbc701f25a96c5917" id="r_a7b7d2d5c5f51047dbc701f25a96c5917"><td class="memItemLeft">async Task&#160;</td><td class="memItemRight"><a class="el" href="#a7b7d2d5c5f51047dbc701f25a96c5917">SaveDataAsync&lt; T &gt;</a> (string key, T data)</td></tr>
+<tr class="memdesc:a7b7d2d5c5f51047dbc701f25a96c5917"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步保存数据文件  <br /></td></tr>
+<tr class="memitem:ae91297191be131c3ec8571c103de44a5" id="r_ae91297191be131c3ec8571c103de44a5"><td class="memItemLeft">async Task&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae91297191be131c3ec8571c103de44a5">LoadDataAsync&lt; T &gt;</a> (string key)</td></tr>
+<tr class="memdesc:ae91297191be131c3ec8571c103de44a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步加载数据  <br /></td></tr>
+<tr class="memitem:aca871f7502add0997179d3cf068571ce" id="r_aca871f7502add0997179d3cf068571ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aca871f7502add0997179d3cf068571ce">DeleteData</a> (string key)</td></tr>
+<tr class="memdesc:aca871f7502add0997179d3cf068571ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定键的数据  <br /></td></tr>
+<tr class="memitem:a330855bc46b8221f200c89f700385a62" id="r_a330855bc46b8221f200c89f700385a62"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a330855bc46b8221f200c89f700385a62">HasData</a> (string key)</td></tr>
+<tr class="memdesc:a330855bc46b8221f200c89f700385a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查指定键是否存在数据  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a5d3386843dfd9fb558b22bad09029ca7" id="r_a5d3386843dfd9fb558b22bad09029ca7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5d3386843dfd9fb558b22bad09029ca7">Awake</a> ()</td></tr>
+<tr class="memitem:a0db9bab677f6eff3276e3609ba5659e1" id="r_a0db9bab677f6eff3276e3609ba5659e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0db9bab677f6eff3276e3609ba5659e1">OnDestroy</a> ()</td></tr>
+<tr class="memitem:aa668ad323c0b0772f18987bdb3feaa3e" id="r_aa668ad323c0b0772f18987bdb3feaa3e"><td class="memItemLeft">byte[]&#160;</td><td class="memItemRight"><a class="el" href="#aa668ad323c0b0772f18987bdb3feaa3e">XOREncrypt</a> (byte[] data, string key)</td></tr>
+<tr class="memdesc:aa668ad323c0b0772f18987bdb3feaa3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">XOR异或加密/解密算法 注意：这是简单的加密，不适合高安全需求  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a320c1a3f85ca20ad96743603977ba646" id="r_a320c1a3f85ca20ad96743603977ba646"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a320c1a3f85ca20ad96743603977ba646">_fileName</a> = &quot;save_data.json&quot;</td></tr>
+<tr class="memitem:a8b7a23869f93c610cb596ff7c2ecd15a" id="r_a8b7a23869f93c610cb596ff7c2ecd15a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8b7a23869f93c610cb596ff7c2ecd15a">_useEncryption</a> = true</td></tr>
+<tr class="memitem:a1a23a1448120d1cafe73efa8cc7d0f42" id="r_a1a23a1448120d1cafe73efa8cc7d0f42"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a1a23a1448120d1cafe73efa8cc7d0f42">_encryptionKey</a> = &quot;SoulFarm_Secret_2025&quot;</td></tr>
+<tr class="memitem:a86a45525ed4bf3df7aba3cca33bc28fc" id="r_a86a45525ed4bf3df7aba3cca33bc28fc"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a86a45525ed4bf3df7aba3cca33bc28fc">_savePath</a></td></tr>
+<tr class="memitem:ae7d3205bf2138729d758ea7389ad5fa8" id="r_ae7d3205bf2138729d758ea7389ad5fa8"><td class="memItemLeft">Dictionary&lt; string, object &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae7d3205bf2138729d758ea7389ad5fa8">_runtimeCache</a> = new Dictionary&lt;string, object&gt;()</td></tr>
+<tr class="memitem:a96d4a755487a387b5431504442a79008" id="r_a96d4a755487a387b5431504442a79008"><td class="memItemLeft">readonly JsonSerializerSettings&#160;</td><td class="memItemRight"><a class="el" href="#a96d4a755487a387b5431504442a79008">_jsonSettings</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>数据管理器实现。 负责磁盘IO、序列化、加密。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a5d3386843dfd9fb558b22bad09029ca7" name="a5d3386843dfd9fb558b22bad09029ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3386843dfd9fb558b22bad09029ca7">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Data.DataManager.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7_cgraph.png" border="0" usemap="#aclass_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7_cgraph" id="aclass_utopia_1_1_data_1_1_data_manager_a5d3386843dfd9fb558b22bad09029ca7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,183,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#ac956d4c6015f38f1bef4f3ee11fdf2e8" title="使用运行时类型信息注册服务实例。" alt="" coords="231,5,450,48"/>
+<area shape="poly" title=" " alt="" coords="183,24,218,26,213,27,183,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aca871f7502add0997179d3cf068571ce" name="aca871f7502add0997179d3cf068571ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca871f7502add0997179d3cf068571ce">&#9670;&#160;</a></span>DeleteData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Data.DataManager.DeleteData </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除指定键的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>数据标识键</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html#af9ec3103551c128865f2e550fd4cd0c6">Utopia.Data.IDataService</a>.</p>
+
+</div>
+</div>
+<a id="a330855bc46b8221f200c89f700385a62" name="a330855bc46b8221f200c89f700385a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330855bc46b8221f200c89f700385a62">&#9670;&#160;</a></span>HasData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Data.DataManager.HasData </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查指定键是否存在数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>数据标识键</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否存在数据</dd></dl>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html#a6c0134f4572a08090cc1f714154bddb3">Utopia.Data.IDataService</a>.</p>
+
+</div>
+</div>
+<a id="ae91297191be131c3ec8571c103de44a5" name="ae91297191be131c3ec8571c103de44a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae91297191be131c3ec8571c103de44a5">&#9670;&#160;</a></span>LoadDataAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; T &gt; Utopia.Data.DataManager.LoadDataAsync&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步加载数据 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>期望的数据类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>数据标识键</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>加载的数据对象，不存在时返回null</dd></dl>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html#a4dfdfc020d339a0c583297cccb5377e4">Utopia.Data.IDataService</a>.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5_cgraph.png" border="0" usemap="#aclass_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5_cgraph" id="aclass_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5_cgraph">
+<area shape="rect" title="异步加载数据" alt="" coords="5,5,183,48"/>
+<area shape="rect" href="class_utopia_1_1_data_1_1_data_manager.html#aa668ad323c0b0772f18987bdb3feaa3e" title="XOR异或加密/解密算法 注意：这是简单的加密，不适合高安全需求" alt="" coords="231,5,408,48"/>
+<area shape="poly" title=" " alt="" coords="183,24,218,26,212,27,183,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0db9bab677f6eff3276e3609ba5659e1" name="a0db9bab677f6eff3276e3609ba5659e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db9bab677f6eff3276e3609ba5659e1">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Data.DataManager.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b7d2d5c5f51047dbc701f25a96c5917" name="a7b7d2d5c5f51047dbc701f25a96c5917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7d2d5c5f51047dbc701f25a96c5917">&#9670;&#160;</a></span>SaveDataAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task Utopia.Data.DataManager.SaveDataAsync&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步保存数据文件 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>数据类型，必须是类</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>数据标识键，用作文件名</td></tr>
+    <tr><td class="paramname">data</td><td>要保存的数据对象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>异步任务</dd></dl>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html#aec33fc40b4e526c450c214d12248344a">Utopia.Data.IDataService</a>.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917_cgraph.png" border="0" usemap="#aclass_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917_cgraph" id="aclass_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917_cgraph">
+<area shape="rect" title="异步保存数据文件" alt="" coords="5,5,183,48"/>
+<area shape="rect" href="class_utopia_1_1_data_1_1_data_manager.html#aa668ad323c0b0772f18987bdb3feaa3e" title="XOR异或加密/解密算法 注意：这是简单的加密，不适合高安全需求" alt="" coords="231,5,408,48"/>
+<area shape="poly" title=" " alt="" coords="183,24,218,26,212,27,183,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa668ad323c0b0772f18987bdb3feaa3e" name="aa668ad323c0b0772f18987bdb3feaa3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa668ad323c0b0772f18987bdb3feaa3e">&#9670;&#160;</a></span>XOREncrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte[] Utopia.Data.DataManager.XOREncrypt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>XOR异或加密/解密算法 注意：这是简单的加密，不适合高安全需求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>要加密/解密的数据</td></tr>
+    <tr><td class="paramname">key</td><td>加密密钥</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的字节数组</dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e_icgraph.png" border="0" usemap="#aclass_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e_icgraph" id="aclass_utopia_1_1_data_1_1_data_manager_aa668ad323c0b0772f18987bdb3feaa3e_icgraph">
+<area shape="rect" title="XOR异或加密/解密算法 注意：这是简单的加密，不适合高安全需求" alt="" coords="231,39,408,81"/>
+<area shape="rect" href="class_utopia_1_1_data_1_1_data_manager.html#ae91297191be131c3ec8571c103de44a5" title="异步加载数据" alt="" coords="5,5,183,48"/>
+<area shape="poly" title=" " alt="" coords="213,45,183,42,183,37,218,44"/>
+<area shape="rect" href="class_utopia_1_1_data_1_1_data_manager.html#a7b7d2d5c5f51047dbc701f25a96c5917" title="异步保存数据文件" alt="" coords="5,72,183,115"/>
+<area shape="poly" title=" " alt="" coords="213,76,184,83,183,78,218,75"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a1a23a1448120d1cafe73efa8cc7d0f42" name="a1a23a1448120d1cafe73efa8cc7d0f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a23a1448120d1cafe73efa8cc7d0f42">&#9670;&#160;</a></span>_encryptionKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Utopia.Data.DataManager._encryptionKey = &quot;SoulFarm_Secret_2025&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a320c1a3f85ca20ad96743603977ba646" name="a320c1a3f85ca20ad96743603977ba646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320c1a3f85ca20ad96743603977ba646">&#9670;&#160;</a></span>_fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Utopia.Data.DataManager._fileName = &quot;save_data.json&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96d4a755487a387b5431504442a79008" name="a96d4a755487a387b5431504442a79008"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96d4a755487a387b5431504442a79008">&#9670;&#160;</a></span>_jsonSettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly JsonSerializerSettings Utopia.Data.DataManager._jsonSettings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">                                                      = <span class="keyword">new</span> JsonSerializerSettings</div>
+<div class="line">{</div>
+<div class="line">    </div>
+<div class="line">    Formatting = Formatting.Indented,</div>
+<div class="line">    </div>
+<div class="line">    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,</div>
+<div class="line">    </div>
+<div class="line">    TypeNameHandling = TypeNameHandling.Auto</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae7d3205bf2138729d758ea7389ad5fa8" name="ae7d3205bf2138729d758ea7389ad5fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d3205bf2138729d758ea7389ad5fa8">&#9670;&#160;</a></span>_runtimeCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, object&gt; Utopia.Data.DataManager._runtimeCache = new Dictionary&lt;string, object&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86a45525ed4bf3df7aba3cca33bc28fc" name="a86a45525ed4bf3df7aba3cca33bc28fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86a45525ed4bf3df7aba3cca33bc28fc">&#9670;&#160;</a></span>_savePath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Utopia.Data.DataManager._savePath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b7a23869f93c610cb596ff7c2ecd15a" name="a8b7a23869f93c610cb596ff7c2ecd15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7a23869f93c610cb596ff7c2ecd15a">&#9670;&#160;</a></span>_useEncryption</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Data.DataManager._useEncryption = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Base/Data/<a class="el" href="_data_manager_8cs.html">DataManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_data.html">Data</a></li><li class="navelem"><a href="class_utopia_1_1_data_1_1_data_manager.html">DataManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

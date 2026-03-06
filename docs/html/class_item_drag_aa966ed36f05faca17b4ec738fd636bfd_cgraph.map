@@ -1,0 +1,25 @@
+<map id="ItemDrag.OnEndDrag" name="ItemDrag.OnEndDrag">
+<area shape="rect" id="Node000001" title="结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性" alt="" coords="5,123,153,149"/>
+<area shape="rect" id="Node000002" href="$class_item_drag.html#afa4ce46ba7f60ccdb57fc530aaa81c9c" title="获取当前指针位置下的GameObject 使用异常处理确保安全" alt="" coords="226,123,382,149"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,133,213,135,208,137,154,139"/>
+<area shape="rect" id="Node000003" href="$class_item_drag.html#a3fd165e24bffc4a1ba8ad365f92b4a1e" title="返回原始位置 当拖拽到无效区域或出现异常时调用" alt="" coords="480,107,657,149"/>
+<area shape="poly" id="edge13_Node000001_Node000003" title=" " alt="" coords="134,120,200,108,269,104,339,104,468,114,463,116,339,109,269,109,201,113,135,125"/>
+<area shape="rect" id="Node000005" href="$class_item_drag.html#a3b8eddea878288083c2115b35d108fba" title="处理拖拽到背包外的情况（丢弃物品）" alt="" coords="207,21,400,48"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="100,120,145,92,200,64,238,52,234,55,202,69,147,97,103,124"/>
+<area shape="rect" id="Node000009" href="$class_item_drag.html#a7dd9c5ece33ad36ea049c085424c6719" title="处理移动到空槽位" alt="" coords="455,224,682,251"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="97,147,143,180,171,197,202,209,261,225,322,235,442,244,437,244,322,240,260,230,200,215,169,202,140,185,96,153"/>
+<area shape="rect" id="Node000010" href="$class_item_drag.html#a4aa44b8bf9a6e79ea49231ad6f3072d6" title="处理与另一个物品交换位置" alt="" coords="201,173,407,200"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="142,147,229,168,224,171,142,153"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,131,467,131,462,132,382,136"/>
+<area shape="rect" id="Node000004" href="$class_item_drag.html#aabda3e1da8ef8840621636641ecc5a2c" title="拖拽结束后的通用设置 恢复射线检测，重置拖拽状态" alt="" coords="742,144,920,171"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="657,135,729,146,724,146,657,141"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="401,41,536,60,610,74,683,92,740,112,792,137,786,137,738,117,682,97,609,79,535,65,401,46"/>
+<area shape="rect" id="Node000006" href="$class_inventory.html#acc6ca12b4614b161833cb896e67353d3" title="丢弃物品 清空对应格子" alt="" coords="502,5,635,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="400,26,490,23,484,24,402,31"/>
+<area shape="rect" id="Node000007" href="$class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="730,5,932,32"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="635,16,718,18,712,19,636,21"/>
+<area shape="rect" id="Node000008" href="$class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="980,5,1199,32"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="932,16,967,18,962,19,933,21"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="620,221,682,203,772,176,777,175,683,208,621,226"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="407,178,729,162,724,164,408,184"/>
+</map>

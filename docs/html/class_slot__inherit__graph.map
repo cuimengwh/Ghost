@@ -1,0 +1,5 @@
+<map id="Slot" name="Slot">
+<area shape="rect" id="Node000001" title="挂在每个背包格子（slot）上。 负责保存并显示该格子对应的物品图标、描述文本， 以及响应点击事件，将物品信息展示到外部面板。" alt="" coords="39,80,83,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>

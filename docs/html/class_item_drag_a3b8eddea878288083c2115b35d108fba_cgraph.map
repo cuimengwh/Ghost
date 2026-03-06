@@ -1,0 +1,11 @@
+<map id="ItemDrag.HandleDropOutside" name="ItemDrag.HandleDropOutside">
+<area shape="rect" id="Node000001" title="处理拖拽到背包外的情况（丢弃物品）" alt="" coords="5,31,199,57"/>
+<area shape="rect" id="Node000002" href="$class_inventory.html#acc6ca12b4614b161833cb896e67353d3" title="丢弃物品 清空对应格子" alt="" coords="270,5,402,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,31,257,27,251,28,199,36"/>
+<area shape="rect" id="Node000005" href="$class_item_drag.html#aabda3e1da8ef8840621636641ecc5a2c" title="拖拽结束后的通用设置 恢复射线检测，重置拖拽状态" alt="" coords="247,56,425,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="199,52,234,58,229,58,199,57"/>
+<area shape="rect" id="Node000003" href="$class_inventory_manager.html#a52595fe976ce12f5403b934b49a05ac0" title="刷新背包UI显示" alt="" coords="473,5,674,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="402,16,460,18,455,19,402,21"/>
+<area shape="rect" id="Node000004" href="$class_inventory_manager.html#a3398a2ce68a4fc5a914563c7c473abb0" title="更新右侧物品信息面板" alt="" coords="722,5,942,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="675,16,710,19,704,19,675,21"/>
+</map>

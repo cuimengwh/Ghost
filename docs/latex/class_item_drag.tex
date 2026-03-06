@@ -1,0 +1,359 @@
+\doxysection{Item\+Drag类 参考}
+\hypertarget{class_item_drag}{}\label{class_item_drag}\index{ItemDrag@{ItemDrag}}
+
+
+物品拖拽组件 -\/ 处理可拖拽物品的\+UI交互  
+
+
+
+
+类 Item\+Drag 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Item\+Drag 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_item_drag_a87c1c2de7157e876bf5c5c9aefded31b}{On\+Begin\+Drag}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em 开始拖拽时调用 初始化拖拽数据，将图标提升到\+UI层级顶部 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_a015a752e681eb4033bf70c715a678d6e}{On\+Drag}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em 拖拽过程中持续调用 更新图标位置跟随鼠标/\+触摸点 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_aa966ed36f05faca17b4ec738fd636bfd}{On\+End\+Drag}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em 结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_item_drag_a5e99cd0e1fb5ba904e61f2f84c90cbe3}{Force\+End\+Drag}} ()
+\begin{DoxyCompactList}\small\item\em 静态方法：强制结束所有正在拖拽的物品 在背包关闭、场景切换时调用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} \doxymbox{\hyperlink{class_item_drag_a1b423fdd7a37a0d20ff754f51d26815e}{my\+Bag}}
+\item 
+Transform \doxymbox{\hyperlink{class_item_drag_a45f0b412f08cf6fba4ba90a9be1b50fb}{original\+Parent}}
+\item 
+int \doxymbox{\hyperlink{class_item_drag_afa71f8f81fdb85f57c40503074c16c62}{slot\+Index}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_item_drag_afa4ce46ba7f60ccdb57fc530aaa81c9c}{Get\+Hit\+Object}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em 获取当前指针位置下的\+Game\+Object 使用异常处理确保安全 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_a3b8eddea878288083c2115b35d108fba}{Handle\+Drop\+Outside}} ()
+\begin{DoxyCompactList}\small\item\em 处理拖拽到背包外的情况（丢弃物品） \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_a4aa44b8bf9a6e79ea49231ad6f3072d6}{Handle\+Swap\+With\+Item}} (Game\+Object hit\+Item)
+\begin{DoxyCompactList}\small\item\em 处理与另一个物品交换位置 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_a7dd9c5ece33ad36ea049c085424c6719}{Handle\+Move\+To\+Empty\+Slot}} (Game\+Object hit\+Slot)
+\begin{DoxyCompactList}\small\item\em 处理移动到空槽位 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_aabda3e1da8ef8840621636641ecc5a2c}{End\+Drag\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em 拖拽结束后的通用设置 恢复射线检测，重置拖拽状态 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_a3fd165e24bffc4a1ba8ad365f92b4a1e}{Return\+To\+Original\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 返回原始位置 当拖拽到无效区域或出现异常时调用 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_item_drag_a09fca6b4b2434ecf2c07dfafc7f38065}{Force\+End\+Current\+Drag}} ()
+\begin{DoxyCompactList}\small\item\em 强制结束当前物品的拖拽 在\+UI关闭、背包切换等情况下调用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_item_drag_a32cb263beb30764316766981627b1436}{is\+Dragging}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+物品拖拽组件 -\/ 处理可拖拽物品的\+UI交互 
+
+功能说明：
+\begin{DoxyEnumerate}
+\item 支持拖拽物品图标在背包内移动
+\item 实现三种目标交互：
+\begin{DoxyItemize}
+\item 与其他物品交换位置
+\item 移动到空槽位
+\item 拖出背包外丢弃物品
+\end{DoxyItemize}
+\item 拖拽失败时自动归位
+\end{DoxyEnumerate}
+
+实现接口：
+\begin{DoxyItemize}
+\item IBegin\+Drag\+Handler:\+ 开始拖拽
+\item IDrag\+Handler:\+ 拖拽中
+\item IEnd\+Drag\+Handler:\+ 结束拖拽
+\end{DoxyItemize}
+
+使用要求：
+\begin{DoxyEnumerate}
+\item 挂载在物品图标(\+Image)Game\+Object上
+\item 父级必须是\+Slot对象
+\item 需要\+Canvas\+Group组件支持射线遮挡控制 
+\end{DoxyEnumerate}
+
+\label{doc-func-members}
+\Hypertarget{class_item_drag_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_item_drag_aabda3e1da8ef8840621636641ecc5a2c}\index{ItemDrag@{ItemDrag}!EndDragSettings@{EndDragSettings}}
+\index{EndDragSettings@{EndDragSettings}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{EndDragSettings()}{EndDragSettings()}}
+{\footnotesize\ttfamily \label{class_item_drag_aabda3e1da8ef8840621636641ecc5a2c} 
+void Item\+Drag.\+End\+Drag\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+拖拽结束后的通用设置 恢复射线检测，重置拖拽状态 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_aabda3e1da8ef8840621636641ecc5a2c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_a09fca6b4b2434ecf2c07dfafc7f38065}\index{ItemDrag@{ItemDrag}!ForceEndCurrentDrag@{ForceEndCurrentDrag}}
+\index{ForceEndCurrentDrag@{ForceEndCurrentDrag}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{ForceEndCurrentDrag()}{ForceEndCurrentDrag()}}
+{\footnotesize\ttfamily \label{class_item_drag_a09fca6b4b2434ecf2c07dfafc7f38065} 
+void Item\+Drag.\+Force\+End\+Current\+Drag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+强制结束当前物品的拖拽 在\+UI关闭、背包切换等情况下调用 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a09fca6b4b2434ecf2c07dfafc7f38065_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_a5e99cd0e1fb5ba904e61f2f84c90cbe3}\index{ItemDrag@{ItemDrag}!ForceEndDrag@{ForceEndDrag}}
+\index{ForceEndDrag@{ForceEndDrag}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{ForceEndDrag()}{ForceEndDrag()}}
+{\footnotesize\ttfamily \label{class_item_drag_a5e99cd0e1fb5ba904e61f2f84c90cbe3} 
+void Item\+Drag.\+Force\+End\+Drag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+静态方法：强制结束所有正在拖拽的物品 在背包关闭、场景切换时调用 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a5e99cd0e1fb5ba904e61f2f84c90cbe3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_afa4ce46ba7f60ccdb57fc530aaa81c9c}\index{ItemDrag@{ItemDrag}!GetHitObject@{GetHitObject}}
+\index{GetHitObject@{GetHitObject}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{GetHitObject()}{GetHitObject()}}
+{\footnotesize\ttfamily \label{class_item_drag_afa4ce46ba7f60ccdb57fc530aaa81c9c} 
+Game\+Object Item\+Drag.\+Get\+Hit\+Object (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+获取当前指针位置下的\+Game\+Object 使用异常处理确保安全 
+
+\begin{DoxyReturn}{返回}
+命中的物体，没有则为null
+\end{DoxyReturn}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_afa4ce46ba7f60ccdb57fc530aaa81c9c_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_item_drag_afa4ce46ba7f60ccdb57fc530aaa81c9c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_a3b8eddea878288083c2115b35d108fba}\index{ItemDrag@{ItemDrag}!HandleDropOutside@{HandleDropOutside}}
+\index{HandleDropOutside@{HandleDropOutside}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{HandleDropOutside()}{HandleDropOutside()}}
+{\footnotesize\ttfamily \label{class_item_drag_a3b8eddea878288083c2115b35d108fba} 
+void Item\+Drag.\+Handle\+Drop\+Outside (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+处理拖拽到背包外的情况（丢弃物品） 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a3b8eddea878288083c2115b35d108fba_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a3b8eddea878288083c2115b35d108fba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_a7dd9c5ece33ad36ea049c085424c6719}\index{ItemDrag@{ItemDrag}!HandleMoveToEmptySlot@{HandleMoveToEmptySlot}}
+\index{HandleMoveToEmptySlot@{HandleMoveToEmptySlot}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{HandleMoveToEmptySlot()}{HandleMoveToEmptySlot()}}
+{\footnotesize\ttfamily \label{class_item_drag_a7dd9c5ece33ad36ea049c085424c6719} 
+void Item\+Drag.\+Handle\+Move\+To\+Empty\+Slot (\begin{DoxyParamCaption}\item[{Game\+Object}]{hit\+Slot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+处理移动到空槽位 
+
+
+\begin{DoxyParams}{参数}
+{\em hit\+Slot} & 命中的空槽位\\
+\hline
+\end{DoxyParams}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a7dd9c5ece33ad36ea049c085424c6719_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a7dd9c5ece33ad36ea049c085424c6719_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_a4aa44b8bf9a6e79ea49231ad6f3072d6}\index{ItemDrag@{ItemDrag}!HandleSwapWithItem@{HandleSwapWithItem}}
+\index{HandleSwapWithItem@{HandleSwapWithItem}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{HandleSwapWithItem()}{HandleSwapWithItem()}}
+{\footnotesize\ttfamily \label{class_item_drag_a4aa44b8bf9a6e79ea49231ad6f3072d6} 
+void Item\+Drag.\+Handle\+Swap\+With\+Item (\begin{DoxyParamCaption}\item[{Game\+Object}]{hit\+Item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+处理与另一个物品交换位置 
+
+
+\begin{DoxyParams}{参数}
+{\em hit\+Item} & 命中的物品图标\\
+\hline
+\end{DoxyParams}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a4aa44b8bf9a6e79ea49231ad6f3072d6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a4aa44b8bf9a6e79ea49231ad6f3072d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_a87c1c2de7157e876bf5c5c9aefded31b}\index{ItemDrag@{ItemDrag}!OnBeginDrag@{OnBeginDrag}}
+\index{OnBeginDrag@{OnBeginDrag}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{OnBeginDrag()}{OnBeginDrag()}}
+{\footnotesize\ttfamily \label{class_item_drag_a87c1c2de7157e876bf5c5c9aefded31b} 
+void Item\+Drag.\+On\+Begin\+Drag (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+开始拖拽时调用 初始化拖拽数据，将图标提升到\+UI层级顶部 
+
+\Hypertarget{class_item_drag_a015a752e681eb4033bf70c715a678d6e}\index{ItemDrag@{ItemDrag}!OnDrag@{OnDrag}}
+\index{OnDrag@{OnDrag}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{OnDrag()}{OnDrag()}}
+{\footnotesize\ttfamily \label{class_item_drag_a015a752e681eb4033bf70c715a678d6e} 
+void Item\+Drag.\+On\+Drag (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+拖拽过程中持续调用 更新图标位置跟随鼠标/\+触摸点 
+
+\Hypertarget{class_item_drag_aa966ed36f05faca17b4ec738fd636bfd}\index{ItemDrag@{ItemDrag}!OnEndDrag@{OnEndDrag}}
+\index{OnEndDrag@{OnEndDrag}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{OnEndDrag()}{OnEndDrag()}}
+{\footnotesize\ttfamily \label{class_item_drag_aa966ed36f05faca17b4ec738fd636bfd} 
+void Item\+Drag.\+On\+End\+Drag (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+结束拖拽时调用 处理物品放置逻辑，判断目标位置有效性 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_aa966ed36f05faca17b4ec738fd636bfd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_item_drag_a3fd165e24bffc4a1ba8ad365f92b4a1e}\index{ItemDrag@{ItemDrag}!ReturnToOriginalPosition@{ReturnToOriginalPosition}}
+\index{ReturnToOriginalPosition@{ReturnToOriginalPosition}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{ReturnToOriginalPosition()}{ReturnToOriginalPosition()}}
+{\footnotesize\ttfamily \label{class_item_drag_a3fd165e24bffc4a1ba8ad365f92b4a1e} 
+void Item\+Drag.\+Return\+To\+Original\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+返回原始位置 当拖拽到无效区域或出现异常时调用 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a3fd165e24bffc4a1ba8ad365f92b4a1e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_drag_a3fd165e24bffc4a1ba8ad365f92b4a1e_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_item_drag_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_item_drag_a32cb263beb30764316766981627b1436}\index{ItemDrag@{ItemDrag}!isDragging@{isDragging}}
+\index{isDragging@{isDragging}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{isDragging}{isDragging}}
+{\footnotesize\ttfamily \label{class_item_drag_a32cb263beb30764316766981627b1436} 
+bool Item\+Drag.\+is\+Dragging = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_item_drag_a1b423fdd7a37a0d20ff754f51d26815e}\index{ItemDrag@{ItemDrag}!myBag@{myBag}}
+\index{myBag@{myBag}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{myBag}{myBag}}
+{\footnotesize\ttfamily \label{class_item_drag_a1b423fdd7a37a0d20ff754f51d26815e} 
+\doxymbox{\hyperlink{class_inventory}{Inventory}} Item\+Drag.\+my\+Bag}
+
+\Hypertarget{class_item_drag_a45f0b412f08cf6fba4ba90a9be1b50fb}\index{ItemDrag@{ItemDrag}!originalParent@{originalParent}}
+\index{originalParent@{originalParent}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{originalParent}{originalParent}}
+{\footnotesize\ttfamily \label{class_item_drag_a45f0b412f08cf6fba4ba90a9be1b50fb} 
+Transform Item\+Drag.\+original\+Parent}
+
+\Hypertarget{class_item_drag_afa71f8f81fdb85f57c40503074c16c62}\index{ItemDrag@{ItemDrag}!slotIndex@{slotIndex}}
+\index{slotIndex@{slotIndex}!ItemDrag@{ItemDrag}}
+\doxysubsubsection{\texorpdfstring{slotIndex}{slotIndex}}
+{\footnotesize\ttfamily \label{class_item_drag_afa71f8f81fdb85f57c40503074c16c62} 
+int Item\+Drag.\+slot\+Index}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Bag/\+\+Inventory\+Script/\+\doxymbox{\hyperlink{_item_drag_8cs}{Item\+Drag.\+cs}}\end{DoxyCompactItemize}

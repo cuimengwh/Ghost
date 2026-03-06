@@ -1,0 +1,5 @@
+<map id="EquipBar.SelectSlot" name="EquipBar.SelectSlot">
+<area shape="rect" id="Node000001" title="选择指定快捷栏槽位" alt="" coords="174,5,312,32"/>
+<area shape="rect" id="Node000002" href="$class_equip_bar.html#aa706c721e14f033793cfbbc45e68f16b" title="每帧更新方法 监听键盘数字键1&#45;9，实现快捷键切换功能" alt="" coords="5,5,126,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,19,126,21,126,16,161,18"/>
+</map>

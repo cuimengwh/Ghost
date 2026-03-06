@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeManager.CheckScheduledEvents" name="Utopia.TimeSystem.TimeManager.CheckScheduledEvents">
+<area shape="rect" id="Node000001" title="检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。" alt="" coords="278,5,502,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>

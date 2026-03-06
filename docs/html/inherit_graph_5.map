@@ -1,0 +1,23 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,183,123,209"/>
+<area shape="rect" id="Node000001" href="$class_inventory.html" title="背包 ScriptableObject 用于存储和管理背包中的物品数据" alt="" coords="242,56,318,83"/>
+<area shape="poly" id="edge30_Node000000_Node000001" title=" " alt="" coords="100,172,256,80,255,86,103,177"/>
+<area shape="rect" id="Node000004" href="$class_item_data.html" title="公共物品数据类" alt="" coords="242,183,318,209"/>
+<area shape="poly" id="edge33_Node000000_Node000004" title=" " alt="" coords="138,193,244,194,239,198,139,199"/>
+<area shape="rect" id="Node000010" href="$class_utopia_1_1_time_system_1_1_time_settings.html" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统" alt="" coords="171,233,389,260"/>
+<area shape="poly" id="edge39_Node000000_Node000010" title=" " alt="" coords="138,211,171,219,222,232,217,234,170,224,138,216"/>
+<area shape="rect" id="Node000002" href="$class_collection_inventory.html" title=" " alt="" coords="437,5,570,32"/>
+<area shape="poly" id="edge31_Node000001_Node000002" title=" " alt="" coords="331,55,444,31,439,34,333,60"/>
+<area shape="rect" id="Node000003" href="$class_dish_inventory.html" title=" " alt="" coords="452,56,555,83"/>
+<area shape="poly" id="edge32_Node000001_Node000003" title=" " alt="" coords="332,67,454,68,450,71,333,72"/>
+<area shape="rect" id="Node000005" href="$class_collection.html" title=" " alt="" coords="464,107,543,133"/>
+<area shape="poly" id="edge34_Node000004_Node000005" title=" " alt="" coords="331,176,466,132,461,134,333,181"/>
+<area shape="rect" id="Node000006" href="$class_crop_data.html" title=" " alt="" coords="465,157,542,184"/>
+<area shape="poly" id="edge35_Node000004_Node000006" title=" " alt="" coords="332,187,467,174,462,176,333,193"/>
+<area shape="rect" id="Node000007" href="$class_dish.html" title="菜肴数据类，继承自 ItemData" alt="" coords="480,208,528,235"/>
+<area shape="poly" id="edge36_Node000004_Node000007" title=" " alt="" coords="333,199,482,218,477,219,333,205"/>
+<area shape="rect" id="Node000008" href="$class_seed_data.html" title=" " alt="" coords="464,259,543,285"/>
+<area shape="poly" id="edge37_Node000004_Node000008" title=" " alt="" coords="333,203,390,219,414,231,438,244,467,258,462,258,436,249,412,236,388,224,332,208"/>
+<area shape="rect" id="Node000009" href="$class_tool.html" title=" " alt="" coords="481,309,526,336"/>
+<area shape="poly" id="edge38_Node000004_Node000009" title=" " alt="" coords="333,197,363,205,391,219,408,238,416,258,423,277,439,295,460,308,483,318,478,318,457,313,435,299,419,279,411,259,404,241,387,223,361,210,333,203"/>
+</map>

@@ -1,0 +1,431 @@
+\doxysection{Utopia.\+Time\+System.\+Custom\+Date\+Time结构体 参考}
+\hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time}{}\label{struct_utopia_1_1_time_system_1_1_custom_date_time}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+
+
+自定义日期时间结构，适用于 28天/\+月、4月/\+年的独特日历系统。 时间部分以 0\texorpdfstring{$\sim$}{\string~}1 的浮点数表示一天内的时间进度（0 对应 00:\+00，1 对应 24:\+00）。 支持比较运算、算术运算（通过时间戳）、以及格式化的字符串输出。  
+
+
+
+
+类 Utopia.\+Time\+System.\+Custom\+Date\+Time 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Time\+System.\+Custom\+Date\+Time 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} (int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_acc2b2a25ba3416f91e61f1812fffbfdd}{year}}, int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_afb639602447b76b61f372dee319459c9}{month}}, int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_ad994c7c26046ff06debe2f8a2284d81d}{day}}, float \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_ab8fbe83f1d2bec29e055cd3d9c1bfa36}{time}})
+\begin{DoxyCompactList}\small\item\em 使用指定的年、月、日和时间初始化 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 实例。 参数会自动钳制到有效范围。 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e}{Compare\+To}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} other)
+\begin{DoxyCompactList}\small\item\em 比较当前实例与另一个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 对象。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c}{Equals}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} other)
+\begin{DoxyCompactList}\small\item\em 指示当前实例是否与另一个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 对象相等。 \end{DoxyCompactList}\item 
+override bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em 指示当前实例是否等于另一个对象。 \end{DoxyCompactList}\item 
+override int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a705bbc3df230846dbd69b8d780e2fe5b}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em 返回当前实例的哈希码。 \end{DoxyCompactList}\item 
+override string \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_af9723d60fca7de1d8d2f5dd771af039e}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em 返回当前 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 的字符串表示，格式为 "{}\+Y\{year\}-\/\+M\{month:\+\+D2\}-\/\+D\{day:\+\+D2\} \{hours:\+\+D2\}:\+\{minutes:\+\+D2\}"{}。 例如：\+Y1-\/\+M01-\/\+D01 00:\+00 表示元年1月1日午夜。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966}{operator==}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} a, \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} b)
+\begin{DoxyCompactList}\small\item\em 判断两个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 实例是否表示同一时刻（基于 Timestamp 比较）。 \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd}{operator!=}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} a, \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} b)
+\begin{DoxyCompactList}\small\item\em 判断两个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 实例是否表示不同时刻。 \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9}{operator$>$}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} x, \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} y)
+\begin{DoxyCompactList}\small\item\em 判断一个实例是否大于另一个实例（基于 Timestamp 比较）。 \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b}{operator$<$}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} x, \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} y)
+\begin{DoxyCompactList}\small\item\em 判断一个实例是否小于另一个实例（基于 Timestamp 比较）。 \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be}{operator$>$=}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} a, \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} b)
+\begin{DoxyCompactList}\small\item\em 判断一个实例是否大于等于另一个实例（基于 Timestamp 比较）。 \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d}{operator$<$=}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} a, \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}} b)
+\begin{DoxyCompactList}\small\item\em 判断一个实例是否小于等于另一个实例（基于 Timestamp 比较）。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_acc2b2a25ba3416f91e61f1812fffbfdd}{year}}
+\begin{DoxyCompactList}\small\item\em 年份。从 1 开始，最小值为 1。 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_afb639602447b76b61f372dee319459c9}{month}}
+\begin{DoxyCompactList}\small\item\em 月份，取值范围 1 \texorpdfstring{$\sim$}{\string~} 4。 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_ad994c7c26046ff06debe2f8a2284d81d}{day}}
+\begin{DoxyCompactList}\small\item\em 日期，取值范围 1 \texorpdfstring{$\sim$}{\string~} 28。 \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_ab8fbe83f1d2bec29e055cd3d9c1bfa36}{time}}
+\begin{DoxyCompactList}\small\item\em 一天内的时间，0 \texorpdfstring{$\sim$}{\string~} 1 之间的浮点数，0 表示 00:\+00，1 表示 24:\+00。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a88eb9dbc3c41bac2b45425c0fa49e880}{To\+Total\+Days}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 获取从元年（1年1月1日）到当前日期经过的整数天数。 元年1月1日返回 0，1月2日返回 1，依此类推。 \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_ae2cc310f10536d73e9cf68c9280081e6}{Timestamp}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 获取一个双精度浮点数表示的绝对时间戳，整数部分为 To\+Total\+Days，小数部分为 time（0\texorpdfstring{$\sim$}{\string~}1）。 该值可用于日期时间的比较和算术运算。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+const int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_ac69252d3786d79986f73c3bf834184ee}{DAYS\+\_\+\+PER\+\_\+\+YEAR}} = 112
+\begin{DoxyCompactList}\small\item\em 每年包含的天数（4个月 × 28天）。 \end{DoxyCompactList}\item 
+const int \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a59eb593d947e7a2d5e4700f243f738ea}{DAYS\+\_\+\+PER\+\_\+\+MONTH}} = 28
+\begin{DoxyCompactList}\small\item\em 每月包含的天数。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+自定义日期时间结构，适用于 28天/\+月、4月/\+年的独特日历系统。 时间部分以 0\texorpdfstring{$\sim$}{\string~}1 的浮点数表示一天内的时间进度（0 对应 00:\+00，1 对应 24:\+00）。 支持比较运算、算术运算（通过时间戳）、以及格式化的字符串输出。 
+
+\label{doc-constructors}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!CustomDateTime@{CustomDateTime}}
+\index{CustomDateTime@{CustomDateTime}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{CustomDateTime()}{CustomDateTime()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3} 
+Utopia.\+Time\+System.\+Custom\+Date\+Time.\+Custom\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{year}{, }\item[{int}]{month}{, }\item[{int}]{day}{, }\item[{float}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+使用指定的年、月、日和时间初始化 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 实例。 参数会自动钳制到有效范围。 
+
+
+\begin{DoxyParams}{参数}
+{\em year} & 年份（自动确保 ≥1）\\
+\hline
+{\em month} & 月份（自动限制在 1\texorpdfstring{$\sim$}{\string~}4）\\
+\hline
+{\em day} & 日期（自动限制在 1\texorpdfstring{$\sim$}{\string~}28）\\
+\hline
+{\em time} & 时间（0\texorpdfstring{$\sim$}{\string~}1，自动限制在范围内）\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!CompareTo@{CompareTo}}
+\index{CompareTo@{CompareTo}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{CompareTo()}{CompareTo()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e} 
+int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+Compare\+To (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+比较当前实例与另一个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 对象。 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & 要比较的对象\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+负数：当前小于 other；零：相等；正数：当前大于 other
+\end{DoxyReturn}
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ba6bf017c7bd2822e64e1eea345d01e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!Equals@{Equals}}
+\index{Equals@{Equals}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c} 
+bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+Equals (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+指示当前实例是否与另一个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 对象相等。 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & 要比较的对象\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果所有字段（年、月、日、时间）都相等则为 true，否则为 false
+\end{DoxyReturn}
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_a0e006c8eba7cb26faa6dbe8938f9346c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!Equals@{Equals}}
+\index{Equals@{Equals}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd} 
+override bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+指示当前实例是否等于另一个对象。 
+
+
+\begin{DoxyParams}{参数}
+{\em obj} & 要比较的对象\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果 obj 是 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 且所有字段相等则为 true
+\end{DoxyReturn}
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_acd921fc5bf33cec856c03f5a4158d6dd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a705bbc3df230846dbd69b8d780e2fe5b}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a705bbc3df230846dbd69b8d780e2fe5b} 
+override int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回当前实例的哈希码。 
+
+\begin{DoxyReturn}{返回}
+由年、月、日、时间组合成的哈希值
+\end{DoxyReturn}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd} 
+bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+operator!= (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{a}{, }\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+判断两个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 实例是否表示不同时刻。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_a4ad44d4b7821d2d7183eeb4e266827fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b} 
+bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+operator$<$ (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{x}{, }\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+判断一个实例是否小于另一个实例（基于 Timestamp 比较）。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_a0f26eeecc7069e70fe3b7e59c6da7d7b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d} 
+bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+operator$<$= (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{a}{, }\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+判断一个实例是否小于等于另一个实例（基于 Timestamp 比较）。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_a89c7bac82fa09da179b5b87c634db85d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!operator==@{operator==}}
+\index{operator==@{operator==}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966} 
+bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+operator== (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{a}{, }\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+判断两个 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 实例是否表示同一时刻（基于 Timestamp 比较）。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_aeeda5a27bc7b7fefe613b4f2d621e966_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9} 
+bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+operator$>$ (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{x}{, }\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+判断一个实例是否大于另一个实例（基于 Timestamp 比较）。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_a1160942def0310bcfa64b95b4a149cf9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be} 
+bool Utopia.\+Time\+System.\+Custom\+Date\+Time.\+operator$>$= (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{a}{, }\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time_a3bdea6ae6b3eecb92b06b8f5203486b3}{Custom\+Date\+Time}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+判断一个实例是否大于等于另一个实例（基于 Timestamp 比较）。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_utopia_1_1_time_system_1_1_custom_date_time_ac8b11c81fdbcdd31d3f96ae5a21b53be_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_af9723d60fca7de1d8d2f5dd771af039e}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!ToString@{ToString}}
+\index{ToString@{ToString}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_af9723d60fca7de1d8d2f5dd771af039e} 
+override string Utopia.\+Time\+System.\+Custom\+Date\+Time.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回当前 \doxylink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time} 的字符串表示，格式为 "{}\+Y\{year\}-\/\+M\{month:\+\+D2\}-\/\+D\{day:\+\+D2\} \{hours:\+\+D2\}:\+\{minutes:\+\+D2\}"{}。 例如：\+Y1-\/\+M01-\/\+D01 00:\+00 表示元年1月1日午夜。 
+
+\begin{DoxyReturn}{返回}
+格式化的日期时间字符串
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_ad994c7c26046ff06debe2f8a2284d81d}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!day@{day}}
+\index{day@{day}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_ad994c7c26046ff06debe2f8a2284d81d} 
+int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+day}
+
+
+
+日期，取值范围 1 \texorpdfstring{$\sim$}{\string~} 28。 
+
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a59eb593d947e7a2d5e4700f243f738ea}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!DAYS\_PER\_MONTH@{DAYS\_PER\_MONTH}}
+\index{DAYS\_PER\_MONTH@{DAYS\_PER\_MONTH}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{DAYS\_PER\_MONTH}{DAYS\_PER\_MONTH}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a59eb593d947e7a2d5e4700f243f738ea} 
+const int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+DAYS\+\_\+\+PER\+\_\+\+MONTH = 28\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+每月包含的天数。 
+
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_ac69252d3786d79986f73c3bf834184ee}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!DAYS\_PER\_YEAR@{DAYS\_PER\_YEAR}}
+\index{DAYS\_PER\_YEAR@{DAYS\_PER\_YEAR}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{DAYS\_PER\_YEAR}{DAYS\_PER\_YEAR}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_ac69252d3786d79986f73c3bf834184ee} 
+const int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+DAYS\+\_\+\+PER\+\_\+\+YEAR = 112\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+每年包含的天数（4个月 × 28天）。 
+
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_afb639602447b76b61f372dee319459c9}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!month@{month}}
+\index{month@{month}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_afb639602447b76b61f372dee319459c9} 
+int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+month}
+
+
+
+月份，取值范围 1 \texorpdfstring{$\sim$}{\string~} 4。 
+
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_ab8fbe83f1d2bec29e055cd3d9c1bfa36}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!time@{time}}
+\index{time@{time}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_ab8fbe83f1d2bec29e055cd3d9c1bfa36} 
+float Utopia.\+Time\+System.\+Custom\+Date\+Time.\+time}
+
+
+
+一天内的时间，0 \texorpdfstring{$\sim$}{\string~} 1 之间的浮点数，0 表示 00:\+00，1 表示 24:\+00。 
+
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_acc2b2a25ba3416f91e61f1812fffbfdd}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!year@{year}}
+\index{year@{year}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_acc2b2a25ba3416f91e61f1812fffbfdd} 
+int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+year}
+
+
+
+年份。从 1 开始，最小值为 1。 
+
+
+
+\label{doc-property-members}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_doc-property-members}
+\doxysubsection{属性说明}
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_ae2cc310f10536d73e9cf68c9280081e6}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!Timestamp@{Timestamp}}
+\index{Timestamp@{Timestamp}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{Timestamp}{Timestamp}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_ae2cc310f10536d73e9cf68c9280081e6} 
+double Utopia.\+Time\+System.\+Custom\+Date\+Time.\+Timestamp\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+获取一个双精度浮点数表示的绝对时间戳，整数部分为 To\+Total\+Days，小数部分为 time（0\texorpdfstring{$\sim$}{\string~}1）。 该值可用于日期时间的比较和算术运算。 
+
+\Hypertarget{struct_utopia_1_1_time_system_1_1_custom_date_time_a88eb9dbc3c41bac2b45425c0fa49e880}\index{Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}!ToTotalDays@{ToTotalDays}}
+\index{ToTotalDays@{ToTotalDays}!Utopia.TimeSystem.CustomDateTime@{Utopia.TimeSystem.CustomDateTime}}
+\doxysubsubsection{\texorpdfstring{ToTotalDays}{ToTotalDays}}
+{\footnotesize\ttfamily \label{struct_utopia_1_1_time_system_1_1_custom_date_time_a88eb9dbc3c41bac2b45425c0fa49e880} 
+int Utopia.\+Time\+System.\+Custom\+Date\+Time.\+To\+Total\+Days\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+获取从元年（1年1月1日）到当前日期经过的整数天数。 元年1月1日返回 0，1月2日返回 1，依此类推。 
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Tool/\+\doxymbox{\hyperlink{_custom_date_time_8cs}{Custom\+Date\+Time.\+cs}}\end{DoxyCompactItemize}

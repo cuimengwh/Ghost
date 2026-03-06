@@ -1,0 +1,5 @@
+<map id="Utopia.GameLogic.NPC.NPCManager.SaveAllNPCs" name="Utopia.GameLogic.NPC.NPCManager.SaveAllNPCs">
+<area shape="rect" id="Node000001" title="保存所有NPC状态到持久化存储 将当前内存中的状态数据异步保存到文件或数据库 通常在以下时机调用：" alt="" coords="303,5,552,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html#ac0fc7998e02deaf2f4c7417c0405d734" title="销毁清理方法 在Unity GameObject销毁前调用，确保状态数据被保存 防止游戏退出或场景切换时数据丢失" alt="" coords="5,5,255,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,27,255,29,255,24,290,27"/>
+</map>

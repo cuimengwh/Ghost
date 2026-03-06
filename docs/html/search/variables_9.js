@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['id_0',['id',['../class_item_data.html#ac9c7a827207936e1779bf10a6ffdfd57',1,'ItemData']]],
+  ['ingredients_1',['ingredients',['../class_dish.html#a7a9940fdd0c3e7a15a088e02ae908243',1,'Dish']]],
+  ['instance_2',['instance',['../class_equip_bar.html#a5b30fca2b30885431e26cc18f6cc399f',1,'EquipBar.instance'],['../class_inventory_manager.html#ace602d33ec272f5ff5248e0a28db890c',1,'InventoryManager.instance']]],
+  ['interactingenergydrain_3',['interactingEnergyDrain',['../class_player_base.html#a21995afbdd86dbee833ad72fb922d49c',1,'PlayerBase']]],
+  ['interactinput_4',['interactInput',['../class_player_base.html#a975c95832d33b41b9863296b2e47d611',1,'PlayerBase']]],
+  ['inventory_5',['inventory',['../class_item_pick.html#af85f93ff1bff1c6dcd6d7187e52b0b0a',1,'ItemPick']]],
+  ['isdragging_6',['isDragging',['../class_item_drag.html#a32cb263beb30764316766981627b1436',1,'ItemDrag']]],
+  ['isghost_7',['isGhost',['../class_seed_data.html#aa41f46eb668cc37e535a74ee2d929b18',1,'SeedData']]],
+  ['isquestitem_8',['isQuestItem',['../class_collection.html#a99c2a5217919511172be165ec208d69f',1,'Collection']]],
+  ['isrepeatable_9',['isRepeatable',['../class_utopia_1_1_time_system_1_1_time_event.html#a73b82e0398d8eb8f04ddf5d32b3dfab2',1,'Utopia::TimeSystem::TimeEvent']]],
+  ['isstackable_10',['isStackable',['../class_item_data.html#a1bc480aa361b0a6c4bfd99fdc732d66f',1,'ItemData']]],
+  ['isstoryitem_11',['isStoryItem',['../class_collection.html#a10d1dc577e07128e45896ed1e09ae6b2',1,'Collection']]],
+  ['item_12',['item',['../class_inventory_item.html#a36d6d2541fa11aafa85982d282a515b5',1,'InventoryItem']]],
+  ['itemdescription_13',['itemDescription',['../class_item_data.html#a4d31ba387c9cbf81f386100006067f86',1,'ItemData']]],
+  ['itemicon_14',['itemIcon',['../class_inventory_manager.html#a9bd3950d7b1c76214d8fd76779ac3125',1,'InventoryManager.itemIcon'],['../class_item_data.html#aba4f58feb517ece89ccaadecb99a59d2',1,'ItemData.itemIcon']]],
+  ['iteminfo_15',['itemInfo',['../class_inventory_manager.html#ad8ddd1c9f0ee2e552e9259ec09548161',1,'InventoryManager']]],
+  ['iteminslot_16',['itemInSlot',['../class_slot.html#aeee4af198c5df9c65e62b830104186d5',1,'Slot']]],
+  ['itemname_17',['itemName',['../class_inventory_manager.html#a5543e54767e3a166bc7ef7b83862f645',1,'InventoryManager.itemName'],['../class_item_data.html#ac84f9991e476bd4c2f8403a0f6f5b98e',1,'ItemData.itemName']]],
+  ['items_18',['items',['../class_inventory.html#a55e40c16b0a53a2fe810d3f5301d25ce',1,'Inventory']]]
+];

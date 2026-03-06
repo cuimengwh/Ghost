@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.ServiceLocatorProvider.SetUpLocator" name="Utopia.Core.Services.ServiceLocatorProvider.SetUpLocator">
+<area shape="rect" id="Node000001" title="设置服务定位器，根据配置创建全局或局部定位器。" alt="" coords="248,5,444,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html#a4fd225428a45c3cb8eaff5fff1c19924" title="Unity生命周期方法：在对象初始化时最早调用。 负责初始化服务定位器并注册预定义组件。" alt="" coords="5,5,200,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,27,200,29,200,24,235,26"/>
+</map>

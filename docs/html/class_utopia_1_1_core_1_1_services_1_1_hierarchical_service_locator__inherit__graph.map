@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.HierarchicalServiceLocator" name="Utopia.Core.Services.HierarchicalServiceLocator">
+<area shape="rect" id="Node000001" title="分层服务定位器，支持服务查找的层级继承机制。 允许创建父子层级的服务容器，子容器可以访问父容器的服务。 实现 IDisposable 接口以确保资源正确释放。" alt="" coords="5,80,225,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="70,5,160,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,46,117,81,113,79,113,50"/>
+</map>

@@ -1,0 +1,88 @@
+\doxysection{Utopia.\+Data.\+IData\+Service接口 参考}
+\hypertarget{interface_utopia_1_1_data_1_1_i_data_service}{}\label{interface_utopia_1_1_data_1_1_i_data_service}\index{Utopia.Data.IDataService@{Utopia.Data.IDataService}}
+
+
+数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试  
+
+
+
+
+类 Utopia.\+Data.\+IData\+Service 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{interface_utopia_1_1_data_1_1_i_data_service__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+Task \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_aec33fc40b4e526c450c214d12248344a}{Save\+Data\+Async$<$ T $>$}} (string key, T data)
+\item 
+Task$<$ T $>$ \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_a4dfdfc020d339a0c583297cccb5377e4}{Load\+Data\+Async$<$ T $>$}} (string key)
+\item 
+void \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_af9ec3103551c128865f2e550fd4cd0c6}{Delete\+Data}} (string key)
+\item 
+bool \doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service_a6c0134f4572a08090cc1f714154bddb3}{Has\+Data}} (string key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试 
+
+\label{doc-func-members}
+\Hypertarget{interface_utopia_1_1_data_1_1_i_data_service_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{interface_utopia_1_1_data_1_1_i_data_service_af9ec3103551c128865f2e550fd4cd0c6}\index{Utopia.Data.IDataService@{Utopia.Data.IDataService}!DeleteData@{DeleteData}}
+\index{DeleteData@{DeleteData}!Utopia.Data.IDataService@{Utopia.Data.IDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteData()}{DeleteData()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_data_1_1_i_data_service_af9ec3103551c128865f2e550fd4cd0c6} 
+void Utopia.\+Data.\+IData\+Service.\+Delete\+Data (\begin{DoxyParamCaption}\item[{string}]{key}{}\end{DoxyParamCaption})}
+
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_aca871f7502add0997179d3cf068571ce}{Utopia.\+Data.\+Data\+Manager}} 内被实现.
+
+\Hypertarget{interface_utopia_1_1_data_1_1_i_data_service_a6c0134f4572a08090cc1f714154bddb3}\index{Utopia.Data.IDataService@{Utopia.Data.IDataService}!HasData@{HasData}}
+\index{HasData@{HasData}!Utopia.Data.IDataService@{Utopia.Data.IDataService}}
+\doxysubsubsection{\texorpdfstring{HasData()}{HasData()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_data_1_1_i_data_service_a6c0134f4572a08090cc1f714154bddb3} 
+bool Utopia.\+Data.\+IData\+Service.\+Has\+Data (\begin{DoxyParamCaption}\item[{string}]{key}{}\end{DoxyParamCaption})}
+
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a330855bc46b8221f200c89f700385a62}{Utopia.\+Data.\+Data\+Manager}} 内被实现.
+
+\Hypertarget{interface_utopia_1_1_data_1_1_i_data_service_a4dfdfc020d339a0c583297cccb5377e4}\index{Utopia.Data.IDataService@{Utopia.Data.IDataService}!LoadDataAsync$<$ T $>$@{LoadDataAsync$<$ T $>$}}
+\index{LoadDataAsync$<$ T $>$@{LoadDataAsync$<$ T $>$}!Utopia.Data.IDataService@{Utopia.Data.IDataService}}
+\doxysubsubsection{\texorpdfstring{LoadDataAsync$<$ T $>$()}{LoadDataAsync< T >()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_data_1_1_i_data_service_a4dfdfc020d339a0c583297cccb5377e4} 
+Task$<$ T $>$ Utopia.\+Data.\+IData\+Service.\+Load\+Data\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key}{}\end{DoxyParamCaption})}
+
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_ae91297191be131c3ec8571c103de44a5}{Utopia.\+Data.\+Data\+Manager}} 内被实现.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\Hypertarget{interface_utopia_1_1_data_1_1_i_data_service_aec33fc40b4e526c450c214d12248344a}\index{Utopia.Data.IDataService@{Utopia.Data.IDataService}!SaveDataAsync$<$ T $>$@{SaveDataAsync$<$ T $>$}}
+\index{SaveDataAsync$<$ T $>$@{SaveDataAsync$<$ T $>$}!Utopia.Data.IDataService@{Utopia.Data.IDataService}}
+\doxysubsubsection{\texorpdfstring{SaveDataAsync$<$ T $>$()}{SaveDataAsync< T >()}}
+{\footnotesize\ttfamily \label{interface_utopia_1_1_data_1_1_i_data_service_aec33fc40b4e526c450c214d12248344a} 
+Task Utopia.\+Data.\+IData\+Service.\+Save\+Data\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key}{, }\item[{T}]{data}{}\end{DoxyParamCaption})}
+
+
+
+在 \doxymbox{\hyperlink{class_utopia_1_1_data_1_1_data_manager_a7b7d2d5c5f51047dbc701f25a96c5917}{Utopia.\+Data.\+Data\+Manager}} 内被实现.
+
+\begin{Desc}
+\item[类型限制]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+
+
+该接口的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Base/\+\+Data/\+\doxymbox{\hyperlink{_data_manager_8cs}{Data\+Manager.\+cs}}\end{DoxyCompactItemize}

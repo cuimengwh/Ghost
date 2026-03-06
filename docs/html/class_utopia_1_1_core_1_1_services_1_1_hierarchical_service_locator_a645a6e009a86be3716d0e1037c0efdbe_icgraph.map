@@ -1,0 +1,9 @@
+<map id="Utopia.Core.Services.HierarchicalServiceLocator.TryGet" name="Utopia.Core.Services.HierarchicalServiceLocator.TryGet">
+<area shape="rect" id="Node000001" title="核心查找方法：按照分层顺序查找指定类型的服务。" alt="" coords="338,72,557,115"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#ae8143b5f603bf92135d78a6a894f4523" title="获取指定类型的服务实例（强制版本）。 按照&quot;当前层级 → 父级 → 父级的父级...&quot;的顺序查找服务。" alt="" coords="38,5,257,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="331,69,247,51,247,46,336,67"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#a2710f9477f0d8f931ede8c575e86d861" title="检查整个层级链中是否存在指定类型的服务。" alt="" coords="5,72,290,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="319,94,291,96,290,91,324,93"/>
+<area shape="rect" id="Node000004" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#a61e03b24b959603aae542a9ad39c2e85" title="尝试获取指定类型的服务实例（安全版本）。" alt="" coords="38,139,257,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="336,118,247,141,246,135,331,119"/>
+</map>

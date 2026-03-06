@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Event.EventManager.EventHandlerList.GetInvocationList" name="Utopia.Core.Event.EventManager.EventHandlerList.GetInvocationList">
+<area shape="rect" id="Node000001" title="获取当前应该被调用的处理器列表。 如果在发布过程中，返回 Handlers 的快照；否则直接返回 Handlers。" alt="" coords="275,5,502,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_event_1_1_event_manager.html#a6a7174ddce49cc96acc49c4c5bd292e2" title="发布指定类型的事件，所有订阅者将收到此事件数据。 发布过程是线程安全的，并且会捕获单个处理器抛出的异常，避免影响其他处理器。" alt="" coords="5,5,227,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,27,227,29,227,24,262,27"/>
+</map>

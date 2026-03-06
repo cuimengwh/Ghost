@@ -1,0 +1,5 @@
+<map id="Utopia.GameLogic.NPC.ResourcesNPCConfigLoader" name="Utopia.GameLogic.NPC.ResourcesNPCConfigLoader">
+<area shape="rect" id="Node000001" title="基于Unity Resources系统的NPC配置加载器 继承自MonoBehaviour，可作为组件附加到游戏对象 实现INPCConfigLoader接口，提供具体的加载逻辑" alt="" coords="5,80,235,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="64,5,176,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,46,122,81,118,79,118,50"/>
+</map>

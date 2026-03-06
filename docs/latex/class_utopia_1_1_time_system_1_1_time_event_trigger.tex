@@ -1,0 +1,464 @@
+\doxysection{Utopia.\+Time\+System.\+Time\+Event\+Trigger类 参考}
+\hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger}{}\label{class_utopia_1_1_time_system_1_1_time_event_trigger}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+
+
+时间事件触发器 -\/ 定义事件触发的条件和规则  
+
+
+
+
+Utopia.\+Time\+System.\+Time\+Event\+Trigger 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50}{Trigger\+Type}} \{ \newline
+\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50adfc67de6b6e06d8b4e6e790a3234d184}{Specific\+Date\+Time}}
+, \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3}{Daily}}
+, \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a9030e39f00132d583da4122532e509e9}{Monthly}}
+, \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50acf5ea7953dc47105e0eb179dbefaaf46}{Yearly}}
+, \newline
+\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a0f094b17d6d26c3925824223a3c97fdd}{Time\+Of\+Day}}
+, \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a783d39033cf6121820228c9259b8e25c}{Season\+Change}}
+, \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a25b324b1f4067f72a0f321378a53ea86}{Month\+Change}}
+ \}
+\begin{DoxyCompactList}\small\item\em 触发类型枚举 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403}{Is\+Condition\+Met}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} current\+Date\+Time, int current\+Total\+Days)
+\begin{DoxyCompactList}\small\item\em 检查是否满足触发条件 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ab2b589aad59b9ed89c37b0cacec6f952}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em 重置触发状态 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50}{Trigger\+Type}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ab51a66be5e01aa3dddb2ae1d7308b600}{trigger\+Type}} = \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3}{Trigger\+Type.\+Daily}}
+\item 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a71330aab25f47da6a2fa7336b8656147}{specific\+Date\+Time}} = new \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}(1, 1, 1, 0.\+5f)
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a0d4aee41c757c1f0963f6c7d230668dc}{daily\+Time}} = 0.\+5f
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ab0ad991ad80a96433e8ca4cdfda95104}{daily\+Time\+Tolerance}} = 0.\+01f
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ace27da1d12171d6df160f773f66f5c34}{day\+Of\+Month}} = 1
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a512ca1ab7337561f1cbd1d8e46b1603f}{monthly\+Time}} = 0.\+5f
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ac69c447064a22d17573823baace2f56f}{monthly\+Time\+Tolerance}} = 0.\+01f
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_acb9fd7ed9d4ec114a4e7a89d856fd57f}{month\+Of\+Year}} = 1
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ac1fc807069fffe059303d9c26f8d8b8c}{day\+Of\+Year}} = 1
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a15c42c5313783ac8d91799a83add9e88}{yearly\+Time}} = 0.\+5f
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a03b07699204a966bcf525ef9d98a9ad7}{yearly\+Time\+Tolerance}} = 0.\+01f
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a0de60a04adc8a89f9f6ee5c6c1a42f39}{time\+Of\+Day}} = 0.\+5f
+\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ab66f741a6f598bac281d70732299200f}{time\+Of\+Day\+Tolerance}} = 0.\+01f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151}{Check\+Specific\+Date\+Time}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} current\+Date\+Time, int current\+Total\+Days)
+\begin{DoxyCompactList}\small\item\em 检查特定日期时间条件 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e}{Check\+Daily}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} current\+Date\+Time, int current\+Total\+Days)
+\begin{DoxyCompactList}\small\item\em 检查每日触发条件 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0}{Check\+Monthly}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} current\+Date\+Time, int current\+Total\+Days)
+\begin{DoxyCompactList}\small\item\em 检查每月触发条件 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a}{Check\+Yearly}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} current\+Date\+Time, int current\+Total\+Days)
+\begin{DoxyCompactList}\small\item\em 检查每年触发条件 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800}{Check\+Time\+Of\+Day}} (\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} current\+Date\+Time, int current\+Total\+Days)
+\begin{DoxyCompactList}\small\item\em 检查每天特定时间触发条件 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984}{Check\+Season\+Change}} (int current\+Month)
+\begin{DoxyCompactList}\small\item\em 检查季节变化触发条件 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3}{Check\+Month\+Change}} (int current\+Month)
+\begin{DoxyCompactList}\small\item\em 检查月份变化触发条件 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d}{Get\+Season\+For\+Month}} (int month)
+\begin{DoxyCompactList}\small\item\em 根据月份获取对应的季节 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a5f5837b4af2ef6c9682e27c4ebcef9e5}{has\+Triggered}} = false
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_affa4410aec15748e2208bd4f4df3b086}{last\+Trigger\+Total\+Days}} = -\/1
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a959cf939a6556f7201b1414695cc47e4}{last\+Trigger\+Month}} = -\/1
+\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a678014600b1a833568744f7bb2c5a36c}{last\+Trigger\+Year}} = -\/1
+\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_ac34f5fa18a0135018849f40910c31aef}{last\+Trigger\+Season}} = \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a38008dd81c2f4d7985ecf6e0ce8af1d1}{Season.\+Spring}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+时间事件触发器 -\/ 定义事件触发的条件和规则 
+
+\label{doc-enum-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_doc-enum-members}
+\doxysubsection{成员枚举类型说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!TriggerType@{TriggerType}}
+\index{TriggerType@{TriggerType}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{TriggerType}{TriggerType}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50} 
+enum \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50}{Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Trigger\+Type}}}
+
+
+
+触发类型枚举 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SpecificDateTime@{SpecificDateTime}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!SpecificDateTime@{SpecificDateTime}}
+}\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50adfc67de6b6e06d8b4e6e790a3234d184}\label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50adfc67de6b6e06d8b4e6e790a3234d184} 
+Specific\+Date\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daily@{Daily}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!Daily@{Daily}}
+}\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3}\label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3} 
+Daily&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Monthly@{Monthly}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!Monthly@{Monthly}}
+}\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a9030e39f00132d583da4122532e509e9}\label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a9030e39f00132d583da4122532e509e9} 
+Monthly&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yearly@{Yearly}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!Yearly@{Yearly}}
+}\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50acf5ea7953dc47105e0eb179dbefaaf46}\label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50acf5ea7953dc47105e0eb179dbefaaf46} 
+Yearly&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TimeOfDay@{TimeOfDay}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!TimeOfDay@{TimeOfDay}}
+}\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a0f094b17d6d26c3925824223a3c97fdd}\label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a0f094b17d6d26c3925824223a3c97fdd} 
+Time\+Of\+Day&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SeasonChange@{SeasonChange}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!SeasonChange@{SeasonChange}}
+}\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a783d39033cf6121820228c9259b8e25c}\label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a783d39033cf6121820228c9259b8e25c} 
+Season\+Change&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MonthChange@{MonthChange}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!MonthChange@{MonthChange}}
+}\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a25b324b1f4067f72a0f321378a53ea86}\label{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50a25b324b1f4067f72a0f321378a53ea86} 
+Month\+Change&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!CheckDaily@{CheckDaily}}
+\index{CheckDaily@{CheckDaily}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{CheckDaily()}{CheckDaily()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Check\+Daily (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}}]{current\+Date\+Time}{, }\item[{int}]{current\+Total\+Days}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查每日触发条件 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_aa9b470b1eb171df9324218142ea6d56e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!CheckMonthChange@{CheckMonthChange}}
+\index{CheckMonthChange@{CheckMonthChange}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{CheckMonthChange()}{CheckMonthChange()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Check\+Month\+Change (\begin{DoxyParamCaption}\item[{int}]{current\+Month}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查月份变化触发条件 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a6bd6fccd85ae6717ddf5a2aba5059dd3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!CheckMonthly@{CheckMonthly}}
+\index{CheckMonthly@{CheckMonthly}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{CheckMonthly()}{CheckMonthly()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Check\+Monthly (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}}]{current\+Date\+Time}{, }\item[{int}]{current\+Total\+Days}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查每月触发条件 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a3b2b1006d3c1ebf4884f3092ac37afd0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!CheckSeasonChange@{CheckSeasonChange}}
+\index{CheckSeasonChange@{CheckSeasonChange}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{CheckSeasonChange()}{CheckSeasonChange()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Check\+Season\+Change (\begin{DoxyParamCaption}\item[{int}]{current\+Month}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查季节变化触发条件 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e3f05cc252a911d39fe726215b06984_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!CheckSpecificDateTime@{CheckSpecificDateTime}}
+\index{CheckSpecificDateTime@{CheckSpecificDateTime}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{CheckSpecificDateTime()}{CheckSpecificDateTime()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Check\+Specific\+Date\+Time (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}}]{current\+Date\+Time}{, }\item[{int}]{current\+Total\+Days}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查特定日期时间条件 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a43a6044c485f73b8c460171a439db151_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!CheckTimeOfDay@{CheckTimeOfDay}}
+\index{CheckTimeOfDay@{CheckTimeOfDay}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{CheckTimeOfDay()}{CheckTimeOfDay()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Check\+Time\+Of\+Day (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}}]{current\+Date\+Time}{, }\item[{int}]{current\+Total\+Days}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查每天特定时间触发条件 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a46e4a4407cc2ab3d03a1da02b8bae800_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!CheckYearly@{CheckYearly}}
+\index{CheckYearly@{CheckYearly}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{CheckYearly()}{CheckYearly()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Check\+Yearly (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}}]{current\+Date\+Time}{, }\item[{int}]{current\+Total\+Days}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查每年触发条件 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a341fdd3d49006d59e077fd431ee4291a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!GetSeasonForMonth@{GetSeasonForMonth}}
+\index{GetSeasonForMonth@{GetSeasonForMonth}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{GetSeasonForMonth()}{GetSeasonForMonth()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Get\+Season\+For\+Month (\begin{DoxyParamCaption}\item[{int}]{month}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+根据月份获取对应的季节 
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_ad42fbc5a41f99104046dbd3aa0a1103d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!IsConditionMet@{IsConditionMet}}
+\index{IsConditionMet@{IsConditionMet}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{IsConditionMet()}{IsConditionMet()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Is\+Condition\+Met (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}}]{current\+Date\+Time}{, }\item[{int}]{current\+Total\+Days}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查是否满足触发条件 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+Date\+Time} & 当前自定义日期时间\\
+\hline
+{\em current\+Total\+Days} & 当前总天数\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否满足条件
+\end{DoxyReturn}
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_event_trigger_a6e57ba87dff9cb48b0a14990965a0403_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ab2b589aad59b9ed89c37b0cacec6f952}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!Reset@{Reset}}
+\index{Reset@{Reset}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ab2b589aad59b9ed89c37b0cacec6f952} 
+void Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+重置触发状态 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a0d4aee41c757c1f0963f6c7d230668dc}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!dailyTime@{dailyTime}}
+\index{dailyTime@{dailyTime}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{dailyTime}{dailyTime}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a0d4aee41c757c1f0963f6c7d230668dc} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+daily\+Time = 0.\+5f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ab0ad991ad80a96433e8ca4cdfda95104}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!dailyTimeTolerance@{dailyTimeTolerance}}
+\index{dailyTimeTolerance@{dailyTimeTolerance}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{dailyTimeTolerance}{dailyTimeTolerance}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ab0ad991ad80a96433e8ca4cdfda95104} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+daily\+Time\+Tolerance = 0.\+01f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ace27da1d12171d6df160f773f66f5c34}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!dayOfMonth@{dayOfMonth}}
+\index{dayOfMonth@{dayOfMonth}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{dayOfMonth}{dayOfMonth}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ace27da1d12171d6df160f773f66f5c34} 
+int Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+day\+Of\+Month = 1}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ac1fc807069fffe059303d9c26f8d8b8c}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!dayOfYear@{dayOfYear}}
+\index{dayOfYear@{dayOfYear}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{dayOfYear}{dayOfYear}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ac1fc807069fffe059303d9c26f8d8b8c} 
+int Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+day\+Of\+Year = 1}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a5f5837b4af2ef6c9682e27c4ebcef9e5}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!hasTriggered@{hasTriggered}}
+\index{hasTriggered@{hasTriggered}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{hasTriggered}{hasTriggered}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a5f5837b4af2ef6c9682e27c4ebcef9e5} 
+bool Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+has\+Triggered = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a959cf939a6556f7201b1414695cc47e4}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!lastTriggerMonth@{lastTriggerMonth}}
+\index{lastTriggerMonth@{lastTriggerMonth}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{lastTriggerMonth}{lastTriggerMonth}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a959cf939a6556f7201b1414695cc47e4} 
+int Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+last\+Trigger\+Month = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ac34f5fa18a0135018849f40910c31aef}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!lastTriggerSeason@{lastTriggerSeason}}
+\index{lastTriggerSeason@{lastTriggerSeason}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{lastTriggerSeason}{lastTriggerSeason}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ac34f5fa18a0135018849f40910c31aef} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+last\+Trigger\+Season = \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541a38008dd81c2f4d7985ecf6e0ce8af1d1}{Season.\+Spring}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_affa4410aec15748e2208bd4f4df3b086}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!lastTriggerTotalDays@{lastTriggerTotalDays}}
+\index{lastTriggerTotalDays@{lastTriggerTotalDays}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{lastTriggerTotalDays}{lastTriggerTotalDays}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_affa4410aec15748e2208bd4f4df3b086} 
+int Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+last\+Trigger\+Total\+Days = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a678014600b1a833568744f7bb2c5a36c}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!lastTriggerYear@{lastTriggerYear}}
+\index{lastTriggerYear@{lastTriggerYear}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{lastTriggerYear}{lastTriggerYear}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a678014600b1a833568744f7bb2c5a36c} 
+int Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+last\+Trigger\+Year = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a512ca1ab7337561f1cbd1d8e46b1603f}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!monthlyTime@{monthlyTime}}
+\index{monthlyTime@{monthlyTime}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{monthlyTime}{monthlyTime}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a512ca1ab7337561f1cbd1d8e46b1603f} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+monthly\+Time = 0.\+5f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ac69c447064a22d17573823baace2f56f}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!monthlyTimeTolerance@{monthlyTimeTolerance}}
+\index{monthlyTimeTolerance@{monthlyTimeTolerance}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{monthlyTimeTolerance}{monthlyTimeTolerance}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ac69c447064a22d17573823baace2f56f} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+monthly\+Time\+Tolerance = 0.\+01f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_acb9fd7ed9d4ec114a4e7a89d856fd57f}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!monthOfYear@{monthOfYear}}
+\index{monthOfYear@{monthOfYear}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{monthOfYear}{monthOfYear}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_acb9fd7ed9d4ec114a4e7a89d856fd57f} 
+int Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+month\+Of\+Year = 1}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a71330aab25f47da6a2fa7336b8656147}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!specificDateTime@{specificDateTime}}
+\index{specificDateTime@{specificDateTime}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{specificDateTime}{specificDateTime}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a71330aab25f47da6a2fa7336b8656147} 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+specific\+Date\+Time = new \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}(1, 1, 1, 0.\+5f)}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a0de60a04adc8a89f9f6ee5c6c1a42f39}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!timeOfDay@{timeOfDay}}
+\index{timeOfDay@{timeOfDay}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{timeOfDay}{timeOfDay}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a0de60a04adc8a89f9f6ee5c6c1a42f39} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+time\+Of\+Day = 0.\+5f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ab66f741a6f598bac281d70732299200f}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!timeOfDayTolerance@{timeOfDayTolerance}}
+\index{timeOfDayTolerance@{timeOfDayTolerance}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{timeOfDayTolerance}{timeOfDayTolerance}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ab66f741a6f598bac281d70732299200f} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+time\+Of\+Day\+Tolerance = 0.\+01f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_ab51a66be5e01aa3dddb2ae1d7308b600}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!triggerType@{triggerType}}
+\index{triggerType@{triggerType}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{triggerType}{triggerType}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_ab51a66be5e01aa3dddb2ae1d7308b600} 
+\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50}{Trigger\+Type}} Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+trigger\+Type = \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event_trigger_a28a01b8ec2f60b1e2d243dacb2cedb50ac512b685438f41daa7386329a3b8f8d3}{Trigger\+Type.\+Daily}}}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a15c42c5313783ac8d91799a83add9e88}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!yearlyTime@{yearlyTime}}
+\index{yearlyTime@{yearlyTime}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{yearlyTime}{yearlyTime}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a15c42c5313783ac8d91799a83add9e88} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+yearly\+Time = 0.\+5f}
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_event_trigger_a03b07699204a966bcf525ef9d98a9ad7}\index{Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}!yearlyTimeTolerance@{yearlyTimeTolerance}}
+\index{yearlyTimeTolerance@{yearlyTimeTolerance}!Utopia.TimeSystem.TimeEventTrigger@{Utopia.TimeSystem.TimeEventTrigger}}
+\doxysubsubsection{\texorpdfstring{yearlyTimeTolerance}{yearlyTimeTolerance}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_event_trigger_a03b07699204a966bcf525ef9d98a9ad7} 
+float Utopia.\+Time\+System.\+Time\+Event\+Trigger.\+yearly\+Time\+Tolerance = 0.\+01f}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Tool/\+\doxymbox{\hyperlink{_time_event_8cs}{Time\+Event.\+cs}}\end{DoxyCompactItemize}

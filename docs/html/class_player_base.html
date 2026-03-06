@@ -1,0 +1,1062 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: PlayerBase类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_player_base.html','','class_player_base-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PlayerBase类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 PlayerBase 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base__inherit__graph.png" border="0" usemap="#a_player_base_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_player_base_inherit__map" id="a_player_base_inherit__map">
+<area shape="rect" title=" " alt="" coords="97,80,185,107"/>
+<area shape="rect" href="class_player_controller.html" title="玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为" alt="" coords="84,155,198,181"/>
+<area shape="poly" title=" " alt="" coords="143,121,143,156,139,153,139,124"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="86,40,130,79,125,80,86,45"/>
+<area shape="rect" href="interface_player_base_1_1_i_interactable.html" title="可交互接口定义" alt="" coords="140,5,304,32"/>
+<area shape="poly" title=" " alt="" coords="199,41,157,82,153,78,195,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+PlayerBase 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base__coll__graph.png" border="0" usemap="#a_player_base_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_player_base_coll__map" id="a_player_base_coll__map">
+<area shape="rect" title=" " alt="" coords="97,80,185,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="87,40,130,79,125,80,85,45"/>
+<area shape="rect" href="interface_player_base_1_1_i_interactable.html" title="可交互接口定义" alt="" coords="140,5,304,32"/>
+<area shape="poly" title=" " alt="" coords="199,42,156,82,154,77,194,43"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:IInteractable" id="r_IInteractable"><td class="memItemLeft">interface &#160;</td><td class="memItemRight"><a class="el" href="interface_player_base_1_1_i_interactable.html">IInteractable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">可交互接口定义  <a href="interface_player_base_1_1_i_interactable.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a9571567d8a69eb7c3b725331a8638d2b" id="r_a9571567d8a69eb7c3b725331a8638d2b"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a9571567d8a69eb7c3b725331a8638d2b">CharacterPhysicalState</a> { <br />
+&#160;&#160;<a class="el" href="#a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c">Idle</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1">Walking</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09">Running</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee">Jumping</a>
+, <br />
+&#160;&#160;<a class="el" href="#a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b">Sleeping</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c">fainting</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a">Falling</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b">Attacking</a>
+, <br />
+&#160;&#160;<a class="el" href="#a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e">Planting</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2">Felling</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76">Interacting</a>
+, <a class="el" href="#a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617">Dead</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a9571567d8a69eb7c3b725331a8638d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">角色物理状态枚举  <a href="#a9571567d8a69eb7c3b725331a8638d2b">更多...</a><br /></td></tr>
+<tr class="memitem:a3b1397acf413e2c9ef8ae46f7190512a" id="r_a3b1397acf413e2c9ef8ae46f7190512a"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a3b1397acf413e2c9ef8ae46f7190512a">MovementType</a> { <br />
+&#160;&#160;<a class="el" href="#a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62">Walk</a>
+, <a class="el" href="#a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d">Run</a>
+, <a class="el" href="#a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367">squat</a>
+, <a class="el" href="#a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d">Swim</a>
+, <br />
+&#160;&#160;<a class="el" href="#a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51">Fly</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a3b1397acf413e2c9ef8ae46f7190512a"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动方式枚举  <a href="#a3b1397acf413e2c9ef8ae46f7190512a">更多...</a><br /></td></tr>
+<tr class="memitem:a59a1d33a183c8e42daad79a58d659ceb" id="r_a59a1d33a183c8e42daad79a58d659ceb"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> { <a class="el" href="#a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9">Physical</a>
+, <a class="el" href="#a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57">Psychical</a>
+ }</td></tr>
+<tr class="memdesc:a59a1d33a183c8e42daad79a58d659ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在状态枚举  <a href="#a59a1d33a183c8e42daad79a58d659ceb">更多...</a><br /></td></tr>
+<tr class="memitem:a630f170c6c590c14d716f5de8f03c4df" id="r_a630f170c6c590c14d716f5de8f03c4df"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a630f170c6c590c14d716f5de8f03c4df">CharacterExecutableActions</a> { <a class="el" href="#a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d">nothing</a>
+ }</td></tr>
+<tr class="memdesc:a630f170c6c590c14d716f5de8f03c4df"><td class="mdescLeft">&#160;</td><td class="mdescRight">角色可执行动作枚举  <a href="#a630f170c6c590c14d716f5de8f03c4df">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ab069356c3f2e1b5d27b14d762830f777" id="r_ab069356c3f2e1b5d27b14d762830f777"><td class="memItemLeft"><a class="el" href="#a630f170c6c590c14d716f5de8f03c4df">CharacterExecutableActions</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab069356c3f2e1b5d27b14d762830f777">CurrentCharacterExecutableActions</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a60f864316d3516c1a091f1c12186e219" id="r_a60f864316d3516c1a091f1c12186e219"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a60f864316d3516c1a091f1c12186e219">ToggleExistenceState</a> ()</td></tr>
+<tr class="memdesc:a60f864316d3516c1a091f1c12186e219"><td class="mdescLeft">&#160;</td><td class="mdescRight">切换存在状态（物理/精神）  <br /></td></tr>
+<tr class="memitem:a6f1754b2027bac04811cf95489dff2be" id="r_a6f1754b2027bac04811cf95489dff2be"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6f1754b2027bac04811cf95489dff2be">ChangeExistenceState</a> (<a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> newState)</td></tr>
+<tr class="memdesc:a6f1754b2027bac04811cf95489dff2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">改变存在状态  <br /></td></tr>
+<tr class="memitem:a45746088ea41373c86537c8d2737af23" id="r_a45746088ea41373c86537c8d2737af23"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a45746088ea41373c86537c8d2737af23">EnterExistenceState</a> (<a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> state)</td></tr>
+<tr class="memdesc:a45746088ea41373c86537c8d2737af23"><td class="mdescLeft">&#160;</td><td class="mdescRight">进入特定存在状态时的处理  <br /></td></tr>
+<tr class="memitem:a17f55ff96f5d5f01ebfba1bb9e84826a" id="r_a17f55ff96f5d5f01ebfba1bb9e84826a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a17f55ff96f5d5f01ebfba1bb9e84826a">ExitExistenceState</a> (<a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> state)</td></tr>
+<tr class="memdesc:a17f55ff96f5d5f01ebfba1bb9e84826a"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出特定存在状态时的处理  <br /></td></tr>
+<tr class="memitem:a6995ce07d2f1c198e2341dee4015c83d" id="r_a6995ce07d2f1c198e2341dee4015c83d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6995ce07d2f1c198e2341dee4015c83d">GetInput</a> ()</td></tr>
+<tr class="memdesc:a6995ce07d2f1c198e2341dee4015c83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取玩家输入  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a4c22537ee829c34af77ff0eb5d594849" id="r_a4c22537ee829c34af77ff0eb5d594849"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4c22537ee829c34af77ff0eb5d594849">maxHealth</a> = 100f</td></tr>
+<tr class="memitem:a30958f090dd354fa915b3cbfb531c88b" id="r_a30958f090dd354fa915b3cbfb531c88b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a30958f090dd354fa915b3cbfb531c88b">health</a> = 100f</td></tr>
+<tr class="memitem:af4678b1e19baa4c55783f0ba254cafdc" id="r_af4678b1e19baa4c55783f0ba254cafdc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af4678b1e19baa4c55783f0ba254cafdc">maxEnergy</a> = 100f</td></tr>
+<tr class="memitem:a919ce2390bded1fb2ac78722b8ac6707" id="r_a919ce2390bded1fb2ac78722b8ac6707"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a919ce2390bded1fb2ac78722b8ac6707">energy</a> = 100f</td></tr>
+<tr class="memitem:a34969ed0207aa3b52ee7cdb445c37ed4" id="r_a34969ed0207aa3b52ee7cdb445c37ed4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a34969ed0207aa3b52ee7cdb445c37ed4">maxSpiritualNourishment</a> = 100f</td></tr>
+<tr class="memitem:abb3977ca382bb0f62e95dc49eedabddc" id="r_abb3977ca382bb0f62e95dc49eedabddc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#abb3977ca382bb0f62e95dc49eedabddc">spiritualNourishment</a> = 100f</td></tr>
+<tr class="memitem:aae05464ed0ec9861302c86c644afc072" id="r_aae05464ed0ec9861302c86c644afc072"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aae05464ed0ec9861302c86c644afc072">walkSpeed</a> = 5f</td></tr>
+<tr class="memitem:a301ffd2d3b8a7c027dd5923f3304df67" id="r_a301ffd2d3b8a7c027dd5923f3304df67"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a301ffd2d3b8a7c027dd5923f3304df67">runSpeed</a> = 10f</td></tr>
+<tr class="memitem:a1bf7af748d618da108ce5c76207c90f0" id="r_a1bf7af748d618da108ce5c76207c90f0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1bf7af748d618da108ce5c76207c90f0">squatSpeed</a> = 2.5f</td></tr>
+<tr class="memitem:afceb356fbaf39359459d33ab91559421" id="r_afceb356fbaf39359459d33ab91559421"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afceb356fbaf39359459d33ab91559421">jumpHeight</a> = 2f</td></tr>
+<tr class="memitem:a1a9152c04dd5812bb2e3907f51809e6a" id="r_a1a9152c04dd5812bb2e3907f51809e6a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1a9152c04dd5812bb2e3907f51809e6a">gravity</a> = -9.81f</td></tr>
+<tr class="memitem:a9f0028a1138247e16bbbc9dec534acc1" id="r_a9f0028a1138247e16bbbc9dec534acc1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9f0028a1138247e16bbbc9dec534acc1">rotationSpeed</a> = 10f</td></tr>
+<tr class="memitem:ad4350eef0c6bfa309455967e59ec7e15" id="r_ad4350eef0c6bfa309455967e59ec7e15"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad4350eef0c6bfa309455967e59ec7e15">horizontalInput</a></td></tr>
+<tr class="memitem:adbfc912504af2402d266f780befa3115" id="r_adbfc912504af2402d266f780befa3115"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#adbfc912504af2402d266f780befa3115">verticalInput</a></td></tr>
+<tr class="memitem:ad3334551ff379d6f2275f3b7f3140685" id="r_ad3334551ff379d6f2275f3b7f3140685"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad3334551ff379d6f2275f3b7f3140685">jumpInput</a></td></tr>
+<tr class="memitem:af634007f2c03f23b2579ec40944ac1fd" id="r_af634007f2c03f23b2579ec40944ac1fd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af634007f2c03f23b2579ec40944ac1fd">runInput</a></td></tr>
+<tr class="memitem:a1d7789c3512aabc9c4db16cb4ea835a7" id="r_a1d7789c3512aabc9c4db16cb4ea835a7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1d7789c3512aabc9c4db16cb4ea835a7">squatInput</a></td></tr>
+<tr class="memitem:a975c95832d33b41b9863296b2e47d611" id="r_a975c95832d33b41b9863296b2e47d611"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a975c95832d33b41b9863296b2e47d611">interactInput</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-events" class="groupheader"><a id="events" name="events"></a>
+事件</h2></td></tr>
+<tr class="memitem:a25aeae6d3d0ad3557d6a71f37590c31d" id="r_a25aeae6d3d0ad3557d6a71f37590c31d"><td class="memItemLeft">Action&lt; <a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a25aeae6d3d0ad3557d6a71f37590c31d">OnExistenceStateChanged</a></td></tr>
+<tr class="memdesc:a25aeae6d3d0ad3557d6a71f37590c31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在状态改变时触发的事件  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:af9702099aba99cc7c5c397eacd909c97" id="r_af9702099aba99cc7c5c397eacd909c97"><td class="memItemLeft">void IInteractable.&#160;</td><td class="memItemRight"><a class="el" href="#af9702099aba99cc7c5c397eacd909c97">Interact</a> (object interactor)</td></tr>
+<tr class="memdesc:af9702099aba99cc7c5c397eacd909c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">实现IInteractable接口的交互方法  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a21995afbdd86dbee833ad72fb922d49c" id="r_a21995afbdd86dbee833ad72fb922d49c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a21995afbdd86dbee833ad72fb922d49c">interactingEnergyDrain</a> = 1f</td></tr>
+<tr class="memitem:a033a31881ba90f50edda691df2903acc" id="r_a033a31881ba90f50edda691df2903acc"><td class="memItemLeft"><a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a033a31881ba90f50edda691df2903acc">currentExistenceState</a> = <a class="el" href="#a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9">ExistenceState.Physical</a></td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">成员枚举类型说明</h2>
+<a id="a630f170c6c590c14d716f5de8f03c4df" name="a630f170c6c590c14d716f5de8f03c4df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630f170c6c590c14d716f5de8f03c4df">&#9670;&#160;</a></span>CharacterExecutableActions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum PlayerBase.CharacterExecutableActions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>角色可执行动作枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d" name="a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d"></a>nothing&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9571567d8a69eb7c3b725331a8638d2b" name="a9571567d8a69eb7c3b725331a8638d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9571567d8a69eb7c3b725331a8638d2b">&#9670;&#160;</a></span>CharacterPhysicalState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum PlayerBase.CharacterPhysicalState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>角色物理状态枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c" name="a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1" name="a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1"></a>Walking&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09" name="a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09"></a>Running&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee" name="a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee"></a>Jumping&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b" name="a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b"></a>Sleeping&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c" name="a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c"></a>fainting&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a" name="a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a"></a>Falling&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b" name="a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b"></a>Attacking&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e" name="a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e"></a>Planting&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2" name="a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2"></a>Felling&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76" name="a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76"></a>Interacting&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617" name="a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617"></a>Dead&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a59a1d33a183c8e42daad79a58d659ceb" name="a59a1d33a183c8e42daad79a58d659ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a1d33a183c8e42daad79a58d659ceb">&#9670;&#160;</a></span>ExistenceState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum PlayerBase.ExistenceState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>存在状态枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9" name="a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9"></a>Physical&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57" name="a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57"></a>Psychical&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a3b1397acf413e2c9ef8ae46f7190512a" name="a3b1397acf413e2c9ef8ae46f7190512a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1397acf413e2c9ef8ae46f7190512a">&#9670;&#160;</a></span>MovementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum PlayerBase.MovementType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移动方式枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62" name="a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62"></a>Walk&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d" name="a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d"></a>Run&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367" name="a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367"></a>squat&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d" name="a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d"></a>Swim&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51" name="a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51"></a>Fly&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a6f1754b2027bac04811cf95489dff2be" name="a6f1754b2027bac04811cf95489dff2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1754b2027bac04811cf95489dff2be">&#9670;&#160;</a></span>ChangeExistenceState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerBase.ChangeExistenceState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a></td>          <td class="paramname"><span class="paramname"><em>newState</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>改变存在状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newState</td><td>目标状态</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base_a6f1754b2027bac04811cf95489dff2be_cgraph.png" border="0" usemap="#aclass_player_base_a6f1754b2027bac04811cf95489dff2be_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_base_a6f1754b2027bac04811cf95489dff2be_cgraph" id="aclass_player_base_a6f1754b2027bac04811cf95489dff2be_cgraph">
+<area shape="rect" title="改变存在状态" alt="" coords="5,39,201,81"/>
+<area shape="rect" href="class_player_base.html#a45746088ea41373c86537c8d2737af23" title="进入特定存在状态时的处理" alt="" coords="249,5,430,48"/>
+<area shape="poly" title=" " alt="" coords="200,44,236,41,231,42,202,49"/>
+<area shape="rect" href="class_player_base.html#a17f55ff96f5d5f01ebfba1bb9e84826a" title="退出特定存在状态时的处理" alt="" coords="253,72,426,115"/>
+<area shape="poly" title=" " alt="" coords="201,71,240,79,235,79,201,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base_a6f1754b2027bac04811cf95489dff2be_icgraph.png" border="0" usemap="#aclass_player_base_a6f1754b2027bac04811cf95489dff2be_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_base_a6f1754b2027bac04811cf95489dff2be_icgraph" id="aclass_player_base_a6f1754b2027bac04811cf95489dff2be_icgraph">
+<area shape="rect" title="改变存在状态" alt="" coords="242,5,437,48"/>
+<area shape="rect" href="class_player_base.html#a60f864316d3516c1a091f1c12186e219" title="切换存在状态（物理/精神）" alt="" coords="5,5,194,48"/>
+<area shape="poly" title=" " alt="" coords="224,27,194,29,194,24,229,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a45746088ea41373c86537c8d2737af23" name="a45746088ea41373c86537c8d2737af23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45746088ea41373c86537c8d2737af23">&#9670;&#160;</a></span>EnterExistenceState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerBase.EnterExistenceState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>进入特定存在状态时的处理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>要进入的状态</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base_a45746088ea41373c86537c8d2737af23_icgraph.png" border="0" usemap="#aclass_player_base_a45746088ea41373c86537c8d2737af23_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_base_a45746088ea41373c86537c8d2737af23_icgraph" id="aclass_player_base_a45746088ea41373c86537c8d2737af23_icgraph">
+<area shape="rect" title="进入特定存在状态时的处理" alt="" coords="485,5,666,48"/>
+<area shape="rect" href="class_player_base.html#a6f1754b2027bac04811cf95489dff2be" title="改变存在状态" alt="" coords="242,5,437,48"/>
+<area shape="poly" title=" " alt="" coords="467,27,438,29,437,24,472,27"/>
+<area shape="rect" href="class_player_base.html#a60f864316d3516c1a091f1c12186e219" title="切换存在状态（物理/精神）" alt="" coords="5,5,194,48"/>
+<area shape="poly" title=" " alt="" coords="224,27,194,29,194,24,229,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17f55ff96f5d5f01ebfba1bb9e84826a" name="a17f55ff96f5d5f01ebfba1bb9e84826a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17f55ff96f5d5f01ebfba1bb9e84826a">&#9670;&#160;</a></span>ExitExistenceState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerBase.ExitExistenceState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>退出特定存在状态时的处理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>要退出的状态</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a_icgraph.png" border="0" usemap="#aclass_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a_icgraph" id="aclass_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a_icgraph">
+<area shape="rect" title="退出特定存在状态时的处理" alt="" coords="485,5,658,48"/>
+<area shape="rect" href="class_player_base.html#a6f1754b2027bac04811cf95489dff2be" title="改变存在状态" alt="" coords="242,5,437,48"/>
+<area shape="poly" title=" " alt="" coords="467,27,438,29,437,24,472,27"/>
+<area shape="rect" href="class_player_base.html#a60f864316d3516c1a091f1c12186e219" title="切换存在状态（物理/精神）" alt="" coords="5,5,194,48"/>
+<area shape="poly" title=" " alt="" coords="224,27,194,29,194,24,229,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6995ce07d2f1c198e2341dee4015c83d" name="a6995ce07d2f1c198e2341dee4015c83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6995ce07d2f1c198e2341dee4015c83d">&#9670;&#160;</a></span>GetInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerBase.GetInput </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取玩家输入 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base_a6995ce07d2f1c198e2341dee4015c83d_icgraph.png" border="0" usemap="#aclass_player_base_a6995ce07d2f1c198e2341dee4015c83d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_base_a6995ce07d2f1c198e2341dee4015c83d_icgraph" id="aclass_player_base_a6995ce07d2f1c198e2341dee4015c83d_icgraph">
+<area shape="rect" title="获取玩家输入" alt="" coords="214,5,356,32"/>
+<area shape="rect" href="class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="195,19,166,21,166,16,200,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9702099aba99cc7c5c397eacd909c97" name="af9702099aba99cc7c5c397eacd909c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9702099aba99cc7c5c397eacd909c97">&#9670;&#160;</a></span>Interact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IInteractable. PlayerBase.Interact </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>interactor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现IInteractable接口的交互方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interactor</td><td>交互发起者</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_player_base_1_1_i_interactable.html#a5a3f535bd56f175d456ad89235d59de9">PlayerBase.IInteractable</a>.</p>
+
+</div>
+</div>
+<a id="a60f864316d3516c1a091f1c12186e219" name="a60f864316d3516c1a091f1c12186e219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f864316d3516c1a091f1c12186e219">&#9670;&#160;</a></span>ToggleExistenceState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerBase.ToggleExistenceState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>切换存在状态（物理/精神） </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_base_a60f864316d3516c1a091f1c12186e219_cgraph.png" border="0" usemap="#aclass_player_base_a60f864316d3516c1a091f1c12186e219_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_player_base_a60f864316d3516c1a091f1c12186e219_cgraph" id="aclass_player_base_a60f864316d3516c1a091f1c12186e219_cgraph">
+<area shape="rect" title="切换存在状态（物理/精神）" alt="" coords="5,39,194,81"/>
+<area shape="rect" href="class_player_base.html#a6f1754b2027bac04811cf95489dff2be" title="改变存在状态" alt="" coords="242,39,437,81"/>
+<area shape="poly" title=" " alt="" coords="194,57,229,60,224,60,195,63"/>
+<area shape="rect" href="class_player_base.html#a45746088ea41373c86537c8d2737af23" title="进入特定存在状态时的处理" alt="" coords="485,5,666,48"/>
+<area shape="poly" title=" " alt="" coords="437,44,472,41,467,42,438,49"/>
+<area shape="rect" href="class_player_base.html#a17f55ff96f5d5f01ebfba1bb9e84826a" title="退出特定存在状态时的处理" alt="" coords="489,72,662,115"/>
+<area shape="poly" title=" " alt="" coords="438,71,476,79,471,79,437,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ab069356c3f2e1b5d27b14d762830f777" name="ab069356c3f2e1b5d27b14d762830f777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab069356c3f2e1b5d27b14d762830f777">&#9670;&#160;</a></span>CurrentCharacterExecutableActions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a630f170c6c590c14d716f5de8f03c4df">CharacterExecutableActions</a> PlayerBase.CurrentCharacterExecutableActions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a033a31881ba90f50edda691df2903acc" name="a033a31881ba90f50edda691df2903acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033a31881ba90f50edda691df2903acc">&#9670;&#160;</a></span>currentExistenceState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a> PlayerBase.currentExistenceState = <a class="el" href="#a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9">ExistenceState.Physical</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a919ce2390bded1fb2ac78722b8ac6707" name="a919ce2390bded1fb2ac78722b8ac6707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919ce2390bded1fb2ac78722b8ac6707">&#9670;&#160;</a></span>energy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.energy = 100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a9152c04dd5812bb2e3907f51809e6a" name="a1a9152c04dd5812bb2e3907f51809e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9152c04dd5812bb2e3907f51809e6a">&#9670;&#160;</a></span>gravity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.gravity = -9.81f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30958f090dd354fa915b3cbfb531c88b" name="a30958f090dd354fa915b3cbfb531c88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30958f090dd354fa915b3cbfb531c88b">&#9670;&#160;</a></span>health</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.health = 100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4350eef0c6bfa309455967e59ec7e15" name="ad4350eef0c6bfa309455967e59ec7e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4350eef0c6bfa309455967e59ec7e15">&#9670;&#160;</a></span>horizontalInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.horizontalInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21995afbdd86dbee833ad72fb922d49c" name="a21995afbdd86dbee833ad72fb922d49c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21995afbdd86dbee833ad72fb922d49c">&#9670;&#160;</a></span>interactingEnergyDrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.interactingEnergyDrain = 1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a975c95832d33b41b9863296b2e47d611" name="a975c95832d33b41b9863296b2e47d611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975c95832d33b41b9863296b2e47d611">&#9670;&#160;</a></span>interactInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerBase.interactInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afceb356fbaf39359459d33ab91559421" name="afceb356fbaf39359459d33ab91559421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afceb356fbaf39359459d33ab91559421">&#9670;&#160;</a></span>jumpHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.jumpHeight = 2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3334551ff379d6f2275f3b7f3140685" name="ad3334551ff379d6f2275f3b7f3140685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3334551ff379d6f2275f3b7f3140685">&#9670;&#160;</a></span>jumpInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerBase.jumpInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4678b1e19baa4c55783f0ba254cafdc" name="af4678b1e19baa4c55783f0ba254cafdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4678b1e19baa4c55783f0ba254cafdc">&#9670;&#160;</a></span>maxEnergy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.maxEnergy = 100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c22537ee829c34af77ff0eb5d594849" name="a4c22537ee829c34af77ff0eb5d594849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c22537ee829c34af77ff0eb5d594849">&#9670;&#160;</a></span>maxHealth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.maxHealth = 100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34969ed0207aa3b52ee7cdb445c37ed4" name="a34969ed0207aa3b52ee7cdb445c37ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34969ed0207aa3b52ee7cdb445c37ed4">&#9670;&#160;</a></span>maxSpiritualNourishment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.maxSpiritualNourishment = 100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f0028a1138247e16bbbc9dec534acc1" name="a9f0028a1138247e16bbbc9dec534acc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0028a1138247e16bbbc9dec534acc1">&#9670;&#160;</a></span>rotationSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.rotationSpeed = 10f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af634007f2c03f23b2579ec40944ac1fd" name="af634007f2c03f23b2579ec40944ac1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af634007f2c03f23b2579ec40944ac1fd">&#9670;&#160;</a></span>runInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerBase.runInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a301ffd2d3b8a7c027dd5923f3304df67" name="a301ffd2d3b8a7c027dd5923f3304df67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a301ffd2d3b8a7c027dd5923f3304df67">&#9670;&#160;</a></span>runSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.runSpeed = 10f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb3977ca382bb0f62e95dc49eedabddc" name="abb3977ca382bb0f62e95dc49eedabddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3977ca382bb0f62e95dc49eedabddc">&#9670;&#160;</a></span>spiritualNourishment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.spiritualNourishment = 100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d7789c3512aabc9c4db16cb4ea835a7" name="a1d7789c3512aabc9c4db16cb4ea835a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7789c3512aabc9c4db16cb4ea835a7">&#9670;&#160;</a></span>squatInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerBase.squatInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bf7af748d618da108ce5c76207c90f0" name="a1bf7af748d618da108ce5c76207c90f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf7af748d618da108ce5c76207c90f0">&#9670;&#160;</a></span>squatSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.squatSpeed = 2.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbfc912504af2402d266f780befa3115" name="adbfc912504af2402d266f780befa3115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbfc912504af2402d266f780befa3115">&#9670;&#160;</a></span>verticalInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.verticalInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae05464ed0ec9861302c86c644afc072" name="aae05464ed0ec9861302c86c644afc072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae05464ed0ec9861302c86c644afc072">&#9670;&#160;</a></span>walkSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerBase.walkSpeed = 5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-event-members" id="doc-event-members"></a><h2 id="header-doc-event-members" class="groupheader">事件说明</h2>
+<a id="a25aeae6d3d0ad3557d6a71f37590c31d" name="a25aeae6d3d0ad3557d6a71f37590c31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25aeae6d3d0ad3557d6a71f37590c31d">&#9670;&#160;</a></span>OnExistenceStateChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="#a59a1d33a183c8e42daad79a58d659ceb">ExistenceState</a>&gt; PlayerBase.OnExistenceStateChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>存在状态改变时触发的事件 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Player/<a class="el" href="_player_base_8cs.html">PlayerBase.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_player_base.html">PlayerBase</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

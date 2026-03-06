@@ -1,0 +1,7 @@
+<map id="Utopia.TimeSystem.TimeManager.RefreshDerivedStates" name="Utopia.TimeSystem.TimeManager.RefreshDerivedStates">
+<area shape="rect" id="Node000001" title="刷新所有派生状态（季节、时段）。" alt="" coords="5,39,230,81"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="278,5,502,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,44,265,42,259,43,231,49"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_manager.html#acaf8f75f48d7f972d62451c97645b2e5" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="278,72,502,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,71,265,78,259,78,230,76"/>
+</map>

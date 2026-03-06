@@ -1,0 +1,22 @@
+<map id="Utopia.TimeSystem.TimeManager" name="Utopia.TimeSystem.TimeManager">
+<area shape="rect" id="Node000001" title="TimeManager &#45; 负责游戏内时间的管理和事件系统" alt="" coords="967,136,1187,163"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="657,5,768,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="783,32,822,41,884,53,944,71,1007,102,1058,136,1053,135,1004,107,942,76,882,58,821,47,783,38"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="650,56,775,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="790,73,865,83,943,99,997,115,1045,136,1040,135,995,120,942,104,864,88,790,79"/>
+<area shape="rect" id="Node000004" href="$interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试" alt="" coords="627,107,798,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="814,125,969,140,964,141,814,131"/>
+<area shape="rect" id="Node000005" href="$interface_utopia_1_1_core_1_1_event_1_1_i_event_manager.html" title="事件管理器行为接口。 定义了事件系统的核心操作：订阅、取消订阅、发布、查询与清理。 实现此接口的类应保证线程安全（建议使用锁机制）。" alt="" coords="627,157,798,200"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="813,173,942,165,987,163,982,164,943,171,814,179"/>
+<area shape="rect" id="Node000006" href="$class_utopia_1_1_time_system_1_1_time_settings.html" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统" alt="" coords="603,224,822,251"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="837,222,942,201,998,182,1045,164,1050,162,1000,187,943,207,838,228"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="312,197,429,224"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="445,214,605,228,600,229,445,219"/>
+<area shape="rect" id="Node000008" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="277,263,464,305"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="480,296,556,301,642,303,733,298,821,284,893,260,961,225,1017,190,1056,164,1061,162,1020,194,963,230,895,265,822,289,733,304,642,308,556,307,480,301"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="480,267,579,253,610,252,616,251,580,259,480,272"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,245,228,272"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="243,269,279,274,274,275,243,274"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="11,296,222,323"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="237,295,279,293,274,294,238,300"/>
+</map>

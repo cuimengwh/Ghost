@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.GameLogic.NPC.NPCManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html','','class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.GameLogic.NPC.NPCManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>NPC管理器 NPC系统的核心实现类，负责：  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Utopia.GameLogic.NPC.NPCManager 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager__inherit__graph.png" border="0" usemap="#a_utopia_8_game_logic_8_n_p_c_8_n_p_c_manager_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_utopia_8_game_logic_8_n_p_c_8_n_p_c_manager_inherit__map" id="a_utopia_8_game_logic_8_n_p_c_8_n_p_c_manager_inherit__map">
+<area shape="rect" title="NPC管理器 NPC系统的核心实现类，负责：" alt="" coords="38,80,284,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="92,39,146,79,141,80,90,44"/>
+<area shape="rect" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html" title="NPC服务接口 提供NPC系统的核心服务功能，统一管理NPC的配置和状态数据 作为其他系统与NPC数据交互的统一入口" alt="" coords="141,5,384,32"/>
+<area shape="poly" title=" " alt="" coords="235,41,180,82,178,77,230,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Utopia.GameLogic.NPC.NPCManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager__coll__graph.png" border="0" usemap="#a_utopia_8_game_logic_8_n_p_c_8_n_p_c_manager_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_game_logic_8_n_p_c_8_n_p_c_manager_coll__map" id="a_utopia_8_game_logic_8_n_p_c_8_n_p_c_manager_coll__map">
+<area shape="rect" title="NPC管理器 NPC系统的核心实现类，负责：" alt="" coords="405,85,650,112"/>
+<area shape="rect" title=" " alt="" coords="81,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="207,29,381,63,470,84,465,85,380,68,207,34"/>
+<area shape="rect" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html" title="NPC服务接口 提供NPC系统的核心服务功能，统一管理NPC的配置和状态数据 作为其他系统与NPC数据交互的统一入口" alt="" coords="15,56,258,83"/>
+<area shape="poly" title=" " alt="" coords="273,77,407,89,402,90,274,82"/>
+<area shape="rect" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader.html" title="NPC配置加载器接口 定义用于加载NPC配置的标准契约" alt="" coords="18,107,255,149"/>
+<area shape="poly" title=" " alt="" coords="270,122,380,115,429,112,423,113,381,120,271,127"/>
+<area shape="rect" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository.html" title="NPC状态数据的仓储接口 设计模式：仓储模式，分离数据访问与业务逻辑" alt="" coords="5,173,268,200"/>
+<area shape="poly" title=" " alt="" coords="282,168,380,149,441,130,492,113,497,112,443,136,381,155,283,174"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9c0871cbae7cb3d47b2dd94f581ae281" id="r_a9c0871cbae7cb3d47b2dd94f581ae281"><td class="memItemLeft">async void&#160;</td><td class="memItemRight"><a class="el" href="#a9c0871cbae7cb3d47b2dd94f581ae281">SaveAllNPCs</a> ()</td></tr>
+<tr class="memdesc:a9c0871cbae7cb3d47b2dd94f581ae281"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存所有NPC状态到持久化存储 将当前内存中的状态数据异步保存到文件或数据库 通常在以下时机调用：  <br /></td></tr>
+<tr class="memitem:af11bd7df509f8248dc1ebcc9c6442151" id="r_af11bd7df509f8248dc1ebcc9c6442151"><td class="memItemLeft">NPCData&#160;</td><td class="memItemRight"><a class="el" href="#af11bd7df509f8248dc1ebcc9c6442151">GetConfig</a> (string npcId)</td></tr>
+<tr class="memdesc:af11bd7df509f8248dc1ebcc9c6442151"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定NPC的配置数据 从配置缓存字典中查找，未找到时返回null  <br /></td></tr>
+<tr class="memitem:ac7441499682a9806d68081270ec5e5ec" id="r_ac7441499682a9806d68081270ec5e5ec"><td class="memItemLeft">NPCState&#160;</td><td class="memItemRight"><a class="el" href="#ac7441499682a9806d68081270ec5e5ec">GetState</a> (string npcId)</td></tr>
+<tr class="memdesc:ac7441499682a9806d68081270ec5e5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定NPC的运行时状态数据 从状态缓存字典中查找，未找到时返回null 注意：返回的是状态对象的引用，外部修改会影响缓存  <br /></td></tr>
+<tr class="memitem:a1b8ba8785e7573962d6f5187d967d019" id="r_a1b8ba8785e7573962d6f5187d967d019"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1b8ba8785e7573962d6f5187d967d019">UpdataState</a> (string npcId, NPCState newState)</td></tr>
+<tr class="memdesc:a1b8ba8785e7573962d6f5187d967d019"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新指定NPC的状态数据 将新的状态对象替换缓存中的旧状态 重要：此方法执行浅拷贝，调用者应确保传入状态对象不会被意外修改  <br /></td></tr>
+<tr class="memitem:a6a4ff44969458709fd9616ac72ed4b6e" id="r_a6a4ff44969458709fd9616ac72ed4b6e"><td class="memItemLeft">IEnumerable&lt; string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6a4ff44969458709fd9616ac72ed4b6e">GetAllNPCIds</a> ()</td></tr>
+<tr class="memdesc:a6a4ff44969458709fd9616ac72ed4b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有已加载NPC的ID列表 返回状态缓存字典的键集合 适用于遍历、筛选或批量操作  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a6f670d8dbc685f840c230f394b20b5b9" id="r_a6f670d8dbc685f840c230f394b20b5b9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f670d8dbc685f840c230f394b20b5b9">Start</a> ()</td></tr>
+<tr class="memdesc:a6f670d8dbc685f840c230f394b20b5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动初始化方法 在Unity GameObject激活后调用，执行以下操作：  <br /></td></tr>
+<tr class="memitem:ac0fc7998e02deaf2f4c7417c0405d734" id="r_ac0fc7998e02deaf2f4c7417c0405d734"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac0fc7998e02deaf2f4c7417c0405d734">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:ac0fc7998e02deaf2f4c7417c0405d734"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁清理方法 在Unity GameObject销毁前调用，确保状态数据被保存 防止游戏退出或场景切换时数据丢失  <br /></td></tr>
+<tr class="memitem:a423af91488b9c8ac20f28457984a1584" id="r_a423af91488b9c8ac20f28457984a1584"><td class="memItemLeft">async Task&#160;</td><td class="memItemRight"><a class="el" href="#a423af91488b9c8ac20f28457984a1584">InitializeSystemAsync</a> ()</td></tr>
+<tr class="memdesc:a423af91488b9c8ac20f28457984a1584"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步初始化NPC系统 执行NPC数据的完整加载流程：  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a88dc3f05fe19e25018c1ab949ee4a70a" id="r_a88dc3f05fe19e25018c1ab949ee4a70a"><td class="memItemLeft"><a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader.html">INPCConfigLoader</a>&#160;</td><td class="memItemRight"><a class="el" href="#a88dc3f05fe19e25018c1ab949ee4a70a">_configLoader</a></td></tr>
+<tr class="memdesc:a88dc3f05fe19e25018c1ab949ee4a70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">NPC配置加载器 通过服务定位器自动注入，负责从Resources等源加载NPC配置  <br /></td></tr>
+<tr class="memitem:a23c891e53d701d1cba4f8ed3c0553a17" id="r_a23c891e53d701d1cba4f8ed3c0553a17"><td class="memItemLeft"><a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository.html">INPCRepository</a>&#160;</td><td class="memItemRight"><a class="el" href="#a23c891e53d701d1cba4f8ed3c0553a17">_repository</a></td></tr>
+<tr class="memdesc:a23c891e53d701d1cba4f8ed3c0553a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">NPC数据仓库 通过服务定位器自动注入，负责NPC状态的持久化存储 处理数据的保存、加载等IO操作  <br /></td></tr>
+<tr class="memitem:a5a398a675271c55120930b1bdcd8ef6d" id="r_a5a398a675271c55120930b1bdcd8ef6d"><td class="memItemLeft">Dictionary&lt; string, NPCData &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5a398a675271c55120930b1bdcd8ef6d">_configCache</a> = new Dictionary&lt;string, NPCData&gt;()</td></tr>
+<tr class="memdesc:a5a398a675271c55120930b1bdcd8ef6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">NPC配置缓存字典 键：NPC的唯一标识符 (npcId) 值：对应的NPCData配置对象 用于快速查询NPC的静态配置，避免重复加载资源  <br /></td></tr>
+<tr class="memitem:aa79ede5021708563e426fa1fd8b8efe6" id="r_aa79ede5021708563e426fa1fd8b8efe6"><td class="memItemLeft">Dictionary&lt; string, NPCState &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa79ede5021708563e426fa1fd8b8efe6">_stateCache</a> = new Dictionary&lt;string, NPCState&gt;()</td></tr>
+<tr class="memdesc:aa79ede5021708563e426fa1fd8b8efe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">NPC状态缓存字典 键：NPC的唯一标识符 (npcId) 值：对应的NPCState状态对象 存储所有NPC的当前运行时状态，是系统的核心数据  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>NPC管理器 NPC系统的核心实现类，负责： </p>
+<ol type="1">
+<li>加载和管理NPC的静态配置数据</li>
+<li>加载、保存和管理NPC的运行时状态数据</li>
+<li>提供NPC数据的查询和更新接口</li>
+<li>协调配置数据和存档数据的合并</li>
+</ol>
+<p>实现单例模式（通过服务定位器），作为NPC系统的中央数据枢纽 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a6a4ff44969458709fd9616ac72ed4b6e" name="a6a4ff44969458709fd9616ac72ed4b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4ff44969458709fd9616ac72ed4b6e">&#9670;&#160;</a></span>GetAllNPCIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt; string &gt; Utopia.GameLogic.NPC.NPCManager.GetAllNPCIds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取所有已加载NPC的ID列表 返回状态缓存字典的键集合 适用于遍历、筛选或批量操作 </p>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html#a60990cd5d1ee5d0fab88c7363cffb889">Utopia.GameLogic.NPC.INPCService</a>.</p>
+
+</div>
+</div>
+<a id="af11bd7df509f8248dc1ebcc9c6442151" name="af11bd7df509f8248dc1ebcc9c6442151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11bd7df509f8248dc1ebcc9c6442151">&#9670;&#160;</a></span>GetConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NPCData Utopia.GameLogic.NPC.NPCManager.GetConfig </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>npcId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定NPC的配置数据 从配置缓存字典中查找，未找到时返回null </p>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html#af18ca0c0c70529b60bb9c357ebaa559c">Utopia.GameLogic.NPC.INPCService</a>.</p>
+
+</div>
+</div>
+<a id="ac7441499682a9806d68081270ec5e5ec" name="ac7441499682a9806d68081270ec5e5ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7441499682a9806d68081270ec5e5ec">&#9670;&#160;</a></span>GetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NPCState Utopia.GameLogic.NPC.NPCManager.GetState </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>npcId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定NPC的运行时状态数据 从状态缓存字典中查找，未找到时返回null 注意：返回的是状态对象的引用，外部修改会影响缓存 </p>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html#a561f9ee4a4e484fb5d3b62ce63fd7d4e">Utopia.GameLogic.NPC.INPCService</a>.</p>
+
+</div>
+</div>
+<a id="a423af91488b9c8ac20f28457984a1584" name="a423af91488b9c8ac20f28457984a1584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423af91488b9c8ac20f28457984a1584">&#9670;&#160;</a></span>InitializeSystemAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task Utopia.GameLogic.NPC.NPCManager.InitializeSystemAsync </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步初始化NPC系统 执行NPC数据的完整加载流程： </p>
+<ol type="1">
+<li>加载所有NPC的静态配置</li>
+<li>从存档加载已保存的NPC状态</li>
+<li>合并配置和存档数据（存档优先）</li>
+<li>初始化没有存档的新NPC状态</li>
+</ol>
+<dl class="section return"><dt>返回</dt><dd>表示异步操作的Task</dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584_icgraph.png" border="0" usemap="#aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584_icgraph" id="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584_icgraph">
+<area shape="rect" title="异步初始化NPC系统 执行NPC数据的完整加载流程：" alt="" coords="303,5,552,48"/>
+<area shape="rect" href="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html#a6f670d8dbc685f840c230f394b20b5b9" title="启动初始化方法 在Unity GameObject激活后调用，执行以下操作：" alt="" coords="5,5,255,48"/>
+<area shape="poly" title=" " alt="" coords="285,27,255,29,255,24,290,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac0fc7998e02deaf2f4c7417c0405d734" name="ac0fc7998e02deaf2f4c7417c0405d734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fc7998e02deaf2f4c7417c0405d734">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.GameLogic.NPC.NPCManager.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>销毁清理方法 在Unity GameObject销毁前调用，确保状态数据被保存 防止游戏退出或场景切换时数据丢失 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734_cgraph.png" border="0" usemap="#aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734_cgraph" id="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734_cgraph">
+<area shape="rect" title="销毁清理方法 在Unity GameObject销毁前调用，确保状态数据被保存 防止游戏退出或场景切换时数据丢失" alt="" coords="5,5,255,48"/>
+<area shape="rect" href="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html#a9c0871cbae7cb3d47b2dd94f581ae281" title="保存所有NPC状态到持久化存储 将当前内存中的状态数据异步保存到文件或数据库 通常在以下时机调用：" alt="" coords="303,5,552,48"/>
+<area shape="poly" title=" " alt="" coords="255,24,290,27,284,27,255,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c0871cbae7cb3d47b2dd94f581ae281" name="a9c0871cbae7cb3d47b2dd94f581ae281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0871cbae7cb3d47b2dd94f581ae281">&#9670;&#160;</a></span>SaveAllNPCs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async void Utopia.GameLogic.NPC.NPCManager.SaveAllNPCs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>保存所有NPC状态到持久化存储 将当前内存中的状态数据异步保存到文件或数据库 通常在以下时机调用： </p>
+<ol type="1">
+<li>游戏退出前 (OnDestroy)</li>
+<li>手动存档时</li>
+<li>自动存档周期 </li>
+</ol>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281_icgraph.png" border="0" usemap="#aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281_icgraph" id="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281_icgraph">
+<area shape="rect" title="保存所有NPC状态到持久化存储 将当前内存中的状态数据异步保存到文件或数据库 通常在以下时机调用：" alt="" coords="303,5,552,48"/>
+<area shape="rect" href="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html#ac0fc7998e02deaf2f4c7417c0405d734" title="销毁清理方法 在Unity GameObject销毁前调用，确保状态数据被保存 防止游戏退出或场景切换时数据丢失" alt="" coords="5,5,255,48"/>
+<area shape="poly" title=" " alt="" coords="285,27,255,29,255,24,290,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6f670d8dbc685f840c230f394b20b5b9" name="a6f670d8dbc685f840c230f394b20b5b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f670d8dbc685f840c230f394b20b5b9">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.GameLogic.NPC.NPCManager.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动初始化方法 在Unity GameObject激活后调用，执行以下操作： </p>
+<ol type="1">
+<li>通过服务定位器注入依赖</li>
+<li>验证依赖注入成功</li>
+<li>异步初始化NPC系统 </li>
+</ol>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9_cgraph.png" border="0" usemap="#aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9_cgraph" id="aclass_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9_cgraph">
+<area shape="rect" title="启动初始化方法 在Unity GameObject激活后调用，执行以下操作：" alt="" coords="5,5,255,48"/>
+<area shape="rect" href="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html#a423af91488b9c8ac20f28457984a1584" title="异步初始化NPC系统 执行NPC数据的完整加载流程：" alt="" coords="303,5,552,48"/>
+<area shape="poly" title=" " alt="" coords="255,24,290,27,284,27,255,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1b8ba8785e7573962d6f5187d967d019" name="a1b8ba8785e7573962d6f5187d967d019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b8ba8785e7573962d6f5187d967d019">&#9670;&#160;</a></span>UpdataState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.GameLogic.NPC.NPCManager.UpdataState </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>npcId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NPCState</td>          <td class="paramname"><span class="paramname"><em>newState</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新指定NPC的状态数据 将新的状态对象替换缓存中的旧状态 重要：此方法执行浅拷贝，调用者应确保传入状态对象不会被意外修改 </p>
+
+<p>实现了 <a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html#ac341207a0aa17d5d89a52ceff8250e6a">Utopia.GameLogic.NPC.INPCService</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a5a398a675271c55120930b1bdcd8ef6d" name="a5a398a675271c55120930b1bdcd8ef6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a398a675271c55120930b1bdcd8ef6d">&#9670;&#160;</a></span>_configCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, NPCData&gt; Utopia.GameLogic.NPC.NPCManager._configCache = new Dictionary&lt;string, NPCData&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NPC配置缓存字典 键：NPC的唯一标识符 (npcId) 值：对应的NPCData配置对象 用于快速查询NPC的静态配置，避免重复加载资源 </p>
+
+</div>
+</div>
+<a id="a88dc3f05fe19e25018c1ab949ee4a70a" name="a88dc3f05fe19e25018c1ab949ee4a70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88dc3f05fe19e25018c1ab949ee4a70a">&#9670;&#160;</a></span>_configLoader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader.html">INPCConfigLoader</a> Utopia.GameLogic.NPC.NPCManager._configLoader</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NPC配置加载器 通过服务定位器自动注入，负责从Resources等源加载NPC配置 </p>
+
+</div>
+</div>
+<a id="a23c891e53d701d1cba4f8ed3c0553a17" name="a23c891e53d701d1cba4f8ed3c0553a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c891e53d701d1cba4f8ed3c0553a17">&#9670;&#160;</a></span>_repository</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository.html">INPCRepository</a> Utopia.GameLogic.NPC.NPCManager._repository</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NPC数据仓库 通过服务定位器自动注入，负责NPC状态的持久化存储 处理数据的保存、加载等IO操作 </p>
+
+</div>
+</div>
+<a id="aa79ede5021708563e426fa1fd8b8efe6" name="aa79ede5021708563e426fa1fd8b8efe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa79ede5021708563e426fa1fd8b8efe6">&#9670;&#160;</a></span>_stateCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, NPCState&gt; Utopia.GameLogic.NPC.NPCManager._stateCache = new Dictionary&lt;string, NPCState&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NPC状态缓存字典 键：NPC的唯一标识符 (npcId) 值：对应的NPCState状态对象 存储所有NPC的当前运行时状态，是系统的核心数据 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Npc/Manage/<a class="el" href="_n_p_c_manager_8cs.html">NPCManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_game_logic.html">GameLogic</a></li><li class="navelem"><a href="namespace_utopia_1_1_game_logic_1_1_n_p_c.html">NPC</a></li><li class="navelem"><a href="class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html">NPCManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

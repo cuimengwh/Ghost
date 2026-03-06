@@ -1,0 +1,9 @@
+<map id="Utopia.Core.Services.HierarchicalServiceLocator.Register" name="Utopia.Core.Services.HierarchicalServiceLocator.Register">
+<area shape="rect" id="Node000001" title="使用运行时类型信息注册服务实例。" alt="" coords="278,72,497,115"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_data_1_1_data_manager.html#a5d3386843dfd9fb558b22bad09029ca7" title=" " alt="" coords="29,5,206,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="281,69,207,51,207,46,286,67"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_game_logic_1_1_game_data_manager.html#a961c61cce570e25501f782ac8429f5bd" title=" " alt="" coords="19,72,216,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,94,217,96,216,91,265,93"/>
+<area shape="rect" id="Node000004" href="$class_utopia_1_1_time_system_1_1_time_manager.html#aedfbda97790b0dfc733c42633ff9a995" title="初始化单例，将自身注册到全局服务定位器。 同时设置为 DontDestroyOnLoad，确保跨场景不销毁。" alt="" coords="5,139,230,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="286,118,207,141,206,135,281,119"/>
+</map>

@@ -1,0 +1,17 @@
+\doxysection{Utopia.\+Game\+Logic.\+NPC 命名空间参考}
+\hypertarget{namespace_utopia_1_1_game_logic_1_1_n_p_c}{}\label{namespace_utopia_1_1_game_logic_1_1_n_p_c}\index{Utopia.GameLogic.NPC@{Utopia.GameLogic.NPC}}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+interface \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service}{INPCService}}
+\begin{DoxyCompactList}\small\item\em NPC服务接口 提供\+NPC系统的核心服务功能，统一管理\+NPC的配置和状态数据 作为其他系统与\+NPC数据交互的统一入口 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager}{NPCManager}}
+\begin{DoxyCompactList}\small\item\em NPC管理器 NPC系统的核心实现类，负责： \end{DoxyCompactList}\item 
+interface \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository}{INPCRepository}}
+\begin{DoxyCompactList}\small\item\em NPC状态数据的仓储接口 设计模式：仓储模式，分离数据访问与业务逻辑 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_repository}{NPCRepository}}
+\begin{DoxyCompactList}\small\item\em NPC状态仓储的默认实现 使用\+IData\+Service进行实际的持久化操作 \end{DoxyCompactList}\item 
+interface \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader}{INPCConfig\+Loader}}
+\begin{DoxyCompactList}\small\item\em NPC配置加载器接口 定义用于加载\+NPC配置的标准契约 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader}{Resources\+NPCConfig\+Loader}}
+\begin{DoxyCompactList}\small\item\em 基于\+Unity Resources系统的\+NPC配置加载器 继承自\+Mono\+Behaviour，可作为组件附加到游戏对象 实现\+INPCConfig\+Loader接口，提供具体的加载逻辑 \end{DoxyCompactList}\end{DoxyCompactItemize}

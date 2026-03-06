@@ -1,0 +1,16 @@
+<map id="InventoryManager" name="InventoryManager">
+<area shape="rect" id="Node000001" title="库存管理器 &#45; 管理背包UI显示和交互 单例模式实现，全局只有一个库存管理器实例" alt="" coords="161,275,286,301"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="302,279,313,288,305,296,287,300,286,294,303,292,308,288,301,284"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,167,117,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,201,148,248,195,274,190,274,145,253,85,206"/>
+<area shape="rect" id="Node000003" href="$class_inventory.html" title="背包 ScriptableObject 用于存储和管理背包中的物品数据" alt="" coords="321,81,396,108"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="303,99,272,106,237,117,205,134,180,159,173,173,171,188,179,220,196,249,215,275,210,274,192,252,174,222,166,188,168,171,176,156,202,130,235,112,271,101,308,97"/>
+<area shape="rect" id="Node000005" href="$class_collection_inventory.html" title=" " alt="" coords="292,167,425,193"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="360,121,361,168,356,165,357,126"/>
+<area shape="rect" id="Node000006" href="$class_dish_inventory.html" title=" " alt="" coords="448,167,551,193"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="393,114,481,166,476,166,392,119"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="300,5,417,32"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="360,45,361,82,356,80,357,49"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="333,203,241,276,238,272,328,204"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="480,203,449,231,413,253,349,274,287,285,287,279,348,269,411,248,446,227,475,205"/>
+</map>

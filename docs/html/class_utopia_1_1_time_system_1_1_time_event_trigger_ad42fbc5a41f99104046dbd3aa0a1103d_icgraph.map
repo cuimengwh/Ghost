@@ -1,0 +1,7 @@
+<map id="Utopia.TimeSystem.TimeEventTrigger.GetSeasonForMonth" name="Utopia.TimeSystem.TimeEventTrigger.GetSeasonForMonth">
+<area shape="rect" id="Node000001" title="根据月份获取对应的季节" alt="" coords="510,5,714,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e3f05cc252a911d39fe726215b06984" title="检查季节变化触发条件" alt="" coords="258,5,462,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,27,463,29,462,24,497,27"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_time_system_1_1_time_event_trigger.html#a6e57ba87dff9cb48b0a14990965a0403" title="检查是否满足触发条件" alt="" coords="5,5,210,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,27,210,29,210,24,245,27"/>
+</map>

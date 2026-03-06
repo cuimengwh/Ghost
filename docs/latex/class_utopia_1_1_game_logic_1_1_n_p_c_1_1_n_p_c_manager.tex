@@ -1,0 +1,271 @@
+\doxysection{Utopia.\+Game\+Logic.\+NPC.\+NPCManager类 参考}
+\hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager}{}\label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+
+
+NPC管理器 NPC系统的核心实现类，负责：  
+
+
+
+
+类 Utopia.\+Game\+Logic.\+NPC.\+NPCManager 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Game\+Logic.\+NPC.\+NPCManager 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+async void \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281}{Save\+All\+NPCs}} ()
+\begin{DoxyCompactList}\small\item\em 保存所有\+NPC状态到持久化存储 将当前内存中的状态数据异步保存到文件或数据库 通常在以下时机调用： \end{DoxyCompactList}\item 
+NPCData \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_af11bd7df509f8248dc1ebcc9c6442151}{Get\+Config}} (string npc\+Id)
+\begin{DoxyCompactList}\small\item\em 获取指定\+NPC的配置数据 从配置缓存字典中查找，未找到时返回null \end{DoxyCompactList}\item 
+NPCState \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac7441499682a9806d68081270ec5e5ec}{Get\+State}} (string npc\+Id)
+\begin{DoxyCompactList}\small\item\em 获取指定\+NPC的运行时状态数据 从状态缓存字典中查找，未找到时返回null 注意：返回的是状态对象的引用，外部修改会影响缓存 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a1b8ba8785e7573962d6f5187d967d019}{Updata\+State}} (string npc\+Id, NPCState new\+State)
+\begin{DoxyCompactList}\small\item\em 更新指定\+NPC的状态数据 将新的状态对象替换缓存中的旧状态 重要：此方法执行浅拷贝，调用者应确保传入状态对象不会被意外修改 \end{DoxyCompactList}\item 
+IEnumerable$<$ string $>$ \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6a4ff44969458709fd9616ac72ed4b6e}{Get\+All\+NPCIds}} ()
+\begin{DoxyCompactList}\small\item\em 获取所有已加载\+NPC的\+ID列表 返回状态缓存字典的键集合 适用于遍历、筛选或批量操作 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9}{Start}} ()
+\begin{DoxyCompactList}\small\item\em 启动初始化方法 在\+Unity Game\+Object激活后调用，执行以下操作： \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em 销毁清理方法 在\+Unity Game\+Object销毁前调用，确保状态数据被保存 防止游戏退出或场景切换时数据丢失 \end{DoxyCompactList}\item 
+async Task \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584}{Initialize\+System\+Async}} ()
+\begin{DoxyCompactList}\small\item\em 异步初始化\+NPC系统 执行\+NPC数据的完整加载流程： \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader}{INPCConfig\+Loader}} \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a88dc3f05fe19e25018c1ab949ee4a70a}{\+\_\+config\+Loader}}
+\begin{DoxyCompactList}\small\item\em NPC配置加载器 通过服务定位器自动注入，负责从\+Resources等源加载\+NPC配置 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository}{INPCRepository}} \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a23c891e53d701d1cba4f8ed3c0553a17}{\+\_\+repository}}
+\begin{DoxyCompactList}\small\item\em NPC数据仓库 通过服务定位器自动注入，负责\+NPC状态的持久化存储 处理数据的保存、加载等\+IO操作 \end{DoxyCompactList}\item 
+Dictionary$<$ string, NPCData $>$ \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a5a398a675271c55120930b1bdcd8ef6d}{\+\_\+config\+Cache}} = new Dictionary$<$string, NPCData$>$()
+\begin{DoxyCompactList}\small\item\em NPC配置缓存字典 键：\+NPC的唯一标识符 (npc\+Id) 值：对应的\+NPCData配置对象 用于快速查询\+NPC的静态配置，避免重复加载资源 \end{DoxyCompactList}\item 
+Dictionary$<$ string, NPCState $>$ \doxymbox{\hyperlink{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_aa79ede5021708563e426fa1fd8b8efe6}{\+\_\+state\+Cache}} = new Dictionary$<$string, NPCState$>$()
+\begin{DoxyCompactList}\small\item\em NPC状态缓存字典 键：\+NPC的唯一标识符 (npc\+Id) 值：对应的\+NPCState状态对象 存储所有\+NPC的当前运行时状态，是系统的核心数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+NPC管理器 NPC系统的核心实现类，负责： 
+
+
+\begin{DoxyEnumerate}
+\item 加载和管理\+NPC的静态配置数据
+\item 加载、保存和管理\+NPC的运行时状态数据
+\item 提供\+NPC数据的查询和更新接口
+\item 协调配置数据和存档数据的合并
+\end{DoxyEnumerate}
+
+实现单例模式（通过服务定位器），作为\+NPC系统的中央数据枢纽 
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6a4ff44969458709fd9616ac72ed4b6e}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!GetAllNPCIds@{GetAllNPCIds}}
+\index{GetAllNPCIds@{GetAllNPCIds}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{GetAllNPCIds()}{GetAllNPCIds()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6a4ff44969458709fd9616ac72ed4b6e} 
+IEnumerable$<$ string $>$ Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+Get\+All\+NPCIds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取所有已加载\+NPC的\+ID列表 返回状态缓存字典的键集合 适用于遍历、筛选或批量操作 
+
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a60990cd5d1ee5d0fab88c7363cffb889}{Utopia.\+Game\+Logic.\+NPC.\+INPCService}}.
+
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_af11bd7df509f8248dc1ebcc9c6442151}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!GetConfig@{GetConfig}}
+\index{GetConfig@{GetConfig}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{GetConfig()}{GetConfig()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_af11bd7df509f8248dc1ebcc9c6442151} 
+NPCData Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+Get\+Config (\begin{DoxyParamCaption}\item[{string}]{npc\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取指定\+NPC的配置数据 从配置缓存字典中查找，未找到时返回null 
+
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_af18ca0c0c70529b60bb9c357ebaa559c}{Utopia.\+Game\+Logic.\+NPC.\+INPCService}}.
+
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac7441499682a9806d68081270ec5e5ec}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!GetState@{GetState}}
+\index{GetState@{GetState}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac7441499682a9806d68081270ec5e5ec} 
+NPCState Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+Get\+State (\begin{DoxyParamCaption}\item[{string}]{npc\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取指定\+NPC的运行时状态数据 从状态缓存字典中查找，未找到时返回null 注意：返回的是状态对象的引用，外部修改会影响缓存 
+
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_a561f9ee4a4e484fb5d3b62ce63fd7d4e}{Utopia.\+Game\+Logic.\+NPC.\+INPCService}}.
+
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!InitializeSystemAsync@{InitializeSystemAsync}}
+\index{InitializeSystemAsync@{InitializeSystemAsync}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{InitializeSystemAsync()}{InitializeSystemAsync()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584} 
+async Task Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+Initialize\+System\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+异步初始化\+NPC系统 执行\+NPC数据的完整加载流程： 
+
+
+\begin{DoxyEnumerate}
+\item 加载所有\+NPC的静态配置
+\item 从存档加载已保存的\+NPC状态
+\item 合并配置和存档数据（存档优先）
+\item 初始化没有存档的新\+NPC状态
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{返回}
+表示异步操作的\+Task
+\end{DoxyReturn}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a423af91488b9c8ac20f28457984a1584_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734} 
+void Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+销毁清理方法 在\+Unity Game\+Object销毁前调用，确保状态数据被保存 防止游戏退出或场景切换时数据丢失 
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_ac0fc7998e02deaf2f4c7417c0405d734_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!SaveAllNPCs@{SaveAllNPCs}}
+\index{SaveAllNPCs@{SaveAllNPCs}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{SaveAllNPCs()}{SaveAllNPCs()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281} 
+async void Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+Save\+All\+NPCs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+保存所有\+NPC状态到持久化存储 将当前内存中的状态数据异步保存到文件或数据库 通常在以下时机调用： 
+
+
+\begin{DoxyEnumerate}
+\item 游戏退出前 (On\+Destroy)
+\item 手动存档时
+\item 自动存档周期 
+\end{DoxyEnumerate}这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a9c0871cbae7cb3d47b2dd94f581ae281_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!Start@{Start}}
+\index{Start@{Start}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9} 
+void Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+启动初始化方法 在\+Unity Game\+Object激活后调用，执行以下操作： 
+
+
+\begin{DoxyEnumerate}
+\item 通过服务定位器注入依赖
+\item 验证依赖注入成功
+\item 异步初始化\+NPC系统 
+\end{DoxyEnumerate}函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a6f670d8dbc685f840c230f394b20b5b9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a1b8ba8785e7573962d6f5187d967d019}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!UpdataState@{UpdataState}}
+\index{UpdataState@{UpdataState}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{UpdataState()}{UpdataState()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a1b8ba8785e7573962d6f5187d967d019} 
+void Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+Updata\+State (\begin{DoxyParamCaption}\item[{string}]{npc\+Id}{, }\item[{NPCState}]{new\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+更新指定\+NPC的状态数据 将新的状态对象替换缓存中的旧状态 重要：此方法执行浅拷贝，调用者应确保传入状态对象不会被意外修改 
+
+
+
+实现了 \doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service_ac341207a0aa17d5d89a52ceff8250e6a}{Utopia.\+Game\+Logic.\+NPC.\+INPCService}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a5a398a675271c55120930b1bdcd8ef6d}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!\_configCache@{\_configCache}}
+\index{\_configCache@{\_configCache}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{\_configCache}{\_configCache}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a5a398a675271c55120930b1bdcd8ef6d} 
+Dictionary$<$string, NPCData$>$ Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+\_\+config\+Cache = new Dictionary$<$string, NPCData$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+NPC配置缓存字典 键：\+NPC的唯一标识符 (npc\+Id) 值：对应的\+NPCData配置对象 用于快速查询\+NPC的静态配置，避免重复加载资源 
+
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a88dc3f05fe19e25018c1ab949ee4a70a}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!\_configLoader@{\_configLoader}}
+\index{\_configLoader@{\_configLoader}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{\_configLoader}{\_configLoader}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a88dc3f05fe19e25018c1ab949ee4a70a} 
+\doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_config_loader}{INPCConfig\+Loader}} Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+\_\+config\+Loader\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+NPC配置加载器 通过服务定位器自动注入，负责从\+Resources等源加载\+NPC配置 
+
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a23c891e53d701d1cba4f8ed3c0553a17}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!\_repository@{\_repository}}
+\index{\_repository@{\_repository}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{\_repository}{\_repository}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_a23c891e53d701d1cba4f8ed3c0553a17} 
+\doxymbox{\hyperlink{interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_repository}{INPCRepository}} Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+\_\+repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+NPC数据仓库 通过服务定位器自动注入，负责\+NPC状态的持久化存储 处理数据的保存、加载等\+IO操作 
+
+\Hypertarget{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_aa79ede5021708563e426fa1fd8b8efe6}\index{Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}!\_stateCache@{\_stateCache}}
+\index{\_stateCache@{\_stateCache}!Utopia.GameLogic.NPC.NPCManager@{Utopia.GameLogic.NPC.NPCManager}}
+\doxysubsubsection{\texorpdfstring{\_stateCache}{\_stateCache}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager_aa79ede5021708563e426fa1fd8b8efe6} 
+Dictionary$<$string, NPCState$>$ Utopia.\+Game\+Logic.\+NPC.\+NPCManager.\+\_\+state\+Cache = new Dictionary$<$string, NPCState$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+NPC状态缓存字典 键：\+NPC的唯一标识符 (npc\+Id) 值：对应的\+NPCState状态对象 存储所有\+NPC的当前运行时状态，是系统的核心数据 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Npc/\+\+Manage/\+\doxymbox{\hyperlink{_n_p_c_manager_8cs}{NPCManager.\+cs}}\end{DoxyCompactItemize}

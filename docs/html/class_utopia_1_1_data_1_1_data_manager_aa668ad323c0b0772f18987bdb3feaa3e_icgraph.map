@@ -1,0 +1,7 @@
+<map id="Utopia.Data.DataManager.XOREncrypt" name="Utopia.Data.DataManager.XOREncrypt">
+<area shape="rect" id="Node000001" title="XOR异或加密/解密算法 注意：这是简单的加密，不适合高安全需求" alt="" coords="231,39,408,81"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_data_1_1_data_manager.html#ae91297191be131c3ec8571c103de44a5" title="异步加载数据" alt="" coords="5,5,183,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,45,183,42,183,37,218,44"/>
+<area shape="rect" id="Node000003" href="$class_utopia_1_1_data_1_1_data_manager.html#a7b7d2d5c5f51047dbc701f25a96c5917" title="异步保存数据文件" alt="" coords="5,72,183,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,76,184,83,183,78,218,75"/>
+</map>

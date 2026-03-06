@@ -1,0 +1,333 @@
+\doxysection{Player\+Controller类 参考}
+\hypertarget{class_player_controller}{}\label{class_player_controller}\index{PlayerController@{PlayerController}}
+
+
+玩家控制器类，继承自\+Player\+Base，负责处理玩家移动、旋转、动画等行为  
+
+
+
+
+类 Player\+Controller 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_player_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Player\+Controller 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_player_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_player_controller_a7393ba7246897b4f96a0c57ae2cf2850}{Handle\+Animation}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_player_controller_a0e31d8c625f96e9190931e33b5e08ddf}{my\+Bag}}
+\item 
+bool \doxymbox{\hyperlink{class_player_controller_a00896f22917508c98eb22357b9bb6fc8}{bag\+Open}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性 继承自 \doxymbox{\hyperlink{class_player_base}{Player\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_player_base_a630f170c6c590c14d716f5de8f03c4df}{Character\+Executable\+Actions}} \doxymbox{\hyperlink{class_player_base_ab069356c3f2e1b5d27b14d762830f777}{Current\+Character\+Executable\+Actions}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_player_controller_a050967f0e5c2340cb21861e4c8c788a1}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数 继承自 \doxymbox{\hyperlink{class_player_base}{Player\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a60f864316d3516c1a091f1c12186e219}{Toggle\+Existence\+State}} ()
+\begin{DoxyCompactList}\small\item\em 切换存在状态（物理/\+精神） \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a6f1754b2027bac04811cf95489dff2be}{Change\+Existence\+State}} (\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em 改变存在状态 \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a45746088ea41373c86537c8d2737af23}{Enter\+Existence\+State}} (\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} state)
+\begin{DoxyCompactList}\small\item\em 进入特定存在状态时的处理 \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a17f55ff96f5d5f01ebfba1bb9e84826a}{Exit\+Existence\+State}} (\doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} state)
+\begin{DoxyCompactList}\small\item\em 退出特定存在状态时的处理 \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_player_base_a6995ce07d2f1c198e2341dee4015c83d}{Get\+Input}} ()
+\begin{DoxyCompactList}\small\item\em 获取玩家输入 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}{Update}} ()
+\item 
+void \doxymbox{\hyperlink{class_player_controller_a53e932ee02c4c2cc18c7219d40e93cad}{Handle\+Movement}} ()
+\item 
+void \doxymbox{\hyperlink{class_player_controller_aeda2a33e5b70b31a20cd310c58d20623}{Handle\+Gravity}} ()
+\item 
+void \doxymbox{\hyperlink{class_player_controller_ad6c24a42714cc5182b042266d9f07403}{Handle\+Rotation}} ()
+\item 
+void \doxymbox{\hyperlink{class_player_controller_a59a67027c72e920c61f0bcd89688d66a}{Handle\+UI}} ()
+\item 
+void \doxymbox{\hyperlink{class_player_controller_a23f7de3309f9aa0712ec564eab57eb10}{Cursor\+Lock}} (bool visible)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Character\+Controller \doxymbox{\hyperlink{class_player_controller_ac0f9de9c0ab3c9e5f9c4aebb56cd36da}{character\+Controller}}
+\item 
+Animator \doxymbox{\hyperlink{class_player_controller_af24a8820ce6558138208255b27d948d3}{animator}}
+\item 
+Vector3 \doxymbox{\hyperlink{class_player_controller_a0b7a80746d397eca23aa5236913b06aa}{velocity}}
+\item 
+Vector3 \doxymbox{\hyperlink{class_player_controller_ac1b74e25587d1a45a576bac03d165254}{move\+Dir}}
+\item 
+float \doxymbox{\hyperlink{class_player_controller_a1b9bf4209b48528e45100b0e4064f0e0}{Move\+Speed}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{额外继承的成员函数}
+\doxysubsection*{Public 类型 继承自 \doxymbox{\hyperlink{class_player_base}{Player\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2b}{Character\+Physical\+State}} \{ \newline
+\doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2bae599161956d626eda4cb0a5ffb85271c}{Idle}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2badb6ea77c7cd8a86b17014c3b688fd1a1}{Walking}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5bda814c4aedb126839228f1a3d92f09}{Running}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba5f51eb9396f286226cf2385d0e1947ee}{Jumping}}
+, \newline
+\doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2babddd4f44136f466c065a2c7a4c53e75b}{Sleeping}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba4257c3fc5bdf550eb2539157906f263c}{fainting}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba0f57d5b441651c57eac9f91efaa5a75a}{Falling}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba8abd002ea36128383f3269de7e74039b}{Attacking}}
+, \newline
+\doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2babd7a3a605f0d57a2a83300d34436772e}{Planting}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba3260712ebc9a46da87fc6a8d726882a2}{Felling}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2baf023446a52e84d38f186937dad1d8f76}{Interacting}}
+, \doxymbox{\hyperlink{class_player_base_a9571567d8a69eb7c3b725331a8638d2ba183b62c7f067711f9c5a54913c054617}{Dead}}
+ \}
+\begin{DoxyCompactList}\small\item\em 角色物理状态枚举 \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512a}{Movement\+Type}} \{ \newline
+\doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa7a16a854f32231a8df9326136b09ee62}{Walk}}
+, \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aac5301693c4e792bcd5a479ef38fb8f8d}{Run}}
+, \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aa6701b56ab3ff30bb18225de93c864367}{squat}}
+, \doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aad0d933facd58904b226d055e75da2a6d}{Swim}}
+, \newline
+\doxymbox{\hyperlink{class_player_base_a3b1397acf413e2c9ef8ae46f7190512aaac51deb7d2c3f9663a6df72c7c9b2b51}{Fly}}
+ \}
+\begin{DoxyCompactList}\small\item\em 移动方式枚举 \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} \{ \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659cebace898d62ed9ca7653a01fe0c781e97e9}{Physical}}
+, \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceba67a099ff3f691845b22ec289cd360b57}{Psychical}}
+ \}
+\begin{DoxyCompactList}\small\item\em 存在状态枚举 \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{class_player_base_a630f170c6c590c14d716f5de8f03c4df}{Character\+Executable\+Actions}} \{ \doxymbox{\hyperlink{class_player_base_a630f170c6c590c14d716f5de8f03c4dfa3e47b75000b0924b6c9ba5759a7cf15d}{nothing}}
+ \}
+\begin{DoxyCompactList}\small\item\em 角色可执行动作枚举 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性 继承自 \doxymbox{\hyperlink{class_player_base}{Player\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_player_base_a4c22537ee829c34af77ff0eb5d594849}{max\+Health}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a30958f090dd354fa915b3cbfb531c88b}{health}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_af4678b1e19baa4c55783f0ba254cafdc}{max\+Energy}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a919ce2390bded1fb2ac78722b8ac6707}{energy}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a34969ed0207aa3b52ee7cdb445c37ed4}{max\+Spiritual\+Nourishment}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_abb3977ca382bb0f62e95dc49eedabddc}{spiritual\+Nourishment}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_player_base_aae05464ed0ec9861302c86c644afc072}{walk\+Speed}} = 5f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a301ffd2d3b8a7c027dd5923f3304df67}{run\+Speed}} = 10f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a1bf7af748d618da108ce5c76207c90f0}{squat\+Speed}} = 2.\+5f
+\item 
+float \doxymbox{\hyperlink{class_player_base_afceb356fbaf39359459d33ab91559421}{jump\+Height}} = 2f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a1a9152c04dd5812bb2e3907f51809e6a}{gravity}} = -\/9.\+81f
+\item 
+float \doxymbox{\hyperlink{class_player_base_a9f0028a1138247e16bbbc9dec534acc1}{rotation\+Speed}} = 10f
+\item 
+float \doxymbox{\hyperlink{class_player_base_ad4350eef0c6bfa309455967e59ec7e15}{horizontal\+Input}}
+\item 
+float \doxymbox{\hyperlink{class_player_base_adbfc912504af2402d266f780befa3115}{vertical\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_ad3334551ff379d6f2275f3b7f3140685}{jump\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_af634007f2c03f23b2579ec40944ac1fd}{run\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_a1d7789c3512aabc9c4db16cb4ea835a7}{squat\+Input}}
+\item 
+bool \doxymbox{\hyperlink{class_player_base_a975c95832d33b41b9863296b2e47d611}{interact\+Input}}
+\end{DoxyCompactItemize}
+\doxysubsection*{事件 继承自 \doxymbox{\hyperlink{class_player_base}{Player\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \doxymbox{\hyperlink{class_player_base_a59a1d33a183c8e42daad79a58d659ceb}{Existence\+State}} $>$ \doxymbox{\hyperlink{class_player_base_a25aeae6d3d0ad3557d6a71f37590c31d}{On\+Existence\+State\+Changed}}
+\begin{DoxyCompactList}\small\item\em 存在状态改变时触发的事件 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+玩家控制器类，继承自\+Player\+Base，负责处理玩家移动、旋转、动画等行为 
+
+\label{doc-func-members}
+\Hypertarget{class_player_controller_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_player_controller_a050967f0e5c2340cb21861e4c8c788a1}\index{PlayerController@{PlayerController}!Awake@{Awake}}
+\index{Awake@{Awake}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_player_controller_a050967f0e5c2340cb21861e4c8c788a1} 
+void Player\+Controller.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_player_controller_a23f7de3309f9aa0712ec564eab57eb10}\index{PlayerController@{PlayerController}!CursorLock@{CursorLock}}
+\index{CursorLock@{CursorLock}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{CursorLock()}{CursorLock()}}
+{\footnotesize\ttfamily \label{class_player_controller_a23f7de3309f9aa0712ec564eab57eb10} 
+void Player\+Controller.\+Cursor\+Lock (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_a23f7de3309f9aa0712ec564eab57eb10_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_controller_a7393ba7246897b4f96a0c57ae2cf2850}\index{PlayerController@{PlayerController}!HandleAnimation@{HandleAnimation}}
+\index{HandleAnimation@{HandleAnimation}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{HandleAnimation()}{HandleAnimation()}}
+{\footnotesize\ttfamily \label{class_player_controller_a7393ba7246897b4f96a0c57ae2cf2850} 
+virtual void Player\+Controller.\+Handle\+Animation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_a7393ba7246897b4f96a0c57ae2cf2850_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_controller_aeda2a33e5b70b31a20cd310c58d20623}\index{PlayerController@{PlayerController}!HandleGravity@{HandleGravity}}
+\index{HandleGravity@{HandleGravity}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{HandleGravity()}{HandleGravity()}}
+{\footnotesize\ttfamily \label{class_player_controller_aeda2a33e5b70b31a20cd310c58d20623} 
+void Player\+Controller.\+Handle\+Gravity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_aeda2a33e5b70b31a20cd310c58d20623_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_controller_a53e932ee02c4c2cc18c7219d40e93cad}\index{PlayerController@{PlayerController}!HandleMovement@{HandleMovement}}
+\index{HandleMovement@{HandleMovement}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{HandleMovement()}{HandleMovement()}}
+{\footnotesize\ttfamily \label{class_player_controller_a53e932ee02c4c2cc18c7219d40e93cad} 
+void Player\+Controller.\+Handle\+Movement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_a53e932ee02c4c2cc18c7219d40e93cad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_controller_ad6c24a42714cc5182b042266d9f07403}\index{PlayerController@{PlayerController}!HandleRotation@{HandleRotation}}
+\index{HandleRotation@{HandleRotation}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{HandleRotation()}{HandleRotation()}}
+{\footnotesize\ttfamily \label{class_player_controller_ad6c24a42714cc5182b042266d9f07403} 
+void Player\+Controller.\+Handle\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_ad6c24a42714cc5182b042266d9f07403_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_controller_a59a67027c72e920c61f0bcd89688d66a}\index{PlayerController@{PlayerController}!HandleUI@{HandleUI}}
+\index{HandleUI@{HandleUI}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{HandleUI()}{HandleUI()}}
+{\footnotesize\ttfamily \label{class_player_controller_a59a67027c72e920c61f0bcd89688d66a} 
+void Player\+Controller.\+Handle\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_a59a67027c72e920c61f0bcd89688d66a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_a59a67027c72e920c61f0bcd89688d66a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}\index{PlayerController@{PlayerController}!Update@{Update}}
+\index{Update@{Update}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_player_controller_ae8bc83dffb99867a04be016473ed2c43} 
+void Player\+Controller.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_controller_ae8bc83dffb99867a04be016473ed2c43_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_player_controller_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_player_controller_af24a8820ce6558138208255b27d948d3}\index{PlayerController@{PlayerController}!animator@{animator}}
+\index{animator@{animator}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily \label{class_player_controller_af24a8820ce6558138208255b27d948d3} 
+Animator Player\+Controller.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_controller_a00896f22917508c98eb22357b9bb6fc8}\index{PlayerController@{PlayerController}!bagOpen@{bagOpen}}
+\index{bagOpen@{bagOpen}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{bagOpen}{bagOpen}}
+{\footnotesize\ttfamily \label{class_player_controller_a00896f22917508c98eb22357b9bb6fc8} 
+bool Player\+Controller.\+bag\+Open = false}
+
+\Hypertarget{class_player_controller_ac0f9de9c0ab3c9e5f9c4aebb56cd36da}\index{PlayerController@{PlayerController}!characterController@{characterController}}
+\index{characterController@{characterController}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{characterController}{characterController}}
+{\footnotesize\ttfamily \label{class_player_controller_ac0f9de9c0ab3c9e5f9c4aebb56cd36da} 
+Character\+Controller Player\+Controller.\+character\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_controller_ac1b74e25587d1a45a576bac03d165254}\index{PlayerController@{PlayerController}!moveDir@{moveDir}}
+\index{moveDir@{moveDir}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{moveDir}{moveDir}}
+{\footnotesize\ttfamily \label{class_player_controller_ac1b74e25587d1a45a576bac03d165254} 
+Vector3 Player\+Controller.\+move\+Dir\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_controller_a1b9bf4209b48528e45100b0e4064f0e0}\index{PlayerController@{PlayerController}!MoveSpeed@{MoveSpeed}}
+\index{MoveSpeed@{MoveSpeed}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{MoveSpeed}{MoveSpeed}}
+{\footnotesize\ttfamily \label{class_player_controller_a1b9bf4209b48528e45100b0e4064f0e0} 
+float Player\+Controller.\+Move\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_controller_a0e31d8c625f96e9190931e33b5e08ddf}\index{PlayerController@{PlayerController}!myBag@{myBag}}
+\index{myBag@{myBag}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{myBag}{myBag}}
+{\footnotesize\ttfamily \label{class_player_controller_a0e31d8c625f96e9190931e33b5e08ddf} 
+Game\+Object Player\+Controller.\+my\+Bag}
+
+\Hypertarget{class_player_controller_a0b7a80746d397eca23aa5236913b06aa}\index{PlayerController@{PlayerController}!velocity@{velocity}}
+\index{velocity@{velocity}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily \label{class_player_controller_a0b7a80746d397eca23aa5236913b06aa} 
+Vector3 Player\+Controller.\+velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Player/\+\doxymbox{\hyperlink{_player_controller_8cs}{Player\+Controller.\+cs}}\end{DoxyCompactItemize}

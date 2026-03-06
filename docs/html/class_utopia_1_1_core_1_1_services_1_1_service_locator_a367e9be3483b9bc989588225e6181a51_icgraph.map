@@ -1,0 +1,5 @@
+<map id="Utopia.Core.Services.ServiceLocator.TryGet" name="Utopia.Core.Services.ServiceLocator.TryGet">
+<area shape="rect" id="Node000001" title="核心尝试获取方法（非泛型版本）" alt="" coords="248,5,442,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_service_locator.html#a5e369588a3d226427dd935ea83b356bf" title="尝试获取服务（安全版本，不抛出异常）" alt="" coords="5,5,200,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,27,200,29,200,24,235,26"/>
+</map>

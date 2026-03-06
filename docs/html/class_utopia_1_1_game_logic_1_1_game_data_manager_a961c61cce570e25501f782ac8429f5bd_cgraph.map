@@ -1,0 +1,5 @@
+<map id="Utopia.GameLogic.GameDataManager.Awake" name="Utopia.GameLogic.GameDataManager.Awake">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,202,48"/>
+<area shape="rect" id="Node000002" href="$class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#ac956d4c6015f38f1bef4f3ee11fdf2e8" title="使用运行时类型信息注册服务实例。" alt="" coords="250,5,469,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,24,237,26,231,27,202,29"/>
+</map>

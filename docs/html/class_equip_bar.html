@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: EquipBar类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_equip_bar.html','','class_equip_bar-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EquipBar类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>装备栏（快捷栏）管理器  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 EquipBar 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_equip_bar__inherit__graph.png" border="0" usemap="#a_equip_bar_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_equip_bar_inherit__map" id="a_equip_bar_inherit__map">
+<area shape="rect" title="装备栏（快捷栏）管理器" alt="" coords="24,80,98,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+EquipBar 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_equip_bar__coll__graph.png" border="0" usemap="#a_equip_bar_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_equip_bar_coll__map" id="a_equip_bar_coll__map">
+<area shape="rect" title="装备栏（快捷栏）管理器" alt="" coords="64,180,138,207"/>
+<area shape="poly" title=" " alt="" coords="155,183,165,193,156,203,139,205,138,200,154,198,160,193,153,188"/>
+<area shape="rect" title=" " alt="" coords="5,81,117,108"/>
+<area shape="poly" title=" " alt="" coords="74,121,99,180,93,180,70,125"/>
+<area shape="rect" href="class_inventory.html" title="背包 ScriptableObject 用于存储和管理背包中的物品数据" alt="" coords="141,81,216,108"/>
+<area shape="poly" title=" " alt="" coords="161,120,113,182,109,178,156,121"/>
+<area shape="rect" title=" " alt="" coords="120,5,237,32"/>
+<area shape="poly" title=" " alt="" coords="180,45,181,82,176,80,177,49"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa598b79327d6991a62d84fc2c0aa53c5" id="r_aa598b79327d6991a62d84fc2c0aa53c5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa598b79327d6991a62d84fc2c0aa53c5">SelectSlot</a> (int index)</td></tr>
+<tr class="memdesc:aa598b79327d6991a62d84fc2c0aa53c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">选择指定快捷栏槽位  <br /></td></tr>
+<tr class="memitem:ada2611a62d0c8eb2c7636a22c75476b0" id="r_ada2611a62d0c8eb2c7636a22c75476b0"><td class="memItemLeft"><a class="el" href="class_item_data.html">ItemData</a>&#160;</td><td class="memItemRight"><a class="el" href="#ada2611a62d0c8eb2c7636a22c75476b0">GetCurrentItem</a> ()</td></tr>
+<tr class="memdesc:ada2611a62d0c8eb2c7636a22c75476b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前选中的物品数据 用于物品使用、装备等操作  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac2baf6ed91a10f38bb57c56334399f09" id="r_ac2baf6ed91a10f38bb57c56334399f09"><td class="memItemLeft"><a class="el" href="class_inventory.html">Inventory</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac2baf6ed91a10f38bb57c56334399f09">myBag</a></td></tr>
+<tr class="memitem:af03e0330ebe2eb1f942551989c624eee" id="r_af03e0330ebe2eb1f942551989c624eee"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af03e0330ebe2eb1f942551989c624eee">hotbarSize</a> = 9</td></tr>
+<tr class="memitem:a62372077f36363036d4df9992b34f086" id="r_a62372077f36363036d4df9992b34f086"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a62372077f36363036d4df9992b34f086">currentIndex</a> = 0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a5b30fca2b30885431e26cc18f6cc399f" id="r_a5b30fca2b30885431e26cc18f6cc399f"><td class="memItemLeft">static <a class="el" href="class_equip_bar.html">EquipBar</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5b30fca2b30885431e26cc18f6cc399f">instance</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aecbca138ae8124656cf31b71a5b6edfb" id="r_aecbca138ae8124656cf31b71a5b6edfb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aecbca138ae8124656cf31b71a5b6edfb">Awake</a> ()</td></tr>
+<tr class="memdesc:aecbca138ae8124656cf31b71a5b6edfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awake初始化方法 实现单例模式，确保全局只有一个快捷栏管理器  <br /></td></tr>
+<tr class="memitem:aa706c721e14f033793cfbbc45e68f16b" id="r_aa706c721e14f033793cfbbc45e68f16b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa706c721e14f033793cfbbc45e68f16b">Update</a> ()</td></tr>
+<tr class="memdesc:aa706c721e14f033793cfbbc45e68f16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧更新方法 监听键盘数字键1-9，实现快捷键切换功能  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>装备栏（快捷栏）管理器 </p>
+<p>功能说明：</p><ol type="1">
+<li>提供游戏内的快捷物品栏，直接引用背包前N个格子</li>
+<li>支持1-9数字键快速切换和选择物品</li>
+<li>单例模式实现，全局唯一访问点</li>
+<li>与背包数据实时同步，无独立存储</li>
+</ol>
+<p>设计特点：</p><ul>
+<li>数据引用模式：直接引用背包数据，不单独存储</li>
+<li>快捷键支持：数字键1-9对应快捷栏1-9</li>
+<li>索引映射：快捷栏索引=背包前N个格子索引</li>
+</ul>
+<p>使用要求：</p><ol type="1">
+<li>需要关联到有效的Inventory背包</li>
+<li>背包必须有足够的格子数量（≥hotbarSize） </li>
+</ol>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="aecbca138ae8124656cf31b71a5b6edfb" name="aecbca138ae8124656cf31b71a5b6edfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecbca138ae8124656cf31b71a5b6edfb">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EquipBar.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Awake初始化方法 实现单例模式，确保全局只有一个快捷栏管理器 </p>
+
+</div>
+</div>
+<a id="ada2611a62d0c8eb2c7636a22c75476b0" name="ada2611a62d0c8eb2c7636a22c75476b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2611a62d0c8eb2c7636a22c75476b0">&#9670;&#160;</a></span>GetCurrentItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_item_data.html">ItemData</a> EquipBar.GetCurrentItem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前选中的物品数据 用于物品使用、装备等操作 </p>
+<dl class="section return"><dt>返回</dt><dd>当前选中槽位的物品数据，可能为null</dd></dl>
+
+</div>
+</div>
+<a id="aa598b79327d6991a62d84fc2c0aa53c5" name="aa598b79327d6991a62d84fc2c0aa53c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa598b79327d6991a62d84fc2c0aa53c5">&#9670;&#160;</a></span>SelectSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EquipBar.SelectSlot </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>选择指定快捷栏槽位 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>快捷栏索引（0-8）</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5_icgraph.png" border="0" usemap="#aclass_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5_icgraph" id="aclass_equip_bar_aa598b79327d6991a62d84fc2c0aa53c5_icgraph">
+<area shape="rect" title="选择指定快捷栏槽位" alt="" coords="174,5,312,32"/>
+<area shape="rect" href="class_equip_bar.html#aa706c721e14f033793cfbbc45e68f16b" title="每帧更新方法 监听键盘数字键1&#45;9，实现快捷键切换功能" alt="" coords="5,5,126,32"/>
+<area shape="poly" title=" " alt="" coords="156,19,126,21,126,16,161,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa706c721e14f033793cfbbc45e68f16b" name="aa706c721e14f033793cfbbc45e68f16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa706c721e14f033793cfbbc45e68f16b">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EquipBar.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每帧更新方法 监听键盘数字键1-9，实现快捷键切换功能 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_equip_bar_aa706c721e14f033793cfbbc45e68f16b_cgraph.png" border="0" usemap="#aclass_equip_bar_aa706c721e14f033793cfbbc45e68f16b_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_equip_bar_aa706c721e14f033793cfbbc45e68f16b_cgraph" id="aclass_equip_bar_aa706c721e14f033793cfbbc45e68f16b_cgraph">
+<area shape="rect" title="每帧更新方法 监听键盘数字键1&#45;9，实现快捷键切换功能" alt="" coords="5,5,126,32"/>
+<area shape="rect" href="class_equip_bar.html#aa598b79327d6991a62d84fc2c0aa53c5" title="选择指定快捷栏槽位" alt="" coords="174,5,312,32"/>
+<area shape="poly" title=" " alt="" coords="126,16,161,18,155,19,126,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a62372077f36363036d4df9992b34f086" name="a62372077f36363036d4df9992b34f086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62372077f36363036d4df9992b34f086">&#9670;&#160;</a></span>currentIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EquipBar.currentIndex = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af03e0330ebe2eb1f942551989c624eee" name="af03e0330ebe2eb1f942551989c624eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03e0330ebe2eb1f942551989c624eee">&#9670;&#160;</a></span>hotbarSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EquipBar.hotbarSize = 9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b30fca2b30885431e26cc18f6cc399f" name="a5b30fca2b30885431e26cc18f6cc399f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b30fca2b30885431e26cc18f6cc399f">&#9670;&#160;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_equip_bar.html">EquipBar</a> EquipBar.instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2baf6ed91a10f38bb57c56334399f09" name="ac2baf6ed91a10f38bb57c56334399f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2baf6ed91a10f38bb57c56334399f09">&#9670;&#160;</a></span>myBag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_inventory.html">Inventory</a> EquipBar.myBag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Bag/Inventory/<a class="el" href="_equip_bar_8cs.html">EquipBar.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_equip_bar.html">EquipBar</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="InventoryManager.SwitchInventory" name="InventoryManager.SwitchInventory">
+<area shape="rect" id="Node000001" title="切换到指定背包" alt="" coords="211,5,434,32"/>
+<area shape="rect" id="Node000002" href="$class_inventory_manager.html#a5b18458e8dd8426c55d2d4e2d184706a" title=" " alt="" coords="5,5,163,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,19,163,21,163,16,197,19"/>
+</map>

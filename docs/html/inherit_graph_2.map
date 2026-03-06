@@ -1,0 +1,7 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,101,32"/>
+<area shape="rect" id="Node000001" href="$struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="149,23,336,65"/>
+<area shape="poly" id="edge27_Node000000_Node000001" title=" " alt="" coords="116,24,151,31,145,32,116,30"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="11,56,95,83"/>
+<area shape="poly" id="edge28_Node000002_Node000001" title=" " alt="" coords="110,59,151,56,145,57,111,64"/>
+</map>

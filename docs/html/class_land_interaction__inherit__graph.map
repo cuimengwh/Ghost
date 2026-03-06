@@ -1,0 +1,5 @@
+<map id="LandInteraction" name="LandInteraction">
+<area shape="rect" id="Node000001" title="ÃÁµØ½»»¥Ã—éÂ¼Ã¾,¹Ã’Ã”ÃšÃæÂ¼Ò½Ã…ÃÂµÄ¿Ã•ÃŽÃ¯ÃŒÃ¥Ã‰Ï£¬¸ºÃ”ðÂ¼ìÂ²Ã¢ÃæÂ¼Ã’Ã“Ã«ÃÁµØµÄ½»»¥" alt="" coords="6,80,116,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>

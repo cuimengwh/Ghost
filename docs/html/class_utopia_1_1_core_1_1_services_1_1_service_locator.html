@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.Core.Services.ServiceLocator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_core_1_1_services_1_1_service_locator.html','','class_utopia_1_1_core_1_1_services_1_1_service_locator-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.Core.Services.ServiceLocator类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>线程安全、支持懒加载工厂的非单例服务定位器。 核心服务容器，提供服务的注册、解析和管理功能。 特性：  
+ <a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a161b4a338361c0873ac79645136cd4b3" id="r_a161b4a338361c0873ac79645136cd4b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a161b4a338361c0873ac79645136cd4b3">Register&lt; T &gt;</a> (T service)</td></tr>
+<tr class="memdesc:a161b4a338361c0873ac79645136cd4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">泛型注册方法：注册具体服务实例  <br /></td></tr>
+<tr class="memitem:a030be246cf7321c13c235f77bcba20ba" id="r_a030be246cf7321c13c235f77bcba20ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a030be246cf7321c13c235f77bcba20ba">Register</a> (Type type, object service)</td></tr>
+<tr class="memdesc:a030be246cf7321c13c235f77bcba20ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">非泛型注册方法：使用Type对象注册服务  <br /></td></tr>
+<tr class="memitem:afc6b6687bd967ada5d8690ddc174722a" id="r_afc6b6687bd967ada5d8690ddc174722a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc6b6687bd967ada5d8690ddc174722a">RegisterFactory&lt; T &gt;</a> (Func&lt; T &gt; factory)</td></tr>
+<tr class="memdesc:afc6b6687bd967ada5d8690ddc174722a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册服务工厂方法，支持懒加载  <br /></td></tr>
+<tr class="memitem:a2e377d2539e39a3d2511069a16e6a524" id="r_a2e377d2539e39a3d2511069a16e6a524"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#a2e377d2539e39a3d2511069a16e6a524">Get&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a2e377d2539e39a3d2511069a16e6a524"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取服务实例，如果未创建则调用工厂方法创建  <br /></td></tr>
+<tr class="memitem:a5e369588a3d226427dd935ea83b356bf" id="r_a5e369588a3d226427dd935ea83b356bf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5e369588a3d226427dd935ea83b356bf">TryGet&lt; T &gt;</a> (out T service)</td></tr>
+<tr class="memdesc:a5e369588a3d226427dd935ea83b356bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">尝试获取服务（安全版本，不抛出异常）  <br /></td></tr>
+<tr class="memitem:a367e9be3483b9bc989588225e6181a51" id="r_a367e9be3483b9bc989588225e6181a51"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a367e9be3483b9bc989588225e6181a51">TryGet</a> (Type type, out object service)</td></tr>
+<tr class="memdesc:a367e9be3483b9bc989588225e6181a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">核心尝试获取方法（非泛型版本）  <br /></td></tr>
+<tr class="memitem:a7fbf6dc5acfb718ba3c715ff2d5f0595" id="r_a7fbf6dc5acfb718ba3c715ff2d5f0595"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7fbf6dc5acfb718ba3c715ff2d5f0595">IsRegistered&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a7fbf6dc5acfb718ba3c715ff2d5f0595"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查指定类型的服务是否已注册（包括工厂注册）  <br /></td></tr>
+<tr class="memitem:af1c2c8416f4a3ae3f095c1836d5a5214" id="r_af1c2c8416f4a3ae3f095c1836d5a5214"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1c2c8416f4a3ae3f095c1836d5a5214">Unregister&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:af1c2c8416f4a3ae3f095c1836d5a5214"><td class="mdescLeft">&#160;</td><td class="mdescRight">泛型注销方法：移除指定类型的服务和工厂  <br /></td></tr>
+<tr class="memitem:a5d3686985cb8d3add4b942b49eaea5a2" id="r_a5d3686985cb8d3add4b942b49eaea5a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5d3686985cb8d3add4b942b49eaea5a2">Unregister</a> (Type type)</td></tr>
+<tr class="memdesc:a5d3686985cb8d3add4b942b49eaea5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">非泛型注销方法：移除指定类型的服务和工厂  <br /></td></tr>
+<tr class="memitem:acdfab0fca292a03e5fbf755cffd611d8" id="r_acdfab0fca292a03e5fbf755cffd611d8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acdfab0fca292a03e5fbf755cffd611d8">Dispose</a> ()</td></tr>
+<tr class="memdesc:acdfab0fca292a03e5fbf755cffd611d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放容器资源  <br /></td></tr>
+<tr class="memitem:ade048c146cc944031f643962428287d3" id="r_ade048c146cc944031f643962428287d3"><td class="memItemLeft">Dictionary&lt; Type, string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ade048c146cc944031f643962428287d3">GetDebugSnapshot</a> ()</td></tr>
+<tr class="memdesc:ade048c146cc944031f643962428287d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">调试用：获取内部服务列表的快照  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ae2773e788ef6ee0ec3f264f6da965cd5" id="r_ae2773e788ef6ee0ec3f264f6da965cd5"><td class="memItemLeft">readonly Dictionary&lt; Type, object &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae2773e788ef6ee0ec3f264f6da965cd5">_services</a> = new Dictionary&lt;Type, object&gt;()</td></tr>
+<tr class="memdesc:ae2773e788ef6ee0ec3f264f6da965cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">已实例化的服务存储字典 Key: 服务类型（通常为接口或抽象类） Value: 已创建的服务实例  <br /></td></tr>
+<tr class="memitem:a97b89f097d28dbda9a0cc3eb26363370" id="r_a97b89f097d28dbda9a0cc3eb26363370"><td class="memItemLeft">readonly Dictionary&lt; Type, Func&lt; object &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a97b89f097d28dbda9a0cc3eb26363370">_factories</a> = new Dictionary&lt;Type, Func&lt;object&gt;&gt;()</td></tr>
+<tr class="memdesc:a97b89f097d28dbda9a0cc3eb26363370"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务工厂字典，用于延迟创建服务实例 Key: 服务类型 Value: 创建该类型实例的工厂方法 当首次请求服务时调用工厂方法，创建后移至_services字典  <br /></td></tr>
+<tr class="memitem:aaa28d78c8663b333cb6dae4e9beba3b5" id="r_aaa28d78c8663b333cb6dae4e9beba3b5"><td class="memItemLeft">readonly ReaderWriterLockSlim&#160;</td><td class="memItemRight"><a class="el" href="#aaa28d78c8663b333cb6dae4e9beba3b5">_lock</a> = new ReaderWriterLockSlim(LockRecursionPolicy.NoRecursion)</td></tr>
+<tr class="memdesc:aaa28d78c8663b333cb6dae4e9beba3b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">读写锁，提供线程安全访问 使用ReaderWriterLockSlim替代lock关键字，优化读多写少的场景 LockRecursionPolicy.NoRecursion: 禁止递归锁，避免死锁风险  <br /></td></tr>
+<tr class="memitem:a949412b9fd9862da0a4cee1e5694ea0a" id="r_a949412b9fd9862da0a4cee1e5694ea0a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a949412b9fd9862da0a4cee1e5694ea0a">_isDisposed</a> = false</td></tr>
+<tr class="memdesc:a949412b9fd9862da0a4cee1e5694ea0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">标记容器是否已释放，防止释放后继续使用  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>线程安全、支持懒加载工厂的非单例服务定位器。 核心服务容器，提供服务的注册、解析和管理功能。 特性： </p>
+<ol type="1">
+<li>线程安全：使用读写锁(ReaderWriterLockSlim)优化并发性能</li>
+<li>懒加载：支持通过工厂方法延迟创建服务实例</li>
+<li>非单例：可创建多个独立实例，适用于不同作用域</li>
+<li>生命周期管理：支持IDisposable服务的自动释放 </li>
+</ol>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="acdfab0fca292a03e5fbf755cffd611d8" name="acdfab0fca292a03e5fbf755cffd611d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdfab0fca292a03e5fbf755cffd611d8">&#9670;&#160;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocator.Dispose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>释放容器资源 </p>
+<p>执行以下操作：</p><ol type="1">
+<li>释放所有实现IDisposable的服务</li>
+<li>清空服务和工厂字典</li>
+<li>释放读写锁</li>
+<li>标记容器为已释放状态</li>
+</ol>
+<p>注意：释放后容器不可再用。 </p>
+
+</div>
+</div>
+<a id="a2e377d2539e39a3d2511069a16e6a524" name="a2e377d2539e39a3d2511069a16e6a524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e377d2539e39a3d2511069a16e6a524">&#9670;&#160;</a></span>Get&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Utopia.Core.Services.ServiceLocator.Get&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取服务实例，如果未创建则调用工厂方法创建 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>请求的服务类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>服务实例</dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>当服务未注册时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>执行流程：</p><ol type="1">
+<li>尝试从已实例化字典中获取（读锁）</li>
+<li>如果未找到，尝试获取工厂方法</li>
+<li>在无锁状态下执行工厂方法（避免死锁）</li>
+<li>使用双重检查锁定模式将新实例存入字典（写锁） </li>
+</ol>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="ade048c146cc944031f643962428287d3" name="ade048c146cc944031f643962428287d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade048c146cc944031f643962428287d3">&#9670;&#160;</a></span>GetDebugSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt; Type, string &gt; Utopia.Core.Services.ServiceLocator.GetDebugSnapshot </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>调试用：获取内部服务列表的快照 </p>
+<dl class="section return"><dt>返回</dt><dd>包含服务类型和描述信息的字典</dd></dl>
+<p>仅供调试使用，生产环境中可能不需要。 返回的字典是副本，不会影响原始数据。 </p>
+
+</div>
+</div>
+<a id="a7fbf6dc5acfb718ba3c715ff2d5f0595" name="a7fbf6dc5acfb718ba3c715ff2d5f0595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fbf6dc5acfb718ba3c715ff2d5f0595">&#9670;&#160;</a></span>IsRegistered&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Core.Services.ServiceLocator.IsRegistered&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查指定类型的服务是否已注册（包括工厂注册） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>要检查的服务类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>服务是否已注册</dd></dl>
+<p>注意：此方法仅检查注册状态，不创建服务实例。 即使只有工厂注册而没有实际实例，也返回true。 </p>
+
+</div>
+</div>
+<a id="a030be246cf7321c13c235f77bcba20ba" name="a030be246cf7321c13c235f77bcba20ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a030be246cf7321c13c235f77bcba20ba">&#9670;&#160;</a></span>Register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocator.Register </td>
+          <td>(</td>
+          <td class="paramtype">Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>service</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>非泛型注册方法：使用Type对象注册服务 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>服务类型（Type对象）</td></tr>
+    <tr><td class="paramname">service</td><td>服务实例</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>当service为null时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>提供运行时类型注册能力，比泛型版本更灵活但类型安全性稍差。 主要用于反射场景或动态类型注册。 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba_icgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba_icgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a030be246cf7321c13c235f77bcba20ba_icgraph">
+<area shape="rect" title="非泛型注册方法：使用Type对象注册服务" alt="" coords="248,5,442,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator.html#a161b4a338361c0873ac79645136cd4b3" title="泛型注册方法：注册具体服务实例" alt="" coords="5,5,200,48"/>
+<area shape="poly" title=" " alt="" coords="229,27,200,29,200,24,235,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a161b4a338361c0873ac79645136cd4b3" name="a161b4a338361c0873ac79645136cd4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a161b4a338361c0873ac79645136cd4b3">&#9670;&#160;</a></span>Register&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="#a030be246cf7321c13c235f77bcba20ba">Utopia.Core.Services.ServiceLocator.Register</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>service</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>泛型注册方法：注册具体服务实例 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>服务类型（通常为接口）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">service</td><td>服务实例</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>当service为null时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>此方法将服务实例直接存储在容器中，立即可用。 如果同一类型已注册，会覆盖原有实例并输出警告。 </p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3_cgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3_cgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a161b4a338361c0873ac79645136cd4b3_cgraph">
+<area shape="rect" title="泛型注册方法：注册具体服务实例" alt="" coords="5,5,200,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator.html#a030be246cf7321c13c235f77bcba20ba" title="非泛型注册方法：使用Type对象注册服务" alt="" coords="248,5,442,48"/>
+<area shape="poly" title=" " alt="" coords="200,24,235,26,230,27,200,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc6b6687bd967ada5d8690ddc174722a" name="afc6b6687bd967ada5d8690ddc174722a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6b6687bd967ada5d8690ddc174722a">&#9670;&#160;</a></span>RegisterFactory&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocator.RegisterFactory&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>factory</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册服务工厂方法，支持懒加载 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>服务类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factory</td><td>创建服务实例的工厂方法</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>当factory为null时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>工厂方法会在首次请求服务时被调用，实现延迟初始化。 适用场景：</p><ol type="1">
+<li>服务创建成本高，需要按需创建</li>
+<li>服务依赖其他可能尚未注册的服务</li>
+<li>需要控制服务创建时机 </li>
+</ol>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a367e9be3483b9bc989588225e6181a51" name="a367e9be3483b9bc989588225e6181a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367e9be3483b9bc989588225e6181a51">&#9670;&#160;</a></span>TryGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Core.Services.ServiceLocator.TryGet </td>
+          <td>(</td>
+          <td class="paramtype">Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out object</td>          <td class="paramname"><span class="paramname"><em>service</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>核心尝试获取方法（非泛型版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>请求的服务类型</td></tr>
+    <tr><td class="paramname">service</td><td>输出参数，找到的服务实例</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功获取服务</dd></dl>
+<p>这是所有获取操作的核心实现，处理懒加载和线程安全。 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51_icgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51_icgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a367e9be3483b9bc989588225e6181a51_icgraph">
+<area shape="rect" title="核心尝试获取方法（非泛型版本）" alt="" coords="248,5,442,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator.html#a5e369588a3d226427dd935ea83b356bf" title="尝试获取服务（安全版本，不抛出异常）" alt="" coords="5,5,200,48"/>
+<area shape="poly" title=" " alt="" coords="229,27,200,29,200,24,235,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5e369588a3d226427dd935ea83b356bf" name="a5e369588a3d226427dd935ea83b356bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e369588a3d226427dd935ea83b356bf">&#9670;&#160;</a></span>TryGet&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="#a367e9be3483b9bc989588225e6181a51">Utopia.Core.Services.ServiceLocator.TryGet</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">out T</td>          <td class="paramname"><span class="paramname"><em>service</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>尝试获取服务（安全版本，不抛出异常） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>请求的服务类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">service</td><td>输出参数，找到的服务实例</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功获取服务</dd></dl>
+<p>此方法不会抛出异常，适合在不确定服务是否注册时使用。 如果服务未注册，返回false且service为null。 </p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf_cgraph.png" border="0" usemap="#aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf_cgraph" id="aclass_utopia_1_1_core_1_1_services_1_1_service_locator_a5e369588a3d226427dd935ea83b356bf_cgraph">
+<area shape="rect" title="尝试获取服务（安全版本，不抛出异常）" alt="" coords="5,5,200,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_service_locator.html#a367e9be3483b9bc989588225e6181a51" title="核心尝试获取方法（非泛型版本）" alt="" coords="248,5,442,48"/>
+<area shape="poly" title=" " alt="" coords="200,24,235,26,230,27,200,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d3686985cb8d3add4b942b49eaea5a2" name="a5d3686985cb8d3add4b942b49eaea5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3686985cb8d3add4b942b49eaea5a2">&#9670;&#160;</a></span>Unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Services.ServiceLocator.Unregister </td>
+          <td>(</td>
+          <td class="paramtype">Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>非泛型注销方法：移除指定类型的服务和工厂 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>要注销的服务类型</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af1c2c8416f4a3ae3f095c1836d5a5214" name="af1c2c8416f4a3ae3f095c1836d5a5214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c2c8416f4a3ae3f095c1836d5a5214">&#9670;&#160;</a></span>Unregister&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="#a5d3686985cb8d3add4b942b49eaea5a2">Utopia.Core.Services.ServiceLocator.Unregister</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>泛型注销方法：移除指定类型的服务和工厂 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>要注销的服务类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>只移除容器中的注册，不会调用服务的Dispose方法。 如果需要释放资源，请先手动调用服务的Dispose。 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a97b89f097d28dbda9a0cc3eb26363370" name="a97b89f097d28dbda9a0cc3eb26363370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97b89f097d28dbda9a0cc3eb26363370">&#9670;&#160;</a></span>_factories</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;Type, Func&lt;object&gt; &gt; Utopia.Core.Services.ServiceLocator._factories = new Dictionary&lt;Type, Func&lt;object&gt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务工厂字典，用于延迟创建服务实例 Key: 服务类型 Value: 创建该类型实例的工厂方法 当首次请求服务时调用工厂方法，创建后移至_services字典 </p>
+
+</div>
+</div>
+<a id="a949412b9fd9862da0a4cee1e5694ea0a" name="a949412b9fd9862da0a4cee1e5694ea0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949412b9fd9862da0a4cee1e5694ea0a">&#9670;&#160;</a></span>_isDisposed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Core.Services.ServiceLocator._isDisposed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>标记容器是否已释放，防止释放后继续使用 </p>
+
+</div>
+</div>
+<a id="aaa28d78c8663b333cb6dae4e9beba3b5" name="aaa28d78c8663b333cb6dae4e9beba3b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa28d78c8663b333cb6dae4e9beba3b5">&#9670;&#160;</a></span>_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ReaderWriterLockSlim Utopia.Core.Services.ServiceLocator._lock = new ReaderWriterLockSlim(LockRecursionPolicy.NoRecursion)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读写锁，提供线程安全访问 使用ReaderWriterLockSlim替代lock关键字，优化读多写少的场景 LockRecursionPolicy.NoRecursion: 禁止递归锁，避免死锁风险 </p>
+
+</div>
+</div>
+<a id="ae2773e788ef6ee0ec3f264f6da965cd5" name="ae2773e788ef6ee0ec3f264f6da965cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2773e788ef6ee0ec3f264f6da965cd5">&#9670;&#160;</a></span>_services</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;Type, object&gt; Utopia.Core.Services.ServiceLocator._services = new Dictionary&lt;Type, object&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已实例化的服务存储字典 Key: 服务类型（通常为接口或抽象类） Value: 已创建的服务实例 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/Services/<a class="el" href="_service_locator_8cs.html">ServiceLocator.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_core.html">Core</a></li><li class="navelem"><a href="namespace_utopia_1_1_core_1_1_services.html">Services</a></li><li class="navelem"><a href="class_utopia_1_1_core_1_1_services_1_1_service_locator.html">ServiceLocator</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

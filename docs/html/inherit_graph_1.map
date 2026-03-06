@@ -1,0 +1,52 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" title=" " alt="" coords="61,5,193,32"/>
+<area shape="rect" id="Node000001" href="$class_item_drag.html" title="物品拖拽组件 &#45; 处理可拖拽物品的UI交互" alt="" coords="382,56,457,83"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="207,30,383,61,379,65,209,35"/>
+<area shape="rect" id="Node000017" href="$interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试" alt="" coords="41,157,213,184"/>
+<area shape="rect" id="Node000016" href="$class_utopia_1_1_data_1_1_data_manager.html" title="数据管理器实现。 负责磁盘IO、序列化、加密。" alt="" coords="333,157,506,184"/>
+<area shape="poly" id="edge3_Node000017_Node000016" title=" " alt="" coords="227,168,334,169,330,172,230,173"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="78,107,176,133"/>
+<area shape="poly" id="edge5_Node000002_Node000001" title=" " alt="" coords="190,107,383,74,380,78,193,111"/>
+<area shape="rect" id="Node000003" href="$class_inventory_drag.html" title="InventoryDrag &#45; 处理背包UI中物品图标的拖拽交互" alt="" coords="368,107,471,133"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="191,118,369,118,366,122,193,122"/>
+<area shape="rect" id="Node000024" title=" " alt="" coords="66,56,188,83"/>
+<area shape="poly" id="edge6_Node000024_Node000001" title=" " alt="" coords="202,67,383,67,379,71,204,72"/>
+<area shape="rect" id="Node000013" href="$interface_player_base_1_1_i_interactable.html" title="可交互接口定义" alt="" coords="45,208,209,235"/>
+<area shape="rect" id="Node000011" href="$class_player_base.html" title=" " alt="" coords="375,208,464,235"/>
+<area shape="poly" id="edge7_Node000013_Node000011" title=" " alt="" coords="223,219,377,220,373,223,226,224"/>
+<area shape="rect" id="Node000012" href="$class_player_controller.html" title="玩家控制器类，继承自PlayerBase，负责处理玩家移动、旋转、动画等行为" alt="" coords="590,208,704,235"/>
+<area shape="poly" id="edge8_Node000011_Node000012" title=" " alt="" coords="478,219,592,220,587,223,480,224"/>
+<area shape="rect" id="Node000020" href="$interface_utopia_1_1_game_logic_1_1_n_p_c_1_1_i_n_p_c_service.html" title="NPC服务接口 提供NPC系统的核心服务功能，统一管理NPC的配置和状态数据 作为其他系统与NPC数据交互的统一入口" alt="" coords="5,259,249,285"/>
+<area shape="rect" id="Node000019" href="$class_utopia_1_1_game_logic_1_1_n_p_c_1_1_n_p_c_manager.html" title="NPC管理器 NPC系统的核心实现类，负责：" alt="" coords="297,259,542,285"/>
+<area shape="poly" id="edge9_Node000020_Node000019" title=" " alt="" coords="263,270,298,270,294,274,265,274"/>
+<area shape="rect" id="Node000023" title=" " alt="" coords="65,864,189,891"/>
+<area shape="rect" id="Node000022" href="$class_utopia_1_1_time_system_1_1_time_manager.html" title="TimeManager &#45; 负责游戏内时间的管理和事件系统" alt="" coords="309,864,530,891"/>
+<area shape="poly" id="edge10_Node000023_Node000022" title=" " alt="" coords="205,875,311,877,306,878,205,880"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="71,436,183,463"/>
+<area shape="poly" id="edge15_Node000004_Node000001" title=" " alt="" coords="151,424,200,368,225,333,246,296,257,267,261,239,260,189,260,165,264,141,275,117,295,93,314,79,337,70,383,66,379,69,338,76,317,84,298,97,279,120,269,143,266,165,266,189,267,240,262,268,251,298,230,336,204,371,156,426"/>
+<area shape="poly" id="edge22_Node000004_Node000016" title=" " alt="" coords="149,423,196,366,246,296,259,267,265,242,274,218,295,194,334,176,330,180,298,198,279,220,270,243,264,269,251,299,200,369,153,426"/>
+<area shape="poly" id="edge13_Node000004_Node000003" title=" " alt="" coords="150,423,199,367,224,333,246,296,256,274,260,253,263,215,269,179,279,161,295,143,311,132,329,124,369,118,365,121,331,129,314,137,298,147,283,164,274,181,268,216,265,254,261,276,251,299,229,336,203,370,155,426"/>
+<area shape="poly" id="edge19_Node000004_Node000011" title=" " alt="" coords="146,422,228,318,269,270,295,244,335,228,377,222,373,225,336,233,298,249,273,274,232,322,150,425"/>
+<area shape="poly" id="edge24_Node000004_Node000019" title=" " alt="" coords="147,422,209,357,250,323,295,295,327,284,324,288,298,300,253,328,212,361,151,425"/>
+<area shape="poly" id="edge26_Node000004_Node000022" title=" " alt="" coords="132,475,147,553,175,655,196,709,224,761,257,809,298,850,317,864,312,863,295,854,253,812,219,764,192,711,170,657,142,555,131,481"/>
+<area shape="rect" id="Node000005" href="$class_camera_follow.html" title="相机跟随脚本，挂在主相机上，实现第三人称视角的跟随效果。" alt="" coords="367,763,472,789"/>
+<area shape="poly" id="edge11_Node000004_Node000005" title=" " alt="" coords="136,475,157,535,189,609,210,648,236,685,265,719,298,748,331,765,369,774,364,775,329,770,295,753,261,723,231,688,206,651,184,612,152,537,135,480"/>
+<area shape="rect" id="Node000006" href="$class_equip_bar.html" title="装备栏（快捷栏）管理器" alt="" coords="382,813,456,840"/>
+<area shape="poly" id="edge12_Node000004_Node000006" title=" " alt="" coords="134,475,152,545,182,632,203,679,230,723,261,764,298,799,318,811,339,818,384,827,379,827,338,823,315,816,295,803,257,768,225,726,199,681,177,634,147,546,133,481"/>
+<area shape="rect" id="Node000007" href="$class_inventory_manager.html" title="库存管理器 &#45; 管理背包UI显示和交互 单例模式实现，全局只有一个库存管理器实例" alt="" coords="357,309,482,336"/>
+<area shape="poly" id="edge14_Node000004_Node000007" title=" " alt="" coords="157,425,219,384,296,346,358,330,354,333,298,350,222,389,161,429"/>
+<area shape="rect" id="Node000008" href="$class_item_pick.html" title="挂在可捡起的物品上，负责与玩家碰撞检测， 并将物品添加到指定的 Inventory 中。" alt="" coords="383,360,456,387"/>
+<area shape="poly" id="edge16_Node000004_Node000008" title=" " alt="" coords="184,429,296,396,384,378,380,382,297,401,187,433"/>
+<area shape="rect" id="Node000009" href="$class_land.html" title="土地类，挂在土地物体上，负责管理土地状态和与玩家的交互 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示" alt="" coords="395,411,444,437"/>
+<area shape="poly" id="edge17_Node000004_Node000009" title=" " alt="" coords="197,441,396,424,392,428,199,446"/>
+<area shape="rect" id="Node000010" href="$class_land_interaction.html" title="Í��ؽ���×�¼þ,�ÒÔÚÍ�¼ҽÅÏµĿÕÎïÌåÉϣ���Ô�¼�²âÍ�¼ÒÓëÍ��صĽ���" alt="" coords="364,461,474,488"/>
+<area shape="poly" id="edge18_Node000004_Node000010" title=" " alt="" coords="198,453,366,468,362,472,199,458"/>
+<area shape="rect" id="Node000014" href="$class_slot.html" title="挂在每个背包格子（slot）上。 负责保存并显示该格子对应的物品图标、描述文本， 以及响应点击事件，将物品信息展示到外部面板。" alt="" coords="397,512,442,539"/>
+<area shape="poly" id="edge20_Node000004_Node000014" title=" " alt="" coords="185,465,297,497,399,520,394,523,296,503,186,470"/>
+<area shape="rect" id="Node000015" href="$class_utopia_1_1_core_1_1_services_1_1_service_locator_provider.html" title="挂载在场景物体上的服务提供者组件。 用于在Unity场景中提供分层依赖注入容器，支持全局和局部服务定位器。" alt="" coords="322,563,516,605"/>
+<area shape="poly" id="edge21_Node000004_Node000015" title=" " alt="" coords="159,469,223,509,298,548,330,561,325,563,296,553,220,514,160,474"/>
+<area shape="rect" id="Node000018" href="$class_utopia_1_1_game_logic_1_1_game_data_manager.html" title="游戏数据管理器 负责全局游戏数据的存储、存档/读档、场景切换以及与各个可存档系统的协调。 通过服务定位器注册自身，供其他模块获取。" alt="" coords="321,629,518,672"/>
+<area shape="poly" id="edge23_Node000004_Node000018" title=" " alt="" coords="147,472,210,544,252,583,298,615,323,628,318,629,295,620,248,587,206,548,147,478"/>
+<area shape="rect" id="Node000021" href="$class_utopia_1_1_game_logic_1_1_n_p_c_1_1_resources_n_p_c_config_loader.html" title="基于Unity Resources系统的NPC配置加载器 继承自MonoBehaviour，可作为组件附加到游戏对象 实现INPCConfigLoader接口，提供具体的加载逻辑" alt="" coords="305,696,534,739"/>
+<area shape="poly" id="edge25_Node000004_Node000021" title=" " alt="" coords="140,474,165,520,200,576,244,634,270,659,298,682,320,695,314,696,295,686,267,663,240,637,195,580,161,523,140,479"/>
+</map>

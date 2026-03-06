@@ -1,0 +1,830 @@
+\doxysection{Utopia.\+Time\+System.\+Time\+Manager类 参考}
+\hypertarget{class_utopia_1_1_time_system_1_1_time_manager}{}\label{class_utopia_1_1_time_system_1_1_time_manager}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+
+
+\doxylink{class_utopia_1_1_time_system_1_1_time_manager}{Time\+Manager} -\/ 负责游戏内时间的管理和事件系统  
+
+
+
+
+类 Utopia.\+Time\+System.\+Time\+Manager 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_utopia_1_1_time_system_1_1_time_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Utopia.\+Time\+System.\+Time\+Manager 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3}{Register\+Event}} (\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}} time\+Event)
+\begin{DoxyCompactList}\small\item\em 注册一个定时事件，事件到达触发时间时将执行回调。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_afdd64db2fe3eb396f550c6e8f31c40ed}{Unregister\+Event}} (\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}} time\+Event)
+\begin{DoxyCompactList}\small\item\em 取消注册一个定时事件。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_abb02f41f30248c4d4f1c8c7a41e5219f}{Pause}} ()
+\begin{DoxyCompactList}\small\item\em 暂停时间推进。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_ab955989921b70987bdf494641f99160c}{Resume}} ()
+\begin{DoxyCompactList}\small\item\em 恢复时间推进。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a749537c4e53b7c0b17e4ce8c333f9e8c}{Set\+Time\+Scale}} (float scale)
+\begin{DoxyCompactList}\small\item\em 设置时间缩放倍数。 \end{DoxyCompactList}\item 
+Task \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a0a924c66e26b6efa63b7d5d364d464f7}{Save}} (string slot\+Id)
+\begin{DoxyCompactList}\small\item\em 将当前时间状态保存到存档。 \end{DoxyCompactList}\item 
+Task \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a3d15db128fb9bbaeb3d282eb161de40d}{Load}} (string slot\+Id)
+\begin{DoxyCompactList}\small\item\em 从存档加载时间状态。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_aece63333d2c97d1865261a5d052d5368}{Current\+Time}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前完整时间对象。 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a08ab19c2b25f34e6b2b88cc9519db4b3}{Year}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前年份。 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_aded6831fffa286aeb456db81ed67ac60}{Month}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前月份（1\texorpdfstring{$\sim$}{\string~}months\+Per\+Year）。 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_af93ac5ddcd1e74cb38d360f26bfc72c9}{Day}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前日期（1\texorpdfstring{$\sim$}{\string~}days\+Per\+Month）。 \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a4e5282336d7abe8a469d070a40c97922}{Time\+Of\+Day}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前一天中的进度（0.0\texorpdfstring{$\sim$}{\string~}1.0）。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a306bf09b23705e0c5eee38684363d67b}{Current\+Season}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前季节。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a3025de895dd66558127db5596bbc71da}{Current\+Sun\+State}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前时段。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_af31632838cd305ee5cdd098900bc9d20}{Is\+Paused}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 时间是否暂停。 \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_ab4c7e5e65bedb987b7a62e0c6d455f3d}{Time\+Scale}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 当前时间缩放倍数。 \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a4ef53e00fd83dc9a1bf9fa70f62fc227}{Save\+Key}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em 实现 ISaveable\+System.\+Save\+Key 接口。 返回用于存档的唯一键名。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{事件}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} $>$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a1a86908e0cf429a52a8e0ecc294de4d4}{On\+Tick}}
+\begin{DoxyCompactList}\small\item\em 每帧触发一次，传递当前时间（高频事件，适合\+UI刷新）。 \end{DoxyCompactList}\item 
+Action$<$ int $>$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a9445e5a00cfe32e3befec2edf9b3ed5c}{On\+Day\+Changed}}
+\begin{DoxyCompactList}\small\item\em 日期变更时触发，传递新的天数（当月第几天）。 \end{DoxyCompactList}\item 
+Action$<$ int $>$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a82b0f1f1aeca5682d9690a12b433cc81}{On\+Month\+Changed}}
+\begin{DoxyCompactList}\small\item\em 月份变更时触发，传递新的月份（1-\/based）。 \end{DoxyCompactList}\item 
+Action$<$ int $>$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_af3cb10f20fdb2bafb73caa79623b212f}{On\+Year\+Changed}}
+\begin{DoxyCompactList}\small\item\em 年份变更时触发，传递新的年份。 \end{DoxyCompactList}\item 
+Action$<$ \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} $>$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a16cf738b810fb68582ae64697b32c2f4}{On\+Season\+Changed}}
+\begin{DoxyCompactList}\small\item\em 季节变更时触发，传递新的季节。 \end{DoxyCompactList}\item 
+Action$<$ \doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} $>$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a423bf53f12bcfe065e5a0c1ad28088a6}{On\+Sun\+State\+Changed}}
+\begin{DoxyCompactList}\small\item\em 时段（早/\+中/\+晚）变更时触发，传递新的时段。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em 初始化单例，将自身注册到全局服务定位器。 同时设置为 Dont\+Destroy\+On\+Load，确保跨场景不销毁。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9}{Start}} ()
+\begin{DoxyCompactList}\small\item\em 启动时初始化时间系统。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a815e7440e47a03a37be9f40421bac462}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 每帧更新，负责时间推进（如果未暂停）。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972}{Initialize\+Time}} ()
+\begin{DoxyCompactList}\small\item\em 初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 \doxylink{class_utopia_1_1_time_system_1_1_time_manager_aaece30bfc5ada5e20f2c322a1ee8d050}{time\+Settings} 中读取。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71}{Advance\+Time}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em 根据流逝的现实时间推进游戏内时间。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031}{Advance\+Day}} ()
+\begin{DoxyCompactList}\small\item\em 推进到新的一天，处理跨月和事件触发。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441}{Advance\+Month}} ()
+\begin{DoxyCompactList}\small\item\em 推进到新的一月，处理跨年和季节变更。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63}{Advance\+Year}} ()
+\begin{DoxyCompactList}\small\item\em 推进到新的一年，触发年份变更事件。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce}{Refresh\+Derived\+States}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em 刷新所有派生状态（季节、时段）。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d}{Check\+Season}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em 根据当前月份检查并更新季节，若变化则触发事件。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5}{Check\+Sun\+State}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em 根据当前时刻检查并更新时段，若变化则触发事件。 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8}{Check\+Scheduled\+Events}} ()
+\begin{DoxyCompactList}\small\item\em 检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service}{IData\+Service}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a38d151f98984539375782af14e93310c}{\+\_\+data\+Service}}
+\begin{DoxyCompactList}\small\item\em 数据存储服务，通过依赖注入获取。 用于存档/\+读档游戏时间数据。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager}{IEvent\+Manager}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a0fe30cb21e9551cfd9cb0860855c56d8}{\+\_\+event\+Manager}}
+\begin{DoxyCompactList}\small\item\em 事件管理器，用于发布全局时间事件。 可以发送如 Day\+Passed\+Event 等全局事件，供其他模块监听。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings}{Time\+Settings}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_aaece30bfc5ada5e20f2c322a1ee8d050}{time\+Settings}}
+\begin{DoxyCompactList}\small\item\em 时间配置数据（\+Scriptable\+Object），在\+Inspector中赋值。 包含一年月数、一月天数、一天秒数、时段划分、季节划分等配置。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_ad3c144fc607fe373bf566627b8ff76a8}{\+\_\+current\+Time}}
+\begin{DoxyCompactList}\small\item\em 当前游戏日期时间（包含年月日及时刻）。 时刻以 0\texorpdfstring{$\sim$}{\string~}1 浮点数表示一天中的进度。 \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_ad344ec85e49eb4a7bc1dd14d0dc18306}{current\+Time\+Of\+Day}}
+\begin{DoxyCompactList}\small\item\em 当前一天中的进度（0.0 \texorpdfstring{$\sim$}{\string~} 1.\+0），用于\+Inspector调试显示。 \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a12d6cb30ddf5d9e9dcd6462f59093b1a}{\+\_\+time\+Scale}} = 1f
+\begin{DoxyCompactList}\small\item\em 时间缩放倍数（1.0 = 现实时间流速）。 实际时间增量 = 现实时间增量 \texorpdfstring{$\ast$}{*} \+\_\+time\+Scale \texorpdfstring{$\ast$}{*} time\+Settings.\+time\+Multiplier。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_ac57c810a79edd8c808d12c0aeac36e49}{\+\_\+is\+Paused}} = false
+\begin{DoxyCompactList}\small\item\em 时间是否暂停。暂停时不会推进游戏时间。 \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a9046aa9c5b9ed53713583ff9cfbf0451}{\+\_\+is\+Initialized}} = false
+\begin{DoxyCompactList}\small\item\em 系统是否已完成初始化。 初始化前不会处理时间推进。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a4f15177a903aa102c7f6818889915377}{\+\_\+current\+Season}}
+\begin{DoxyCompactList}\small\item\em 当前季节（根据月份计算得出）。 \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_a6d1fcaa1a185d475949470ed5e51b2d7}{\+\_\+current\+Sun\+State}}
+\begin{DoxyCompactList}\small\item\em 当前时段（如早晨、中午、傍晚、夜晚）。 \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}} $>$ \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_adb07be1c5ae8bb22a87c987ed1000e9c}{\+\_\+scheduled\+Events}} = new List$<$\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}}$>$()
+\begin{DoxyCompactList}\small\item\em 已注册的定时事件列表。 这些事件会在时间达到触发条件时执行回调。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+const string \doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_manager_adce8029f59b8d7f33b777e1066c168da}{SAVE\+\_\+\+KEY}} = "{}Game\+Time\+Data"{}
+\begin{DoxyCompactList}\small\item\em 存档数据在 \doxylink{interface_utopia_1_1_data_1_1_i_data_service}{IData\+Service} 中的唯一键名。 用于存储和加载时间数据。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\doxylink{class_utopia_1_1_time_system_1_1_time_manager}{Time\+Manager} -\/ 负责游戏内时间的管理和事件系统 
+
+功能说明：
+\begin{DoxyEnumerate}
+\item 管理游戏内的日期、时间、季节等状态
+\item 支持时间缩放和暂停功能
+\item 提供事件系统，允许其他系统订阅时间变化事件
+\item 支持自定义日期时间结构，便于游戏内逻辑使用
+\item 实现 ISaveable\+System 接口，支持存档/\+读档
+\end{DoxyEnumerate}
+
+使用要求：
+\begin{DoxyEnumerate}
+\item 挂载在场景中的单例\+Game\+Object上
+\item 配置 \doxylink{class_utopia_1_1_time_system_1_1_time_settings}{Time\+Settings} Scriptable\+Object 以定义时间参数 
+\end{DoxyEnumerate}
+
+\label{doc-func-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!AdvanceDay@{AdvanceDay}}
+\index{AdvanceDay@{AdvanceDay}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{AdvanceDay()}{AdvanceDay()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Advance\+Day (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+推进到新的一天，处理跨月和事件触发。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!AdvanceMonth@{AdvanceMonth}}
+\index{AdvanceMonth@{AdvanceMonth}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{AdvanceMonth()}{AdvanceMonth()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Advance\+Month (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+推进到新的一月，处理跨年和季节变更。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!AdvanceTime@{AdvanceTime}}
+\index{AdvanceTime@{AdvanceTime}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{AdvanceTime()}{AdvanceTime()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Advance\+Time (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+根据流逝的现实时间推进游戏内时间。 
+
+
+\begin{DoxyParams}{参数}
+{\em delta\+Time} & 上一帧的现实时间（秒）\\
+\hline
+\end{DoxyParams}
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!AdvanceYear@{AdvanceYear}}
+\index{AdvanceYear@{AdvanceYear}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{AdvanceYear()}{AdvanceYear()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Advance\+Year (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+推进到新的一年，触发年份变更事件。 
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Awake@{Awake}}
+\index{Awake@{Awake}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+初始化单例，将自身注册到全局服务定位器。 同时设置为 Dont\+Destroy\+On\+Load，确保跨场景不销毁。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!CheckScheduledEvents@{CheckScheduledEvents}}
+\index{CheckScheduledEvents@{CheckScheduledEvents}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{CheckScheduledEvents()}{CheckScheduledEvents()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Check\+Scheduled\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。 
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!CheckSeason@{CheckSeason}}
+\index{CheckSeason@{CheckSeason}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{CheckSeason()}{CheckSeason()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Check\+Season (\begin{DoxyParamCaption}\item[{bool}]{force}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+根据当前月份检查并更新季节，若变化则触发事件。 
+
+
+\begin{DoxyParams}{参数}
+{\em force} & 强制触发事件（用于初始化或存档加载）\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!CheckSunState@{CheckSunState}}
+\index{CheckSunState@{CheckSunState}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{CheckSunState()}{CheckSunState()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Check\+Sun\+State (\begin{DoxyParamCaption}\item[{bool}]{force}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+根据当前时刻检查并更新时段，若变化则触发事件。 
+
+
+\begin{DoxyParams}{参数}
+{\em force} & 强制触发事件\\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!InitializeTime@{InitializeTime}}
+\index{InitializeTime@{InitializeTime}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{InitializeTime()}{InitializeTime()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Initialize\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 \doxylink{class_utopia_1_1_time_system_1_1_time_manager_aaece30bfc5ada5e20f2c322a1ee8d050}{time\+Settings} 中读取。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a3d15db128fb9bbaeb3d282eb161de40d}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Load@{Load}}
+\index{Load@{Load}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a3d15db128fb9bbaeb3d282eb161de40d} 
+Task Utopia.\+Time\+System.\+Time\+Manager.\+Load (\begin{DoxyParamCaption}\item[{string}]{slot\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+从存档加载时间状态。 
+
+
+\begin{DoxyParams}{参数}
+{\em slot\+Id} & 存档槽位标识。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+异步任务。
+\end{DoxyReturn}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_abb02f41f30248c4d4f1c8c7a41e5219f}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Pause@{Pause}}
+\index{Pause@{Pause}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_abb02f41f30248c4d4f1c8c7a41e5219f} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Pause (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+暂停时间推进。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!RefreshDerivedStates@{RefreshDerivedStates}}
+\index{RefreshDerivedStates@{RefreshDerivedStates}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{RefreshDerivedStates()}{RefreshDerivedStates()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Refresh\+Derived\+States (\begin{DoxyParamCaption}\item[{bool}]{force}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+刷新所有派生状态（季节、时段）。 
+
+
+\begin{DoxyParams}{参数}
+{\em force} & 是否强制触发变更事件（即使值未变）\\
+\hline
+\end{DoxyParams}
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!RegisterEvent@{RegisterEvent}}
+\index{RegisterEvent@{RegisterEvent}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{RegisterEvent()}{RegisterEvent()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Register\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}}}]{time\+Event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+注册一个定时事件，事件到达触发时间时将执行回调。 
+
+
+\begin{DoxyParams}{参数}
+{\em time\+Event} & 要注册的时间事件对象。\\
+\hline
+\end{DoxyParams}
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_ab955989921b70987bdf494641f99160c}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Resume@{Resume}}
+\index{Resume@{Resume}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_ab955989921b70987bdf494641f99160c} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Resume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+恢复时间推进。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a0a924c66e26b6efa63b7d5d364d464f7}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Save@{Save}}
+\index{Save@{Save}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a0a924c66e26b6efa63b7d5d364d464f7} 
+Task Utopia.\+Time\+System.\+Time\+Manager.\+Save (\begin{DoxyParamCaption}\item[{string}]{slot\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+将当前时间状态保存到存档。 
+
+
+\begin{DoxyParams}{参数}
+{\em slot\+Id} & 存档槽位标识。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+异步任务。
+\end{DoxyReturn}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a749537c4e53b7c0b17e4ce8c333f9e8c}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!SetTimeScale@{SetTimeScale}}
+\index{SetTimeScale@{SetTimeScale}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{SetTimeScale()}{SetTimeScale()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a749537c4e53b7c0b17e4ce8c333f9e8c} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Set\+Time\+Scale (\begin{DoxyParamCaption}\item[{float}]{scale}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置时间缩放倍数。 
+
+
+\begin{DoxyParams}{参数}
+{\em scale} & 缩放倍数（必须大于等于0）\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Start@{Start}}
+\index{Start@{Start}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+启动时初始化时间系统。 
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_afdd64db2fe3eb396f550c6e8f31c40ed}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!UnregisterEvent@{UnregisterEvent}}
+\index{UnregisterEvent@{UnregisterEvent}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{UnregisterEvent()}{UnregisterEvent()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_afdd64db2fe3eb396f550c6e8f31c40ed} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Unregister\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}}}]{time\+Event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+取消注册一个定时事件。 
+
+
+\begin{DoxyParams}{参数}
+{\em time\+Event} & 要取消的事件对象。\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a815e7440e47a03a37be9f40421bac462}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Update@{Update}}
+\index{Update@{Update}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a815e7440e47a03a37be9f40421bac462} 
+void Utopia.\+Time\+System.\+Time\+Manager.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+每帧更新，负责时间推进（如果未暂停）。 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a4f15177a903aa102c7f6818889915377}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_currentSeason@{\_currentSeason}}
+\index{\_currentSeason@{\_currentSeason}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_currentSeason}{\_currentSeason}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a4f15177a903aa102c7f6818889915377} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} Utopia.\+Time\+System.\+Time\+Manager.\+\_\+current\+Season\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前季节（根据月份计算得出）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a6d1fcaa1a185d475949470ed5e51b2d7}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_currentSunState@{\_currentSunState}}
+\index{\_currentSunState@{\_currentSunState}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_currentSunState}{\_currentSunState}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a6d1fcaa1a185d475949470ed5e51b2d7} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} Utopia.\+Time\+System.\+Time\+Manager.\+\_\+current\+Sun\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前时段（如早晨、中午、傍晚、夜晚）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_ad3c144fc607fe373bf566627b8ff76a8}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_currentTime@{\_currentTime}}
+\index{\_currentTime@{\_currentTime}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_currentTime}{\_currentTime}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_ad3c144fc607fe373bf566627b8ff76a8} 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} Utopia.\+Time\+System.\+Time\+Manager.\+\_\+current\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前游戏日期时间（包含年月日及时刻）。 时刻以 0\texorpdfstring{$\sim$}{\string~}1 浮点数表示一天中的进度。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a38d151f98984539375782af14e93310c}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_dataService@{\_dataService}}
+\index{\_dataService@{\_dataService}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_dataService}{\_dataService}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a38d151f98984539375782af14e93310c} 
+\doxymbox{\hyperlink{interface_utopia_1_1_data_1_1_i_data_service}{IData\+Service}} Utopia.\+Time\+System.\+Time\+Manager.\+\_\+data\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+数据存储服务，通过依赖注入获取。 用于存档/\+读档游戏时间数据。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a0fe30cb21e9551cfd9cb0860855c56d8}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_eventManager@{\_eventManager}}
+\index{\_eventManager@{\_eventManager}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_eventManager}{\_eventManager}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a0fe30cb21e9551cfd9cb0860855c56d8} 
+\doxymbox{\hyperlink{interface_utopia_1_1_core_1_1_event_1_1_i_event_manager}{IEvent\+Manager}} Utopia.\+Time\+System.\+Time\+Manager.\+\_\+event\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+事件管理器，用于发布全局时间事件。 可以发送如 Day\+Passed\+Event 等全局事件，供其他模块监听。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a9046aa9c5b9ed53713583ff9cfbf0451}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_isInitialized@{\_isInitialized}}
+\index{\_isInitialized@{\_isInitialized}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_isInitialized}{\_isInitialized}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a9046aa9c5b9ed53713583ff9cfbf0451} 
+bool Utopia.\+Time\+System.\+Time\+Manager.\+\_\+is\+Initialized = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+系统是否已完成初始化。 初始化前不会处理时间推进。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_ac57c810a79edd8c808d12c0aeac36e49}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_isPaused@{\_isPaused}}
+\index{\_isPaused@{\_isPaused}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_isPaused}{\_isPaused}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_ac57c810a79edd8c808d12c0aeac36e49} 
+bool Utopia.\+Time\+System.\+Time\+Manager.\+\_\+is\+Paused = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+时间是否暂停。暂停时不会推进游戏时间。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_adb07be1c5ae8bb22a87c987ed1000e9c}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_scheduledEvents@{\_scheduledEvents}}
+\index{\_scheduledEvents@{\_scheduledEvents}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_scheduledEvents}{\_scheduledEvents}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_adb07be1c5ae8bb22a87c987ed1000e9c} 
+List$<$\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}}$>$ Utopia.\+Time\+System.\+Time\+Manager.\+\_\+scheduled\+Events = new List$<$\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_event}{Time\+Event}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+已注册的定时事件列表。 这些事件会在时间达到触发条件时执行回调。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a12d6cb30ddf5d9e9dcd6462f59093b1a}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!\_timeScale@{\_timeScale}}
+\index{\_timeScale@{\_timeScale}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{\_timeScale}{\_timeScale}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a12d6cb30ddf5d9e9dcd6462f59093b1a} 
+float Utopia.\+Time\+System.\+Time\+Manager.\+\_\+time\+Scale = 1f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+时间缩放倍数（1.0 = 现实时间流速）。 实际时间增量 = 现实时间增量 \texorpdfstring{$\ast$}{*} \+\_\+time\+Scale \texorpdfstring{$\ast$}{*} time\+Settings.\+time\+Multiplier。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_ad344ec85e49eb4a7bc1dd14d0dc18306}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!currentTimeOfDay@{currentTimeOfDay}}
+\index{currentTimeOfDay@{currentTimeOfDay}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{currentTimeOfDay}{currentTimeOfDay}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_ad344ec85e49eb4a7bc1dd14d0dc18306} 
+float Utopia.\+Time\+System.\+Time\+Manager.\+current\+Time\+Of\+Day\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前一天中的进度（0.0 \texorpdfstring{$\sim$}{\string~} 1.\+0），用于\+Inspector调试显示。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_adce8029f59b8d7f33b777e1066c168da}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!SAVE\_KEY@{SAVE\_KEY}}
+\index{SAVE\_KEY@{SAVE\_KEY}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{SAVE\_KEY}{SAVE\_KEY}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_adce8029f59b8d7f33b777e1066c168da} 
+const string Utopia.\+Time\+System.\+Time\+Manager.\+SAVE\+\_\+\+KEY = "{}Game\+Time\+Data"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+存档数据在 \doxylink{interface_utopia_1_1_data_1_1_i_data_service}{IData\+Service} 中的唯一键名。 用于存储和加载时间数据。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_aaece30bfc5ada5e20f2c322a1ee8d050}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!timeSettings@{timeSettings}}
+\index{timeSettings@{timeSettings}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{timeSettings}{timeSettings}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_aaece30bfc5ada5e20f2c322a1ee8d050} 
+\doxymbox{\hyperlink{class_utopia_1_1_time_system_1_1_time_settings}{Time\+Settings}} Utopia.\+Time\+System.\+Time\+Manager.\+time\+Settings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+时间配置数据（\+Scriptable\+Object），在\+Inspector中赋值。 包含一年月数、一月天数、一天秒数、时段划分、季节划分等配置。 
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_doc-property-members}
+\doxysubsection{属性说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a306bf09b23705e0c5eee38684363d67b}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!CurrentSeason@{CurrentSeason}}
+\index{CurrentSeason@{CurrentSeason}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{CurrentSeason}{CurrentSeason}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a306bf09b23705e0c5eee38684363d67b} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}} Utopia.\+Time\+System.\+Time\+Manager.\+Current\+Season\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前季节。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a3025de895dd66558127db5596bbc71da}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!CurrentSunState@{CurrentSunState}}
+\index{CurrentSunState@{CurrentSunState}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{CurrentSunState}{CurrentSunState}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a3025de895dd66558127db5596bbc71da} 
+\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}} Utopia.\+Time\+System.\+Time\+Manager.\+Current\+Sun\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前时段。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_aece63333d2c97d1865261a5d052d5368}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!CurrentTime@{CurrentTime}}
+\index{CurrentTime@{CurrentTime}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{CurrentTime}{CurrentTime}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_aece63333d2c97d1865261a5d052d5368} 
+\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}} Utopia.\+Time\+System.\+Time\+Manager.\+Current\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前完整时间对象。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_af93ac5ddcd1e74cb38d360f26bfc72c9}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Day@{Day}}
+\index{Day@{Day}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Day}{Day}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_af93ac5ddcd1e74cb38d360f26bfc72c9} 
+int Utopia.\+Time\+System.\+Time\+Manager.\+Day\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前日期（1\texorpdfstring{$\sim$}{\string~}days\+Per\+Month）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_af31632838cd305ee5cdd098900bc9d20}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!IsPaused@{IsPaused}}
+\index{IsPaused@{IsPaused}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{IsPaused}{IsPaused}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_af31632838cd305ee5cdd098900bc9d20} 
+bool Utopia.\+Time\+System.\+Time\+Manager.\+Is\+Paused\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+时间是否暂停。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_aded6831fffa286aeb456db81ed67ac60}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Month@{Month}}
+\index{Month@{Month}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Month}{Month}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_aded6831fffa286aeb456db81ed67ac60} 
+int Utopia.\+Time\+System.\+Time\+Manager.\+Month\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前月份（1\texorpdfstring{$\sim$}{\string~}months\+Per\+Year）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a4ef53e00fd83dc9a1bf9fa70f62fc227}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!SaveKey@{SaveKey}}
+\index{SaveKey@{SaveKey}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{SaveKey}{SaveKey}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a4ef53e00fd83dc9a1bf9fa70f62fc227} 
+string Utopia.\+Time\+System.\+Time\+Manager.\+Save\+Key\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+实现 ISaveable\+System.\+Save\+Key 接口。 返回用于存档的唯一键名。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a4e5282336d7abe8a469d070a40c97922}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!TimeOfDay@{TimeOfDay}}
+\index{TimeOfDay@{TimeOfDay}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{TimeOfDay}{TimeOfDay}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a4e5282336d7abe8a469d070a40c97922} 
+float Utopia.\+Time\+System.\+Time\+Manager.\+Time\+Of\+Day\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前一天中的进度（0.0\texorpdfstring{$\sim$}{\string~}1.0）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_ab4c7e5e65bedb987b7a62e0c6d455f3d}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!TimeScale@{TimeScale}}
+\index{TimeScale@{TimeScale}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{TimeScale}{TimeScale}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_ab4c7e5e65bedb987b7a62e0c6d455f3d} 
+float Utopia.\+Time\+System.\+Time\+Manager.\+Time\+Scale\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前时间缩放倍数。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a08ab19c2b25f34e6b2b88cc9519db4b3}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!Year@{Year}}
+\index{Year@{Year}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{Year}{Year}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a08ab19c2b25f34e6b2b88cc9519db4b3} 
+int Utopia.\+Time\+System.\+Time\+Manager.\+Year\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+当前年份。 
+
+
+
+\label{doc-event-members}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_doc-event-members}
+\doxysubsection{事件说明}
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a9445e5a00cfe32e3befec2edf9b3ed5c}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!OnDayChanged@{OnDayChanged}}
+\index{OnDayChanged@{OnDayChanged}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{OnDayChanged}{OnDayChanged}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a9445e5a00cfe32e3befec2edf9b3ed5c} 
+Action$<$int$>$ Utopia.\+Time\+System.\+Time\+Manager.\+On\+Day\+Changed}
+
+
+
+日期变更时触发，传递新的天数（当月第几天）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a82b0f1f1aeca5682d9690a12b433cc81}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!OnMonthChanged@{OnMonthChanged}}
+\index{OnMonthChanged@{OnMonthChanged}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{OnMonthChanged}{OnMonthChanged}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a82b0f1f1aeca5682d9690a12b433cc81} 
+Action$<$int$>$ Utopia.\+Time\+System.\+Time\+Manager.\+On\+Month\+Changed}
+
+
+
+月份变更时触发，传递新的月份（1-\/based）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a16cf738b810fb68582ae64697b32c2f4}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!OnSeasonChanged@{OnSeasonChanged}}
+\index{OnSeasonChanged@{OnSeasonChanged}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{OnSeasonChanged}{OnSeasonChanged}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a16cf738b810fb68582ae64697b32c2f4} 
+Action$<$\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_af20373bd58b8066dd253e1cabbf32541}{Season}}$>$ Utopia.\+Time\+System.\+Time\+Manager.\+On\+Season\+Changed}
+
+
+
+季节变更时触发，传递新的季节。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a423bf53f12bcfe065e5a0c1ad28088a6}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!OnSunStateChanged@{OnSunStateChanged}}
+\index{OnSunStateChanged@{OnSunStateChanged}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{OnSunStateChanged}{OnSunStateChanged}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a423bf53f12bcfe065e5a0c1ad28088a6} 
+Action$<$\doxymbox{\hyperlink{namespace_utopia_1_1_time_system_a8b1ceff83ce04f14a3301d8a2b5956a2}{Sun\+State}}$>$ Utopia.\+Time\+System.\+Time\+Manager.\+On\+Sun\+State\+Changed}
+
+
+
+时段（早/\+中/\+晚）变更时触发，传递新的时段。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_a1a86908e0cf429a52a8e0ecc294de4d4}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!OnTick@{OnTick}}
+\index{OnTick@{OnTick}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{OnTick}{OnTick}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_a1a86908e0cf429a52a8e0ecc294de4d4} 
+Action$<$\doxymbox{\hyperlink{struct_utopia_1_1_time_system_1_1_custom_date_time}{Custom\+Date\+Time}}$>$ Utopia.\+Time\+System.\+Time\+Manager.\+On\+Tick}
+
+
+
+每帧触发一次，传递当前时间（高频事件，适合\+UI刷新）。 
+
+\Hypertarget{class_utopia_1_1_time_system_1_1_time_manager_af3cb10f20fdb2bafb73caa79623b212f}\index{Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}!OnYearChanged@{OnYearChanged}}
+\index{OnYearChanged@{OnYearChanged}!Utopia.TimeSystem.TimeManager@{Utopia.TimeSystem.TimeManager}}
+\doxysubsubsection{\texorpdfstring{OnYearChanged}{OnYearChanged}}
+{\footnotesize\ttfamily \label{class_utopia_1_1_time_system_1_1_time_manager_af3cb10f20fdb2bafb73caa79623b212f} 
+Action$<$int$>$ Utopia.\+Time\+System.\+Time\+Manager.\+On\+Year\+Changed}
+
+
+
+年份变更时触发，传递新的年份。 
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Script/\+\+Time\+Tool/\+\doxymbox{\hyperlink{_time_manager_8cs}{Time\+Manager.\+cs}}\end{DoxyCompactItemize}

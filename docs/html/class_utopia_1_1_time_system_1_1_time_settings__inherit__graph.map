@@ -1,0 +1,5 @@
+<map id="Utopia.TimeSystem.TimeSettings" name="Utopia.TimeSystem.TimeSettings">
+<area shape="rect" id="Node000001" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统" alt="" coords="5,80,224,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="56,5,173,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,46,117,81,112,78,113,50"/>
+</map>

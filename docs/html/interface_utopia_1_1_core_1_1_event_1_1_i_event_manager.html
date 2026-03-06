@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.Core.Event.IEventManager接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('interface_utopia_1_1_core_1_1_event_1_1_i_event_manager.html','','interface_utopia_1_1_core_1_1_event_1_1_i_event_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.Core.Event.IEventManager接口 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>事件管理器行为接口。 定义了事件系统的核心操作：订阅、取消订阅、发布、查询与清理。 实现此接口的类应保证线程安全（建议使用锁机制）。  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Utopia.Core.Event.IEventManager 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_utopia_1_1_core_1_1_event_1_1_i_event_manager__inherit__graph.png" border="0" usemap="#a_utopia_8_core_8_event_8_i_event_manager_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_utopia_8_core_8_event_8_i_event_manager_inherit__map" id="a_utopia_8_core_8_event_8_i_event_manager_inherit__map">
+<area shape="rect" title="事件管理器行为接口。 定义了事件系统的核心操作：订阅、取消订阅、发布、查询与清理。 实现此接口的类应保证线程安全（建议使用锁机制）。" alt="" coords="28,5,200,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html" title="全局事件总线。 纯 C# 实现，独立于 Unity 生命周期，适用于任何需要事件通信的场景。 无单例模式，建议通过依赖注入或服务定位器访问。 遵循订阅&#45;发布模式，用于模块间解耦通信。 所有公开方法均为线..." alt="" coords="5,96,223,123"/>
+<area shape="poly" title=" " alt="" coords="116,62,116,97,112,94,112,66"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a37a67fd6abf20b3a10202785e0b2c7d3" id="r_a37a67fd6abf20b3a10202785e0b2c7d3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a37a67fd6abf20b3a10202785e0b2c7d3">Subscribe&lt; IEvent &gt;</a> (Action&lt; IEvent &gt; handler)</td></tr>
+<tr class="memdesc:a37a67fd6abf20b3a10202785e0b2c7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">订阅指定类型的事件。  <br /></td></tr>
+<tr class="memitem:a6cecd9b8f1feafea20629f387eb51232" id="r_a6cecd9b8f1feafea20629f387eb51232"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6cecd9b8f1feafea20629f387eb51232">Unsubscribe&lt; IEvent &gt;</a> (Action&lt; IEvent &gt; handler)</td></tr>
+<tr class="memdesc:a6cecd9b8f1feafea20629f387eb51232"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消订阅指定类型的事件。 如果取消后该事件类型没有任何订阅者，将自动从内部字典中移除。  <br /></td></tr>
+<tr class="memitem:a09d7fe918547676bbbba917a664bc189" id="r_a09d7fe918547676bbbba917a664bc189"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a09d7fe918547676bbbba917a664bc189">Publish&lt; IEvent &gt;</a> (IEvent eventData)</td></tr>
+<tr class="memdesc:a09d7fe918547676bbbba917a664bc189"><td class="mdescLeft">&#160;</td><td class="mdescRight">发布指定类型的事件，所有订阅者将收到此事件数据。 发布过程是线程安全的，并且会捕获单个处理器抛出的异常，避免影响其他处理器。  <br /></td></tr>
+<tr class="memitem:ae61a7a74151a852b7b57b27bce802267" id="r_ae61a7a74151a852b7b57b27bce802267"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae61a7a74151a852b7b57b27bce802267">HasSubscribers&lt; IEvent &gt;</a> ()</td></tr>
+<tr class="memdesc:ae61a7a74151a852b7b57b27bce802267"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测指定事件类型是否存在至少一个订阅者。  <br /></td></tr>
+<tr class="memitem:ac3e6da116f298d210b6db0ee5d1368e1" id="r_ac3e6da116f298d210b6db0ee5d1368e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac3e6da116f298d210b6db0ee5d1368e1">ClearAll</a> ()</td></tr>
+<tr class="memdesc:ac3e6da116f298d210b6db0ee5d1368e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除所有事件的所有订阅者。  <br /></td></tr>
+<tr class="memitem:af4e2cf4f538caeffdc1c66e57c8a7cdb" id="r_af4e2cf4f538caeffdc1c66e57c8a7cdb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af4e2cf4f538caeffdc1c66e57c8a7cdb">ClearEvent&lt; IEvent &gt;</a> ()</td></tr>
+<tr class="memdesc:af4e2cf4f538caeffdc1c66e57c8a7cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除指定事件类型的所有订阅者。  <br /></td></tr>
+<tr class="memitem:ad644d79d3e8afc511fcdeb1d46d28e3b" id="r_ad644d79d3e8afc511fcdeb1d46d28e3b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad644d79d3e8afc511fcdeb1d46d28e3b">GetSubscriberCount&lt; IEvent &gt;</a> ()</td></tr>
+<tr class="memdesc:ad644d79d3e8afc511fcdeb1d46d28e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定事件类型的当前订阅者数量。  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>事件管理器行为接口。 定义了事件系统的核心操作：订阅、取消订阅、发布、查询与清理。 实现此接口的类应保证线程安全（建议使用锁机制）。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ac3e6da116f298d210b6db0ee5d1368e1" name="ac3e6da116f298d210b6db0ee5d1368e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e6da116f298d210b6db0ee5d1368e1">&#9670;&#160;</a></span>ClearAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Event.IEventManager.ClearAll </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除所有事件的所有订阅者。 </p>
+
+<p>在 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html#a48504e514beb0bf6a2db2143acbe864f">Utopia.Core.Event.EventManager</a> 内被实现.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_cgraph.png" border="0" usemap="#ainterface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_cgraph" loading="lazy" alt=""/></div>
+<map name="ainterface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_cgraph" id="ainterface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_cgraph">
+<area shape="rect" title="清除所有事件的所有订阅者。" alt="" coords="5,29,177,72"/>
+<area shape="poly" title=" " alt="" coords="58,28,57,19,62,10,74,5,91,3,110,5,122,14,117,14,108,10,91,8,75,10,66,14,62,20,63,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_icgraph.png" border="0" usemap="#ainterface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_icgraph" loading="lazy" alt=""/></div>
+<map name="ainterface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_icgraph" id="ainterface_utopia_1_1_core_1_1_event_1_1_i_event_manager_ac3e6da116f298d210b6db0ee5d1368e1_icgraph">
+<area shape="rect" title="清除所有事件的所有订阅者。" alt="" coords="5,29,177,72"/>
+<area shape="poly" title=" " alt="" coords="117,14,108,10,91,8,75,10,66,14,62,20,63,29,58,28,57,19,62,10,74,5,91,3,110,5,122,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af4e2cf4f538caeffdc1c66e57c8a7cdb" name="af4e2cf4f538caeffdc1c66e57c8a7cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e2cf4f538caeffdc1c66e57c8a7cdb">&#9670;&#160;</a></span>ClearEvent&lt; IEvent &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Event.IEventManager.ClearEvent&lt; IEvent &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除指定事件类型的所有订阅者。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IEvent</td><td>事件类型，必须继承自 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此">GameEventBase</a></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html#aa1a1e5d43849b0528b4a2433ad9cc841">Utopia.Core.Event.EventManager</a> 内被实现.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>IEvent</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html">GameEventBase</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="ad644d79d3e8afc511fcdeb1d46d28e3b" name="ad644d79d3e8afc511fcdeb1d46d28e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad644d79d3e8afc511fcdeb1d46d28e3b">&#9670;&#160;</a></span>GetSubscriberCount&lt; IEvent &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.Core.Event.IEventManager.GetSubscriberCount&lt; IEvent &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定事件类型的当前订阅者数量。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IEvent</td><td>事件类型，必须继承自 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此">GameEventBase</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>订阅者数量，如果无订阅者则返回 0</dd></dl>
+
+<p>在 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html#a34166deaba5a5d805dfd1ae34b0b243b">Utopia.Core.Event.EventManager</a> 内被实现.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>IEvent</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html">GameEventBase</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="ae61a7a74151a852b7b57b27bce802267" name="ae61a7a74151a852b7b57b27bce802267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61a7a74151a852b7b57b27bce802267">&#9670;&#160;</a></span>HasSubscribers&lt; IEvent &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.Core.Event.IEventManager.HasSubscribers&lt; IEvent &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检测指定事件类型是否存在至少一个订阅者。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IEvent</td><td>事件类型，必须继承自 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此">GameEventBase</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果有任何订阅者则返回 true，否则返回 false</dd></dl>
+
+<p>在 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html#a1d0994435da6d43b5016393967e51b41">Utopia.Core.Event.EventManager</a> 内被实现.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>IEvent</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html">GameEventBase</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a09d7fe918547676bbbba917a664bc189" name="a09d7fe918547676bbbba917a664bc189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d7fe918547676bbbba917a664bc189">&#9670;&#160;</a></span>Publish&lt; IEvent &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Event.IEventManager.Publish&lt; IEvent &gt; </td>
+          <td>(</td>
+          <td class="paramtype">IEvent</td>          <td class="paramname"><span class="paramname"><em>eventData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发布指定类型的事件，所有订阅者将收到此事件数据。 发布过程是线程安全的，并且会捕获单个处理器抛出的异常，避免影响其他处理器。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IEvent</td><td>事件类型，必须继承自 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此">GameEventBase</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>要发布的事件实例</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>当 eventData 为 null 时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html#a6a7174ddce49cc96acc49c4c5bd292e2">Utopia.Core.Event.EventManager</a> 内被实现.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>IEvent</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html">GameEventBase</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a37a67fd6abf20b3a10202785e0b2c7d3" name="a37a67fd6abf20b3a10202785e0b2c7d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a67fd6abf20b3a10202785e0b2c7d3">&#9670;&#160;</a></span>Subscribe&lt; IEvent &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Event.IEventManager.Subscribe&lt; IEvent &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Action&lt; IEvent &gt;</td>          <td class="paramname"><span class="paramname"><em>handler</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>订阅指定类型的事件。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IEvent</td><td>事件类型，必须继承自 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此">GameEventBase</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>事件处理回调方法</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>当 handler 为 null 时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html#ae1af2a702706f939ffdca13b3c2fb4ac">Utopia.Core.Event.EventManager</a> 内被实现.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>IEvent</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html">GameEventBase</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a6cecd9b8f1feafea20629f387eb51232" name="a6cecd9b8f1feafea20629f387eb51232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cecd9b8f1feafea20629f387eb51232">&#9670;&#160;</a></span>Unsubscribe&lt; IEvent &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.Core.Event.IEventManager.Unsubscribe&lt; IEvent &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Action&lt; IEvent &gt;</td>          <td class="paramname"><span class="paramname"><em>handler</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取消订阅指定类型的事件。 如果取消后该事件类型没有任何订阅者，将自动从内部字典中移除。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IEvent</td><td>事件类型，必须继承自 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html" title="所有事件基类，用于定义事件的存在，包含基础必须属性 其余事件继承自此">GameEventBase</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>之前订阅时使用的相同回调方法</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>当 handler 为 null 时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="class_utopia_1_1_core_1_1_event_1_1_event_manager.html#aab47270229db301088f40cbc5a1b6886">Utopia.Core.Event.EventManager</a> 内被实现.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>IEvent</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_utopia_1_1_core_1_1_event_1_1_game_event_base.html">GameEventBase</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>Assets/Script/Events/<a class="el" href="_event_manager_8cs.html">EventManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_core.html">Core</a></li><li class="navelem"><a href="namespace_utopia_1_1_core_1_1_event.html">Event</a></li><li class="navelem"><a href="interface_utopia_1_1_core_1_1_event_1_1_i_event_manager.html">IEventManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

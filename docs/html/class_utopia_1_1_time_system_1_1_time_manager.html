@@ -1,0 +1,1692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Utopia: Utopia.TimeSystem.TimeManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Utopia<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_utopia_1_1_time_system_1_1_time_manager.html','','class_utopia_1_1_time_system_1_1_time_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utopia.TimeSystem.TimeManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="class_utopia_1_1_time_system_1_1_time_manager.html" title="TimeManager - 负责游戏内时间的管理和事件系统">TimeManager</a> - 负责游戏内时间的管理和事件系统  
+ <a href="#details">更多...</a></p>
+<div class="dynheader">
+类 Utopia.TimeSystem.TimeManager 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager__inherit__graph.png" border="0" usemap="#a_utopia_8_time_system_8_time_manager_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_utopia_8_time_system_8_time_manager_inherit__map" id="a_utopia_8_time_system_8_time_manager_inherit__map">
+<area shape="rect" title="TimeManager &#45; 负责游戏内时间的管理和事件系统" alt="" coords="22,80,242,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="85,41,122,79,117,80,83,46"/>
+<area shape="rect" title=" " alt="" coords="140,5,264,32"/>
+<area shape="poly" title=" " alt="" coords="182,42,145,82,142,77,177,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Utopia.TimeSystem.TimeManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager__coll__graph.png" border="0" usemap="#a_utopia_8_time_system_8_time_manager_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_utopia_8_time_system_8_time_manager_coll__map" id="a_utopia_8_time_system_8_time_manager_coll__map">
+<area shape="rect" title="TimeManager &#45; 负责游戏内时间的管理和事件系统" alt="" coords="967,136,1187,163"/>
+<area shape="rect" title=" " alt="" coords="657,5,768,32"/>
+<area shape="poly" title=" " alt="" coords="783,32,822,41,884,53,944,71,1007,102,1058,136,1053,135,1004,107,942,76,882,58,821,47,783,38"/>
+<area shape="rect" title=" " alt="" coords="650,56,775,83"/>
+<area shape="poly" title=" " alt="" coords="790,73,865,83,943,99,997,115,1045,136,1040,135,995,120,942,104,864,88,790,79"/>
+<area shape="rect" href="interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试" alt="" coords="627,107,798,133"/>
+<area shape="poly" title=" " alt="" coords="814,125,969,140,964,141,814,131"/>
+<area shape="rect" href="interface_utopia_1_1_core_1_1_event_1_1_i_event_manager.html" title="事件管理器行为接口。 定义了事件系统的核心操作：订阅、取消订阅、发布、查询与清理。 实现此接口的类应保证线程安全（建议使用锁机制）。" alt="" coords="627,157,798,200"/>
+<area shape="poly" title=" " alt="" coords="813,173,942,165,987,163,982,164,943,171,814,179"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_settings.html" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统" alt="" coords="603,224,822,251"/>
+<area shape="poly" title=" " alt="" coords="837,222,942,201,998,182,1045,164,1050,162,1000,187,943,207,838,228"/>
+<area shape="rect" title=" " alt="" coords="312,197,429,224"/>
+<area shape="poly" title=" " alt="" coords="445,214,605,228,600,229,445,219"/>
+<area shape="rect" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html" title="自定义日期时间结构，适用于 28天/月、4月/年的独特日历系统。 时间部分以 0~1 的浮点数表示一天内的时间进度（0 对应 00:00，1 对应 24:00）。 支持比较运算、算术运算（通过时间戳）、..." alt="" coords="277,263,464,305"/>
+<area shape="poly" title=" " alt="" coords="480,296,556,301,642,303,733,298,821,284,893,260,961,225,1017,190,1056,164,1061,162,1020,194,963,230,895,265,822,289,733,304,642,308,556,307,480,301"/>
+<area shape="poly" title=" " alt="" coords="480,267,579,253,610,252,616,251,580,259,480,272"/>
+<area shape="rect" title=" " alt="" coords="5,245,228,272"/>
+<area shape="poly" title=" " alt="" coords="243,269,279,274,274,275,243,274"/>
+<area shape="rect" title=" " alt="" coords="11,296,222,323"/>
+<area shape="poly" title=" " alt="" coords="237,295,279,293,274,294,238,300"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a473a06b00d6f1bfeaf8dfef1f28a66b3" id="r_a473a06b00d6f1bfeaf8dfef1f28a66b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a473a06b00d6f1bfeaf8dfef1f28a66b3">RegisterEvent</a> (<a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a> timeEvent)</td></tr>
+<tr class="memdesc:a473a06b00d6f1bfeaf8dfef1f28a66b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册一个定时事件，事件到达触发时间时将执行回调。  <br /></td></tr>
+<tr class="memitem:afdd64db2fe3eb396f550c6e8f31c40ed" id="r_afdd64db2fe3eb396f550c6e8f31c40ed"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afdd64db2fe3eb396f550c6e8f31c40ed">UnregisterEvent</a> (<a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a> timeEvent)</td></tr>
+<tr class="memdesc:afdd64db2fe3eb396f550c6e8f31c40ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消注册一个定时事件。  <br /></td></tr>
+<tr class="memitem:abb02f41f30248c4d4f1c8c7a41e5219f" id="r_abb02f41f30248c4d4f1c8c7a41e5219f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abb02f41f30248c4d4f1c8c7a41e5219f">Pause</a> ()</td></tr>
+<tr class="memdesc:abb02f41f30248c4d4f1c8c7a41e5219f"><td class="mdescLeft">&#160;</td><td class="mdescRight">暂停时间推进。  <br /></td></tr>
+<tr class="memitem:ab955989921b70987bdf494641f99160c" id="r_ab955989921b70987bdf494641f99160c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab955989921b70987bdf494641f99160c">Resume</a> ()</td></tr>
+<tr class="memdesc:ab955989921b70987bdf494641f99160c"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复时间推进。  <br /></td></tr>
+<tr class="memitem:a749537c4e53b7c0b17e4ce8c333f9e8c" id="r_a749537c4e53b7c0b17e4ce8c333f9e8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a749537c4e53b7c0b17e4ce8c333f9e8c">SetTimeScale</a> (float scale)</td></tr>
+<tr class="memdesc:a749537c4e53b7c0b17e4ce8c333f9e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置时间缩放倍数。  <br /></td></tr>
+<tr class="memitem:a0a924c66e26b6efa63b7d5d364d464f7" id="r_a0a924c66e26b6efa63b7d5d364d464f7"><td class="memItemLeft">Task&#160;</td><td class="memItemRight"><a class="el" href="#a0a924c66e26b6efa63b7d5d364d464f7">Save</a> (string slotId)</td></tr>
+<tr class="memdesc:a0a924c66e26b6efa63b7d5d364d464f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前时间状态保存到存档。  <br /></td></tr>
+<tr class="memitem:a3d15db128fb9bbaeb3d282eb161de40d" id="r_a3d15db128fb9bbaeb3d282eb161de40d"><td class="memItemLeft">Task&#160;</td><td class="memItemRight"><a class="el" href="#a3d15db128fb9bbaeb3d282eb161de40d">Load</a> (string slotId)</td></tr>
+<tr class="memdesc:a3d15db128fb9bbaeb3d282eb161de40d"><td class="mdescLeft">&#160;</td><td class="mdescRight">从存档加载时间状态。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:aece63333d2c97d1865261a5d052d5368" id="r_aece63333d2c97d1865261a5d052d5368"><td class="memItemLeft"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>&#160;</td><td class="memItemRight"><a class="el" href="#aece63333d2c97d1865261a5d052d5368">CurrentTime</a><code> [get]</code></td></tr>
+<tr class="memdesc:aece63333d2c97d1865261a5d052d5368"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前完整时间对象。  <br /></td></tr>
+<tr class="memitem:a08ab19c2b25f34e6b2b88cc9519db4b3" id="r_a08ab19c2b25f34e6b2b88cc9519db4b3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a08ab19c2b25f34e6b2b88cc9519db4b3">Year</a><code> [get]</code></td></tr>
+<tr class="memdesc:a08ab19c2b25f34e6b2b88cc9519db4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前年份。  <br /></td></tr>
+<tr class="memitem:aded6831fffa286aeb456db81ed67ac60" id="r_aded6831fffa286aeb456db81ed67ac60"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aded6831fffa286aeb456db81ed67ac60">Month</a><code> [get]</code></td></tr>
+<tr class="memdesc:aded6831fffa286aeb456db81ed67ac60"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前月份（1~monthsPerYear）。  <br /></td></tr>
+<tr class="memitem:af93ac5ddcd1e74cb38d360f26bfc72c9" id="r_af93ac5ddcd1e74cb38d360f26bfc72c9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af93ac5ddcd1e74cb38d360f26bfc72c9">Day</a><code> [get]</code></td></tr>
+<tr class="memdesc:af93ac5ddcd1e74cb38d360f26bfc72c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前日期（1~daysPerMonth）。  <br /></td></tr>
+<tr class="memitem:a4e5282336d7abe8a469d070a40c97922" id="r_a4e5282336d7abe8a469d070a40c97922"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4e5282336d7abe8a469d070a40c97922">TimeOfDay</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4e5282336d7abe8a469d070a40c97922"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前一天中的进度（0.0~1.0）。  <br /></td></tr>
+<tr class="memitem:a306bf09b23705e0c5eee38684363d67b" id="r_a306bf09b23705e0c5eee38684363d67b"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a>&#160;</td><td class="memItemRight"><a class="el" href="#a306bf09b23705e0c5eee38684363d67b">CurrentSeason</a><code> [get]</code></td></tr>
+<tr class="memdesc:a306bf09b23705e0c5eee38684363d67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前季节。  <br /></td></tr>
+<tr class="memitem:a3025de895dd66558127db5596bbc71da" id="r_a3025de895dd66558127db5596bbc71da"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3025de895dd66558127db5596bbc71da">CurrentSunState</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3025de895dd66558127db5596bbc71da"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前时段。  <br /></td></tr>
+<tr class="memitem:af31632838cd305ee5cdd098900bc9d20" id="r_af31632838cd305ee5cdd098900bc9d20"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af31632838cd305ee5cdd098900bc9d20">IsPaused</a><code> [get]</code></td></tr>
+<tr class="memdesc:af31632838cd305ee5cdd098900bc9d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间是否暂停。  <br /></td></tr>
+<tr class="memitem:ab4c7e5e65bedb987b7a62e0c6d455f3d" id="r_ab4c7e5e65bedb987b7a62e0c6d455f3d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab4c7e5e65bedb987b7a62e0c6d455f3d">TimeScale</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab4c7e5e65bedb987b7a62e0c6d455f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前时间缩放倍数。  <br /></td></tr>
+<tr class="memitem:a4ef53e00fd83dc9a1bf9fa70f62fc227" id="r_a4ef53e00fd83dc9a1bf9fa70f62fc227"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a4ef53e00fd83dc9a1bf9fa70f62fc227">SaveKey</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4ef53e00fd83dc9a1bf9fa70f62fc227"><td class="mdescLeft">&#160;</td><td class="mdescRight">实现 ISaveableSystem.SaveKey 接口。 返回用于存档的唯一键名。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-events" class="groupheader"><a id="events" name="events"></a>
+事件</h2></td></tr>
+<tr class="memitem:a1a86908e0cf429a52a8e0ecc294de4d4" id="r_a1a86908e0cf429a52a8e0ecc294de4d4"><td class="memItemLeft">Action&lt; <a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a86908e0cf429a52a8e0ecc294de4d4">OnTick</a></td></tr>
+<tr class="memdesc:a1a86908e0cf429a52a8e0ecc294de4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧触发一次，传递当前时间（高频事件，适合UI刷新）。  <br /></td></tr>
+<tr class="memitem:a9445e5a00cfe32e3befec2edf9b3ed5c" id="r_a9445e5a00cfe32e3befec2edf9b3ed5c"><td class="memItemLeft">Action&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9445e5a00cfe32e3befec2edf9b3ed5c">OnDayChanged</a></td></tr>
+<tr class="memdesc:a9445e5a00cfe32e3befec2edf9b3ed5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">日期变更时触发，传递新的天数（当月第几天）。  <br /></td></tr>
+<tr class="memitem:a82b0f1f1aeca5682d9690a12b433cc81" id="r_a82b0f1f1aeca5682d9690a12b433cc81"><td class="memItemLeft">Action&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a82b0f1f1aeca5682d9690a12b433cc81">OnMonthChanged</a></td></tr>
+<tr class="memdesc:a82b0f1f1aeca5682d9690a12b433cc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">月份变更时触发，传递新的月份（1-based）。  <br /></td></tr>
+<tr class="memitem:af3cb10f20fdb2bafb73caa79623b212f" id="r_af3cb10f20fdb2bafb73caa79623b212f"><td class="memItemLeft">Action&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af3cb10f20fdb2bafb73caa79623b212f">OnYearChanged</a></td></tr>
+<tr class="memdesc:af3cb10f20fdb2bafb73caa79623b212f"><td class="mdescLeft">&#160;</td><td class="mdescRight">年份变更时触发，传递新的年份。  <br /></td></tr>
+<tr class="memitem:a16cf738b810fb68582ae64697b32c2f4" id="r_a16cf738b810fb68582ae64697b32c2f4"><td class="memItemLeft">Action&lt; <a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a16cf738b810fb68582ae64697b32c2f4">OnSeasonChanged</a></td></tr>
+<tr class="memdesc:a16cf738b810fb68582ae64697b32c2f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">季节变更时触发，传递新的季节。  <br /></td></tr>
+<tr class="memitem:a423bf53f12bcfe065e5a0c1ad28088a6" id="r_a423bf53f12bcfe065e5a0c1ad28088a6"><td class="memItemLeft">Action&lt; <a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a423bf53f12bcfe065e5a0c1ad28088a6">OnSunStateChanged</a></td></tr>
+<tr class="memdesc:a423bf53f12bcfe065e5a0c1ad28088a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">时段（早/中/晚）变更时触发，传递新的时段。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aedfbda97790b0dfc733c42633ff9a995" id="r_aedfbda97790b0dfc733c42633ff9a995"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aedfbda97790b0dfc733c42633ff9a995">Awake</a> ()</td></tr>
+<tr class="memdesc:aedfbda97790b0dfc733c42633ff9a995"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化单例，将自身注册到全局服务定位器。 同时设置为 DontDestroyOnLoad，确保跨场景不销毁。  <br /></td></tr>
+<tr class="memitem:a7b664087cb737df808970dba08fa7ef9" id="r_a7b664087cb737df808970dba08fa7ef9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7b664087cb737df808970dba08fa7ef9">Start</a> ()</td></tr>
+<tr class="memdesc:a7b664087cb737df808970dba08fa7ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动时初始化时间系统。  <br /></td></tr>
+<tr class="memitem:a815e7440e47a03a37be9f40421bac462" id="r_a815e7440e47a03a37be9f40421bac462"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a815e7440e47a03a37be9f40421bac462">Update</a> ()</td></tr>
+<tr class="memdesc:a815e7440e47a03a37be9f40421bac462"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧更新，负责时间推进（如果未暂停）。  <br /></td></tr>
+<tr class="memitem:adc47f1f89ae295d0dbb3d1cc635e1972" id="r_adc47f1f89ae295d0dbb3d1cc635e1972"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adc47f1f89ae295d0dbb3d1cc635e1972">InitializeTime</a> ()</td></tr>
+<tr class="memdesc:adc47f1f89ae295d0dbb3d1cc635e1972"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 <a class="el" href="#aaece30bfc5ada5e20f2c322a1ee8d050" title="时间配置数据（ScriptableObject），在Inspector中赋值。 包含一年月数、一月天数、一天秒数、时段划分、季节划分等配置。">timeSettings</a> 中读取。  <br /></td></tr>
+<tr class="memitem:abc01f83b0e182ddc03f45fb733743b71" id="r_abc01f83b0e182ddc03f45fb733743b71"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc01f83b0e182ddc03f45fb733743b71">AdvanceTime</a> (float deltaTime)</td></tr>
+<tr class="memdesc:abc01f83b0e182ddc03f45fb733743b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据流逝的现实时间推进游戏内时间。  <br /></td></tr>
+<tr class="memitem:a83bc0288b5c2c5156c8d90113ef8a031" id="r_a83bc0288b5c2c5156c8d90113ef8a031"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83bc0288b5c2c5156c8d90113ef8a031">AdvanceDay</a> ()</td></tr>
+<tr class="memdesc:a83bc0288b5c2c5156c8d90113ef8a031"><td class="mdescLeft">&#160;</td><td class="mdescRight">推进到新的一天，处理跨月和事件触发。  <br /></td></tr>
+<tr class="memitem:a37aec0df9dd39c07adffc3f21ef74441" id="r_a37aec0df9dd39c07adffc3f21ef74441"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a37aec0df9dd39c07adffc3f21ef74441">AdvanceMonth</a> ()</td></tr>
+<tr class="memdesc:a37aec0df9dd39c07adffc3f21ef74441"><td class="mdescLeft">&#160;</td><td class="mdescRight">推进到新的一月，处理跨年和季节变更。  <br /></td></tr>
+<tr class="memitem:adf292d62d1f2e3893212d5ab2bb2cb63" id="r_adf292d62d1f2e3893212d5ab2bb2cb63"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf292d62d1f2e3893212d5ab2bb2cb63">AdvanceYear</a> ()</td></tr>
+<tr class="memdesc:adf292d62d1f2e3893212d5ab2bb2cb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">推进到新的一年，触发年份变更事件。  <br /></td></tr>
+<tr class="memitem:a24c81babd9b2946736418757ac59a0ce" id="r_a24c81babd9b2946736418757ac59a0ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a24c81babd9b2946736418757ac59a0ce">RefreshDerivedStates</a> (bool force=false)</td></tr>
+<tr class="memdesc:a24c81babd9b2946736418757ac59a0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新所有派生状态（季节、时段）。  <br /></td></tr>
+<tr class="memitem:a7f2d786cdee58f7399dd91ad36c1127d" id="r_a7f2d786cdee58f7399dd91ad36c1127d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7f2d786cdee58f7399dd91ad36c1127d">CheckSeason</a> (bool force=false)</td></tr>
+<tr class="memdesc:a7f2d786cdee58f7399dd91ad36c1127d"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当前月份检查并更新季节，若变化则触发事件。  <br /></td></tr>
+<tr class="memitem:acaf8f75f48d7f972d62451c97645b2e5" id="r_acaf8f75f48d7f972d62451c97645b2e5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acaf8f75f48d7f972d62451c97645b2e5">CheckSunState</a> (bool force=false)</td></tr>
+<tr class="memdesc:acaf8f75f48d7f972d62451c97645b2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当前时刻检查并更新时段，若变化则触发事件。  <br /></td></tr>
+<tr class="memitem:a40e3c3b354971e1e4927b93967ca19d8" id="r_a40e3c3b354971e1e4927b93967ca19d8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a40e3c3b354971e1e4927b93967ca19d8">CheckScheduledEvents</a> ()</td></tr>
+<tr class="memdesc:a40e3c3b354971e1e4927b93967ca19d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a38d151f98984539375782af14e93310c" id="r_a38d151f98984539375782af14e93310c"><td class="memItemLeft"><a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html">IDataService</a>&#160;</td><td class="memItemRight"><a class="el" href="#a38d151f98984539375782af14e93310c">_dataService</a></td></tr>
+<tr class="memdesc:a38d151f98984539375782af14e93310c"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据存储服务，通过依赖注入获取。 用于存档/读档游戏时间数据。  <br /></td></tr>
+<tr class="memitem:a0fe30cb21e9551cfd9cb0860855c56d8" id="r_a0fe30cb21e9551cfd9cb0860855c56d8"><td class="memItemLeft"><a class="el" href="interface_utopia_1_1_core_1_1_event_1_1_i_event_manager.html">IEventManager</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0fe30cb21e9551cfd9cb0860855c56d8">_eventManager</a></td></tr>
+<tr class="memdesc:a0fe30cb21e9551cfd9cb0860855c56d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件管理器，用于发布全局时间事件。 可以发送如 DayPassedEvent 等全局事件，供其他模块监听。  <br /></td></tr>
+<tr class="memitem:aaece30bfc5ada5e20f2c322a1ee8d050" id="r_aaece30bfc5ada5e20f2c322a1ee8d050"><td class="memItemLeft"><a class="el" href="class_utopia_1_1_time_system_1_1_time_settings.html">TimeSettings</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaece30bfc5ada5e20f2c322a1ee8d050">timeSettings</a></td></tr>
+<tr class="memdesc:aaece30bfc5ada5e20f2c322a1ee8d050"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间配置数据（ScriptableObject），在Inspector中赋值。 包含一年月数、一月天数、一天秒数、时段划分、季节划分等配置。  <br /></td></tr>
+<tr class="memitem:ad3c144fc607fe373bf566627b8ff76a8" id="r_ad3c144fc607fe373bf566627b8ff76a8"><td class="memItemLeft"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad3c144fc607fe373bf566627b8ff76a8">_currentTime</a></td></tr>
+<tr class="memdesc:ad3c144fc607fe373bf566627b8ff76a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前游戏日期时间（包含年月日及时刻）。 时刻以 0~1 浮点数表示一天中的进度。  <br /></td></tr>
+<tr class="memitem:ad344ec85e49eb4a7bc1dd14d0dc18306" id="r_ad344ec85e49eb4a7bc1dd14d0dc18306"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad344ec85e49eb4a7bc1dd14d0dc18306">currentTimeOfDay</a></td></tr>
+<tr class="memdesc:ad344ec85e49eb4a7bc1dd14d0dc18306"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前一天中的进度（0.0 ~ 1.0），用于Inspector调试显示。  <br /></td></tr>
+<tr class="memitem:a12d6cb30ddf5d9e9dcd6462f59093b1a" id="r_a12d6cb30ddf5d9e9dcd6462f59093b1a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a12d6cb30ddf5d9e9dcd6462f59093b1a">_timeScale</a> = 1f</td></tr>
+<tr class="memdesc:a12d6cb30ddf5d9e9dcd6462f59093b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间缩放倍数（1.0 = 现实时间流速）。 实际时间增量 = 现实时间增量 * _timeScale * timeSettings.timeMultiplier。  <br /></td></tr>
+<tr class="memitem:ac57c810a79edd8c808d12c0aeac36e49" id="r_ac57c810a79edd8c808d12c0aeac36e49"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac57c810a79edd8c808d12c0aeac36e49">_isPaused</a> = false</td></tr>
+<tr class="memdesc:ac57c810a79edd8c808d12c0aeac36e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间是否暂停。暂停时不会推进游戏时间。  <br /></td></tr>
+<tr class="memitem:a9046aa9c5b9ed53713583ff9cfbf0451" id="r_a9046aa9c5b9ed53713583ff9cfbf0451"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9046aa9c5b9ed53713583ff9cfbf0451">_isInitialized</a> = false</td></tr>
+<tr class="memdesc:a9046aa9c5b9ed53713583ff9cfbf0451"><td class="mdescLeft">&#160;</td><td class="mdescRight">系统是否已完成初始化。 初始化前不会处理时间推进。  <br /></td></tr>
+<tr class="memitem:a4f15177a903aa102c7f6818889915377" id="r_a4f15177a903aa102c7f6818889915377"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4f15177a903aa102c7f6818889915377">_currentSeason</a></td></tr>
+<tr class="memdesc:a4f15177a903aa102c7f6818889915377"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前季节（根据月份计算得出）。  <br /></td></tr>
+<tr class="memitem:a6d1fcaa1a185d475949470ed5e51b2d7" id="r_a6d1fcaa1a185d475949470ed5e51b2d7"><td class="memItemLeft"><a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6d1fcaa1a185d475949470ed5e51b2d7">_currentSunState</a></td></tr>
+<tr class="memdesc:a6d1fcaa1a185d475949470ed5e51b2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前时段（如早晨、中午、傍晚、夜晚）。  <br /></td></tr>
+<tr class="memitem:adb07be1c5ae8bb22a87c987ed1000e9c" id="r_adb07be1c5ae8bb22a87c987ed1000e9c"><td class="memItemLeft">List&lt; <a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adb07be1c5ae8bb22a87c987ed1000e9c">_scheduledEvents</a> = new List&lt;<a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a>&gt;()</td></tr>
+<tr class="memdesc:adb07be1c5ae8bb22a87c987ed1000e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">已注册的定时事件列表。 这些事件会在时间达到触发条件时执行回调。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:adce8029f59b8d7f33b777e1066c168da" id="r_adce8029f59b8d7f33b777e1066c168da"><td class="memItemLeft">const string&#160;</td><td class="memItemRight"><a class="el" href="#adce8029f59b8d7f33b777e1066c168da">SAVE_KEY</a> = &quot;GameTimeData&quot;</td></tr>
+<tr class="memdesc:adce8029f59b8d7f33b777e1066c168da"><td class="mdescLeft">&#160;</td><td class="mdescRight">存档数据在 <a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试">IDataService</a> 中的唯一键名。 用于存储和加载时间数据。  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="class_utopia_1_1_time_system_1_1_time_manager.html" title="TimeManager - 负责游戏内时间的管理和事件系统">TimeManager</a> - 负责游戏内时间的管理和事件系统 </p>
+<p>功能说明：</p><ol type="1">
+<li>管理游戏内的日期、时间、季节等状态</li>
+<li>支持时间缩放和暂停功能</li>
+<li>提供事件系统，允许其他系统订阅时间变化事件</li>
+<li>支持自定义日期时间结构，便于游戏内逻辑使用</li>
+<li>实现 ISaveableSystem 接口，支持存档/读档</li>
+</ol>
+<p>使用要求：</p><ol type="1">
+<li>挂载在场景中的单例GameObject上</li>
+<li>配置 <a class="el" href="class_utopia_1_1_time_system_1_1_time_settings.html" title="时间系统配置数据 支持28天为一月，一年4个月的自定义日历系统">TimeSettings</a> ScriptableObject 以定义时间参数 </li>
+</ol>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a83bc0288b5c2c5156c8d90113ef8a031" name="a83bc0288b5c2c5156c8d90113ef8a031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83bc0288b5c2c5156c8d90113ef8a031">&#9670;&#160;</a></span>AdvanceDay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.AdvanceDay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>推进到新的一天，处理跨月和事件触发。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_cgraph">
+<area shape="rect" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="5,39,230,81"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a37aec0df9dd39c07adffc3f21ef74441" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="278,39,502,81"/>
+<area shape="poly" title=" " alt="" coords="230,57,265,60,259,60,230,63"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#adf292d62d1f2e3893212d5ab2bb2cb63" title="推进到新的一年，触发年份变更事件。" alt="" coords="550,5,774,48"/>
+<area shape="poly" title=" " alt="" coords="502,44,537,42,532,43,503,49"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="550,72,774,115"/>
+<area shape="poly" title=" " alt="" coords="502,71,537,78,532,78,502,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a83bc0288b5c2c5156c8d90113ef8a031_icgraph">
+<area shape="rect" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="278,5,502,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a37aec0df9dd39c07adffc3f21ef74441" name="a37aec0df9dd39c07adffc3f21ef74441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37aec0df9dd39c07adffc3f21ef74441">&#9670;&#160;</a></span>AdvanceMonth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.AdvanceMonth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>推进到新的一月，处理跨年和季节变更。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_cgraph">
+<area shape="rect" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="5,39,230,81"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#adf292d62d1f2e3893212d5ab2bb2cb63" title="推进到新的一年，触发年份变更事件。" alt="" coords="278,5,502,48"/>
+<area shape="poly" title=" " alt="" coords="230,44,265,42,259,43,231,49"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="278,72,502,115"/>
+<area shape="poly" title=" " alt="" coords="230,71,265,78,259,78,230,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a37aec0df9dd39c07adffc3f21ef74441_icgraph">
+<area shape="rect" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="550,5,774,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a83bc0288b5c2c5156c8d90113ef8a031" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="278,5,502,48"/>
+<area shape="poly" title=" " alt="" coords="532,27,503,29,503,24,537,27"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abc01f83b0e182ddc03f45fb733743b71" name="abc01f83b0e182ddc03f45fb733743b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc01f83b0e182ddc03f45fb733743b71">&#9670;&#160;</a></span>AdvanceTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.AdvanceTime </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据流逝的现实时间推进游戏内时间。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>上一帧的现实时间（秒）</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_abc01f83b0e182ddc03f45fb733743b71_cgraph">
+<area shape="rect" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,105,230,148"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a83bc0288b5c2c5156c8d90113ef8a031" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="278,39,502,81"/>
+<area shape="poly" title=" " alt="" coords="207,102,287,84,283,87,208,107"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a40e3c3b354971e1e4927b93967ca19d8" title="检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。" alt="" coords="278,105,502,148"/>
+<area shape="poly" title=" " alt="" coords="230,124,265,126,259,127,230,129"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#acaf8f75f48d7f972d62451c97645b2e5" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="278,172,502,215"/>
+<area shape="poly" title=" " alt="" coords="208,146,288,167,282,168,207,151"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a37aec0df9dd39c07adffc3f21ef74441" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="550,39,774,81"/>
+<area shape="poly" title=" " alt="" coords="502,57,537,60,532,60,503,63"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#adf292d62d1f2e3893212d5ab2bb2cb63" title="推进到新的一年，触发年份变更事件。" alt="" coords="822,5,1047,48"/>
+<area shape="poly" title=" " alt="" coords="774,44,809,42,804,43,775,49"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="822,72,1047,115"/>
+<area shape="poly" title=" " alt="" coords="775,71,809,78,804,78,775,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adf292d62d1f2e3893212d5ab2bb2cb63" name="adf292d62d1f2e3893212d5ab2bb2cb63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf292d62d1f2e3893212d5ab2bb2cb63">&#9670;&#160;</a></span>AdvanceYear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.AdvanceYear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>推进到新的一年，触发年份变更事件。 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_adf292d62d1f2e3893212d5ab2bb2cb63_icgraph">
+<area shape="rect" title="推进到新的一年，触发年份变更事件。" alt="" coords="822,5,1047,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a37aec0df9dd39c07adffc3f21ef74441" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="550,5,774,48"/>
+<area shape="poly" title=" " alt="" coords="804,27,775,29,775,24,810,27"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a83bc0288b5c2c5156c8d90113ef8a031" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="278,5,502,48"/>
+<area shape="poly" title=" " alt="" coords="532,27,503,29,503,24,537,27"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aedfbda97790b0dfc733c42633ff9a995" name="aedfbda97790b0dfc733c42633ff9a995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfbda97790b0dfc733c42633ff9a995">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化单例，将自身注册到全局服务定位器。 同时设置为 DontDestroyOnLoad，确保跨场景不销毁。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_aedfbda97790b0dfc733c42633ff9a995_cgraph">
+<area shape="rect" title="初始化单例，将自身注册到全局服务定位器。 同时设置为 DontDestroyOnLoad，确保跨场景不销毁。" alt="" coords="5,5,230,48"/>
+<area shape="rect" href="class_utopia_1_1_core_1_1_services_1_1_hierarchical_service_locator.html#ac956d4c6015f38f1bef4f3ee11fdf2e8" title="使用运行时类型信息注册服务实例。" alt="" coords="278,5,497,48"/>
+<area shape="poly" title=" " alt="" coords="230,24,265,27,260,27,230,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a40e3c3b354971e1e4927b93967ca19d8" name="a40e3c3b354971e1e4927b93967ca19d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e3c3b354971e1e4927b93967ca19d8">&#9670;&#160;</a></span>CheckScheduledEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.CheckScheduledEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a40e3c3b354971e1e4927b93967ca19d8_icgraph">
+<area shape="rect" title="检查所有已注册的定时事件，如果满足触发条件则执行回调。 从后向前遍历以避免集合修改问题。" alt="" coords="278,5,502,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7f2d786cdee58f7399dd91ad36c1127d" name="a7f2d786cdee58f7399dd91ad36c1127d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2d786cdee58f7399dd91ad36c1127d">&#9670;&#160;</a></span>CheckSeason()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.CheckSeason </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>force</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据当前月份检查并更新季节，若变化则触发事件。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>强制触发事件（用于初始化或存档加载）</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a7f2d786cdee58f7399dd91ad36c1127d_icgraph">
+<area shape="rect" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="822,39,1047,81"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a37aec0df9dd39c07adffc3f21ef74441" title="推进到新的一月，处理跨年和季节变更。" alt="" coords="550,5,774,48"/>
+<area shape="poly" title=" " alt="" coords="804,44,775,43,775,38,810,44"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a24c81babd9b2946736418757ac59a0ce" title="刷新所有派生状态（季节、时段）。" alt="" coords="550,72,774,115"/>
+<area shape="poly" title=" " alt="" coords="810,75,775,82,775,77,804,76"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a83bc0288b5c2c5156c8d90113ef8a031" title="推进到新的一天，处理跨月和事件触发。" alt="" coords="278,5,502,48"/>
+<area shape="poly" title=" " alt="" coords="532,27,503,29,502,24,537,26"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="260,27,231,29,230,24,265,26"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#adc47f1f89ae295d0dbb3d1cc635e1972" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="278,72,502,115"/>
+<area shape="poly" title=" " alt="" coords="532,93,503,96,503,91,537,93"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7b664087cb737df808970dba08fa7ef9" title="启动时初始化时间系统。" alt="" coords="5,72,230,115"/>
+<area shape="poly" title=" " alt="" coords="260,93,230,96,230,91,265,93"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acaf8f75f48d7f972d62451c97645b2e5" name="acaf8f75f48d7f972d62451c97645b2e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf8f75f48d7f972d62451c97645b2e5">&#9670;&#160;</a></span>CheckSunState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.CheckSunState </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>force</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据当前时刻检查并更新时段，若变化则触发事件。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>强制触发事件</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_acaf8f75f48d7f972d62451c97645b2e5_icgraph">
+<area shape="rect" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="822,39,1047,81"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#abc01f83b0e182ddc03f45fb733743b71" title="根据流逝的现实时间推进游戏内时间。" alt="" coords="550,5,774,48"/>
+<area shape="poly" title=" " alt="" coords="804,44,775,43,775,38,810,44"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a24c81babd9b2946736418757ac59a0ce" title="刷新所有派生状态（季节、时段）。" alt="" coords="550,72,774,115"/>
+<area shape="poly" title=" " alt="" coords="810,75,775,82,775,77,804,76"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#adc47f1f89ae295d0dbb3d1cc635e1972" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="278,72,502,115"/>
+<area shape="poly" title=" " alt="" coords="532,93,503,96,503,91,537,93"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7b664087cb737df808970dba08fa7ef9" title="启动时初始化时间系统。" alt="" coords="5,72,230,115"/>
+<area shape="poly" title=" " alt="" coords="260,93,230,96,230,91,265,93"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc47f1f89ae295d0dbb3d1cc635e1972" name="adc47f1f89ae295d0dbb3d1cc635e1972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc47f1f89ae295d0dbb3d1cc635e1972">&#9670;&#160;</a></span>InitializeTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.InitializeTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 <a class="el" href="#aaece30bfc5ada5e20f2c322a1ee8d050" title="时间配置数据（ScriptableObject），在Inspector中赋值。 包含一年月数、一月天数、一天秒数、时段划分、季节划分等配置。">timeSettings</a> 中读取。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_cgraph">
+<area shape="rect" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="5,39,230,81"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a24c81babd9b2946736418757ac59a0ce" title="刷新所有派生状态（季节、时段）。" alt="" coords="278,39,502,81"/>
+<area shape="poly" title=" " alt="" coords="230,57,265,60,259,60,230,63"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="550,5,774,48"/>
+<area shape="poly" title=" " alt="" coords="502,44,537,42,532,43,503,49"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#acaf8f75f48d7f972d62451c97645b2e5" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="550,72,774,115"/>
+<area shape="poly" title=" " alt="" coords="502,71,537,78,532,78,502,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_adc47f1f89ae295d0dbb3d1cc635e1972_icgraph">
+<area shape="rect" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="278,5,502,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7b664087cb737df808970dba08fa7ef9" title="启动时初始化时间系统。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3d15db128fb9bbaeb3d282eb161de40d" name="a3d15db128fb9bbaeb3d282eb161de40d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d15db128fb9bbaeb3d282eb161de40d">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Utopia.TimeSystem.TimeManager.Load </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>slotId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从存档加载时间状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slotId</td><td>存档槽位标识。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>异步任务。</dd></dl>
+
+</div>
+</div>
+<a id="abb02f41f30248c4d4f1c8c7a41e5219f" name="abb02f41f30248c4d4f1c8c7a41e5219f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb02f41f30248c4d4f1c8c7a41e5219f">&#9670;&#160;</a></span>Pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.Pause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>暂停时间推进。 </p>
+
+</div>
+</div>
+<a id="a24c81babd9b2946736418757ac59a0ce" name="a24c81babd9b2946736418757ac59a0ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c81babd9b2946736418757ac59a0ce">&#9670;&#160;</a></span>RefreshDerivedStates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.RefreshDerivedStates </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>force</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>刷新所有派生状态（季节、时段）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>是否强制触发变更事件（即使值未变）</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_cgraph">
+<area shape="rect" title="刷新所有派生状态（季节、时段）。" alt="" coords="5,39,230,81"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="278,5,502,48"/>
+<area shape="poly" title=" " alt="" coords="230,44,265,42,259,43,231,49"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#acaf8f75f48d7f972d62451c97645b2e5" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="278,72,502,115"/>
+<area shape="poly" title=" " alt="" coords="230,71,265,78,259,78,230,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_icgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_icgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a24c81babd9b2946736418757ac59a0ce_icgraph">
+<area shape="rect" title="刷新所有派生状态（季节、时段）。" alt="" coords="550,5,774,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#adc47f1f89ae295d0dbb3d1cc635e1972" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="278,5,502,48"/>
+<area shape="poly" title=" " alt="" coords="532,27,503,29,503,24,537,27"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7b664087cb737df808970dba08fa7ef9" title="启动时初始化时间系统。" alt="" coords="5,5,230,48"/>
+<area shape="poly" title=" " alt="" coords="260,27,230,29,230,24,265,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a473a06b00d6f1bfeaf8dfef1f28a66b3" name="a473a06b00d6f1bfeaf8dfef1f28a66b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a473a06b00d6f1bfeaf8dfef1f28a66b3">&#9670;&#160;</a></span>RegisterEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.RegisterEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a></td>          <td class="paramname"><span class="paramname"><em>timeEvent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册一个定时事件，事件到达触发时间时将执行回调。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeEvent</td><td>要注册的时间事件对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a473a06b00d6f1bfeaf8dfef1f28a66b3_cgraph">
+<area shape="rect" title="注册一个定时事件，事件到达触发时间时将执行回调。" alt="" coords="5,5,230,48"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_event.html#a5362cad4d4d73896e334c79d1cb7dfe1" title="重置事件状态（对于非重复事件，可以重新激活）" alt="" coords="278,5,486,48"/>
+<area shape="poly" title=" " alt="" coords="230,24,264,27,259,27,230,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab955989921b70987bdf494641f99160c" name="ab955989921b70987bdf494641f99160c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab955989921b70987bdf494641f99160c">&#9670;&#160;</a></span>Resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.Resume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>恢复时间推进。 </p>
+
+</div>
+</div>
+<a id="a0a924c66e26b6efa63b7d5d364d464f7" name="a0a924c66e26b6efa63b7d5d364d464f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a924c66e26b6efa63b7d5d364d464f7">&#9670;&#160;</a></span>Save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Utopia.TimeSystem.TimeManager.Save </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>slotId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将当前时间状态保存到存档。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slotId</td><td>存档槽位标识。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>异步任务。</dd></dl>
+
+</div>
+</div>
+<a id="a749537c4e53b7c0b17e4ce8c333f9e8c" name="a749537c4e53b7c0b17e4ce8c333f9e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749537c4e53b7c0b17e4ce8c333f9e8c">&#9670;&#160;</a></span>SetTimeScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.SetTimeScale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置时间缩放倍数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>缩放倍数（必须大于等于0）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b664087cb737df808970dba08fa7ef9" name="a7b664087cb737df808970dba08fa7ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b664087cb737df808970dba08fa7ef9">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动时初始化时间系统。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9_cgraph.png" border="0" usemap="#aclass_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9_cgraph" id="aclass_utopia_1_1_time_system_1_1_time_manager_a7b664087cb737df808970dba08fa7ef9_cgraph">
+<area shape="rect" title="启动时初始化时间系统。" alt="" coords="5,39,230,81"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#adc47f1f89ae295d0dbb3d1cc635e1972" title="初始化时间系统，设置起始时间并刷新派生状态。 起始时间从 timeSettings 中读取。" alt="" coords="278,39,502,81"/>
+<area shape="poly" title=" " alt="" coords="230,57,265,60,259,60,230,63"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a24c81babd9b2946736418757ac59a0ce" title="刷新所有派生状态（季节、时段）。" alt="" coords="550,39,774,81"/>
+<area shape="poly" title=" " alt="" coords="502,57,537,60,532,60,503,63"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#a7f2d786cdee58f7399dd91ad36c1127d" title="根据当前月份检查并更新季节，若变化则触发事件。" alt="" coords="822,5,1047,48"/>
+<area shape="poly" title=" " alt="" coords="774,44,804,43,809,42,775,49"/>
+<area shape="rect" href="class_utopia_1_1_time_system_1_1_time_manager.html#acaf8f75f48d7f972d62451c97645b2e5" title="根据当前时刻检查并更新时段，若变化则触发事件。" alt="" coords="822,72,1047,115"/>
+<area shape="poly" title=" " alt="" coords="775,71,809,78,804,78,775,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afdd64db2fe3eb396f550c6e8f31c40ed" name="afdd64db2fe3eb396f550c6e8f31c40ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd64db2fe3eb396f550c6e8f31c40ed">&#9670;&#160;</a></span>UnregisterEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.UnregisterEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a></td>          <td class="paramname"><span class="paramname"><em>timeEvent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>取消注册一个定时事件。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeEvent</td><td>要取消的事件对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a815e7440e47a03a37be9f40421bac462" name="a815e7440e47a03a37be9f40421bac462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815e7440e47a03a37be9f40421bac462">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Utopia.TimeSystem.TimeManager.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每帧更新，负责时间推进（如果未暂停）。 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a4f15177a903aa102c7f6818889915377" name="a4f15177a903aa102c7f6818889915377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f15177a903aa102c7f6818889915377">&#9670;&#160;</a></span>_currentSeason</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a> Utopia.TimeSystem.TimeManager._currentSeason</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前季节（根据月份计算得出）。 </p>
+
+</div>
+</div>
+<a id="a6d1fcaa1a185d475949470ed5e51b2d7" name="a6d1fcaa1a185d475949470ed5e51b2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1fcaa1a185d475949470ed5e51b2d7">&#9670;&#160;</a></span>_currentSunState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a> Utopia.TimeSystem.TimeManager._currentSunState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前时段（如早晨、中午、傍晚、夜晚）。 </p>
+
+</div>
+</div>
+<a id="ad3c144fc607fe373bf566627b8ff76a8" name="ad3c144fc607fe373bf566627b8ff76a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c144fc607fe373bf566627b8ff76a8">&#9670;&#160;</a></span>_currentTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> Utopia.TimeSystem.TimeManager._currentTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前游戏日期时间（包含年月日及时刻）。 时刻以 0~1 浮点数表示一天中的进度。 </p>
+
+</div>
+</div>
+<a id="a38d151f98984539375782af14e93310c" name="a38d151f98984539375782af14e93310c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d151f98984539375782af14e93310c">&#9670;&#160;</a></span>_dataService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html">IDataService</a> Utopia.TimeSystem.TimeManager._dataService</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数据存储服务，通过依赖注入获取。 用于存档/读档游戏时间数据。 </p>
+
+</div>
+</div>
+<a id="a0fe30cb21e9551cfd9cb0860855c56d8" name="a0fe30cb21e9551cfd9cb0860855c56d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe30cb21e9551cfd9cb0860855c56d8">&#9670;&#160;</a></span>_eventManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_utopia_1_1_core_1_1_event_1_1_i_event_manager.html">IEventManager</a> Utopia.TimeSystem.TimeManager._eventManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>事件管理器，用于发布全局时间事件。 可以发送如 DayPassedEvent 等全局事件，供其他模块监听。 </p>
+
+</div>
+</div>
+<a id="a9046aa9c5b9ed53713583ff9cfbf0451" name="a9046aa9c5b9ed53713583ff9cfbf0451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9046aa9c5b9ed53713583ff9cfbf0451">&#9670;&#160;</a></span>_isInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeManager._isInitialized = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>系统是否已完成初始化。 初始化前不会处理时间推进。 </p>
+
+</div>
+</div>
+<a id="ac57c810a79edd8c808d12c0aeac36e49" name="ac57c810a79edd8c808d12c0aeac36e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57c810a79edd8c808d12c0aeac36e49">&#9670;&#160;</a></span>_isPaused</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeManager._isPaused = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>时间是否暂停。暂停时不会推进游戏时间。 </p>
+
+</div>
+</div>
+<a id="adb07be1c5ae8bb22a87c987ed1000e9c" name="adb07be1c5ae8bb22a87c987ed1000e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb07be1c5ae8bb22a87c987ed1000e9c">&#9670;&#160;</a></span>_scheduledEvents</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a>&gt; Utopia.TimeSystem.TimeManager._scheduledEvents = new List&lt;<a class="el" href="class_utopia_1_1_time_system_1_1_time_event.html">TimeEvent</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已注册的定时事件列表。 这些事件会在时间达到触发条件时执行回调。 </p>
+
+</div>
+</div>
+<a id="a12d6cb30ddf5d9e9dcd6462f59093b1a" name="a12d6cb30ddf5d9e9dcd6462f59093b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d6cb30ddf5d9e9dcd6462f59093b1a">&#9670;&#160;</a></span>_timeScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeManager._timeScale = 1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>时间缩放倍数（1.0 = 现实时间流速）。 实际时间增量 = 现实时间增量 * _timeScale * timeSettings.timeMultiplier。 </p>
+
+</div>
+</div>
+<a id="ad344ec85e49eb4a7bc1dd14d0dc18306" name="ad344ec85e49eb4a7bc1dd14d0dc18306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad344ec85e49eb4a7bc1dd14d0dc18306">&#9670;&#160;</a></span>currentTimeOfDay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeManager.currentTimeOfDay</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前一天中的进度（0.0 ~ 1.0），用于Inspector调试显示。 </p>
+
+</div>
+</div>
+<a id="adce8029f59b8d7f33b777e1066c168da" name="adce8029f59b8d7f33b777e1066c168da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce8029f59b8d7f33b777e1066c168da">&#9670;&#160;</a></span>SAVE_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Utopia.TimeSystem.TimeManager.SAVE_KEY = &quot;GameTimeData&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存档数据在 <a class="el" href="interface_utopia_1_1_data_1_1_i_data_service.html" title="数据服务接口 — 定义数据层的契约 用于抽象数据保存和加载操作，便于依赖注入和单元测试">IDataService</a> 中的唯一键名。 用于存储和加载时间数据。 </p>
+
+</div>
+</div>
+<a id="aaece30bfc5ada5e20f2c322a1ee8d050" name="aaece30bfc5ada5e20f2c322a1ee8d050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaece30bfc5ada5e20f2c322a1ee8d050">&#9670;&#160;</a></span>timeSettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utopia_1_1_time_system_1_1_time_settings.html">TimeSettings</a> Utopia.TimeSystem.TimeManager.timeSettings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>时间配置数据（ScriptableObject），在Inspector中赋值。 包含一年月数、一月天数、一天秒数、时段划分、季节划分等配置。 </p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">属性说明</h2>
+<a id="a306bf09b23705e0c5eee38684363d67b" name="a306bf09b23705e0c5eee38684363d67b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306bf09b23705e0c5eee38684363d67b">&#9670;&#160;</a></span>CurrentSeason</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a> Utopia.TimeSystem.TimeManager.CurrentSeason</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前季节。 </p>
+
+</div>
+</div>
+<a id="a3025de895dd66558127db5596bbc71da" name="a3025de895dd66558127db5596bbc71da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3025de895dd66558127db5596bbc71da">&#9670;&#160;</a></span>CurrentSunState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a> Utopia.TimeSystem.TimeManager.CurrentSunState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前时段。 </p>
+
+</div>
+</div>
+<a id="aece63333d2c97d1865261a5d052d5368" name="aece63333d2c97d1865261a5d052d5368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece63333d2c97d1865261a5d052d5368">&#9670;&#160;</a></span>CurrentTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a> Utopia.TimeSystem.TimeManager.CurrentTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前完整时间对象。 </p>
+
+</div>
+</div>
+<a id="af93ac5ddcd1e74cb38d360f26bfc72c9" name="af93ac5ddcd1e74cb38d360f26bfc72c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93ac5ddcd1e74cb38d360f26bfc72c9">&#9670;&#160;</a></span>Day</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeManager.Day</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前日期（1~daysPerMonth）。 </p>
+
+</div>
+</div>
+<a id="af31632838cd305ee5cdd098900bc9d20" name="af31632838cd305ee5cdd098900bc9d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31632838cd305ee5cdd098900bc9d20">&#9670;&#160;</a></span>IsPaused</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Utopia.TimeSystem.TimeManager.IsPaused</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>时间是否暂停。 </p>
+
+</div>
+</div>
+<a id="aded6831fffa286aeb456db81ed67ac60" name="aded6831fffa286aeb456db81ed67ac60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded6831fffa286aeb456db81ed67ac60">&#9670;&#160;</a></span>Month</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeManager.Month</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前月份（1~monthsPerYear）。 </p>
+
+</div>
+</div>
+<a id="a4ef53e00fd83dc9a1bf9fa70f62fc227" name="a4ef53e00fd83dc9a1bf9fa70f62fc227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ef53e00fd83dc9a1bf9fa70f62fc227">&#9670;&#160;</a></span>SaveKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Utopia.TimeSystem.TimeManager.SaveKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现 ISaveableSystem.SaveKey 接口。 返回用于存档的唯一键名。 </p>
+
+</div>
+</div>
+<a id="a4e5282336d7abe8a469d070a40c97922" name="a4e5282336d7abe8a469d070a40c97922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e5282336d7abe8a469d070a40c97922">&#9670;&#160;</a></span>TimeOfDay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeManager.TimeOfDay</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前一天中的进度（0.0~1.0）。 </p>
+
+</div>
+</div>
+<a id="ab4c7e5e65bedb987b7a62e0c6d455f3d" name="ab4c7e5e65bedb987b7a62e0c6d455f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c7e5e65bedb987b7a62e0c6d455f3d">&#9670;&#160;</a></span>TimeScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Utopia.TimeSystem.TimeManager.TimeScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前时间缩放倍数。 </p>
+
+</div>
+</div>
+<a id="a08ab19c2b25f34e6b2b88cc9519db4b3" name="a08ab19c2b25f34e6b2b88cc9519db4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ab19c2b25f34e6b2b88cc9519db4b3">&#9670;&#160;</a></span>Year</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Utopia.TimeSystem.TimeManager.Year</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前年份。 </p>
+
+</div>
+</div>
+<a name="doc-event-members" id="doc-event-members"></a><h2 id="header-doc-event-members" class="groupheader">事件说明</h2>
+<a id="a9445e5a00cfe32e3befec2edf9b3ed5c" name="a9445e5a00cfe32e3befec2edf9b3ed5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9445e5a00cfe32e3befec2edf9b3ed5c">&#9670;&#160;</a></span>OnDayChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;int&gt; Utopia.TimeSystem.TimeManager.OnDayChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>日期变更时触发，传递新的天数（当月第几天）。 </p>
+
+</div>
+</div>
+<a id="a82b0f1f1aeca5682d9690a12b433cc81" name="a82b0f1f1aeca5682d9690a12b433cc81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82b0f1f1aeca5682d9690a12b433cc81">&#9670;&#160;</a></span>OnMonthChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;int&gt; Utopia.TimeSystem.TimeManager.OnMonthChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>月份变更时触发，传递新的月份（1-based）。 </p>
+
+</div>
+</div>
+<a id="a16cf738b810fb68582ae64697b32c2f4" name="a16cf738b810fb68582ae64697b32c2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16cf738b810fb68582ae64697b32c2f4">&#9670;&#160;</a></span>OnSeasonChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="namespace_utopia_1_1_time_system.html#af20373bd58b8066dd253e1cabbf32541">Season</a>&gt; Utopia.TimeSystem.TimeManager.OnSeasonChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>季节变更时触发，传递新的季节。 </p>
+
+</div>
+</div>
+<a id="a423bf53f12bcfe065e5a0c1ad28088a6" name="a423bf53f12bcfe065e5a0c1ad28088a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423bf53f12bcfe065e5a0c1ad28088a6">&#9670;&#160;</a></span>OnSunStateChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="namespace_utopia_1_1_time_system.html#a8b1ceff83ce04f14a3301d8a2b5956a2">SunState</a>&gt; Utopia.TimeSystem.TimeManager.OnSunStateChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时段（早/中/晚）变更时触发，传递新的时段。 </p>
+
+</div>
+</div>
+<a id="a1a86908e0cf429a52a8e0ecc294de4d4" name="a1a86908e0cf429a52a8e0ecc294de4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a86908e0cf429a52a8e0ecc294de4d4">&#9670;&#160;</a></span>OnTick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="struct_utopia_1_1_time_system_1_1_custom_date_time.html">CustomDateTime</a>&gt; Utopia.TimeSystem.TimeManager.OnTick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>每帧触发一次，传递当前时间（高频事件，适合UI刷新）。 </p>
+
+</div>
+</div>
+<a id="af3cb10f20fdb2bafb73caa79623b212f" name="af3cb10f20fdb2bafb73caa79623b212f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3cb10f20fdb2bafb73caa79623b212f">&#9670;&#160;</a></span>OnYearChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;int&gt; Utopia.TimeSystem.TimeManager.OnYearChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>年份变更时触发，传递新的年份。 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Script/TimeTool/<a class="el" href="_time_manager_8cs.html">TimeManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_utopia.html">Utopia</a></li><li class="navelem"><a href="namespace_utopia_1_1_time_system.html">TimeSystem</a></li><li class="navelem"><a href="class_utopia_1_1_time_system_1_1_time_manager.html">TimeManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
