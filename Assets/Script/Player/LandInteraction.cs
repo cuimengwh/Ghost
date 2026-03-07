@@ -1,44 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// 土地交互组件,挂在玩家脚下的空物体上，负责检测玩家与土地的交互
-/// </summary>
 public class LandInteraction : MonoBehaviour
 {
-    PlayerController playerController; // 玩家控制器引用
-    Land selectedLand = null; // 当前选中的土地
+    PlayerController playerController;
+    Land selectedLand = null;
+    GameObject currenttool;
 
-    // 初始化
-    void Start()
-    {
-        // 从父对象获取PlayerController组件
-        playerController = transform.parent.GetComponent<PlayerController>();
-        /* 调试代码：检查是否成功获取PlayerController
-        if (playerController == null) {Debug.LogError("PlayerController component not found on parent.");}
-        else {Debug.Log("PlayerController found: " + playerController);}
-        */
-    }
+    [SerializeField] private float raycastDistance = 2f; //射线长度
+    [SerializeField] private float selectionDelay = 0.1f; // 延迟时间
+    private float lastValidLandTime; // 最后一次有效土地的时间
+    private Land lastValidLand; // 最后一次有效的土地
 
-    // 每帧更新
     void Update()
     {
-        RaycastHit hit; // 射线命中信息
+        RaycastHit hit;
 
-        // 向下发射射线检测土地（射线长度2个单位）
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, raycastDistance))
         {
-            SelectLand(hit.collider.GetComponent<Land>()); // 尝试选择土地
-            // 检测E键按下交互
-            if (Input.GetKeyDown(KeyCode.E))
+            Land currentLand = hit.collider.GetComponent<Land>();
+
+            if (currentLand != null)
             {
-                OnInteractableHit(hit); // 执行交互操作
+                // 记录有效的土地和时间
+                lastValidLand = currentLand;
+                lastValidLandTime = Time.time;
+                SelectLand(currentLand);
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    OnInteractableHit(hit);
+                }
+            }
+            else
+            {
+                // 如果射线命中的不是土地，不要立即取消选择
+                CheckAndDeselectLand();
             }
         }
         else
         {
-            SelectLand(null); // 没有命中土地，取消选择
+            // 射线没有命中任何物体，检查是否需要取消选择
+            CheckAndDeselectLand();
         }
     }
 
@@ -50,32 +52,51 @@ public class LandInteraction : MonoBehaviour
         if (sth.CompareTag("Land"))
         {
             Land land = sth.GetComponent<Land>(); // 获取土地组件
-            land.Interact(); // 调用土地交互方法
+            land.ChangStatusToFarmland(); // 调用土地交互方法
         }
     }
 
-    // 选择土地的方法
+    void CheckAndDeselectLand()
+    {
+        // 如果超过一定时间没有检测到土地，才取消选择
+        if (Time.time - lastValidLandTime > 0.2f) // 0.2秒的缓冲时间
+        {
+            SelectLand(null);
+        }
+    }
+
     void SelectLand(Land land)
     {
-        // 点空地：只清旧选
-        if (land == null)
-        {
-            if (selectedLand != null)
-            {
-                selectedLand.Select(false);
-                selectedLand = null;
-            }
-            return;
-        }
-
-        // 点同一块：直接返回
         if (land == selectedLand) return;
 
-        // 切到另一块：清旧选新
+        // 取消旧的选择
         if (selectedLand != null)
+        {
             selectedLand.Select(false);
+        }
 
+        // 设置新的选择
         selectedLand = land;
-        land.Select(true);
+        if (selectedLand != null)
+        {
+            selectedLand.Select(true);
+        }
+    }
+
+    /// <summary>
+    /// 种植作物
+    /// </summary>
+    public void Plant()
+    {
+        //播放播种动作
+        selectedLand.PlantOnLand();
+    }
+    /// <summary>
+    /// 收获作物
+    /// </summary>
+    public void Harvest()
+    {
+        //播放收获动作
+        selectedLand.HarvestFormLand();
     }
 }
