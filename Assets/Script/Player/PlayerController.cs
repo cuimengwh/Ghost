@@ -32,7 +32,6 @@ public class PlayerController : PlayerBase
         HandleGravity();      // 处理重力与跳跃
         HandleRotation();     // 处理角色旋转
         HandleAnimation();    // 处理动画状态
-        HandleUI();          // 处理UI打开与关闭
     }
 
     // 处理角色移动的方法
@@ -124,41 +123,6 @@ public class PlayerController : PlayerBase
 
         // 设置速度参数控制混合树
         animator.SetFloat("Speed", velocity.magnitude);
-    }
-
-    // 处理背包打开与关闭的方法
-    private void HandleUI()
-    {
-        bool cursorState; // 光标状态变量，true为显示光标，false为隐藏光标
-        if (Input.GetKey(KeyCode.LeftAlt))
-        {
-            cursorState = true;
-        }
-        else
-        {
-            cursorState = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.B)) // 按下B键时切换背包显示状态
-        {
-            if (myBag != null)
-            {
-                bagOpen=myBag.activeSelf; // 获取当前背包状态
-                bagOpen = !bagOpen; // 切换背包状态
-                if (!bagOpen)
-                    ItemDrag.ForceEndDrag(); // 关闭背包时强制结束拖拽
-                myBag.SetActive(bagOpen); // 设置背包对象的激活状态
-            }
-            else
-            {
-                Debug.LogWarning("找不到背包！");
-            }
-        }
-        if (myBag != null && bagOpen)
-        {
-            cursorState = true; // 如果背包关闭则隐藏光标
-        }
-        CursorLock(cursorState); // 根据背包状态设置光标锁定模式
     }
 
     private void CursorLock(bool visible)
