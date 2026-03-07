@@ -45,5 +45,16 @@ namespace Utopia.Npc
                 _agent.enabled = visible; // 仅在可见时启用NavMeshAgent
             }
         }
+
+        public bool HasReachedDestination()
+        {
+            if (_agent == null || !_agent.enabled) return false;
+            return !_agent.pathPending && _agent.remainingDistance <= _agent.stoppingDistance;
+        }
+
+        public float GetCurrentSpeed()
+        {
+            return _agent != null ? _agent.velocity.magnitude : 0f;
+        }
     }
 }
