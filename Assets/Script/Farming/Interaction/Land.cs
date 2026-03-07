@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//测试代码
+
 /// <summary>
 /// 土地类，挂在土地物体上，负责管理土地状态和与玩家的交互
 /// 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示
