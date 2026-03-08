@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 /// <summary>
 /// 土地类，挂在土地物体上，负责管理土地状态和与玩家的交互
 /// 土地状态包括：未开垦、已耕作、已浇水等，每种状态对应不同的材质显示
@@ -23,6 +22,8 @@ public class Land : MonoBehaviour
 
     public LandStatus landStatus;   // 当前土地状态
     public GameObject select;       // 土地被选中时显示的提示物体
+    public bool isPlant = false;    // 当前土地是否正在种植作物
+    public Plant plant = null;     // 当前土地种植的作物的引用
 
     new Renderer renderer;          // 土地物体的渲染器组件
 
@@ -33,6 +34,8 @@ public class Land : MonoBehaviour
         renderer = GetComponent<Renderer>();
         // 初始化土地状态为未开垦
         SwitchLandStatus(LandStatus.dirt);
+        //初始化土地状态为未选中
+        Select(false);
     }
 
     /// <summary>
@@ -68,11 +71,43 @@ public class Land : MonoBehaviour
     }
 
     /// <summary>
-    /// 与土地交互的处理函数
+    /// 改变土地状态为未开垦
     /// </summary>
-    public void Interact()
+    public void ChangStatusToDirt()
     {
-        // 将土地状态切换为已耕作
+        SwitchLandStatus(LandStatus.dirt);
+    }
+    /// <summary>
+    /// 改变土地状态为已开垦
+    /// </summary>
+    public void ChangStatusToFarmland()
+    {
         SwitchLandStatus(LandStatus.farmland);
+    }
+    /// <summary>
+    /// 改变土地状态为已浇水
+    /// </summary>
+    public void ChangStatusToWatered()
+    {
+        SwitchLandStatus(LandStatus.watered);
+    }
+    /// <summary>
+    /// 种植作物
+    /// </summary>
+    public void PlantOnLand(SeedData seed)
+    {
+        //查找种子对应的作物模型
+        SeedToPlantManager.FindSeedToPlant(seed.PlantId);
+        Instantiate(plant, transform.position,Quaternion.identity);
+    }
+    /// <summary>
+    /// 收获作物
+    /// </summary>
+    public void HarvestFormLand()
+    {
+        //添加作物到背包
+
+        Destroy(plant);
+        plant = null;
     }
 }
