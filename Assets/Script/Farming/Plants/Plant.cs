@@ -25,6 +25,7 @@ public class Plant : MonoBehaviour
         //初始化种植时间
         currentGrowTime = 0;
 
+        currentModel = stageModels[0];
         UpdateModel((int)currentStatus);
     }
 
@@ -69,11 +70,8 @@ public class Plant : MonoBehaviour
     /// </summary>
     private void UpdateModel(int stageIndex)
     {
-        // 隐藏所有模型
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        //隐藏当前状态模型
+        currentModel.gameObject.SetActive(false);
 
         // 显示当前阶段的模型
         if (stageModels != null && stageIndex < stageModels.Length)
