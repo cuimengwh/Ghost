@@ -5,7 +5,7 @@ using Utopia.TimeSystem;
 
 [CreateAssetMenu(fileName = "New Seed", menuName = "Inventory/New Seed")]
 [System.Serializable]
-public class SeedData : ItemData
+public class SeedData : ItemDetails
 {
     [Header("种子属性")]
     public Season plantSeason;       // 可种植季节
@@ -14,4 +14,5 @@ public class SeedData : ItemData
     public int resultingCropId;      // 所得产物ID
     public int yieldAmount;          // 产量
     public bool isGhost;             // 是否为幽灵作物
+    public Plant plant;              // 对应的作物模型
 }

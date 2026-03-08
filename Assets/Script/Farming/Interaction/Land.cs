@@ -96,8 +96,7 @@ public class Land : MonoBehaviour
     /// </summary>
     public void PlantOnLand(SeedData seed)
     {
-        //查找种子对应的作物模型
-        SeedToPlantManager.FindSeedToPlant(seed.PlantId);
+        plant = seed.plant;
         Instantiate(plant, transform.position,Quaternion.identity);
     }
     /// <summary>
