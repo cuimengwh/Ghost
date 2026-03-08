@@ -5,6 +5,7 @@ public class InventoryManager : Singleton<InventoryManager>
 {
     [Header("物品数据")]
     public ItemDataList_SO itemDataList_SO;
+    public ItemDetails currentItemDetails;
 
     [Header("背包数据")]
     public InventoryBag_SO playerBagTemp;
@@ -22,6 +23,7 @@ public class InventoryManager : Singleton<InventoryManager>
         EventHandler.DropItemEvent += OnDropItemEvent;
         EventHandler.BaseBagOpenEvent += OnBaseBagOpenEvent;
         EventHandler.StartNewGameEvent += OnStartNewGameEvent;
+        EventHandler.ItemSelectedEvent += OnItemSelectedEvent;
     }
 
     private void OnDisable()
@@ -29,6 +31,15 @@ public class InventoryManager : Singleton<InventoryManager>
         EventHandler.DropItemEvent -= OnDropItemEvent;
         EventHandler.BaseBagOpenEvent -= OnBaseBagOpenEvent;
         EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+        EventHandler.ItemSelectedEvent -= OnItemSelectedEvent;
+    }
+
+    private void OnItemSelectedEvent(ItemDetails details, bool isSelected)
+    {
+        if(isSelected)
+            currentItemDetails = details;
+        else
+            currentItemDetails = null;
     }
 
     /// <summary>

@@ -15,5 +15,6 @@ public class TestInventory : MonoBehaviour
     private void OnItemSelectedEvent(ItemDetails details, bool arg2)
     {
         Debug.Log("选中的物品类型为" + details.itemType);
+        Debug.Log(InventoryManager.Instance.currentItemDetails);
     }
 }
