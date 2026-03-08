@@ -43,4 +43,40 @@ public class DialogueEntry
     }
 }
 
+[System.Serializable]
+public struct InventoryItem
+{
+    //这个结构是背包的基本信息，使用结构是为了解决一些空引用的问题
+    public int itemID; //物品ID
+
+    public int itemAmount; //物品在背包中的数量
+}
+
+[System.Serializable]
+public class ItemDetails
+{
+    //这个类是物品的基本信息
+    #region  物品基本信息
+    public int itemID; //物品id   
+    public string itemName; //物品名称
+    public ItemType itemType;
+    public Sprite itemIcon; //物品的图标
+    public Sprite itemOnWorldSprite; //物品在地图上显示的样子
+    public string itemDescription;
+    public int itemUseRadius; //物品使用的范围
+    #endregion
+
+    #region 人物能对物品施加的操作
+    public bool canPickedUp; //物品能否被拾取
+    public bool canDropped; //物品能否被放下
+    public bool canCarried; //物品能否被举着
+    #endregion
+
+    #region 出售物品的设置
+    public int itemPrice; //物品的价值
+    [Range(0, 1)]
+    public float sellPercentage; //物品售卖时所打的折扣
+    #endregion
+}
+
 

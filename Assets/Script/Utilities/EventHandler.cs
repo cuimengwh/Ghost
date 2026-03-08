@@ -53,6 +53,49 @@ public static class EventHandler
 
     #endregion
 
+    #region 物品事件
+    //更新背包及物品栏UI
+    public static event Action<InventoryLocation, List<InventoryItem>> UpdateInventoryUI;
+    public static void CallUpdateInventoryUI(InventoryLocation location, List<InventoryItem> list)
+    {
+        UpdateInventoryUI?.Invoke(location, list);
+    }
+
+    //实例化物品到场景中
+    public static event Action<int, Vector3> InstantiateItemScene;
+    public static void CallInstantiateItemScene(int ID, Vector3 pos)
+    {
+        InstantiateItemScene?.Invoke(ID, pos);
+    }
+
+    //扔下物品事件
+    public static event Action<int, Vector3, ItemType> DropItemEvent;
+    public static void CallDropItemEvent(int ID, Vector3 pos, ItemType itemType)
+    {
+        DropItemEvent?.Invoke(ID, pos, itemType);
+    }
+
+    //物品被选中事件
+    public static event Action<ItemDetails, bool> ItemSelectedEvent;
+    public static void CallItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
+    {
+        ItemSelectedEvent?.Invoke(itemDetails, isSelected);
+    }
+
+    //打开关闭背包UI事件
+    public static event Action<SlotType, InventoryBag_SO> BaseBagOpenEvent;
+    public static void CallBaseBagOpenEvent(SlotType slotType, InventoryBag_SO bag_SO)
+    {
+        BaseBagOpenEvent?.Invoke(slotType, bag_SO);
+    }
+
+    public static event Action<SlotType, InventoryBag_SO> BaseBagCloseEvent;
+    public static void CallBaseBagCloseEvent(SlotType slotType, InventoryBag_SO bag_SO)
+    {
+        BaseBagCloseEvent?.Invoke(slotType, bag_SO);
+    }
+    #endregion
+
     public static event Action<ParticleEffectType, Vector3> ParticleEffectEvent;
     public static void CallParticleEffectEvent(ParticleEffectType effectType, Vector3 pos)
     {
