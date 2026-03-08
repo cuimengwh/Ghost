@@ -8,25 +8,19 @@ public class Plant : MonoBehaviour
     private float currentGrowTime; //当前种植时间
     private PlantStatus currentStatus; //当前种植阶段
     [SerializeField] private GameObject[] stageModels; // 各个阶段的模型数组
-    private GameObject currentModel; //当前显示的模型
+    private GameObject currentModel = null; //当前显示的模型
 
     public enum PlantStatus
     {
-        initialStage, //初级阶段
-        intermediateStage, //中级阶段
+        intermediateStage, //初级阶段
         advancedStage, //高级阶段
         matureStage //成熟阶段
     }
 
     private void Start()
     {
-        //初始化种植阶段
-        currentStatus = PlantStatus.initialStage;
         //初始化种植时间
         currentGrowTime = 0;
-
-        currentModel = stageModels[0];
-        UpdateModel((int)currentStatus);
     }
 
     private void Update()
@@ -44,11 +38,8 @@ public class Plant : MonoBehaviour
     /// </summary>
     private void ChangePlantStatus()
     {
-        if (currentGrowTime / maxGrowTime <= 0.25f)
-        {
-            currentStatus = PlantStatus.initialStage;
-            UpdateModel((int)currentStatus);
-        }
+        //第一阶段没有模型
+        if (currentGrowTime / maxGrowTime <= 0.25f) { }
         else if (currentGrowTime / maxGrowTime <= 0.5f)
         {
             currentStatus = PlantStatus.intermediateStage;
