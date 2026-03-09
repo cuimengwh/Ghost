@@ -183,7 +183,6 @@ public class InventoryUI : MonoBehaviour
     /// <summary>
     /// 打开关闭背包UI
     /// </summary>
-
     public void OpenBagUI()
     {
         bagOpened = !bagOpened;
@@ -226,12 +225,22 @@ public class InventoryUI : MonoBehaviour
     /// <param name="index"></param>
     public void UpdateSlotHeight(int index)
     {
+        foreach(var slot in playerSlots)
+        {
+            slot.slotHightlight.gameObject.SetActive(false);
+        }
+
         foreach (var slot in playerSlots)
         {
             if (slot.slotIndex == index && slot.isSelected)
                 slot.slotHightlight.gameObject.SetActive(true);
             else
+            {
                 slot.slotHightlight.gameObject.SetActive(false);
+                slot.isSelected = false;
+            }
+
+            slot.transform.DOScale(slot.isSelected ? Vector3.one * 1.1f : Vector3.one, 0.2f).SetEase(Ease.OutBack).SetAutoKill(true);
         }
     }
 }
