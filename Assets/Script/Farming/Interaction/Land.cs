@@ -11,14 +11,16 @@ public class Land : MonoBehaviour
     public enum LandStatus
     {
         dirt,       // 未开垦的土地
-        farmland,   // 已耕作的土地
-        watered     // 已浇水的土地
+        farmland,   // 已耕作但未浇水的土地
+        watered,    // 已浇水的土地
+        weeded      // 未除草的土地
     }
 
     // 不同土地状态对应的材质
     public Material dirtMat;        // 土地默认状态的材质
-    public Material farmlandMat;    // 已耕作土地的材质
+    public Material farmlandMat;    // 已耕作但未浇水土地的材质
     public Material wateredMat;     // 已浇水土地的材质
+    public Material weededMat;      // 未除草的土地
 
     public LandStatus landStatus;   // 当前土地状态
     public GameObject select;       // 土地被选中时显示的提示物体
@@ -57,6 +59,10 @@ public class Land : MonoBehaviour
             case LandStatus.watered:
                 renderer.material = wateredMat;
                 break;
+            case LandStatus.weeded:
+                renderer.material = weededMat;
+                break;
+
         }
     }
 
@@ -90,6 +96,13 @@ public class Land : MonoBehaviour
     public void ChangStatusToWatered()
     {
         SwitchLandStatus(LandStatus.watered);
+    }
+    /// <summary>
+    /// 改变土地状态为未除草
+    /// </summary>
+    public void ChangStatusToWeeded()
+    {
+        SwitchLandStatus(LandStatus.weeded);
     }
     /// <summary>
     /// 种植作物

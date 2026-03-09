@@ -4,7 +4,6 @@ public class LandInteraction : MonoBehaviour
 {
     PlayerController playerController;
     Land selectedLand = null;
-    GameObject currenttool;
 
     [SerializeField] private float raycastDistance = 2f; //射线长度
     [SerializeField] private float selectionDelay = 0.1f; // 延迟时间
@@ -52,7 +51,33 @@ public class LandInteraction : MonoBehaviour
         if (sth.CompareTag("Land"))
         {
             Land land = sth.GetComponent<Land>(); // 获取土地组件
-            land.ChangStatusToFarmland(); // 调用土地交互方法
+            switch(InventoryManager.Instance.currentItemDetails.itemType)
+            {
+                case ItemType.HoeTool:
+                    {
+                        if(selectedLand.landStatus == Land.LandStatus.dirt)
+                        {
+                            land.ChangStatusToFarmland();
+                        }
+                        break;
+                    }
+                case ItemType.WaterTool:
+                    {
+                        if (selectedLand.landStatus == Land.LandStatus.farmland)
+                        {
+                            land.ChangStatusToWatered();
+                        }
+                        break;
+                    }
+                case ItemType.ReapTool:
+                    {
+                        if(selectedLand.landStatus == Land.LandStatus.weeded)
+                        {
+                            land.ChangStatusToWeeded();
+                        }
+                        break;
+                    }
+            }
         }
     }
 

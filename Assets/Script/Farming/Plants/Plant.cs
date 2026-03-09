@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utopia.Core.Event;
+using Utopia.TimeSystem;
 
 public class Plant : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Plant : MonoBehaviour
     private PlantStatus currentStatus; //当前种植阶段
     [SerializeField] private GameObject[] stageModels; // 各个阶段的模型数组
     private GameObject currentModel = null; //当前显示的模型
+    private TimeManager timeManager;
 
     public enum PlantStatus
     {
@@ -17,21 +20,25 @@ public class Plant : MonoBehaviour
         matureStage //成熟阶段
     }
 
+    private void Awake()
+    {
+        TryGetComponent(out timeManager);
+    }
+
+    private void OnEnable()
+    {
+        timeManager.OnDayChanged += AfterADay;
+    }
+
+    private void OnDisable()
+    {
+        timeManager.OnDayChanged -= AfterADay;
+    }
+
     private void Start()
     {
         //初始化种植时间
         currentGrowTime = 0;
-    }
-
-    private void Update()
-    {
-        ChangePlantStatus(); // 每帧检测作物状态
-
-        //每帧更新种植时间
-        if (currentGrowTime <  maxGrowTime)
-        {
-            currentGrowTime += Time.deltaTime;
-        }
     }
     /// <summary>
     /// 更改作物状态
@@ -70,5 +77,11 @@ public class Plant : MonoBehaviour
             stageModels[stageIndex].SetActive(true);
             currentModel = stageModels[stageIndex];
         }
+    }
+
+    public void AfterADay(int day)
+    {
+        currentGrowTime++;
+        ChangePlantStatus();
     }
 }
