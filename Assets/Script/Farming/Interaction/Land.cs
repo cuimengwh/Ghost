@@ -119,7 +119,7 @@ public class Land : MonoBehaviour
     /// </summary>
     public void HarvestFormLand()
     {
-        //添加作物到背包
+        //InventoryManager.Instance.AddItem(, false);
 
         Destroy(plant);
         plant = null;

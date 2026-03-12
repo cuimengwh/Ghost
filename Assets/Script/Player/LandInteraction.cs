@@ -77,6 +77,14 @@ public class LandInteraction : MonoBehaviour
                         }
                         break;
                     }
+                //case ItemType.Seed:
+                //    {
+                //        if(selectedLand.landStatus == Land.LandStatus.farmland || selectedLand.landStatus == Land.LandStatus.watered)
+                //        {
+                //            Plant(InventoryManager.Instance.currentItemDetails);
+                //            break;
+                //        }
+                //    }
             }
         }
     }

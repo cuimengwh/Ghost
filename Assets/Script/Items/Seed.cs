@@ -5,7 +5,7 @@ using Utopia.TimeSystem;
 
 [CreateAssetMenu(fileName = "New Seed", menuName = "Items/Seed")]
 [System.Serializable]
-public class Seed : Items
+public class Seed : ItemDetails
 {
     [Header("种子属性")]
     [SerializeField] private Season plantSeason;       // 最佳种植季节（双倍产量）
@@ -15,9 +15,8 @@ public class Seed : Items
     [SerializeField] private int yieldAmount;          // 产量
     [SerializeField] private bool isGhost;             // 是否为幽灵作物
     [SerializeField] private Plant plant;              // 对应的作物模型
-    [SerializeField] private int buyPrice;             // 购买价格
-    [SerializeField] private int sellPrice;            // 出售价格
 
     public float GrowDay { get => growDay; set => growDay = value; }
     public Plant Plant { get => plant;}
+    public int ResultingCropId { get => resultingCropId; set => resultingCropId = value; }
 }
