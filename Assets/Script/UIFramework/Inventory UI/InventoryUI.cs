@@ -203,6 +203,7 @@ public class InventoryUI : MonoBehaviour
                 bagCanvasGroup.DOFade(1f, 1f).OnComplete(() =>
                 {
                     bagCanvasGroup.interactable = true;
+                    EventHandler.CallSetCusorVisibleEvent(true);
                 });
             });
         }
@@ -215,6 +216,7 @@ public class InventoryUI : MonoBehaviour
             {
                 bagUI.SetActive(false);
                 skeletonGraphic.AnimationState.SetEmptyAnimation(0, 0.1f);
+                EventHandler.CallSetCusorVisibleEvent(false);
             });
         }
     }

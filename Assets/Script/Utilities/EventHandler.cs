@@ -96,6 +96,12 @@ public static class EventHandler
     }
     #endregion
 
+    public static event Action<bool> SetCusorVisibleEvent;
+    public static void CallSetCusorVisibleEvent(bool isVisible)
+    {
+        SetCusorVisibleEvent?.Invoke(isVisible);
+    }
+
     public static event Action<ParticleEffectType, Vector3> ParticleEffectEvent;
     public static void CallParticleEffectEvent(ParticleEffectType effectType, Vector3 pos)
     {
