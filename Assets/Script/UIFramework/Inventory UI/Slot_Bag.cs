@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -17,6 +18,8 @@ public class Slot_Bag : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     //判断格子是否被选中的bool
     public bool isSelected;
+
+    private Tween selectTween;
 
     private void Start()
     {
@@ -89,8 +92,14 @@ public class Slot_Bag : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     /// <param name="eventData"></param>
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (itemDetails == null)
+        SlotSelected();
+    }
+
+    public void SlotSelected()
+    {
+        if (itemDetails == null || (selectTween != null && selectTween.IsPlaying()))
             return;
+
         isSelected = !isSelected;
 
         //通过InventoryUI上面的函数来控制物品框高亮显示，同时其它物品框的高亮关闭
@@ -110,7 +119,6 @@ public class Slot_Bag : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
             //显示拖拽的图片，并且调整为原来的尺寸
             inventoryUI.dragItem.enabled = true;
             inventoryUI.dragItem.sprite = slotImage.sprite;
-            inventoryUI.dragItem.SetNativeSize();
 
             //拖拽时也保持高亮显示
             isSelected = true;
@@ -120,7 +128,7 @@ public class Slot_Bag : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
-        inventoryUI.dragItem.transform.position = Input.mousePosition;
+        inventoryUI.dragItem.transform.position = Input.mousePosition + new Vector3(-50f, -5f);
     }
 
     public void OnEndDrag(PointerEventData eventData)

@@ -12,6 +12,35 @@ public class CusorManager : MonoBehaviour
     private Sprite currentSprite;
     private RectTransform cusorCanvas;
 
+    private void OnEnable()
+    {
+        EventHandler.SetCusorVisibleEvent += OnSetCusorVisibleEvent;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.SetCusorVisibleEvent -= OnSetCusorVisibleEvent;
+    }
+
+    private void Start()
+    {
+        OnSetCusorVisibleEvent(false);
+    }
+
+    private void OnSetCusorVisibleEvent(bool isVisible)
+    {
+        if(isVisible)
+        {
+            Cursor.visible = false;
+            cusorImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            Cursor.visible = true;
+            cusorImage.gameObject.SetActive(false);
+        }
+    }
+
     private void Update()
     {
         CusorFollow();
