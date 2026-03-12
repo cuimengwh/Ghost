@@ -111,7 +111,7 @@ public class Land : MonoBehaviour
     public void PlantOnLand(Seed _seed)
     {
         seed = _seed;
-        plant = _seed.plant;
+        plant = _seed.Plant;
         Instantiate(plant, transform.position,Quaternion.identity);
     }
     /// <summary>

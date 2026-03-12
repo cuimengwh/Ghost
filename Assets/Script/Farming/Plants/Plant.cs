@@ -24,7 +24,7 @@ public class Plant : MonoBehaviour
     private void Awake()
     {
         TryGetComponent(out timeManager);
-        maxGrowTime = seed.growDay;
+        maxGrowTime = seed.GrowDay;
     }
 
     private void OnEnable()
