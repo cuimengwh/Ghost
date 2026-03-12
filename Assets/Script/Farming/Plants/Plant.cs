@@ -6,12 +6,13 @@ using Utopia.TimeSystem;
 
 public class Plant : MonoBehaviour
 {
-    [SerializeField] private float maxGrowTime; //需要成熟的时间
-    private float currentGrowTime; //当前种植时间
-    private PlantStatus currentStatus; //当前种植阶段
     [SerializeField] private GameObject[] stageModels; // 各个阶段的模型数组
-    private GameObject currentModel = null; //当前显示的模型
-    private TimeManager timeManager;
+    public Seed seed;                                  //作物对应的种子
+    private float maxGrowTime;                         //需要成熟的时间
+    private float currentGrowTime;                     //当前种植时间
+    private PlantStatus currentStatus;                 //当前种植阶段
+    private GameObject currentModel = null;            //当前显示的模型
+    private TimeManager timeManager;                   //时间管理器
 
     public enum PlantStatus
     {
@@ -23,6 +24,7 @@ public class Plant : MonoBehaviour
     private void Awake()
     {
         TryGetComponent(out timeManager);
+        maxGrowTime = seed.growDay;
     }
 
     private void OnEnable()

@@ -26,6 +26,7 @@ public class Land : MonoBehaviour
     public GameObject select;       // 土地被选中时显示的提示物体
     public bool isPlant = false;    // 当前土地是否正在种植作物
     public Plant plant = null;     // 当前土地种植的作物的引用
+    public Seed seed = null;        //当前土地正在种植的植物种类
 
     new Renderer renderer;          // 土地物体的渲染器组件
 
@@ -107,9 +108,10 @@ public class Land : MonoBehaviour
     /// <summary>
     /// 种植作物
     /// </summary>
-    public void PlantOnLand(SeedData seed)
+    public void PlantOnLand(Seed _seed)
     {
-        plant = seed.plant;
+        seed = _seed;
+        plant = _seed.plant;
         Instantiate(plant, transform.position,Quaternion.identity);
     }
     /// <summary>
@@ -121,5 +123,6 @@ public class Land : MonoBehaviour
 
         Destroy(plant);
         plant = null;
+        seed = null;
     }
 }

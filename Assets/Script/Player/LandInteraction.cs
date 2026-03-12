@@ -111,7 +111,7 @@ public class LandInteraction : MonoBehaviour
     /// <summary>
     /// 种植作物
     /// </summary>
-    public void Plant(SeedData seed)
+    public void Plant(Seed seed)
     {
         //播放播种动作
         selectedLand.PlantOnLand(seed);

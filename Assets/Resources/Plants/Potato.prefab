@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2455970164900305069}
   - component: {fileID: 9167303010121485684}
   m_Layer: 0
-  m_Name: potato
+  m_Name: Potato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8983cbe53b013fe47a8bc198f0df5155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxGrowTime: 20
   stageModels:
   - {fileID: 8807266262775222007}
   - {fileID: 5755665928614551094}
   - {fileID: 3261538117467924926}
+  seed: {fileID: 11400000, guid: 70aec1f472683664ebb2e59da7702cb8, type: 2}
 --- !u!1001 &675422985247402391
 PrefabInstance:
   m_ObjectHideFlags: 0
