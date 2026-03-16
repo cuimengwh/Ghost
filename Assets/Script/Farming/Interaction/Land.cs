@@ -52,15 +52,19 @@ public class Land : MonoBehaviour
         switch (landStatus)
         {
             case LandStatus.dirt:
+                Debug.Log("土地状态变更为：干涸");
                 renderer.material = dirtMat;
                 break;
             case LandStatus.farmland:
+                Debug.Log("土地状态变更为：已开垦");
                 renderer.material = farmlandMat;
                 break;
             case LandStatus.watered:
+                Debug.Log("土地状态变更为：已湿润");
                 renderer.material = wateredMat;
                 break;
             case LandStatus.weeded:
+                Debug.Log("土地状态变更为：杂草");
                 renderer.material = weededMat;
                 break;
 
@@ -119,7 +123,7 @@ public class Land : MonoBehaviour
     /// </summary>
     public void HarvestFormLand()
     {
-        //InventoryManager.Instance.AddItem(, false);
+        //InventoryManager.Instance.AddItem(InventoryManager.Instance.GetItemDetails(seed.ResultingCropId), false);
 
         Destroy(plant);
         plant = null;
