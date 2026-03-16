@@ -7,4 +7,6 @@ using UnityEngine;
 public class ItemDataList_SO : ScriptableObject 
 {
     public List<ItemDetails> itemDetailsList;
+
+   
 }

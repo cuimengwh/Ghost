@@ -1,86 +1,152 @@
+using DG.Tweening;
 using Spine.Unity;
 using UnityEngine;
 
 public class TradeUI : MonoBehaviour
 {
     [Header("组件获取")]
-    public SkeletonGraphic skeletonGraphic;   // 拖拽 SkeletonGraphic 组件
-    public Transform characterTransform;      // 角色 Transform（用于计算方向）
+    public SkeletonGraphic skeletonGraphic;
+    public RectTransform characterTransform;   // 角色 UI 的 RectTransform（用于计算鼠标方向）
+    public GameObject tradePanel;              // 交易面板
+    public CanvasGroup canvasGroup;              // 交易面板的 CanvasGroup（用于淡入淡出）
 
     [Header("骨骼设置")]
-    public string boneName = "转向";           // 要控制的骨骼名称
+    public string boneName = "转向";
 
     [Header("圆圈移动范围")]
-    public float circleRadius = 100f;          // 在 Canvas 局部坐标系中的半径
+    public float circleRadius = 100f;           // 在骨骼父级局部空间中的半径
 
     [Header("平滑移动")]
     public bool smoothPosition = true;
-    public float smoothSpeed = 10f;            // 位置插值速度
+    public float smoothSpeed = 10f;
 
-    private Spine.Bone targetBone;              // 目标骨骼
+    private Spine.Bone targetBone;
     private Vector2 boneOrigin;                  // 骨骼初始局部位置（圆心）
-    private Vector2 targetPosition;               // 目标位置（用于平滑）
+    private Vector2 currentTarget;                // 当前目标位置（平滑插值用）
+
+    private Canvas canvas;
+    private RectTransform canvasRect;
+    private bool isAnimation = false;
 
     void Start()
     {
-        if (skeletonGraphic != null && skeletonGraphic.Skeleton != null)
+        if (skeletonGraphic == null || skeletonGraphic.Skeleton == null) return;
+        targetBone = skeletonGraphic.Skeleton.FindBone(boneName);
+        if (targetBone == null)
         {
-            targetBone = skeletonGraphic.Skeleton.FindBone(boneName);
-            if (targetBone == null)
-                Debug.LogError($"未找到名为 '{boneName}' 的骨骼！");
-            else
-            {
-                Debug.Log($"找到名为 '{boneName}' 的骨骼！");
-                // 记录骨骼初始局部位置作为圆心
-                boneOrigin = new Vector2(targetBone.X, targetBone.Y);
-                targetPosition = boneOrigin;
-            }
+            Debug.LogError($"未找到骨骼 '{boneName}'");
+            return;
         }
+        // 记录骨骼在其父骨骼局部空间中的初始位置作为圆心
+        boneOrigin = new Vector2(targetBone.X, targetBone.Y);
+        currentTarget = boneOrigin;
+
+        canvas = skeletonGraphic.canvas;
+        canvasRect = canvas.GetComponent<RectTransform>();
     }
 
     void Update()
     {
         if (targetBone == null) return;
 
-        // 1. 获取 Canvas 的 RectTransform
-        RectTransform canvasRect = skeletonGraphic.canvas.GetComponent<RectTransform>();
-        if (canvasRect == null)
-            return;
-
-        //2. 根据 Canvas 渲染模式决定用于转换的摄像机
-        Camera cam = null;
-        if (skeletonGraphic.canvas.renderMode != RenderMode.ScreenSpaceOverlay)
-            cam = skeletonGraphic.canvas.worldCamera;  // Screen Space - Camera 模式需要
-
-        //3. 将鼠标屏幕坐标转换为 Canvas 局部坐标
+        // ---------- 1. 将屏幕坐标转换为 Canvas 局部坐标 ----------
+        // 注意：Overlay 模式下 camera 参数传 null
         if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 canvasRect,
                 Input.mousePosition,
-                cam,
+                null,                           // Overlay 模式不需要摄像机
                 out Vector2 localMousePos))
         {
-            Debug.LogWarning("鼠标坐标转换失败");
+            Debug.LogWarning("无法将鼠标坐标转换到 Canvas 局部空间");
             return;
         }
 
-        //4. 将角色世界坐标转换为 Canvas 局部坐标
+        // ---------- 2. 将角色 UI 的世界坐标转换为 Canvas 局部坐标 ----------
         Vector2 localCharPos = canvasRect.InverseTransformPoint(characterTransform.position);
 
-        //5. 计算方向向量（从角色指向鼠标）
-        Vector2 direction = localMousePos - localCharPos;
-        if (direction.sqrMagnitude < 0.001f)  // 避免零向量
-            return;
+        // ---------- 3. 在 Canvas 局部空间中计算方向（从角色指向鼠标） ----------
+        Vector2 canvasDir = (localMousePos - localCharPos).normalized;
+        if (canvasDir.sqrMagnitude < 0.001f) return;
 
-        Debug.Log(direction);
-        //6. 计算反方向单位向量（骨骼移动方向：远离鼠标）
-        Vector2 oppositeDir = -direction.normalized;
+        // 骨骼应远离鼠标，因此取反方向
+        Vector2 oppositeCanvasDir = -canvasDir;
 
-        //7. 计算目标位置：圆心 + 反方向 * 半径
-        Vector3 desiredPos = localCharPos + oppositeDir * circleRadius;
+        // ---------- 4. 将 Canvas 局部方向转换为世界方向 ----------
+        // Canvas 的变换包含了旋转/缩放，TransformDirection 将局部方向转换为世界方向
+        Vector3 worldDir = canvas.transform.TransformDirection(new Vector3(oppositeCanvasDir.x, oppositeCanvasDir.y, 0));
 
-        // 8. 应用位置
-        targetBone.X = desiredPos.x;
-        targetBone.Y = desiredPos.y;
-        // Spine 会自动更新骨骼，无需手动调用
+        // ---------- 5. 将世界方向转换到目标骨骼的父骨骼局部空间 ----------
+        Spine.Bone parentBone = targetBone.Parent;
+        Vector2 localDir;
+
+        if (parentBone != null)
+        {
+            // 通过父骨骼的 WorldToLocal 将世界方向转换为父骨骼局部方向
+            // 技巧：计算两个点的差值来得到方向
+            Vector2 worldOrigin = Vector2.zero;
+            Vector2 worldDirPoint = new Vector2(worldDir.x, worldDir.y);
+            Vector2 localOrigin = parentBone.WorldToLocal(worldOrigin);
+            Vector2 localDirPoint = parentBone.WorldToLocal(worldDirPoint);
+            localDir = (localDirPoint - localOrigin).normalized;
+        }
+        else
+        {
+            // 根骨骼：直接将世界方向转换到 skeletonGraphic 的局部空间
+            Vector3 localDir3 = skeletonGraphic.transform.InverseTransformDirection(worldDir);
+            localDir = new Vector2(localDir3.x, localDir3.y).normalized;
+        }
+
+        // ---------- 6. 计算目标位置（父骨骼局部空间） ----------
+        Vector2 targetPos = boneOrigin + localDir * circleRadius;
+
+        // 可选：观察 localDir 是否随鼠标变化（调试用）
+        // Debug.Log(localDir);
+
+        // ---------- 7. 平滑处理 ----------
+        if (smoothPosition)
+        {
+            currentTarget = Vector2.Lerp(currentTarget, targetPos, smoothSpeed * Time.deltaTime);
+        }
+        else
+        {
+            currentTarget = targetPos;
+        }
+
+        // ---------- 8. 应用位置 ----------
+        targetBone.X = currentTarget.x;
+        targetBone.Y = currentTarget.y;
+
+        // 强制 Spine 立即更新骨骼（通常不需要每帧调用，但如果你发现骨骼显示延迟可取消注释）
+        // skeletonGraphic.Skeleton.UpdateWorldTransform();
+    }
+
+    public void OpenAndCloseTradePanel()
+    {
+        if (tradePanel != null)
+        {
+            if (!tradePanel.activeSelf)
+            {
+                tradePanel.SetActive(true);
+                isAnimation = true;
+                skeletonGraphic.DOFade(1f, 0.5f);
+                canvasGroup.DOFade(1f, 0.5f).OnComplete(() =>
+                {
+                    canvasGroup.blocksRaycasts = true; // 确保面板可交互
+                    isAnimation = false;
+                });
+            }
+            else
+            {
+                isAnimation = true;
+                canvasGroup.blocksRaycasts = false;
+
+                skeletonGraphic.DOFade(0f, 0.5f);
+                canvasGroup.DOFade(0f, 0.5f).OnComplete(() =>
+                {
+                    tradePanel.SetActive(false);
+                    isAnimation = false;
+                });
+            }
+        }
     }
 }
