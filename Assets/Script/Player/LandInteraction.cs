@@ -51,6 +51,11 @@ public class LandInteraction : MonoBehaviour
         if (sth.CompareTag("Land"))
         {
             Land land = sth.GetComponent<Land>(); // 获取土地组件
+            if (land == null)
+            {
+                Debug.Log("当前选择土地为空");
+                return;
+            }
             switch(InventoryManager.Instance.currentItemDetails.itemType)
             {
                 case ItemType.HoeTool:
@@ -77,14 +82,14 @@ public class LandInteraction : MonoBehaviour
                         }
                         break;
                     }
-                //case ItemType.Seed:
-                //    {
-                //        if(selectedLand.landStatus == Land.LandStatus.farmland || selectedLand.landStatus == Land.LandStatus.watered)
-                //        {
-                //            Plant(InventoryManager.Instance.currentItemDetails);
-                //            break;
-                //        }
-                //    }
+                case ItemType.Seed:
+                    {
+                        if (selectedLand.landStatus == Land.LandStatus.farmland || selectedLand.landStatus == Land.LandStatus.watered)
+                        {
+                            Plant(selectedLand,InventoryManager.Instance.currentItemDetails as Seed);
+                        }
+                            break;
+                    }
             }
         }
     }
@@ -119,10 +124,10 @@ public class LandInteraction : MonoBehaviour
     /// <summary>
     /// 种植作物
     /// </summary>
-    public void Plant(Seed seed)
+    public void Plant(Land land,Seed seed)
     {
         //播放播种动作
-        selectedLand.PlantOnLand(seed);
+        land.PlantOnLand(seed);
     }
     /// <summary>
     /// 收获作物

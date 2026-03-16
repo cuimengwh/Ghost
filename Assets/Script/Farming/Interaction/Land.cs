@@ -17,24 +17,22 @@ public class Land : MonoBehaviour
     }
 
     // 不同土地状态对应的材质
-    public Material dirtMat;        // 土地默认状态的材质
-    public Material farmlandMat;    // 已耕作但未浇水土地的材质
-    public Material wateredMat;     // 已浇水土地的材质
-    public Material weededMat;      // 未除草的土地
+    public GameObject dirtMat;        // 土地默认状态的材质
+    public GameObject farmlandMat;    // 已耕作但未浇水土地的材质
+    public GameObject wateredMat;     // 已浇水土地的材质
+    public GameObject weededMat;      // 未除草的土地
 
+    public GameObject currentShow;   // 当前显示模型
     public LandStatus landStatus;   // 当前土地状态
     public GameObject select;       // 土地被选中时显示的提示物体
     public bool isPlant = false;    // 当前土地是否正在种植作物
     public Plant plant = null;     // 当前土地种植的作物的引用
     public Seed seed = null;        //当前土地正在种植的植物种类
 
-    new Renderer renderer;          // 土地物体的渲染器组件
-
     // 初始化函数
     void Start()
     {
-        // 获取渲染器组件
-        renderer = GetComponent<Renderer>();
+        currentShow = dirtMat;
         // 初始化土地状态为未开垦
         SwitchLandStatus(LandStatus.dirt);
         //初始化土地状态为未选中
@@ -48,20 +46,29 @@ public class Land : MonoBehaviour
     public void SwitchLandStatus(LandStatus newStatus)
     {
         landStatus = newStatus;
+        currentShow.gameObject.SetActive(false);
         // 根据土地状态切换对应的材质
         switch (landStatus)
         {
             case LandStatus.dirt:
-                renderer.material = dirtMat;
+                Debug.Log("土地状态变更为：干涸");
+                dirtMat.gameObject.SetActive(true);
+                currentShow = dirtMat;
                 break;
             case LandStatus.farmland:
-                renderer.material = farmlandMat;
+                Debug.Log("土地状态变更为：已开垦");
+                farmlandMat.gameObject.SetActive(true);
+                currentShow = farmlandMat;
                 break;
             case LandStatus.watered:
-                renderer.material = wateredMat;
+                Debug.Log("土地状态变更为：已湿润");
+                wateredMat.gameObject.SetActive(true);
+                currentShow = wateredMat;
                 break;
             case LandStatus.weeded:
-                renderer.material = weededMat;
+                Debug.Log("土地状态变更为：杂草");
+                weededMat.gameObject.SetActive(true);
+                currentShow = weededMat;
                 break;
 
         }
@@ -112,6 +119,7 @@ public class Land : MonoBehaviour
     {
         seed = _seed;
         plant = _seed.Plant;
+        isPlant = true;
         Instantiate(plant, transform.position,Quaternion.identity);
     }
     /// <summary>
@@ -119,10 +127,11 @@ public class Land : MonoBehaviour
     /// </summary>
     public void HarvestFormLand()
     {
-        //InventoryManager.Instance.AddItem(, false);
+        //InventoryManager.Instance.AddItem(InventoryManager.Instance.GetItemDetails(seed.ResultingCropId), false);
 
         Destroy(plant);
         plant = null;
         seed = null;
+        isPlant = false;
     }
 }

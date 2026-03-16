@@ -31,7 +31,7 @@ public class PlayerController : PlayerBase
         HandleMovement();     // 处理移动逻辑
         HandleGravity();      // 处理重力与跳跃
         HandleRotation();     // 处理角色旋转
-        HandleAnimation();    // 处理动画状态
+        //HandleAnimation();    // 处理动画状态
     }
 
     // 处理角色移动的方法
@@ -107,23 +107,23 @@ public class PlayerController : PlayerBase
     }
 
     // 处理动画状态的方法
-    public virtual void HandleAnimation()
-    {
-        if (animator == null) return; // 如果动画器不存在则直接返回
+    //public virtual void HandleAnimation()
+    //{
+    //    if (animator == null) return; // 如果动画器不存在则直接返回
 
-        // 设置奔跑状态动画参数
-        if (Input.GetKey(KeyCode.LeftShift) && velocity.magnitude > 0.1f)
-        {
-            animator.SetBool("isRunning", true); // 设置为奔跑状态
-        }
-        else
-        {
-            animator.SetBool("isRunning", false); // 取消奔跑状态
-        }
+    //    // 设置奔跑状态动画参数
+    //    if (Input.GetKey(KeyCode.LeftShift) && velocity.magnitude > 0.1f)
+    //    {
+    //        animator.SetBool("isRunning", true); // 设置为奔跑状态
+    //    }
+    //    else
+    //    {
+    //        animator.SetBool("isRunning", false); // 取消奔跑状态
+    //    }
 
-        // 设置速度参数控制混合树
-        animator.SetFloat("Speed", velocity.magnitude);
-    }
+    //    // 设置速度参数控制混合树
+    //    animator.SetFloat("Speed", velocity.magnitude);
+    //}
 
     private void CursorLock(bool visible)
     {
