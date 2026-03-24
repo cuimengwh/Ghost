@@ -5,7 +5,7 @@ using Utopia.TimeSystem;
 
 [CreateAssetMenu(fileName = "New Seed", menuName = "Items/Seed")]
 [System.Serializable]
-public class Seed : ItemDetails
+public class Seed
 {
     [Header("种子属性")]
     [SerializeField] private Season plantSeason;       // 最佳种植季节（双倍产量）
