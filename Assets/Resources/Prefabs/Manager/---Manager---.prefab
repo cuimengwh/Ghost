@@ -123,9 +123,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDataList_SO: {fileID: 11400000, guid: a59d4c08a4d8d98419a6f7e311a669f5, type: 2}
+  currentItemDetails:
+    itemID: 0
+    itemName: 
+    itemType: 0
+    itemIcon: {fileID: 0}
+    itemOnWorldSprite: {fileID: 0}
+    itemDescription: 
+    itemUseRadius: 0
+    canPickedUp: 0
+    canDropped: 0
+    canCarried: 0
+    itemPrice: 0
+    sellPercentage: 0
   playerBagTemp: {fileID: 11400000, guid: b06f3e6aade54b74a9d94261a693efa2, type: 2}
   playerBag: {fileID: 11400000, guid: b06f3e6aade54b74a9d94261a693efa2, type: 2}
-  playerMoney: 0
+  playerMoney: 1000
 --- !u!1 &2670044672195750463
 GameObject:
   m_ObjectHideFlags: 0
