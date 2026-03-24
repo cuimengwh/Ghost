@@ -1209,10 +1209,6 @@ PrefabInstance:
       propertyPath: cusorImage
       value: 
       objectReference: {fileID: 707995736}
-    - target: {fileID: 1869809718838098065, guid: 420658b384a3f43448d0cad30a254b84, type: 3}
-      propertyPath: playerMoney
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 2670044672195750463, guid: 420658b384a3f43448d0cad30a254b84, type: 3}
       propertyPath: m_Name
       value: ---Manager---
