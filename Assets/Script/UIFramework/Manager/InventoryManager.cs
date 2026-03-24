@@ -62,6 +62,7 @@ public class InventoryManager : Singleton<InventoryManager>
     {
         currentBoxBag = bag_SO;
     }
+
     private void OnDropItemEvent(int ID, Vector3 pos, ItemType itemType)
     {
         RemoveItem(ID, 1);
