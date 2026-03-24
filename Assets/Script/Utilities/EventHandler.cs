@@ -94,6 +94,13 @@ public static class EventHandler
     {
         BaseBagCloseEvent?.Invoke(slotType, bag_SO);
     }
+
+    //确认交易界面
+    public static event Action<ItemDetails, bool> ShowTradeUIEvent;
+    public static void CallShowTradeUIEvent(ItemDetails item, bool isSell)
+    {
+        ShowTradeUIEvent?.Invoke(item, isSell);
+    }
     #endregion
 
     public static event Action<bool> SetCusorVisibleEvent;

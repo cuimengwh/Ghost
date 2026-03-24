@@ -49,7 +49,7 @@ public class Slot_Bag : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         }
     }
 
-    public InventoryUI inventoryUI => GetComponentInParent<InventoryUI>();
+    public InventoryUI inventoryUI => FindAnyObjectByType<InventoryUI>();
 
     /// <summary>
     /// 将Shot更新为空
@@ -153,11 +153,11 @@ public class Slot_Bag : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
             }
             else if (slotType == SlotType.Shop && targetSlot.slotType == SlotType.Bag) //从商店买东西 
             {
-                //EventHandler.CallShowTradeUI(itemDetails, false);
+                EventHandler.CallShowTradeUIEvent(itemDetails, false);
             }
             else if (slotType == SlotType.Bag && targetSlot.slotType == SlotType.Shop) //从背包卖东西 
             {
-                //EventHandler.CallShowTradeUI(itemDetails, true);
+                EventHandler.CallShowTradeUIEvent(itemDetails, true);
             }
             else if (slotType != SlotType.Shop && targetSlot.slotType != SlotType.Shop && slotType != targetSlot.slotType) //跨背包数据交换
             {
