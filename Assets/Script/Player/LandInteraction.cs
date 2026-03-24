@@ -86,7 +86,7 @@ public class LandInteraction : MonoBehaviour
                     {
                         if (selectedLand.landStatus == Land.LandStatus.farmland || selectedLand.landStatus == Land.LandStatus.watered)
                         {
-                            Plant(selectedLand,InventoryManager.Instance.currentItemDetails as Seed);
+                            //Plant(selectedLand,InventoryManager.Instance.currentItemDetails as Seed);
                         }
                             break;
                     }
