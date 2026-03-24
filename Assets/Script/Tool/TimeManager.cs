@@ -54,6 +54,8 @@ namespace Utopia.TimeSystem
     /// </summary>
     public class TimeManager : MonoBehaviour, ISaveableSystem, ITimeManager
     {
+        public static TimeManager instance;
+
         #region 依赖 配置
 
         /// <summary>
@@ -230,6 +232,16 @@ namespace Utopia.TimeSystem
         /// </summary>
         private void Awake()
         {
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
             if (ServiceLocatorProvider.Global.Locator != null)
             {
                 ServiceLocatorProvider.Global.Locator.Register(this);

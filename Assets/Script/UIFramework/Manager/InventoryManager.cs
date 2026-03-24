@@ -141,7 +141,7 @@ public class InventoryManager : Singleton<InventoryManager>
     /// <param name="ID"></param>
     /// <param name="index"></param>
     /// <param name="amount"></param>
-    private bool AddItemAtIndex(int ID, int index, int amount)
+    public bool AddItemAtIndex(int ID, int index, int amount)
     {
         if (index == -1 && CheckBagCapacity()) //背包里面没有这个物品，同时背包有空位
         {

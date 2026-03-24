@@ -52,9 +52,16 @@ public class LandInteraction : MonoBehaviour
         if (sth.CompareTag("Land"))
         {
             Land land = sth.GetComponent<Land>(); // 获取土地组件
+            //空值判断
             if (land == null)
             {
                 Debug.Log("当前选择土地为空");
+                return;
+            }
+            //收获作物
+            if (land.plant != null && land.plant.CurrentStatus == PlantStatus.matureStage)
+            {
+                Harvest(land);
                 return;
             }
             switch(InventoryManager.Instance.currentItemDetails.itemType)
@@ -136,9 +143,9 @@ public class LandInteraction : MonoBehaviour
     /// <summary>
     /// 收获作物
     /// </summary>
-    public void Harvest()
+    public void Harvest(Land land)
     {
         //播放收获动作
-        selectedLand.HarvestFormLand();
+        land.HarvestFormLand();
     }
 }

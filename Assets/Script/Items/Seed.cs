@@ -21,4 +21,5 @@ public class Seed
     public Plant Plant { get => plant;}
     public int ResultingCropId { get => resultingCropId; set => resultingCropId = value; }
     public int Id { get => id; set => id = value; }
+    public int YieldAmount { get => yieldAmount; set => yieldAmount = value; }
 }

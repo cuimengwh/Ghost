@@ -49,15 +49,11 @@ MonoBehaviour:
   - {fileID: 8807266262775222007}
   - {fileID: 5755665928614551094}
   - {fileID: 3261538117467924926}
-  seed:
-    id: 0
-    plantSeason: 0
-    groweasons: 
-    growTime: 0
-    resultingCropId: 0
-    yieldAmount: 0
-    isGhost: 0
-    plant: {fileID: 0}
+  seedID: 10001
+  currentGrowTime: 0
+  currentStatus: 0
+  currentModel: {fileID: 0}
+  SeedDataList_SO: {fileID: 11400000, guid: b162aed3a634efd4796f55a3c0e7132c, type: 2}
 --- !u!1001 &675422985247402391
 PrefabInstance:
   m_ObjectHideFlags: 0
