@@ -3,44 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utopia.Core.Event;
 using Utopia.TimeSystem;
+public enum PlantStatus
+{
+    intermediateStage, //初级阶段
+    advancedStage, //高级阶段
+    matureStage //成熟阶段
+}
 
 public class Plant : MonoBehaviour
 {
     [SerializeField] private GameObject[] stageModels; // 各个阶段的模型数组
-    public Seed seed;                                  //作物对应的种子
+    private Seed seed;                                  //作物对应的种子
+    [SerializeField] public int seedID;               // 种子的id
     private float maxGrowTime;                         //需要成熟的时间
-    private float currentGrowTime;                     //当前种植时间
-    private PlantStatus currentStatus;                 //当前种植阶段
-    private GameObject currentModel = null;            //当前显示的模型
-    private TimeManager timeManager;                   //时间管理器
+    [SerializeField] private float currentGrowTime;                     //当前种植时间
+    [SerializeField] private PlantStatus currentStatus;                 //当前种植阶段
+    [SerializeField] private GameObject currentModel;            //当前显示的模型
+    [SerializeField] private SeedDataList_SO SeedDataList_SO; //种子列表
 
-    public enum PlantStatus
-    {
-        intermediateStage, //初级阶段
-        advancedStage, //高级阶段
-        matureStage //成熟阶段
-    }
+    public PlantStatus CurrentStatus { get => currentStatus; set => currentStatus = value; }
+    public Seed Seed { get => seed; set => seed = value; }
 
     private void Awake()
     {
-        TryGetComponent(out timeManager);
-        maxGrowTime = seed.GrowDay;
+        Seed = SeedDataList_SO.Find(seedID);
+        maxGrowTime = Seed.GrowDay;
     }
 
     private void OnEnable()
     {
-        timeManager.OnDayChanged += AfterADay;
+        TimeManager.instance.OnDayChanged += AfterADay;
     }
 
     private void OnDisable()
     {
-        timeManager.OnDayChanged -= AfterADay;
+        TimeManager.instance.OnDayChanged -= AfterADay;
     }
 
     private void Start()
     {
         //初始化种植时间
         currentGrowTime = 0;
+        currentModel = stageModels[0];
+        currentModel.SetActive(false);
     }
     /// <summary>
     /// 更改作物状态
@@ -51,18 +56,18 @@ public class Plant : MonoBehaviour
         if (currentGrowTime / maxGrowTime <= 0.25f) { }
         else if (currentGrowTime / maxGrowTime <= 0.5f)
         {
-            currentStatus = PlantStatus.intermediateStage;
-            UpdateModel((int)currentStatus);
+            CurrentStatus = PlantStatus.intermediateStage;
+            UpdateModel((int)CurrentStatus);
         }
         else if (currentGrowTime / maxGrowTime < 1.0f)
         {
-            currentStatus = PlantStatus.advancedStage;
-            UpdateModel((int)currentStatus);
+            CurrentStatus = PlantStatus.advancedStage;
+            UpdateModel((int)CurrentStatus);
         }
         else
         {
-            currentStatus = PlantStatus.matureStage;
-            UpdateModel((int)currentStatus);
+            CurrentStatus = PlantStatus.matureStage;
+            UpdateModel((int)CurrentStatus);
         }
     }
     /// <summary>

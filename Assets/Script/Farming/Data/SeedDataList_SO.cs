@@ -6,4 +6,9 @@ using UnityEngine;
 public class SeedDataList_SO : ScriptableObject
 {
     public List<Seed> SeedDataList;
+
+    public Seed Find(int id)
+    {
+        return SeedDataList.Find(i => i.Id == id);
+    }
 }

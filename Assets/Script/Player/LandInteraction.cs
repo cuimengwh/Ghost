@@ -9,6 +9,7 @@ public class LandInteraction : MonoBehaviour
     [SerializeField] private float selectionDelay = 0.1f; // 延迟时间
     private float lastValidLandTime; // 最后一次有效土地的时间
     private Land lastValidLand; // 最后一次有效的土地
+    [SerializeField] private SeedDataList_SO SeedDataList_SO;
 
     void Update()
     {
@@ -51,9 +52,16 @@ public class LandInteraction : MonoBehaviour
         if (sth.CompareTag("Land"))
         {
             Land land = sth.GetComponent<Land>(); // 获取土地组件
+            //空值判断
             if (land == null)
             {
                 Debug.Log("当前选择土地为空");
+                return;
+            }
+            //收获作物
+            if (land.plant != null && land.plant.CurrentStatus == PlantStatus.matureStage)
+            {
+                Harvest(land);
                 return;
             }
             switch(InventoryManager.Instance.currentItemDetails.itemType)
@@ -86,7 +94,10 @@ public class LandInteraction : MonoBehaviour
                     {
                         if (selectedLand.landStatus == Land.LandStatus.farmland || selectedLand.landStatus == Land.LandStatus.watered)
                         {
-                            //Plant(selectedLand,InventoryManager.Instance.currentItemDetails as Seed);
+                            if(InventoryManager.Instance.currentItemDetails.itemType == ItemType.Seed)
+                            {
+                                Plant(selectedLand, SeedDataList_SO.Find(InventoryManager.Instance.currentItemDetails.itemID));
+                            }
                         }
                             break;
                     }
@@ -132,9 +143,9 @@ public class LandInteraction : MonoBehaviour
     /// <summary>
     /// 收获作物
     /// </summary>
-    public void Harvest()
+    public void Harvest(Land land)
     {
         //播放收获动作
-        selectedLand.HarvestFormLand();
+        land.HarvestFormLand();
     }
 }

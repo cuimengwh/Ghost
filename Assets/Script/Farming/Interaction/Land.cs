@@ -117,20 +117,33 @@ public class Land : MonoBehaviour
     /// </summary>
     public void PlantOnLand(Seed _seed)
     {
+        //防止种子/作物预制体为空（避免空引用）
+        if (_seed == null || _seed.Plant == null)
+        {
+            Debug.LogError("种子或作物预制体未赋值！");
+            return;
+        }
+        if (isPlant)
+        {
+            Debug.Log("这块土地已经种了作物！");
+            return;
+        }
+
+        Vector3 plantPos = new Vector3(transform.position.x,transform.position.y + 0.5f,transform.position.z);
+        plant = Instantiate(_seed.Plant, plantPos, Quaternion.identity);
+        //让作物作为土地的子物体（层级更整洁，也方便Plant脚本获取父物体）
+        plant.transform.SetParent(transform);
+
+        //赋值数据
         seed = _seed;
-        plant = _seed.Plant;
         isPlant = true;
-        Instantiate(plant, transform.position,Quaternion.identity);
     }
     /// <summary>
     /// 收获作物
     /// </summary>
     public void HarvestFormLand()
     {
-        InventoryManager.Instance.AddItem(InventoryManager.Instance.GetItemDetails(seed.ResultingCropId).itemID, 1);
-
-        Destroy(plant);
-        InventoryManager.Instance.AddItem(plant.seed.ResultingCropId, plant.seed.YieldAmount);
+        InventoryManager.Instance.AddItemAtIndex(plant.Seed.ResultingCropId, -1, plant.Seed.YieldAmount);
         Debug.Log("收获作物");
         Destroy(plant.gameObject);
         plant = null;
