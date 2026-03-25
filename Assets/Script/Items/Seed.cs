@@ -19,4 +19,6 @@ public class Seed
     public float GrowDay { get => growDay; set => growDay = value; }
     public Plant Plant { get => plant;}
     public int ResultingCropId { get => resultingCropId; set => resultingCropId = value; }
+
+    public int YieldAmount { get => yieldAmount; set => yieldAmount = value; }
 }

@@ -117,11 +117,7 @@ public class InventoryManager : Singleton<InventoryManager>
     /// <param name="ID"></param>
     /// <param name="index"></param>
     /// <param name="amount"></param>
-<<<<<<< Updated upstream
-    private bool AddItemAtIndex(int ID, int index, int amount)
-=======
-    public void AddItemAtIndex(int ID, int amount)
->>>>>>> Stashed changes
+    public void AddItem(int ID, int amount)
     {
         //拾取物品到背包
         //需要考虑两个因素：1、背包是否已经有这个物品了 2、背包是否已经满了
@@ -273,7 +269,7 @@ public class InventoryManager : Singleton<InventoryManager>
         {
             if (CheckBagCapacity()) //确认背包还有空间
             {
-                AddItemAtIndex(itemDetails.itemID, amount);
+                AddItem(itemDetails.itemID, amount);
             }
             playerMoney -= cost;
         }
