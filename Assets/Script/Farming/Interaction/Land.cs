@@ -143,7 +143,7 @@ public class Land : MonoBehaviour
     /// </summary>
     public void HarvestFormLand()
     {
-        InventoryManager.Instance.AddItemAtIndex(plant.Seed.ResultingCropId, -1, plant.Seed.YieldAmount);
+        InventoryManager.Instance.AddItem(plant.Seed.ResultingCropId, plant.Seed.YieldAmount);
         Debug.Log("收获作物");
         Destroy(plant.gameObject);
         plant = null;
