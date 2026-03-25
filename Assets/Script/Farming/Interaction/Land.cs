@@ -127,9 +127,15 @@ public class Land : MonoBehaviour
     /// </summary>
     public void HarvestFormLand()
     {
+<<<<<<< Updated upstream
         //InventoryManager.Instance.AddItem(InventoryManager.Instance.GetItemDetails(seed.ResultingCropId), false);
 
         Destroy(plant);
+=======
+        InventoryManager.Instance.AddItemAtIndex(plant.Seed.ResultingCropId, plant.Seed.YieldAmount);
+        Debug.Log("收获作物");
+        Destroy(plant.gameObject);
+>>>>>>> Stashed changes
         plant = null;
         seed = null;
         isPlant = false;

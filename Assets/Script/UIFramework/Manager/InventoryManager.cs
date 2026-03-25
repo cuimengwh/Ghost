@@ -80,30 +80,6 @@ public class InventoryManager : Singleton<InventoryManager>
     }
 
     /// <summary>
-    /// 拾取物品到背包
-    /// </summary>
-    /// <param name="item">物品</param>
-    /// <param name="toDestroy">是否要销毁这个物品</param>
-    public void AddItem(Item item, bool toDestroy)
-    {
-        //拾取物品到背包
-        //需要考虑两个因素：1、背包是否已经有这个物品了 2、背包是否已经满了
-
-        //1、背包是否已经有这个物品了
-        var index = GetItemIndexInBag(item.itemID);
-
-        //2、背包是否已经满了
-
-        if (AddItemAtIndex(item.itemID, index, 1))
-        {
-            Destroy(item.gameObject);
-        }
-
-        //更新UI
-        EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
-    }
-
-    /// <summary>
     /// 检查背包是否有空位
     /// </summary>
     /// <returns></returns>
@@ -141,8 +117,19 @@ public class InventoryManager : Singleton<InventoryManager>
     /// <param name="ID"></param>
     /// <param name="index"></param>
     /// <param name="amount"></param>
+<<<<<<< Updated upstream
     private bool AddItemAtIndex(int ID, int index, int amount)
+=======
+    public void AddItemAtIndex(int ID, int amount)
+>>>>>>> Stashed changes
     {
+        //拾取物品到背包
+        //需要考虑两个因素：1、背包是否已经有这个物品了 2、背包是否已经满了
+
+        //1、背包是否已经有这个物品了
+        var index = GetItemIndexInBag(ID);
+
+        //2、背包是否已经满了
         if (index == -1 && CheckBagCapacity()) //背包里面没有这个物品，同时背包有空位
         {
             var item = new InventoryItem { itemID = ID, itemAmount = amount };
@@ -154,19 +141,20 @@ public class InventoryManager : Singleton<InventoryManager>
                     break;
                 }
             }
-            return true;
         }
         else if (index != -1) //要去除背包没有这个物品，同时背包没有空位这种情况
         {
             int currentAmount = playerBag.itemList[index].itemAmount + amount;
             var item = new InventoryItem { itemID = ID, itemAmount = currentAmount };
             playerBag.itemList[index] = item;
-            return true;
         }
         else
         {
-            return false;
+            Debug.Log("背包已经没有空位了");
         }
+
+        //更新UI
+        EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
     }
 
     /// <summary>
@@ -285,7 +273,7 @@ public class InventoryManager : Singleton<InventoryManager>
         {
             if (CheckBagCapacity()) //确认背包还有空间
             {
-                AddItemAtIndex(itemDetails.itemID, index, amount);
+                AddItemAtIndex(itemDetails.itemID, amount);
             }
             playerMoney -= cost;
         }
