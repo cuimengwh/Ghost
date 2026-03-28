@@ -21,7 +21,10 @@ namespace Utopia.Npc
 
         //[Header("基础设定")]
 
-        //[Header("性格设定")]
+        [Header("性格设定")]
+        public OptimismTrait optimismTrait = OptimismTrait.Optimist;
+        public SensitivityTrait sensitivityTrait = SensitivityTrait.Dull;
+        public RationalityTrait rationalityTrait = RationalityTrait.Rational;
 
         [Header("日程与行为")]
         public List<NPCScheduleItem> scheduleItems;
